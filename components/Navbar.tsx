@@ -35,7 +35,7 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-primary-100 px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                        <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-blue-500 px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                 </div>
 
