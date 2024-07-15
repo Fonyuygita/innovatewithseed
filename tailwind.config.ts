@@ -26,9 +26,9 @@ const config = {
           600: "#0D2A1F",
         },
         blue: {
-          500: "#79B5EC",
-          600: "#152432",
-          700: "0B042A",
+          500: "#4893CD",
+          600: "#031840",
+          700: "#0B042A",
         },
         red: {
           500: "#F37877",
@@ -37,6 +37,7 @@ const config = {
         },
         light: {
           200: "#E8E9E9",
+          300: "#EBEBEB",
         },
         dark: {
           200: "#0D0F10",
@@ -51,7 +52,7 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       backgroundImage: {
-        appointments: "url('/assets/images/appointments-bg.png')",
+        appointments: "url('/assets/images/banner.png')",
         pending: "url('/assets/images/pending-bg.png')",
         cancelled: "url('/assets/images/cancelled-bg.png')",
       },

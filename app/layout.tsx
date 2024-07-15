@@ -12,8 +12,8 @@ const fontSans = Plus_Jakarta_Sans({
 
 
 export const metadata: Metadata = {
-  title: "seeDoc",
-  description: "make an appointment with your favorite Doctor",
+  title: "SeedInnovations",
+  description: "Innovates with Seed",
 };
 
 export default function RootLayout({
