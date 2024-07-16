@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Experience from "@/components/Partnership";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -8,6 +9,7 @@ export default function Home() {
     <div className="bg-light-300 h-screen text-red-400">
       <Navbar />
       <Hero />
+      <Experience />
     </div>
   );
 }
