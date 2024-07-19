@@ -20,8 +20,8 @@ const Navbar = () => {
 
     const pathname = usePathname();
     return (
-        <div className='bg-[#fff] w-[100%] mr-auto ml-auto px-[5%] '>
-            <nav className='flex justify-between items-center p-2'>
+        <div className='bg-[#fff] w-[100%] mr-auto ml-auto px-[5%] h-[110px] fixed top-0 left-0 z-50'>
+            <nav className='flex justify-between items-center p-2 '>
                 <div className='w-22 h-23 '>
                     <Image
                         src="/seedLogo.png"

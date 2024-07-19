@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
 import Navbar from "@/components/Navbar";
+import Services from "@/components/Services";
 // import Experience from "@/components/Partnership";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       {/* <Experience /> */}
       <Introduction />
+      <Services />
     </div>
   );
 }
