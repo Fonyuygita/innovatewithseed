@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-light-300 min-h-screen text-red-400">
+    <div className="bg-light-300 min-h-screen text-red-400 overflow-x-hidden">
       <Navbar />
       <Hero />
       {/* <Experience /> */}
