@@ -5,7 +5,7 @@ import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 const Introduction = () => {
     return (
-        <section className="mt-[4rem] flex flex-col md:flex-row justify-between px-[5%] -z-10  mb-[7rem]">
+        <section className="mt-[8rem] flex flex-col md:flex-row justify-between px-[5%] -z-10  mb-[12rem]">
             <div className="flex flex-col  flex-start w-[50%] gap-9  relative ">
                 <div className="w-[600px] h-[300px] px-[5rem] py-[4rem] absolute top-1 left-[-23px]  bg-white -z-1 pl-9"></div>
                 <div className="absolute z-10 flex flex-col gap-9 ">

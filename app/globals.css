@@ -30,6 +30,25 @@
 @layer utilities {
 
   /* ===== UTILITIES */
+  .card-wrapper {
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-blue-900 to-blue-950;
+  }
+
+  /* Gradient */
+  .card-wrapper::before {
+    background: conic-gradient(
+      rgba(244, 114, 182, 0.4) 0deg,
+      rgba(192, 132, 252, 0.4) 0deg,
+      transparent 80deg
+    );
+
+    @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-border-spin content-[''];
+  }
+
+  /* Body */
+  .card-content {
+    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-blue-900 to-blue-950;
+  }
   .sidebar {
     @apply remove-scrollbar w-full max-w-72 flex-col overflow-auto bg-black-800 px-7 py-10;
   }

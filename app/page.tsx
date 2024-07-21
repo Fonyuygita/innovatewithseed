@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
+import Mission from "@/components/Mission";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 // import Experience from "@/components/Partnership";
@@ -14,6 +15,7 @@ export default function Home() {
       {/* <Experience /> */}
       <Introduction />
       <Services />
+      <Mission />
     </div>
   );
 }
