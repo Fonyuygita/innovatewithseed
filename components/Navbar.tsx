@@ -35,14 +35,14 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-blue-500 px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                        <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                 </div>
 
                 {/* search_bar and register cta */}
                 <div className="flex items-center justify-center gap-x-10">
                     <Image src="/search.png" alt="" width={30} height={30} className='w-fit object-contain cursor-pointer' />
-                    <button className='text-lg py-2 flex items-center justify-center outline-none bg-blue-500 text-white rounded-3xl px-8  hover:scale-110  transition p-3'>Register</button>
+                    <button className='text-lg py-2 flex items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950 to-blue-900 text-white rounded-3xl px-8  hover:scale-110  transition p-3'>Register</button>
                 </div>
 
             </nav>
