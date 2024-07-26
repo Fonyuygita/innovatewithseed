@@ -8,7 +8,7 @@ const Technologies = () => {
             <div className='flex items-center justify-center gap-[1rem] flex-col'>
                 <Technology
                     title='Artificial Intelligence'
-                    image='/p4.svg'
+                    image='/ai.svg'
                     description1='Get in to the world of ai and Explore'
                     description2='Get in to the world of ai and Explore'
                     description3='Get in to the world of ai and Explore'
@@ -21,7 +21,7 @@ const Technologies = () => {
 
                 <Technology
                     title='Computer Programming'
-                    image='/p3.svg'
+                    image='/p2.svg'
                     description1='Web development'
                     description2='Dynamic Programming'
                     description3='Data Structure And Algorithm'
@@ -34,7 +34,7 @@ const Technologies = () => {
 
                 <Technology
                     title='Cyber Security'
-                    image='/p1.svg'
+                    image='/p3.svg'
                     description1='Hacking'
                     description2='Securing Data'
                     description3='Securing Account'

@@ -1,10 +1,13 @@
 import Hero from "@/components/Hero";
+import Internship from "@/components/Internship";
 import Introduction from "@/components/Introduction";
+import Mentorship from "@/components/Mentorship";
 import Mission from "@/components/Mission";
 import Navbar from "@/components/Navbar";
 import Partnership from "@/components/Partnership";
 import Services from "@/components/Services";
 import Technologies from "@/components/Technologies";
+import Testimonials from "@/components/Testimonials";
 // import Experience from "@/components/Partnership";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -17,10 +20,12 @@ export default function Home() {
       <Partnership />
       {/* <Experience /> */}
       <Introduction />
-
-      <Services />
+      <Internship />
+      {/* <Services /> */}
       <Technologies />
+      <Mentorship />
       <Mission />
+      <Testimonials />
     </div>
   );
 }
