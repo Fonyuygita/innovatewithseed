@@ -1,3 +1,4 @@
+import Faqs from "@/components/Faqs";
 import Hero from "@/components/Hero";
 import Internship from "@/components/Internship";
 import Introduction from "@/components/Introduction";
@@ -26,6 +27,7 @@ export default function Home() {
       <Mentorship />
       <Mission />
       <Testimonials />
+      <Faqs />
     </div>
   );
 }

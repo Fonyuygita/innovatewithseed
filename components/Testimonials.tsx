@@ -33,33 +33,160 @@ const Testimonials = () => {
 
       {/* testimonials here */}
 
-      <div className="grid grid-cols-2 items-center justify-center w-full px-9 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-full px-9 gap-8 sm:p-5">
         <div className="w-full  h-[230px] card-wrapper">
-          <div className="card-content"></div>
-        </div>
-        <div className="w-full  h-[230px] card-wrapper">
-          <div className="card-content"></div>
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
         </div>
 
         <div className="w-full  h-[230px] card-wrapper">
-          <div className="card-content"></div>
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
         </div>
 
         <div className="w-full  h-[230px] card-wrapper">
-          <div className="card-content"></div>
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
         </div>
 
         <div className="w-full  h-[230px] card-wrapper">
-          <div className="card-content"></div>
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
         </div>
 
         <div className="w-full  h-[230px] card-wrapper">
-          <div className="card-content"></div>
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
         </div>
 
         <div className="w-full  h-[230px] card-wrapper">
-          <div className="card-content"></div>
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
         </div>
+
+        <div className="w-full  h-[230px] card-wrapper">
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
+        </div>
+
+        <div className="w-full  h-[230px] card-wrapper">
+          <div className="card-content flex flex-col items-center  gap-5">
+            {/* top section */}
+            <div className="flex justify-between items-center w-full px-6 mt-3">
+              <h3 className="text-light-200 text-xl">Fonyuy Gita</h3>
+              <Image src="/user.png" className='w-9 h-9 rounded-full border border-primary-100' alt='user' width={50} height={50} />
+            </div>
+            <div className="flex  justify-between w-full items-center px-3">
+
+              <Image src="/star.svg" width={150} height={60} alt='stars' className='w-[120px] h-[60px] ' />
+              {/* <h4>student</h4> */}
+            </div>
+            <p className='w-full text-sm text-[#beb7b7] px-6'>
+              {"SEED's"} 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers
+            </p>
+          </div>
+
+        </div>
+
+
 
       </div>
     </section>
