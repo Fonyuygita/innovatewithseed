@@ -22,7 +22,7 @@ const Navbar = () => {
     return (
         <div className='bg-[#fff] w-[100%] mr-auto ml-auto px-[5%] h-[110px] fixed top-0 left-0 z-30'>
             <nav className='flex justify-between items-center p-2 '>
-                <div className='w-22 h-23 '>
+                <div className='w-22 h-23  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950 to-blue-900 rounded-full border border-primary-100'>
                     <Image
                         src="/seedLogo.png"
                         width={100}

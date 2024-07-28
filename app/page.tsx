@@ -7,6 +7,7 @@ import Mentorship from "@/components/Mentorship";
 import Mission from "@/components/Mission";
 import Navbar from "@/components/Navbar";
 import Partnership from "@/components/Partnership";
+import RecentBlogs from "@/components/RecentBlogs";
 import Services from "@/components/Services";
 import Technologies from "@/components/Technologies";
 import Testimonials from "@/components/Testimonials";
@@ -27,6 +28,7 @@ export default function Home() {
       <Technologies />
       <Mentorship />
       <Mission />
+      <RecentBlogs />
       <Testimonials />
       <Faqs />
       <Footer />
