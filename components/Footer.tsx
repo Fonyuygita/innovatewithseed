@@ -19,7 +19,7 @@ const Footer = () => {
                         <FaWhatsapp className='text-primary-100 h-12 w-12 border border-primary-100 p-2' />
 
                         <div className="flex flex-col gap-3">
-                            <h1 className='text-sm text-primary'>Call Now</h1>
+                            <h1 className='text-sm text-primary-100'>Call Now</h1>
                             <p className="text-white font-bold text-lg ">(+237) 674 567 789</p>
                         </div>
                     </div>
@@ -28,7 +28,7 @@ const Footer = () => {
                         <FaMessage className='text-primary-100 h-12 w-12 border border-primary-100 p-2' />
 
                         <div className="flex flex-col gap-3">
-                            <h1 className='text-sm text-primary'>Email Administration</h1>
+                            <h1 className='text-sm text-primary-100'>Email Administration</h1>
                             <p className="text-white font-bold text-lg ">seed@email.com</p>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const Footer = () => {
                         <FaShareNodes className='text-primary-100 h-12 w-12 border border-primary-100 p-2' />
 
                         <div className="flex flex-col gap-3">
-                            <h1 className='text-sm text-primary'>Follow us on social media</h1>
+                            <h1 className='text-sm text-primary-100'>Follow us on social media</h1>
                             <p className="text-white font-bold text-lg ">(+237) 674 567 789</p>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ const Footer = () => {
 
             </div>
             <div className="w-full bg-white h-[130px] mt-3 flex items-center justify-center">
-                <FaUber className='bg-violet-950 h-12 w-12' />
+                <FaUber className='bg-violet-950 h-12 w-12 text-primary-100' />
                 <p className="text-primary-100 text-lg">Fonyuy Gita</p>
             </div>
         </div>

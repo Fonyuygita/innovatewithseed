@@ -18,8 +18,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-950 min-h-screen text-red-400 overflow-x-hidden">
-      <Navbar />
+    <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900 to-blue-800 min-h-screen text-red-400 overflow-x-hidden">
+
       <Hero />
       <Partnership />
       {/* <Experience /> */}
@@ -32,7 +32,7 @@ export default function Home() {
       <RecentBlogs />
       <Testimonials />
       <Faqs />
-      <Footer />
+
     </div>
   );
 }

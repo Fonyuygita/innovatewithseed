@@ -31,7 +31,7 @@
 
   /* ===== UTILITIES */
   .card-wrapper {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-blue-900 to-blue-950;
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-blue-800 to-blue-500;
   }
 
   /* Gradient */
@@ -49,7 +49,7 @@
 
   /* Body */
   .card-content {
-    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-blue-900 to-blue-950;
+    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-blue-800 to-blue-500;
   }
   
   .clip-text {

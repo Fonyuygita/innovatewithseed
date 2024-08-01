@@ -18,16 +18,7 @@ const items = [
     { icon: <FaShieldAlt />, text: 'Integrity' },
     { icon: <FaLaptopCode />, text: 'Quality Code' },
     { icon: <FaBookOpen />, text: 'Continuous Learning' },
-    { icon: <FaShieldAlt />, text: 'Integrity' },
-    { icon: <FaLaptopCode />, text: 'Quality Code' },
-    { icon: <FaBookOpen />, text: 'Continuous Learning' },
-    { icon: <FaHandshake />, text: 'Collaboration' },
-    { icon: <FaBullseye />, text: 'Focus' },
-    { icon: <FaRocket />, text: 'Ambition' },
-    { icon: <FaHeart />, text: 'Passion' },
-    { icon: <FaGlobe />, text: 'Global Impact' },
-    { icon: <FaBrain />, text: 'Creativity' },
-    { icon: <FaTools />, text: 'Technical Expertise' },
+
     // Add more items as needed
 ];
 
@@ -58,7 +49,7 @@ const Partnership = () => {
     const handleMouseLeave = () => setIsPaused(false);
 
     return (
-        <div className="overflow-hidden w-full flex items-center justify-center h-[140px] bg-white shadow-2xl">
+        <div className="overflow-hidden w-full flex items-center justify-center h-[240px] bg-white shadow-2xl gap-[5rem]">
             <motion.div
                 className="flex"
                 animate={controls}
@@ -67,7 +58,7 @@ const Partnership = () => {
                 {items.concat(items).map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col items-center justify-center w-24 h-24 m-2  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 p-6 text-white rounded-lg shadow-2xl"
+                        className=" w-[12rem] h-[12rem] flex flex-col items-center justify-center  m-2  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 p-6 text-white rounded-lg shadow-2xl px-8"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >

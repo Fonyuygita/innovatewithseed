@@ -8,7 +8,7 @@ const Testimonials = () => {
   return (
 
 
-    <section className="w-full bg-blue-950  py-[6rem] overflow-hidden">
+    <section className="w-full py-[6rem] overflow-hidden">
       <h1 className='text-[1.6rem] md:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-light-200 '>Testimonials{" "}<span className='text-primary-100 capitalize'>From{" "}</span>Studentss At{" "}<span className='text-primary-100'>SEED</span></h1>
 
       <div className="flex  md:flex-row flex-col items-center justify-between px-9 w-full my-[3rem]">
