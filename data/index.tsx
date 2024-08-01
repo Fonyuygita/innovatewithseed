@@ -1,4 +1,13 @@
-import { FaCode } from "react-icons/fa";
+
+import { ReactNode } from 'react';
+import { FaHandshake, FaProjectDiagram, FaLightbulb, FaRocket, FaUsers, FaChartLine, FaCogs, FaLaptopCode, FaMobileAlt, FaShieldAlt } from 'react-icons/fa';
+
+export interface Offering {
+  title: string;
+  description: string;
+  icon: ReactNode;
+}
+
 
 interface MentorshipProps {
   id?: number;
@@ -87,3 +96,33 @@ const MentorshipData: MentorshipProps[] = [
     portfolio: "",
   },
 ];
+
+
+// types.ts
+export interface Offering {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+
+
+// types.ts
+
+
+export const offerings: Offering[] = [
+  { title: 'Partnership', description: 'Collaborate with industry leaders.', icon: <FaHandshake /> },
+  { title: 'Real-Life Projects', description: 'Work on real-world projects.', icon: <FaProjectDiagram /> },
+  { title: 'Innovation', description: 'Drive innovation and creativity.', icon: <FaLightbulb /> },
+  { title: 'Growth', description: 'Grow with new technology.', icon: <FaRocket /> },
+  { title: 'Teamwork', description: 'Work with a dynamic team.', icon: <FaUsers /> },
+  { title: 'Analytics', description: 'Leverage data and analytics.', icon: <FaChartLine /> },
+  { title: 'Engineering', description: 'Engineering excellence.', icon: <FaCogs /> },
+  { title: 'Development', description: 'Cutting-edge development.', icon: <FaLaptopCode /> },
+  { title: 'Mobile Solutions', description: 'Innovative mobile solutions.', icon: <FaMobileAlt /> },
+  { title: 'Security', description: 'Top-notch security.', icon: <FaShieldAlt /> },
+];
+
+
+
+

@@ -13,7 +13,7 @@ const Footer = () => {
 
                 {/* top section */}
 
-                <div className="flex justify-between items-center gap-[8rem] mt-9">
+                <div className="flex md:flex-row flex-col justify-between items-center gap-[8rem] mt-9">
                     {/* social media icon */}
                     <div className="flex items-center gap-4">
                         <FaWhatsapp className='text-primary-100 h-12 w-12 border border-primary-100 p-2' />
@@ -49,7 +49,7 @@ const Footer = () => {
 
 
                 {/* middle section */}
-                <div className="flex justify-between w-full gap-[8rem]">
+                <div className="flex justify-between w-full flex-col md:flex-row gap-[8rem]">
                     <div className="flex flex-col gap-5 items-center">
                         <div className='flex flex-col items-center '>
                             <Image src="/seedLogo.png" alt='seed' width={150} height={150} className='object-contain' />
@@ -94,7 +94,7 @@ const Footer = () => {
                 {/* bottom section */}
             </div>
             <div className="my-3 w-full h-[1px]  bg-primary-100"></div>
-            <div className="flex w-[83%] mx-auto flex-between px-2" py-5>
+            <div className=" flex  w-[83%] mx-auto flex-between px-[1px]" py-5>
                 <h5 className='text-sm text-[#999] font-sans '>Copyright 2024 Seed. All Rights Reserved.</h5>
 
                 <h5 className='text-sm text-[#999] font-sans '>Design by Seed</h5>

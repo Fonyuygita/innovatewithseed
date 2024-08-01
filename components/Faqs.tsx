@@ -4,12 +4,12 @@ import { FaExpand } from 'react-icons/fa'
 const Faqs = () => {
     return (
         <section className="w-full bg-blue-950  py-[6rem] overflow-hidden">
-            <h1 className='text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-light-200 '>Frequently{" "}<span className='text-primary-100 mb-6 capitalize'>Ask{" "}</span>Questions{" "}<span className='text-primary-100'>.</span></h1>
+            <h1 className='text-[1.6rem] mg:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-light-200 '>Frequently{" "}<span className='text-primary-100 mb-6 capitalize'>Ask{" "}</span>Questions{" "}<span className='text-primary-100'>.</span></h1>
 
-            <div className="grid grid-cols-1 items-center justify-center w-[80vw] px-9 gap-8 mx-auto">
+            <div className="grid grid-cols-1 items-center justify-center w-[80vw] px-[1px] md:px-9 gap-8 mx-auto">
                 <div className="w-full  h-[90px] card-wrapper">
                     <div className="card-content w-full flex items-center justify-between px-4">
-                        <p className="w-full text-[#c7bfbf] ">
+                        <p className="w-full text-[#c7bfbf] md:text-inherit text-sm ">
                             What is {"SEED's"} primary focus as a tech company?
                         </p>
                         <FaExpand color='#FFF' className='cursor-pointer' />

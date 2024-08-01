@@ -6,6 +6,7 @@ import Introduction from "@/components/Introduction";
 import Mentorship from "@/components/Mentorship";
 import Mission from "@/components/Mission";
 import Navbar from "@/components/Navbar";
+import Offers from "@/components/Offers";
 import Partnership from "@/components/Partnership";
 import RecentBlogs from "@/components/RecentBlogs";
 import Services from "@/components/Services";
@@ -23,7 +24,7 @@ export default function Home() {
       <Partnership />
       {/* <Experience /> */}
       <Introduction />
-      <Internship />
+
       {/* <Services /> */}
       <Technologies />
       <Mentorship />

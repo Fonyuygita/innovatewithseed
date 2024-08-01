@@ -5,15 +5,15 @@ import { FaProjectDiagram } from 'react-icons/fa'
 const Mentorship = () => {
     return (
         <section className="w-full   py-[3rem] overflow-hidden  items-center  gap-6 flex-col">
-            <h1 className='text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-light-200 '>Get <span className='text-primary-100 capitalize'>Mentored{" "}</span>By The {" "}<span className='text-primary-100'>Best</span></h1>
-            <div className="h-[350px] w-[70%] mx-auto bg-blue-950">
+            <h1 className='text-[1.6rem] md:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-light-200 '>Get <span className='text-primary-100 capitalize'>Mentored{" "}</span>By The {" "}<span className='text-primary-100'>Best</span></h1>
+            <div className="h-[350px] w-screen md:w-[80%] lg:w-[70%] mx-auto bg-blue-950">
                 <Image src="/m1.svg" alt='banner' height={700} width={500} className='object-cover w-[990px] h-[300px] mx-auto ' />
 
 
 
             </div>
 
-            <div className="card-wrapper h-[350px] w-[70%] mx-auto">
+            <div className="card-wrapper min-h-[300px] md:h-[350px] w-[89%] px-3 md:w-[70%] mx-auto mt-3">
                 <div className="card-content flex items-center justify-center text-xs">
                     <div className="max-w-[100%] text-center flex items-center flex-col gap-4">
                         <div className="w-24 h-24 bg-primary-100 text-white rounded-full flex items-center justify-center  border-primary-100">

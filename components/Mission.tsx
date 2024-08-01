@@ -4,15 +4,15 @@ import { FaComputer } from 'react-icons/fa6'
 
 const Mission = () => {
     return (
-        <section className="mt-[12rem]">
+        <section className="mt-[12rem] w-full min-h-screen">
             <h1 className="heading text-white -[70%] my-4">
                 Our   {' '}
                 <span className="text-primary-100">Mission</span>
             </h1>
 
 
-            <div className="flex flex-wrap  h-[50vh] w-[100vw] flex-col md:flex-row  items-center justify-center bg-blue-950 text-white shadow-lg gap-5 slider slide-in-from-left-7">
-                <div className="card-wrapper h-[300px] w-[300px]">
+            <div className="w-full  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-5  bg-blue-950 text-white shadow-lg gap-5 py-4 my-6">
+                <div className="card-wrapper h-[300px] ">
                     <div className="card-content flex items-center justify-center text-xs">
                         <div className="max-w-[100%] text-center flex items-center flex-col gap-4">
                             <div className="w-24 h-24 bg-blue-500 text-white rounded-full flex items-center justify-center border border-primary-100">
@@ -27,7 +27,7 @@ const Mission = () => {
                     </div>
                 </div>
 
-                <div className="card-wrapper h-[300px] w-[300px]">
+                <div className="card-wrapper h-[300px] ">
                     <div className="card-content flex items-center justify-center text-xs">
                         <div className="max-w-[100%] text-center flex items-center flex-col gap-4">
                             <div className="w-24 h-24 bg-primary-100 text-white rounded-full flex items-center justify-center  border-primary-100">
@@ -42,7 +42,7 @@ const Mission = () => {
                     </div>
                 </div>
 
-                <div className="card-wrapper h-[300px] w-[300px]">
+                <div className="card-wrapper h-[300px] ">
                     <div className="card-content flex items-center justify-center text-xs">
                         <div className="max-w-[100%] text-center flex items-center flex-col gap-4">
                             <div className="w-24 h-24 bg-blue-500 text-white rounded-full flex items-center justify-center border border-primary-100">
@@ -56,7 +56,7 @@ const Mission = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card-wrapper h-[300px] w-[300px]">
+                <div className="card-wrapper h-[300px] ">
                     <div className="card-content flex items-center justify-center text-xs">
                         <div className="max-w-[100%] text-center flex items-center flex-col gap-4">
                             <div className="w-24 h-24 bg-primary-100 text-white rounded-full flex items-center justify-center  border-primary-100">
