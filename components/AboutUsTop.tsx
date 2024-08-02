@@ -12,13 +12,18 @@ const AboutUsTop = () => {
                 >
                     About Us
                 </motion.h1>
+                <p className='w-[30%] text-gray-600 text-sm'>
+                    SEED, were everything is grown
+                </p>
+
+                <div className="w-full h-[1px] bg-primary-100 my-[7rem]"></div>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-lg mb-8 text-dark-400"
+                    className="text-lg mb-8 text-gray-700 w-full my-3"
                 >
-                    SEED: A software and technology company developed to help kids and young people interested in tech grow. Founded by Cheko Yohane, Fonyuy Gita, and Fien Dora, SEED aims to train and empower young lads who want to grow and mature in tech. SEED stands for Skills Enhancement and Empowerment through Digitalization.
+                    SEED, A software and technology company developed to help kids and young people interested in tech grow. Founded by Cheko Yohane, Fonyuy Gita, and Fien Dora, SEED aims to train and empower young lads who want to grow and mature in tech. SEED stands for Skills Enhancement and Empowerment through Digitalization.
                 </motion.p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <motion.div

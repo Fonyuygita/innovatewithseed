@@ -2,18 +2,19 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import PlayIcon from './PlayIcon';
 
-
 const videos = [
-    { url: 'https://www.youtube.com/embed/xyz1', thumbnail: '/t1.jpg', title: 'Video 1' },
-    { url: 'https://www.youtube.com/embed/xyz2', thumbnail: '/t2.jpg', title: 'Video 2' },
-    { url: 'https://www.youtube.com/embed/xyz3', thumbnail: '/t3.jpg', title: 'Video 3' },
+    { url: 'https://jumpshare.com/s/P8SbgFzW2WNbR3h4Z8r7', thumbnail: '/t1.jpg', title: 'Video 1' },
+    { url: 'https://youtu.be/OcL932W6E1w?si=epysX07SclPZGo40', thumbnail: '/t2.jpg', title: 'Video 2' },
+    { url: 'https://www.youtube.com/embed/87m19xZ--BE', thumbnail: '/t3.jpg', title: 'Video 3' },
     { url: 'https://www.youtube.com/embed/xyz1', thumbnail: '/t1.jpg', title: 'Video 1' },
     { url: 'https://www.youtube.com/embed/xyz2', thumbnail: '/t2.jpg', title: 'Video 2' },
     { url: 'https://www.youtube.com/embed/xyz3', thumbnail: '/t3.jpg', title: 'Video 3' },
     // Add more videos as needed
 ];
+
 
 const VideoGrid: React.FC = () => {
     const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -24,13 +25,13 @@ const VideoGrid: React.FC = () => {
         setTimeout(() => {
             setSelectedVideo(url);
             setIsAnimating(false);
-        }, 4000);
+        }, 100);
     };
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4 overflow-hidden">
             <h2 className="text-2xl font-bold mb-4">Our Recent Activities</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 overflow-hidden">
                 {videos.map((video, index) => (
                     <motion.div
                         key={index}
@@ -41,7 +42,7 @@ const VideoGrid: React.FC = () => {
                         transition={{ duration: 0.5 }}
                         onClick={() => handleClick(video.url)}
                     >
-                        <img src={video.thumbnail} alt={video.title} className="w-full h-auto" />
+                        <Image src={video.thumbnail} alt={video.title} layout="responsive" width={16} height={9} />
                         <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2">
                             {video.title}
                         </div>

@@ -29,7 +29,7 @@ const Introduction = () => {
 
     return (
         <section ref={ref} className="mt-[8rem] flex flex-col md:flex-row justify-between gap-[7rem] px-[5rem] mb-[2rem] items-center">
-            <div className="md:flex hidden w-[800px] h-[400px] px-[5rem] pt-[4rem] absolute top-1 left-[-23px] bg-[radial-gradient(ellipse_at_top, _var(--tw-gradient-stops))] from-blue-950 to-blue-800 -z-1 pl-9 rounded-2xl shadow-2xl"></div>
+            <div className="md:flex hidden w-[800px] h-[400px] px-[5rem] pt-[4rem] absolute top-1 left-[-23px]   -z-1 pl-9 rounded-2xl shadow-2xl"></div>
 
             <motion.div
                 className="flex flex-col gap-9"

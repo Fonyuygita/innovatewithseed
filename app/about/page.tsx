@@ -7,20 +7,23 @@ import { FaFileContract, FaPlus } from 'react-icons/fa'
 import CustomButton from '@/components/CustomButton'
 import AboutUsTop from '@/components/AboutUsTop'
 import VideoGrid from '@/components/Videos'
+import CountUpNumber from '@/components/CountUp'
 const page = () => {
     return (
         <section className="w-full flex flex-col items-center justify-center min-h-screen">
 
             <AboutUsTop />
 
-            <div className='flex items-center justify-between min-h-screen w-full px-4'>
+            <div className='flex items-center justify-between min-h-screen w-full px-4 md:flex-row flex-col'>
                 {/* image boc */}
                 <div className="w-full h-[25rem] shadow=2xl rounded-xl relative">
                     <Image src="/bootcamps.jpg" alt='about' width={1000} height={1000} className='w-full h-[20rem] px-[6rem]' />
                     <div className="absolute bottom-[2rem] left-[40%] bg-primary-100 shadow-2xl  h-[100px] w-[100px] rounded-md flex items-center justify-center flex-col ">
-                        <h2 className="text-blue-95 text-lg font-extrabold flex gap-3 items-center justify-center text-center">500 <span className='text-white rounded-full'>
-                            <FaPlus />
-                        </span></h2>
+                        <h2 className="text-blue-95 text-lg font-extrabold flex gap-3 items-center justify-center text-center">
+                            <CountUpNumber />
+                            <span className='text-white rounded-full'>
+                                <FaPlus />
+                            </span></h2>
                         <p className="text-blue-950 my-4 text-sm">Students</p>
                     </div>
                 </div>
