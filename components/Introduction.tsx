@@ -39,7 +39,7 @@ const Introduction = () => {
                 transition={{ duration: 0.5 }}
             >
                 <motion.h1
-                    className="text-2xl md:text-5xl text-white font-extrabold mt-3"
+                    className="text-2xl md:text-5xl text-gray-900 font-extrabold mt-3"
                     initial="hidden"
                     animate={controls}
                     variants={variants}
@@ -49,7 +49,7 @@ const Introduction = () => {
                 </motion.h1>
 
                 <motion.p
-                    className="md:text-lg text-sm font-sans text-white w-[90%] md:w-[60%]"
+                    className="md:text-lg text-sm font-sans text-gray-800 w-[90%] md:w-[60%]"
                     initial="hidden"
                     animate={controls}
                     variants={variants}
@@ -79,7 +79,7 @@ const Introduction = () => {
                 variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
                 transition={{ duration: 0.5, delay: 0.8 }}
             >
-                <div className="absolute bg-blue-800 w-[340px] h-[340px] rounded-full top-9 left-0"></div>
+                <div className="absolute bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-100 to-blue w-[340px] h-[340px] rounded-full top-9 left-0"></div>
                 <Image
                     src="/laptop.png"
                     alt="intro_img"

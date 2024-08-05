@@ -8,6 +8,7 @@ import CustomButton from '@/components/CustomButton'
 import AboutUsTop from '@/components/AboutUsTop'
 import VideoGrid from '@/components/Videos'
 import CountUpNumber from '@/components/CountUp'
+import FounderSection from '@/components/Founders'
 const page = () => {
     return (
         <section className="w-full flex flex-col items-center justify-center min-h-screen">
@@ -44,7 +45,7 @@ const page = () => {
 
 
                     <motion.p
-                        className='text-[18px] md:text-[1.4rem] my-6 font-sans line-clamp-5  text-left w-[68%] mx-auto  '
+                        className='text-[18px] md:text-[1.4rem] my-6 font-sans line-clamp-5 text-gray-800  text-left w-[68%] mx-auto  '
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -53,14 +54,7 @@ const page = () => {
 
                     </motion.p>
 
-                    <motion.button
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className='p-4 w-[50%] items-start flex bg-primary-100 text-gray-100 mx-auto'
-                    >
-                        About Us
-                    </motion.button>
+
 
 
                 </div>
@@ -68,6 +62,7 @@ const page = () => {
             </div>
 
             <VideoGrid />
+            <FounderSection />
         </section>
     )
 }

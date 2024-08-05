@@ -58,11 +58,11 @@ const Partnership = () => {
                 {items.concat(items).map((item, index) => (
                     <div
                         key={index}
-                        className=" w-[12rem] h-[12rem] flex flex-col items-center justify-center  m-2  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 p-6 text-white rounded-lg shadow-2xl px-8"
+                        className=" w-[12rem] h-[12rem] flex flex-col items-center justify-center  m-2  bg-primary-100 p-6 text-white rounded-lg shadow-2xl px-8"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <div className="text-4xl text-primary-100">{item.icon}</div>
+                        <div className="text-4xl text-light-200">{item.icon}</div>
                         <p className="mt-2 text-center text-sm">{item.text}</p>
                     </div>
                 ))}
