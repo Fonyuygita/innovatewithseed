@@ -27,7 +27,7 @@ const ServicesBody = () => {
                         transition={{ duration: 0.5 }}
                         className="p-6 bg-gray-100 rounded-lg shadow-lg"
                     >
-                        <service.icon className="text-4xl mb-4 text-blue-500" />
+                        <service.icon className="text-4xl mb-4 text-primary-100" />
                         <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                         <p>{service.description}</p>
                     </motion.div>

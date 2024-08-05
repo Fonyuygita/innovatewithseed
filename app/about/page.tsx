@@ -10,6 +10,7 @@ import VideoGrid from '@/components/Videos'
 import CountUpNumber from '@/components/CountUp'
 import FounderSection from '@/components/Founders'
 import DynamicHero from '@/components/DynamicHero'
+import ContactUs from '@/components/ContactUs'
 const page = () => {
     return (
         <section className="w-full flex flex-col items-center justify-center min-h-screen">
@@ -68,6 +69,9 @@ const page = () => {
 
             <VideoGrid />
             <FounderSection />
+            <div className="min-h-screen flex items-center justify-center bg-gray-100 w-full">
+                <ContactUs />
+            </div>
         </section>
     )
 }

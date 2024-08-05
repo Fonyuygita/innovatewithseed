@@ -1,3 +1,4 @@
+import ContactUs from '@/components/ContactUs'
 import DynamicHero from '@/components/DynamicHero'
 import ServicesBody from '@/components/ServicesBody'
 // import ServicesHero from '@/components/ServicesHero'
@@ -11,6 +12,9 @@ const page = () => {
                 description="We offer a wide range of services to help your business thrive in the digital age. From web development to AI solutions, our team of experts is here to support you every step of the way."
             />
             <ServicesBody />
+            <div className="min-h-screen flex items-center justify-center bg-gray-100 w-full">
+                <ContactUs />
+            </div>
         </section>
     )
 }
