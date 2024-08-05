@@ -25,13 +25,47 @@
     /* background: #1e2238; */
     background: transparent;
   }
+
+    /* styles.module.css */
+  
+    .hero-container {
+      background-image: url('/services.png');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .hero-content {
+      text-align: center;
+      color: #fff;
+    }
+  
+    .hero-header {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .hero-divider {
+      width: 50px;
+      height: 2px;
+      background-color: #fff;
+      margin: 0 auto 1rem;
+    }
+  
+    .hero-description {
+      font-size: 1.2rem;
+    }
 }
 
 @layer utilities {
 
   /* ===== UTILITIES */
   .card-wrapper {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-blue-800 to-blue-500;
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-gray-200 to-gray-50;
   }
 
   /* Gradient */
@@ -49,7 +83,7 @@
 
   /* Body */
   .card-content {
-    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-blue-800 to-blue-500;
+    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-gray-300 to-blue-100;
   }
   
   .clip-text {
