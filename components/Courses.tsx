@@ -26,24 +26,41 @@ const courses = [
     // Add more courses here
 ];
 
-const CourseDetail = () => {
-    const router = useRouter();
-    const { id } = useParams();
-    console.log(id);
-    const course = courses.find(course => course.id === parseInt(id as string));
+const CourseDetail = ({ id }: any) => {
 
-    if (!course) return <p>Course not found</p>;
 
     return (
-        <div className="container mx-auto p-4">
-            <Link href="/courses">
-                <a className="text-blue-500 mb-4 inline-block">Back to courses</a>
-            </Link>
-            <Image src={course.image} alt={course.title} width={800} height={600} className="rounded-lg" />
-            <h1 className="text-3xl font-bold mt-4">{course.title}</h1>
-            <p className="text-gray-700 mt-2">{course.description}</p>
-            <button className="bg-blue-500 text-white p-2 rounded mt-4">Register</button>
-        </div>
+
+        <section className="w-full px-3 min-h-screen bg-gray-300">
+
+            <h1 className='text-[1.6rem] md:text-[3.4rem] my-8 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800 '>Get Enrolled{" "}<span className='text-primary-100 capitalize'>{" "}</span>In Our{" "}<span className='text-primary-100'>Courses</span></h1>
+
+
+            <div className="container gap-3 mx-auto w-full  md:w-[80%] p-4  px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {courses.map(item => (
+                    <Link href={`courses/${123}`} key={item.id} className="flex-col items-center flex-center md: gap-5 bg-white shadow-2xl py-4 ">
+                        {/* image box */}
+                        <div className="px-2 w-full h-[12rem]">
+                            <Image src={item.image} alt='image her' width={500} height={500} className='w-full h-full p-2' />
+                        </div>
+
+                        <h3 className="text-gray-800">{item.title}</h3>
+
+                        {/* brief description */}
+                        <p className='text-sm w-full px-2 text-gray-700'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, quisquam. Ipsa deleniti labore quas totam voluptatem tempore, officiis qui. Non id ducimus ipsa?</p>
+
+
+
+                    </Link>
+
+                ))}
+
+
+
+            </div>
+        </section>
+
+
     );
 };
 

@@ -5,6 +5,10 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import Link from "next/link"
 import { usePathname } from 'next/navigation';
+import { ClerkLoading, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
+
 type MenuLink = {
     title: string;
     url: string;
@@ -88,6 +92,15 @@ const listItemVariants = {
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const pathname = usePathname();
+    const { userId } = useAuth();
+    const { isLoaded, isSignedIn, user } = useUser();
+
+
+    if (!isLoaded || !isSignedIn) {
+        return null;
+    }
+
+
     return (
         <div className='bg-[#fff] w-[100%] mr-auto ml-auto px-[5%] h-[110px] fixed top-0 left-0 z-30'>
             <nav className='flex justify-between items-center p-2 h-full'>
@@ -112,9 +125,23 @@ const Navbar = () => {
                 </div>
 
                 {/* search_bar and register cta */}
+
+
                 <div className="flex items-center justify-center gap-x-10">
 
-                    <button className='text-lg py-2  items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 text-white md:flex hidden rounded-3xl px-8  hover:scale-110  transition p-3'>Login</button>
+                    <ClerkLoading>
+                        <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-500 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white" />
+                    </ClerkLoading>
+                    <SignedIn>
+
+                        <Link href="/">
+                            <UserButton afterSignOutUrl="/" />
+                        </Link>
+                    </SignedIn>
+
+                    <SignedOut>
+                        <Link href="/sign-in" className='text-lg py-2  items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 text-white md:flex hidden rounded-3xl px-8  hover:scale-110  transition p-3'>Login</Link>
+                    </SignedOut>
                 </div>
 
 

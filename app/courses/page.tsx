@@ -4,7 +4,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <section className='w-full bg-gray-300 min-h-screen'>
+        <section className='w-full bg-gray-300 min-h-screen overflow-hidden'>
             <DynamicHero
                 title="We Offer Courses On"
                 description="We offer a wide range of services to help your business thrive in the digital age. From web development to AI solutions, our team of experts is here to support you every step of the way."

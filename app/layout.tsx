@@ -4,6 +4,9 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+// import Provider from "@/components/ClerkProvider";
+import { ClerkProvider } from "@clerk/nextjs";
+// import { ClerkProvider } from "@clerk/nextjs";
 // import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = Plus_Jakarta_Sans({
@@ -24,13 +27,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn('min-h-screen bg-light-300 font-sans antialiased', fontSans.variable)}>
-        <Navbar />
-        {children}
-        <Footer />
+    <ClerkProvider>
+      <html lang="en">
 
-      </body>
-    </html>
+        <body className={cn('min-h-screen bg-light-300 font-sans antialiased', fontSans.variable)}>
+          <Navbar />
+          {children}
+          <Footer />
+
+        </body>
+
+      </html>
+    </ClerkProvider>
+
   );
 }

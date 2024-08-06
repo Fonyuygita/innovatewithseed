@@ -8,7 +8,7 @@ import PrimaryBtn from './PrimaryBtn'
 
 const Footer = () => {
     return (
-        <div className="w-full bg-blue-900 px-3 min-h-[540px] mt-[3rem]">
+        <div className="w-full bg-gray-200 px-3 min-h-[540px] mt-[3rem]">
             <div className="flex flex-col items-center w-[90%] mx-auto p-3">
 
                 {/* top section */}
