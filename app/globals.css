@@ -59,6 +59,44 @@
     .hero-description {
       font-size: 1.2rem;
     }
+
+
+/* Swiper JS needs same classes that's why we can't use modules */
+.swiper {
+  width: 30rem;
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+}
+
+.swiper-wrapper {
+  padding: 3rem 0 6rem;
+}
+
+.swiper-slide {
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  cursor: default;
+  background: var(--color-gray-0);
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--color-primary);
+}
+
+
+main.dark .swiper-pagination .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--color-primary);
+}
 }
 
 @layer utilities {
