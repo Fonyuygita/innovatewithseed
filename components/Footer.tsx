@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
-import { FaShare, FaSubscript, FaUber, FaWhatsapp } from 'react-icons/fa'
-import { FaMessage, FaShareNodes } from 'react-icons/fa6'
+import { FaFacebook, FaInstagram, FaLinkedin, FaShare, FaSubscript, FaUber, FaWhatsapp } from 'react-icons/fa'
+import { FaMessage, FaShareNodes, FaX, FaXTwitter } from 'react-icons/fa6'
 import CustomButton from './CustomButton'
 import Link from 'next/link'
 import PrimaryBtn from './PrimaryBtn'
 
 const Footer = () => {
     return (
-        <div className="w-full bg-gray-200 px-3 min-h-[540px] mt-[3rem]">
+        <div className="w-full bg-white shadow-2xl px-3 min-h-[540px] mt-[3rem]">
             <div className="flex flex-col items-center w-[90%] mx-auto p-3">
 
                 {/* top section */}
@@ -20,7 +20,7 @@ const Footer = () => {
 
                         <div className="flex flex-col gap-3">
                             <h1 className='text-sm text-primary-100'>Call Now</h1>
-                            <p className="text-white font-bold text-lg ">(+237) 674 567 789</p>
+                            <p className="text-gray-700 font-bold text-lg ">(+237) 674 567 789</p>
                         </div>
                     </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
 
                         <div className="flex flex-col gap-3">
                             <h1 className='text-sm text-primary-100'>Email Administration</h1>
-                            <p className="text-white font-bold text-lg ">seed@email.com</p>
+                            <p className="text-gray-700 font-bold text-lg ">seed@email.com</p>
                         </div>
                     </div>
 
@@ -38,14 +38,31 @@ const Footer = () => {
 
                         <div className="flex flex-col gap-3">
                             <h1 className='text-sm text-primary-100'>Follow us on social media</h1>
-                            <p className="text-white font-bold text-lg ">(+237) 674 567 789</p>
+                            <div className="flex items-center gap-3">
+                                <Link href="#">
+                                    <FaXTwitter className='text-[24px]' />
+                                </Link>
+                                <Link href="#">
+                                    <FaFacebook className='text-[24px]' />
+                                </Link>
+
+                                <Link href="#">
+                                    <FaInstagram className='text-[24px]' />
+                                </Link>
+
+                                <Link href="#">
+                                    <FaLinkedin className='text-[24px]' />
+                                </Link>
+
+
+                            </div>
                         </div>
                     </div>
 
 
                 </div>
                 {/* line */}
-                <div className="w-full h-[1px] bg-light-200 my-8"></div>
+                <div className="w-full h-[1px] bg-gray-900 my-8"></div>
 
 
                 {/* middle section */}
@@ -69,25 +86,25 @@ const Footer = () => {
 
                     {/* links here */}
 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-start gap-4">
                         <h3 className="text-primary-100 my-7">Company</h3>
                         <div className="bg-primary-100 w-[100%] h-[1px] mb-4"></div>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">About Us</Link>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Admission</Link>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Blog</Link>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Contact Us</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">About Us</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Admission</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Blog</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Contact Us</Link>
 
                     </div>
 
                     {/* links here */}
 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-left gap-4">
                         <h3 className="text-primary-100 my-7">Our Interest</h3>
                         <div className="bg-primary-100 w-[100%] h-[1px] mb-4"></div>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Web Development</Link>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Cybersecurity</Link>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Machine Learning</Link>
-                        <Link href="/about" className="text-light-200 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">App Development</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Web Development</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Cybersecurity</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Machine Learning</Link>
+                        <Link href="/about" className="text-gray-700 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">App Development</Link>
 
                     </div>
                 </div>

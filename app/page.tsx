@@ -1,4 +1,6 @@
+import ContactUs from "@/components/ContactUs";
 import Faqs from "@/components/Faqs";
+import FAQSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Internship from "@/components/Internship";
@@ -31,7 +33,8 @@ export default function Home() {
       <Mission />
       <RecentBlogs />
       <Testimonials />
-      <Faqs />
+      <FAQSection />
+      <ContactUs />
 
     </div>
   );

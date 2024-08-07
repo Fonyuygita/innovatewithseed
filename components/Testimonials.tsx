@@ -70,7 +70,7 @@ const Testimonials = () => {
           initial="hidden"
           animate={controls}
           variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
-          transition={{ duration: 0.5, delay: 0.8 }} className=" md:rounded-3xl rounded-full w-full md:h-[600px] h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] 
+          transition={{ duration: 0.6, delay: 0.7 }} className=" md:rounded-3xl rounded-full w-full md:h-[600px] h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] 
         from-gray-300 to-gray-100  shadow-xl">
           <Image src="/student.svg" alt='student' width={1000} height={1000} className='w-full md:h-[500px] h-full md:rounded-sm rounded-full object-contain' />
         </motion.div>
@@ -79,12 +79,24 @@ const Testimonials = () => {
       </div>
 
 
-      <h2 className='text-[1.6rem] md:text-[2.4rem] my-[5rem] font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800  '>There{" "}<span className='text-primary-100 capitalize'>We{" "}</span>Go👌{" "}<span className='text-primary-100'>SEED</span></h2>
+      <motion.h2
 
-      {/* testimonials here */}
-      <div className="w-[80%] mx-auto py-[4rem]">
+        initial="hidden"
+        animate={controls}
+        variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
+        transition={{ duration: 0.7, delay: 0.8 }}
+        className='text-[1.6rem] md:text-[2.4rem] my-[5rem] font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800  '>There{" "}<span className='text-primary-100 capitalize'>We{" "}</span>Go👌{" "}<span className='text-primary-100'>SEED</span></motion.h2>
+
+      { }
+      <motion.div
+        initial="hidden"
+        animate={controls}
+        variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+
+        className="w-[80%] mx-auto py-[4rem]">
         <SwipeTestimonials />
-      </div>
+      </motion.div>
     </section>
   )
 }

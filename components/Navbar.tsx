@@ -96,9 +96,7 @@ const Navbar = () => {
     const { isLoaded, isSignedIn, user } = useUser();
 
 
-    if (!isLoaded || !isSignedIn) {
-        return null;
-    }
+
 
 
     return (
@@ -132,16 +130,23 @@ const Navbar = () => {
                     <ClerkLoading>
                         <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-500 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white" />
                     </ClerkLoading>
-                    <SignedIn>
-
+                    {isSignedIn ? (
                         <Link href="/">
                             <UserButton afterSignOutUrl="/" />
                         </Link>
-                    </SignedIn>
+                    ) :
 
-                    <SignedOut>
-                        <Link href="/sign-in" className='text-lg py-2  items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 text-white md:flex hidden rounded-3xl px-8  hover:scale-110  transition p-3'>Login</Link>
-                    </SignedOut>
+                        (
+
+                            <Link href="/sign-in" className='text-lg py-2  items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 text-white md:flex hidden rounded-3xl px-8  hover:scale-110  transition p-3'>Login</Link>
+
+
+                        )
+                    }
+
+
+
+
                 </div>
 
 

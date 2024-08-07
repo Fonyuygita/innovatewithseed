@@ -1,6 +1,11 @@
-import React from 'react'
-import { FaProjectDiagram } from 'react-icons/fa'
-import { FaComputer } from 'react-icons/fa6'
+"use client"
+
+import { useAnimation } from 'framer-motion';
+import React, { useEffect } from 'react'
+
+import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion"
+import { FaRegLightbulb, FaUserFriends, FaCogs, FaChalkboardTeacher, FaGlobe, FaBriefcase, FaCode, FaUsers, FaBook } from 'react-icons/fa';
 
 interface MissionProps {
     title: string;
@@ -10,84 +15,101 @@ interface MissionProps {
 }
 
 
-const MissionData: MissionProps[] = [
-    {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
-    },
-    {
-        title: "Skill Enhancement",
-        icon: <FaProjectDiagram size={40} />,
-        description: "We enhance our students skills , by building life projects"
-    },
-
-    {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
-    },
 
 
-    {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
-    },
 
+const MissionInfo: MissionProps[] = [
     {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
-    },
-
-    {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
+        icon: <FaRegLightbulb />,
+        title: "Empowering Techies",
+        description: "To grow, nurture, and help young techies thrive in the industry."
     },
     {
-        title: "Skill Enhancement",
-        icon: <FaProjectDiagram size={40} />,
-        description: "We enhance our students skills , by building life projects"
+        icon: <FaUserFriends />,
+        title: "Real-life Solutions",
+        description: "Working on real-life solutions that impact and improve society."
     },
-
     {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
+        icon: <FaCogs />,
+        title: "Training Techies",
+        description: "Training 1000+ techies to excel in their fields and beyond."
     },
-
-
     {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
+        icon: <FaChalkboardTeacher />,
+        title: "Real-life Projects",
+        description: "Completing 100+ real-life projects that make a difference."
     },
-
     {
-        title: "Skill Enhancement",
-        icon: <FaComputer size={40} />,
-        description: "We enhance our students skills , by building life projects"
+        icon: <FaGlobe />,
+        title: "Innovative Solutions",
+        description: "Innovating ideas and technologies to drive positive change."
     },
-]
+    {
+        icon: <FaBriefcase />,
+        title: "Community Building",
+        description: "Building a strong community of tech enthusiasts and professionals."
+    },
+    {
+        icon: <FaCode />,
+        title: "Global Impact",
+        description: "Making a global impact through technology and innovation."
+    },
+    {
+        icon: <FaUsers />,
+        title: "Continuous Learning",
+        description: "Fostering a culture of continuous learning and growth."
+    },
+    {
+        icon: <FaBook />,
+        title: "Tech Excellence",
+        description: "Striving for excellence in all aspects of technology and beyond."
+    }
+];
 
 const Mission = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
+    const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
     return (
-        <section className="mt-[12rem] md:w-[80%] w-full mx-auto min-h-screen">
-            <h1 className="heading text-gray-800 -[70%] my-4">
+        <section ref={ref} className="mt-[12rem] md:w-[80%] w-full mx-auto min-h-screen">
+            <motion.h1
+                initial="hidden"
+                animate={controls}
+                variants={variants}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="heading text-gray-800 -[70%] my-4">
                 Our   {' '}
                 <span className="text-primary-100">Mission</span>
-            </h1>
+            </motion.h1>
 
 
             <div className="w-full  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-5   text-gray-700  gap-5 py-4 my-6">
-                {MissionData.map(item => (
+                {MissionInfo.map((item, index) => (
 
-                    <div className="card-wrapper h-[300px] " key={item.title}>
-                        <div className="card-content flex items-center justify-center text-xs">
+                    <motion.div
+                        initial="hidden"
+                        animate={controls}
+                        variants={variants}
+                        transition={{ duration: 0.5 * index, delay: 0.2 * index }}
+                        className="bg-white shadow-2xl h-[300px] " key={item.title}>
+                        <div className=" flex items-center justify-center text-xs">
                             <div className="max-w-[100%] text-center flex items-center flex-col gap-4">
-                                <div className="w-24 h-24  text-gray-900 rounded-full flex items-center justify-center border border-primary-100">
+                                <div className="w-24 h-24  text-primary-100 rounded-full flex items-center justify-center  text-[30px]">
                                     {item.icon}
                                 </div>
                                 <div className="flex item-center gap-4 flex-col justify-center">
@@ -97,7 +119,7 @@ const Mission = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
 
             </div>
