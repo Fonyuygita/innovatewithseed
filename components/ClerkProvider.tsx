@@ -11,7 +11,7 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <ClerkProvider
-            appearance={{
+        appearance={{
                 baseTheme: [shadesOfPurple],
             }}
 

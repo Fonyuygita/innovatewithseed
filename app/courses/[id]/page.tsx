@@ -130,21 +130,22 @@ const CoursePage = () => {
                     </div>
                 </div>
             </div>
-            <RegisterForm
-                onSubmit={handleSubmit}
-                formType="course"
-                buttonText="Enroll"
-                animationType="slide"
-                buttonClassName='w-[45%] text-white shadow-xl mx-auto px-4 py-2 bg-primary-100'
+            <div className="flex items-center justify-between bg-gray-300 min-h-screen w-full px-1">
+                <div className="w-full h-full bg-slate-100">
+                    <RegisterForm
+                        onSubmit={handleSubmit}
+                        formType="course"
+                        buttonText="Enroll"
+                        animationType="slide"
+                        buttonClassName='w-[45%] text-white shadow-xl mx-auto px-4 py-2 bg-primary-100'
 
-            />
+                    />
+                </div>
+                <div className="w-full h-full">
+                    <Image src="/services.png" alt="ima" width={1000} height={1000} className='w-full h-full object-contain' />
+                </div>
+            </div>
 
-            <RegisterForm
-                onSubmit={handleSubmit}
-                formType="internship"
-                buttonText="Apply"
-                animationType="fade"
-            />
         </section>
 
     );

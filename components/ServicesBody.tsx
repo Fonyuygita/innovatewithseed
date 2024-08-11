@@ -37,4 +37,4 @@ const ServicesBody = () => {
     );
 };
 
-export default ServicesBody;
+export default ServicesBody

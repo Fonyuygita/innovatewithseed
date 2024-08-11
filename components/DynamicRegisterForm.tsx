@@ -1,9 +1,10 @@
 "use client"
 
 // components/RegisterForm.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import CustomInput from './formInputs/CustomInput';
+import { useInView } from 'react-intersection-observer';
 
 interface RegisterFormProps {
     onSubmit: (data: any) => void;
@@ -48,6 +49,26 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
         onSubmit(formData);
     };
 
+    const controls = useAnimation();
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
+    const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
+
     const animationVariants = {
         fade: { opacity: 1, transition: { duration: animationDuration } },
         slide: { x: 0, transition: { duration: animationDuration } },
@@ -55,12 +76,20 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
 
     return (
         <motion.form
+            ref={ref}
             initial={animationType === 'fade' ? { opacity: 0 } : { x: '-100%' }}
             animate={animationVariants[animationType]}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-5 w-[90%] md:w-[70%] bg-gray-100 mx-auto items-center p-6"
+            className="flex flex-col gap-5 w-[90%]  md:w-full min-h-screen bg-gray-100  items-center   justify-center"
         >
-            <div className='lg:w-[50%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
+
+            <motion.h1
+
+                initial="hidden"
+                animate={controls}
+                variants={variants}
+                transition={{ duration: 0.5, delay: 0.2 }} className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800 '>Enroll {" "}<span className='text-primary-100 capitalize'>Now 👇{" "}</span></motion.h1>
+            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
 
                 <CustomInput
                     name='First Name'
@@ -78,7 +107,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
                 />
 
             </div>
-            <div className='flex w-[50%] items-center px-7'>
+            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
                 <CustomInput
                     name='email'
                     icon='/icons/email.svg'
@@ -87,7 +116,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
                 />
             </div>
 
-            <div className='flex w-[50%] items-center px-7'>
+            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
                 <CustomInput
                     name='phone'
                     icon='/icons/appointments.svg'
@@ -96,7 +125,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
                 />
             </div>
 
-            <div className='flex w-[50%] items-center px-7 gap-5'>
+            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
                 <CustomInput
                     name='courses'
                     icon='/icons/appointments.svg'
@@ -117,10 +146,9 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
 
             </div>
 
-            <div className='flex w-[50%] items-center px-7 gap-5'>
+            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
                 <CustomInput
-                    name='courses'
-
+                    name='platform'
                     placeholder='Select Course.'
                     type='radio'
                     options={time}
@@ -129,7 +157,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
             </div>
 
 
-            <div className='flex w-[50%] items-center px-7 gap-5'>
+            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
                 <CustomInput
                     name='message'
 

@@ -75,10 +75,10 @@ const Footer = () => {
 
                         <p className="text-light-200 w-[70%] text-left font-sans">We Are A First Class Professional IT Training Institute
                         </p>
-                        <input type="text" className='text-white px-8 py-3 outline-none border-none bg-blue-950 rounded-lg' placeholder='email' />
+                        <input type="text" className='text-white px-8 py-3 outline-none border-none bg-gray-100 rounded-lg shadow-2xl' placeholder='email......' />
                         <PrimaryBtn
                             title="Subscribe"
-                            extraStyle="min-w-[70%] md:w-[27%] border-blue-950 border"
+                            extraStyle="min-w-[70%] md:w-[27%] "
                             icon={<FaSubscript />}
                         />
 
