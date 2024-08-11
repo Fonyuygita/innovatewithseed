@@ -72,7 +72,7 @@ const MyImageGallery: React.FC = () => {
                     transition={{ duration: 0.5 }}
                     className="mt-4"
                 >
-                    <h2 className="text-xl font-bold mb-2">Variants</h2>
+                    <h2 className="text-xl font-bold mb-6  my-7">SEED Gallery</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                         {variants.map((variant, idx) => (
                             <Image

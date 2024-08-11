@@ -5,15 +5,48 @@
 import { motion } from 'framer-motion';
 
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface HeroProps {
     title: string;
     description: string;
 }
 
+const data = [
+    {
+        id: 1,
+        title: "Always fresh & always crispy & always hot",
+        image: "hero-container1.png"
+    },
+    {
+        id: 2,
+        title: "We Deliver your order wherever you are ",
+        image: "hero-container2.png"
+    },
+    {
+        id: 3,
+        title: "The bet piza to share with your family",
+        image: "hero-container3.png"
+    }
+
+
+]
+
 const DynamicHero: React.FC<HeroProps> = ({ title, description }) => {
+
+    const [currentSlide, setCurrentSlide] = useState(1);
+
+    // create useEffect to manipulate or  vhange our items
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => prev === data.length - 1 ? 0 : prev + 1)
+        }, 2000)
+        // clean interval to avoid memory leaking
+        return () => clearInterval(interval)
+    }, [])
+
     return (
-        <div className="hero-container">
+        <div className={data[currentSlide].image}>
             <div className="hero-bg"></div>
             <div className="hero-content">
                 <motion.h1
