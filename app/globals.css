@@ -32,34 +32,38 @@
       background-image: url('/services.png');
       background-size: cover;
       background-position: center;
-      height: 80vh;
+      height: 100vh;
       width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
+              background-repeat: no-repeat;
       position: relative;
+    
     }
 
             .hero-container1 {
               background-image: url('/services.png');
               background-size: cover;
               background-position: center;
-              height: 80vh;
+              height: 100vh;
               width: 100vw;
               display: flex;
               justify-content: center;
               align-items: center;
+              background-repeat: no-repeat;
               position: relative;
             }
-                .hero-container1 {
+                .hero-container2 {
                   background-image: url('/team/d4.png');
                   background-size: cover;
                   background-position: center;
-                  height: 80vh;
+                  height: 100vh;
                   width: 100vw;
                   display: flex;
                   justify-content: center;
                   align-items: center;
+              background-repeat: no-repeat;
                   position: relative;
                 }
 
@@ -67,8 +71,9 @@
               background-image: url('/team/d6.png');
               background-size: cover;
               background-position: center;
-              height: 80vh;
+              height: 100vh;
               width: 100vw;
+              background-repeat: no-repeat;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -79,13 +84,28 @@
                               background-image: url('/team/d1.png');
                               background-size: cover;
                               background-position: center;
-                              height: 80vh;
+              background-repeat: no-repeat;
+                              height: 100vh;
                               width: 100vw;
                               display: flex;
                               justify-content: center;
                               align-items: center;
                               position: relative;
                             }
+
+                    .hero-container4 {
+                      background-image: url('/camera.png');
+                      background-size: cover;
+                      background-position: center;
+                      height: 100vh;
+                      width: 100vw;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background-repeat: no-repeat;
+                      position: relative;
+          
+                    }
             
  .hero-bg{
   width: 100%;

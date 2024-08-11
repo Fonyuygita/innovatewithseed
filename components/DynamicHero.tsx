@@ -16,17 +16,29 @@ const data = [
     {
         id: 1,
         title: "Always fresh & always crispy & always hot",
-        image: "hero-container1.png"
+        image: "hero-container1"
     },
     {
         id: 2,
         title: "We Deliver your order wherever you are ",
-        image: "hero-container2.png"
+        image: "hero-container2"
     },
     {
         id: 3,
         title: "The bet piza to share with your family",
-        image: "hero-container3.png"
+        image: "hero-container3"
+    },
+
+    {
+        id: 4,
+        title: "The bet piza to share with your family",
+        image: "hero-container4"
+    },
+
+    {
+        id: 4,
+        title: "The bet piza to share with your family",
+        image: "hero-container4"
     }
 
 
@@ -40,7 +52,7 @@ const DynamicHero: React.FC<HeroProps> = ({ title, description }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => prev === data.length - 1 ? 0 : prev + 1)
-        }, 2000)
+        }, 5000)
         // clean interval to avoid memory leaking
         return () => clearInterval(interval)
     }, [])
