@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import CustomButton from './CustomButton';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Introduction = () => {
     const controls = useAnimation();
@@ -28,18 +29,18 @@ const Introduction = () => {
     };
 
     return (
-        <section ref={ref} className="mt-[8rem] flex flex-col md:flex-row justify-between gap-[7rem] px-[5rem] mb-[2rem] items-center">
-            <div className="md:flex hidden w-[800px] h-[400px] px-[5rem] pt-[4rem] absolute top-1 left-[-23px]   -z-1 pl-9 rounded-2xl shadow-2xl"></div>
+        <section ref={ref} className="mt-[8rem] flex flex-col md:flex-row justify-between gap-[7rem] px-[5rem] mb-[2rem] items-center w-full">
+            <div className="md:flex hidden w-full h-[400px]  pt-[4rem] absolute top-1 left-[-23px]   -z-1 pl-9 rounded-2xl shadow-2xl"></div>
 
             <motion.div
-                className="flex flex-col gap-9"
+                className="flex flex-col gap-9 w-full"
                 initial="hidden"
                 animate={controls}
                 variants={variants}
                 transition={{ duration: 0.5 }}
             >
                 <motion.h1
-                    className="text-2xl md:text-5xl text-gray-900 font-extrabold mt-3"
+                    className="text-3xl md:text-5xl text-gray-900 font-extrabold mt-3"
                     initial="hidden"
                     animate={controls}
                     variants={variants}
@@ -49,7 +50,7 @@ const Introduction = () => {
                 </motion.h1>
 
                 <motion.p
-                    className="md:text-lg text-sm font-sans text-gray-800 w-[90%] md:w-[60%]"
+                    className="md:text-lg text-sm font-sans text-gray-800 w-full md:w-[60%]"
                     initial="hidden"
                     animate={controls}
                     variants={variants}
@@ -64,11 +65,13 @@ const Introduction = () => {
                     variants={variants}
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                    <CustomButton
-                        title="Read more"
-                        extraStyle="min-w-[30%] md:w-[27%] border-blue-950 border"
-                        icon={<FaArrowAltCircleRight />}
-                    />
+                    <Link href="/about">
+                        <CustomButton
+                            title="Read more"
+                            extraStyle="min-w-[30%] md:w-[27%] border-blue-950 border"
+                            icon={<FaArrowAltCircleRight />}
+                        />
+                    </Link>
                 </motion.div>
             </motion.div>
 

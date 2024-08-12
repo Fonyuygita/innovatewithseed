@@ -49,7 +49,7 @@ const Partnership = () => {
     const handleMouseLeave = () => setIsPaused(false);
 
     return (
-        <div className="overflow-hidden w-[80%] mx-auto flex items-center justify-center h-[240px] bg-white shadow-2xl gap-[12rem]">
+        <div className="overflow-hidden w-[80%] w-full mx-auto flex items-center justify-center h-[240px] bg-white shadow-2xl gap-[12rem]">
             <motion.div
                 className="flex"
                 animate={controls}

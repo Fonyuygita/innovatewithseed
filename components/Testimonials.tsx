@@ -8,6 +8,7 @@ import PrimaryBtn from './PrimaryBtn'
 import SwipeTestimonials from './SwipeTestimonials'
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link'
 
 const Testimonials = () => {
   const controls = useAnimation();
@@ -40,7 +41,7 @@ const Testimonials = () => {
         transition={{ duration: 0.5, delay: 0.2 }} className='text-[1.6rem] md:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800 '>Testimonials{" "}<span className='text-primary-100 capitalize'>From{" "}</span>Students At{" "}<span className='text-primary-100'>SEED</span></motion.h1>
 
       <div className="flex  md:flex-row flex-col items-center justify-between px-9 w-full my-[3rem]">
-        <div className="w-full h-full  flex flex-col gap-7 justify-center">
+        <div className="w-full h-full  flex flex-col items-center lg:items-start  gap-7 justify-center">
           <motion.h2
 
             initial="hidden"
@@ -57,11 +58,13 @@ const Testimonials = () => {
             variants={variants}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            <PrimaryBtn
-              title="Read more"
-              extraStyle="min-w-[30%] md:w-[27%] border-blue-950 border bg-primary-100 md:my-4 my-6 "
-              icon={<FaArrowAltCircleRight />}
-            />
+            <Link href="/about">
+              <PrimaryBtn
+                title="Read more"
+                extraStyle="min-w-[30%] md:w-[27%] border-blue-950 border bg-primary-100 md:my-4 my-6 "
+                icon={<FaArrowAltCircleRight />}
+              />
+            </Link>
           </motion.div>
         </div>
 

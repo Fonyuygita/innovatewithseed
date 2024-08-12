@@ -101,16 +101,34 @@ const Navbar = () => {
 
     return (
         <div className='bg-[#fff] w-[100%] mr-auto ml-auto px-[5%] h-[110px] fixed top-0 left-0 z-30'>
-            <nav className='flex justify-between items-center p-2 h-full'>
-                <div className='md:w-22 md:h-23 w-16 h-16  rounded-full '>
+            <nav className='flex justify-between items-center p-2 h-full flex-row-reverse'>
+
+                <div className="lg:hidden  flex items-center justify-center`">
+                    {isSignedIn ? (
+                        <Link href="/">
+                            <UserButton afterSignOutUrl="/" />
+                        </Link>
+                    ) :
+
+                        (
+
+                            <Link href="/sign-in" className='md:text-lg text-sm py-2  items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 text-white flex  px-3  hover:scale-110  transition p-2'>Login</Link>
+
+
+                        )
+                    }
+                </div>
+
+
+                <Link href="/" className='  rounded-full '>
                     <Image
                         src="/seedLogo.png"
                         width={100}
                         height={200}
                         alt='logo'
-                        className='w-15 h-15  object-contain'
+                        className='lg:w-25 lg:h-25 w-12 h-12 flex items-center justify-center  object-contain'
                     />
-                </div>
+                </Link>
 
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
@@ -128,11 +146,9 @@ const Navbar = () => {
                 {/* search_bar and register cta */}
 
 
-                <div className="flex items-center justify-center gap-x-10">
+                <div className="lg:flex items-center justify-center gap-x-10 hidden ">
 
-                    <ClerkLoading>
-                        <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-500 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white" />
-                    </ClerkLoading>
+
                     {isSignedIn ? (
                         <Link href="/">
                             <UserButton afterSignOutUrl="/" />
