@@ -5,25 +5,10 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import CustomInput from './formInputs/CustomInput';
 import { useInView } from 'react-intersection-observer';
+import { RegisterFormProps } from '@/constants/type';
+import { level, techCourses, time } from '@/constants';
 
-interface RegisterFormProps {
-    onSubmit: (data: any) => void;
-    formType: 'course' | 'internship';
-    initialValues?: any;
-    buttonText?: string;
-    className?: string;
-    inputClassName?: string;
-    labelClassName?: string;
-    buttonClassName?: string;
-    animationDuration?: number;
-    animationType?: 'fade' | 'slide';
-    placeholder?: string;
-    inputName?: string;
-}
 
-const techCourses = ['React', 'Next.js', 'TypeScript', 'Node.js', 'GraphQL', 'Docker', 'Kubernetes', 'Python', 'Machine Learning', 'Data Science'];
-const level = ['Beginner', 'Intermediate', 'Advance, Other']
-const time = ['online', 'onside', 'Both', 'Other']
 const RegisterForm: React.FC<RegisterFormProps> = ({
     onSubmit,
     formType,
