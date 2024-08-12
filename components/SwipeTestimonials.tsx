@@ -8,79 +8,11 @@ import 'swiper/css';
 import 'swiper/css/pagination'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { testimonials } from '@/constants';
+// import { Testimonial } from '@/constants/type';
 
-interface Testimonial {
-    name: string;
-    image: string;
-    stars: string;
-    text: string;
-}
 
-const testimonials: Testimonial[] = [
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
 
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-
-    {
-        name: 'Fonyuy Gita',
-        image: '/user.png',
-        stars: '/star.svg',
-        text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
-    },
-    // Add more testimonials as needed
-];
 
 const SwipeTestimonials: FC = () => {
 
@@ -104,7 +36,7 @@ const SwipeTestimonials: FC = () => {
                     <div className=" flex flex-col items-center gap-5">
                         <div className="flex justify-between items-center w-full px-6 mt-3">
                             <h3 className="text-gray-900 text-xl">{testimonial.name}</h3>
-                            <Image src={testimonial.image} className="w-9 h-9 rounded-full border border-primary-100" alt="user" width={50} height={50} />
+                            <Image src={testimonial.image} className="w-9 h-9 rounded-full border border-primary-100 object-cover" alt="user" width={50} height={50} />
                         </div>
                         <div className="flex justify-between w-full items-center px-3">
                             <Image src={testimonial.stars} width={150} height={60} alt="stars" className="w-[120px] h-[60px]" />

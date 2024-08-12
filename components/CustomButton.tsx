@@ -1,10 +1,7 @@
+import { ButtonType } from '@/constants/type'
 import React from 'react'
 
-type ButtonType = {
-    title: string;
-    icon?: React.ReactNode
-    extraStyle?: string
-}
+
 
 const CustomButton = ({ title, icon, extraStyle }: ButtonType) => {
     return (

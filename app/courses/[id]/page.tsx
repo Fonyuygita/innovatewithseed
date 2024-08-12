@@ -141,7 +141,7 @@ const CoursePage = () => {
 
                     />
                 </div>
-                <div className="w-full h-full">
+                <div className="hidden lg:flex w-full h-full">
                     <Image src="/services.png" alt="ima" width={1000} height={1000} className='w-full h-full object-contain' />
                 </div>
             </div>

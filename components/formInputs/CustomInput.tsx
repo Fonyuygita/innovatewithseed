@@ -49,10 +49,11 @@ const CustomInput = ({ name, icon, placeholder, customStyles, initialValues, lab
                     <select
                         className="px-4 w-full bg-white py-2 shadow-xl rounded-md border-none outline-none flex justify-center text-gray-700"
                         name={name}
+                        title='select'
                         value={formData[name] || ''}
                         onChange={handleChange}
-
                         required
+
                     >
                         <option value="" disabled>{placeholder}</option>
                         {options && options.map((option, index) => (

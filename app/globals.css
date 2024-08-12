@@ -54,6 +54,20 @@
               background-repeat: no-repeat;
               position: relative;
             }
+
+                         .hero-container5 {
+                           background-image: url('/team/d4.png');
+                           background-size: cover;
+                           background-position: center;
+                           height: 100vh;
+                           width: 100vw;
+                           display: flex;
+                           justify-content: center;
+                           align-items: center;
+                           background-repeat: no-repeat;
+                           position: relative;
+            
+                         }
                 .hero-container2 {
                   background-image: url('/team/d4.png');
                   background-size: cover;
@@ -67,7 +81,7 @@
                   position: relative;
                 }
 
-            .hero-container2 {
+            .hero-container2{
               background-image: url('/team/d6.png');
               background-size: cover;
               background-position: center;
@@ -106,6 +120,19 @@
                       position: relative;
           
                     }
+
+                                         .hero-container5 {
+                                           background-image: url('/bootcamps.jpg');
+                                           background-size: cover;
+                                           background-position: center;
+                                           height: 100vh;
+                                           width: 100vw;
+                                           background-repeat: no-repeat;
+                                           display: flex;
+                                           justify-content: center;
+                                           align-items: center;
+                                           position: relative;
+                                         }
             
  .hero-bg{
   width: 100%;
