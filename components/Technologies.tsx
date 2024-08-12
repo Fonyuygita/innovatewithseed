@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import Technology from './Technology'
+
 import { motion } from "framer-motion"
 import Offers from './Offers'
 
