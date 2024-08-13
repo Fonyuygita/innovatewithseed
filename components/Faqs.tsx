@@ -3,7 +3,7 @@ import { FaExpand } from 'react-icons/fa'
 
 const Faqs = () => {
     return (
-        <section className="w-full bg-gray-200  py-[6rem] overflow-hidden">
+        <section className="w-full bg-gray-200  py-[2rem] overflow-hidden">
             <h1 className='text-[1.6rem] mg:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-light-200 '>Frequently{" "}<span className='text-primary-100 mb-6 capitalize'>Ask{" "}</span>Questions{" "}<span className='text-primary-100'>.</span></h1>
 
             <div className="grid grid-cols-1 items-center justify-center w-[80vw] px-[1px] md:px-9 gap-8 mx-auto">

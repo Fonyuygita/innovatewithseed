@@ -24,7 +24,7 @@ const CustomInput = ({ name, icon, placeholder, customStyles, initialValues, lab
             case 'text':
                 return (
                     <input
-                        className="px-4 w-full bg-white py-2 shadow-xl rounded-md border-none outline-none flex justify-center text-gray-700"
+                        className="px-7 w-full bg-white py-3 shadow-xl rounded-md border-none outline-none flex justify-center text-gray-700"
                         type="text"
                         name={name}
                         value={formData[name] || ''}

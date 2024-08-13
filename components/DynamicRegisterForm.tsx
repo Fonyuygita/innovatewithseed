@@ -65,7 +65,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
             initial={animationType === 'fade' ? { opacity: 0 } : { x: '-100%' }}
             animate={animationVariants[animationType]}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-5 w-[90%]  md:w-full min-h-screen bg-gray-100  items-center   justify-center"
+            className="flex flex-col gap-5 w-[100%]  md:w-full min-h-screen bg-gray-100  items-center   justify-center"
         >
 
             <motion.h1
@@ -73,8 +73,8 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
                 initial="hidden"
                 animate={controls}
                 variants={variants}
-                transition={{ duration: 0.5, delay: 0.2 }} className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800 '>Enroll {" "}<span className='text-primary-100 capitalize'>Now 👇{" "}</span></motion.h1>
-            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
+                transition={{ duration: 0.5, delay: 0.2 }} className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[90%] md:[68%] mx-auto text-gray-800 '>Enroll {" "}<span className='text-primary-100 capitalize'>Now 👇{" "}</span></motion.h1>
+            <div className='lg:w-[70%] w-full lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
 
                 <CustomInput
                     name='First Name'
@@ -110,7 +110,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
                 />
             </div>
 
-            <div className='lg:w-[70%] w-[98%] lg:flex-row flex-col flex lg:gap-2 gap-4 items-center px-7'>
+            <div className='w-[100%]   flex lg:gap-2 gap-4 items-center px-7'>
                 <CustomInput
                     name='courses'
                     icon='/icons/appointments.svg'

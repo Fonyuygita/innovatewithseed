@@ -100,7 +100,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='bg-[#fff] w-[100%] mr-auto ml-auto px-[5%] h-[110px] fixed top-0 left-0 z-30'>
+        <div className='bg-gray-200 w-[100%] mr-auto ml-auto px-[5%] h-[110px] fixed top-0 left-0 z-30'>
             <nav className='flex justify-between items-center p-2 h-full flex-row-reverse'>
 
                 <div className="lg:hidden  flex items-center justify-center`">
@@ -112,7 +112,7 @@ const Navbar = () => {
 
                         (
 
-                            <Link href="/sign-in" className='md:text-lg text-sm py-2  items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 text-white flex  px-3  hover:scale-110  transition p-2'>Login</Link>
+                            <Link href="/sign-in" className='md:text-lg text-[12px] py-2  items-center justify-center outline-none rounded-md  bg-primary-100 text-white flex  px-3  hover:scale-110  transition p-2'>Academics</Link>
 
 
                         )
@@ -133,7 +133,7 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                        <Link className={`text-gray-800 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                     {isSignedIn &&
                         (
@@ -169,14 +169,14 @@ const Navbar = () => {
                 </div>
 
 
-                <div className="lg:hidden">
+                <div className="lg:hidden bg-primary-100 rounded-md p-2">
 
                     {/*  CREATE MENU BUTTON FOR MOBILE*/}
 
                     <button className="w-7 h-5 flex flex-col justify-between cursor-pointer z-50 relative items-center" onClick={() => setIsOpen(!isOpen)}>
-                        <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-primary-100 rounded origin-left"></motion.div>
-                        <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-primary-100 rounded"></motion.div>
-                        <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-primary-100 rounded origin-left"></motion.div>
+                        <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-blue-300 rounded origin-left"></motion.div>
+                        <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-blue-300 rounded"></motion.div>
+                        <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-blue-300 rounded origin-left"></motion.div>
                     </button>
                     {/*  END MENU BUTTON*/}
 

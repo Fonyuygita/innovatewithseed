@@ -29,4 +29,5 @@ export interface Testimonial {
   image: string;
   stars: string;
   text: string;
+  title: string;
 }

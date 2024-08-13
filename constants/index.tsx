@@ -45,7 +45,8 @@ export
             name: 'Abdul Fadiga',
             image: '/testimonial/abdul.png',
             stars: '/star.svg',
-            text: "Seed is committed to nurturing young tech talent across all fields.Their full- stack web development program has been an exceptional experience.The hands - on, project - based curriculum and supportive instructors have equipped me with invaluable technical skills and a problem - solving mindset to thrive in the ever - evolving tech landscape.",
+            text: "SEED nurtures tech talent in diverse fields. Their full-stack web development program offers exceptional hands-on experience, equipping with technical skills and a problem-solving mindset for the dynamic tech landscape.",
+            title: "Student-Cs"
         },
 
         {
@@ -53,34 +54,39 @@ export
             image: '/testimonial/frank.png',
             stars: '/star.svg',
             text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
+            title: 'student'
         },
 
         {
             name: 'Favour Deoum',
             image: '/testimonial/favour.png',
             stars: '/star.svg',
-            text: "So far SEED has given me the best tech experience I've ever had. I grew from 0 knowledge in tech and I can now boast that I've attained a certain level I could never have imagined in no time. The bootcamp has been of great help to me coupled with the fact that our tutor gives detailed explanations on every single line of code. Not only good tutoring, they also made me feel at home. I found my tech family there all thanks to SEED. They've thought me to be consistent, no matter how many errors I make, I keep on trying till I get it right. There's no backing out #SEED_a_place_to_be",
+            text: "SEED offers unparalleled tech growth. From zero knowledge to a remarkable skill level, the bootcamp provides detailed guidance and a supportive environment. It feels like home, fostering consistency and resilience. SEED cultivates a tech family, encouraging perseverance and progress.",
+            title: 'Student'
         },
 
         {
             name: 'Mbingolo Tracy',
             image: '/testimonial/tracy.png',
             stars: '/star.svg',
-            text: "SEED is a company with so many growing technologies in  it ready to  explore the world of technology... It has many experts who are committed to their field and very ready to impact same driving force to young people who are ready to explore the tech world. We are excited to see how there will continue to push the boundaries of what is possible with technology..",
+            text: "SEED embodies innovation with a plethora of cutting-edge technologies, fostering exploration in the tech realm. Experts passionately mentor youth, driving forward technological boundaries with enthusiasm.",
+            title: "Student"
         },
 
         {
-            name: 'Dhorbit Carlen',
+            name: 'Dorhbit Carlen',
             image: '/testimonial/carlen.png',
             stars: '/star.svg',
-            text: "As a beginner I was skeptical about “SEED” at first, but this bootcamp change my way of seing things different from a normal persons view using the tech mentality. The instructor  Mr Gita is knowledgeable, supportive, and pushed me to reach where I am today but not my full potential but I believe with time I will do more. I equally belt a strong a strong network with my course mates from different backgrounds like Mr Emmanuel. For the course so far it has not been easy for me considering the fact that I’m a high school student, digesting the materials is slow but I do my best to get what I can get. ",
+            text: "nitially skeptical about SEED, this bootcamp shifted my perspective towards tech. Instructor Mr. Gita is supportive, pushing growth. Building a diverse network, like Mr. Emmanuel, enhances learning. As a high school student, grasping course material is challenging, but I strive for progress.",
+            title: "Student"
         },
 
         {
-            name: 'Hope',
+            name: 'Aloumbah Hope',
             image: '/testimonial/hope.png',
             stars: '/star.svg',
-            text: "Working in seed has being a great experience for me.The tutors are doing a great job and they make sure everyone understands what they're teaching and it is also a comfortable place because everything is available to make your studies smooth.recommend seed to everybody planning to start a journey in seed",
+            text: "Great experience at SEED, dedicated tutors ensure understanding.Comfortable environment with resources for smooth studies.Recommend for starters",
+            title: "Student"
         },
 
         {
@@ -88,6 +94,7 @@ export
             image: '/testimonial/zino.png',
             stars: '/star.svg',
             text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
+            title: "Student"
         },
 
 

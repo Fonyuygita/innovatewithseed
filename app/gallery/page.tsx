@@ -7,7 +7,7 @@ const page = () => {
         <div className='w-full min-h-screen bg-gray-200 mt-[4rem]'>
             <DynamicHero
                 title="Our Gallery"
-                description="We offer a wide range of services to help your business thrive in the digital age. From web development to AI solutions, our team of experts is here to support you every step of the way."
+                description="We plant to harvest"
             />
             <MyImageGallery />
         </div>
