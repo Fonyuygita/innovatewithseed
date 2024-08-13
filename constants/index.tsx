@@ -1,43 +1,43 @@
 import { Testimonial } from "./type";
 
-export const slideShowData = [
-    {
-        id: 1,
-        title: "Always fresh & always crispy & always hot",
-        image: "hero-container1"
-    },
-    {
-        id: 2,
-        title: "We Deliver your order wherever you are ",
-        image: "hero-container2"
-    },
-    {
-        id: 3,
-        title: "The bet piza to share with your family",
-        image: "hero-container3"
-    },
+// export const slideShowData = [
+//     {
+//         id: 1,
+//         title: "Always fresh & always crispy & always hot",
+//         image: "hero-container1"
+//     },
+//     {
+//         id: 2,
+//         title: "We Deliver your order wherever you are ",
+//         image: "hero-container2"
+//     },
+//     {
+//         id: 3,
+//         title: "The bet piza to share with your family",
+//         image: "hero-container3"
+//     },
 
-    {
-        id: 4,
-        title: "The bet piza to share with your family",
-        image: "hero-container4"
-    },
-
-
-    {
-        id: 5,
-        title: "The bet piza to share with your family",
-        image: "hero-container5"
-    },
-
-    {
-        id: 5,
-        title: "The bet piza to share with your family",
-        image: "hero-container5"
-    }
+//     {
+//         id: 4,
+//         title: "The bet piza to share with your family",
+//         image: "hero-container4"
+//     },
 
 
-]
+//     {
+//         id: 5,
+//         title: "The bet piza to share with your family",
+//         image: "hero-container5"
+//     },
+
+//     {
+//         id: 5,
+//         title: "The bet piza to share with your family",
+//         image: "hero-container5"
+//     }
+
+
+// ]
 
 export
     const testimonials: Testimonial[] = [
