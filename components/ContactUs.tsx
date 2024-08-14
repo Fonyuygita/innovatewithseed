@@ -18,15 +18,15 @@ const ContactUs = () => {
                 <h2 className="text-3xl font-bold mb-4 text-primary-100">Contact Us</h2>
                 <form className="space-y-4">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium">Name</label>
+                        <label htmlFor="name" className="block  text-gray-900 text-sm font-medium ">Name</label>
                         <input type="text" id="name" className="w-full p-2 rounded-md border border-primary-100 outline-none text-blue-900" />
                     </div>
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium">Email</label>
+                        <label htmlFor="email" className="block text-gray-900  text-sm font-medium">Email</label>
                         <input type="email" id="email" className="w-full p-2 rounded-md border border-primary-100 outline-none text-blue-900" />
                     </div>
                     <div>
-                        <label htmlFor="message" className="block text-sm font-medium">Message</label>
+                        <label htmlFor="message" className="blo text-gray-900 ck text-sm font-medium">Message</label>
                         <textarea id="message" className="w-full p-2 rounded-md border border-primary-100 outline-none text-blue-900" rows={4}></textarea>
                     </div>
                     <button type="submit" className="w-full p-2 bg-primary-100 rounded-md hover:bg-yellow-600">Send</button>

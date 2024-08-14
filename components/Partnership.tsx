@@ -58,7 +58,7 @@ const Partnership = () => {
                 {items.concat(items).map((item, index) => (
                     <div
                         key={index}
-                        className=" w-[12rem] h-[12rem] flex flex-col items-center justify-center  m-2  bg-primary-100 p-6 text-white rounded-lg shadow-2xl px-8 mr-6"
+                        className=" w-[12rem] h-[12rem] flex flex-col items-center justify-center  m-2  bg-blue-500 p-6 text-white rounded-lg shadow-2xl px-8 mr-6"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >

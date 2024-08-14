@@ -81,7 +81,7 @@ const FAQSection: React.FC = () => {
                             className="flex justify-between items-center cursor-pointer"
                             onClick={() => toggleFAQ(index)}
                         >
-                            <h2 className="text-lg font-bold text-primary-100">{faq.question}</h2>
+                            <h2 className="text-lg font-bold text-gray-800">{faq.question}</h2>
                             {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
                         </div>
                         {activeIndex === index && (

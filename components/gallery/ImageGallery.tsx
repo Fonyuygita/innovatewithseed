@@ -11,6 +11,7 @@ const images = [
     {
         original: '/bootcamps.jpg',
         thumbnail: '/p1.svg',
+
         variants: [
             '/p4.svg',
             '/bootcamps.jpg',
@@ -41,6 +42,20 @@ const images = [
             '/team/d4.png',
             '/team/d5.png',
             '/team/d6.png'
+        ],
+    },
+
+    {
+        original: '/team/s1.png',
+        thumbnail: '/team/s3.png',
+        variants: [
+            '/team/s1.png',
+            '/team/s2.png',
+            '/team/s3.png',
+            '/team/s4.png',
+            '/team/s1.png',
+            '/team/s2.png',
+            '/team/s4.png'
         ],
     },
 ];

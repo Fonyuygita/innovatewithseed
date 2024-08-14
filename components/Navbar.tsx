@@ -100,7 +100,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='bg-gray-200 w-[100%] mr-auto ml-auto px-[5%] h-[110px] fixed top-0 left-0 z-30'>
+        <div className='bg-gray-200 w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px'>
             <nav className='flex justify-between items-center p-2 h-full flex-row-reverse'>
 
                 <div className="lg:hidden  flex items-center justify-center`">
@@ -126,9 +126,20 @@ const Navbar = () => {
                         width={100}
                         height={200}
                         alt='logo'
-                        className='lg:w-25 lg:h-25 w-12 h-12 flex items-center justify-center  object-contain'
+                        className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain md:flex hidden'
                     />
                 </Link>
+
+                <Link href="/" className='rounded-full bg-gray-200  absolute bottom-[-28px] left-[41%] md:hidden  border border-primary-100 w-12 h-12 flex items-center justify-center'>
+                    <Image
+                        src="/seedLogo.png"
+                        width={100}
+                        height={200}
+                        alt='logo'
+                        className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain'
+                    />
+                </Link>
+
 
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
@@ -157,7 +168,7 @@ const Navbar = () => {
 
                         (
 
-                            <Link href="/sign-in" className='text-lg py-2  items-center justify-center outline-none   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue-500 text-white md:flex hidden rounded-3xl px-8  hover:scale-110  transition p-3'>Login</Link>
+                            <Link href="/sign-in" className='text-lg py-2  items-center justify-center outline-none bg-primary-100 text-gray-100 rounded-3xl px-8  hover:scale-110  transition p-3'>Academics</Link>
 
 
                         )
@@ -169,14 +180,14 @@ const Navbar = () => {
                 </div>
 
 
-                <div className="lg:hidden bg-primary-100 rounded-md p-2">
+                <div className="lg:hidden bg-primary-100 rounded-md p-3">
 
                     {/*  CREATE MENU BUTTON FOR MOBILE*/}
 
                     <button className="w-7 h-5 flex flex-col justify-between cursor-pointer z-50 relative items-center" onClick={() => setIsOpen(!isOpen)}>
-                        <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-blue-300 rounded origin-left"></motion.div>
-                        <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-blue-300 rounded"></motion.div>
-                        <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-blue-300 rounded origin-left"></motion.div>
+                        <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded origin-left"></motion.div>
+                        <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded"></motion.div>
+                        <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded origin-left"></motion.div>
                     </button>
                     {/*  END MENU BUTTON*/}
 
@@ -184,9 +195,17 @@ const Navbar = () => {
 
                     {isOpen &&
 
+
                         <motion.div variants={listVariants} initial="closed" animate="open" onClick={() => setIsOpen(!isOpen)} className="absolute top-0 left-0 w-screen h-screen bg-light-200 shadow-xl text-blue-400 flex flex-col items-center justify-center gap-8 z-40">
+                            <Image
+                                src="/seedLogo.png"
+                                width={100}
+                                height={200}
+                                alt='logo'
+                                className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain flex my-7'
+                            />
                             {menuLinks.map(link => (
-                                <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                                <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-primary-100 px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                             ))}
 
                             {isSignedIn &&
