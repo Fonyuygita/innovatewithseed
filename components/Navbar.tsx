@@ -180,11 +180,11 @@ const Navbar = () => {
                 </div>
 
 
-                <div className="lg:hidden bg-primary-100 rounded-md p-3">
+                <div className="lg:hidden bg-primary-100 rounded-md p-2">
 
                     {/*  CREATE MENU BUTTON FOR MOBILE*/}
 
-                    <button className="w-7 h-5 flex flex-col justify-between cursor-pointer z-50 relative items-center" onClick={() => setIsOpen(!isOpen)}>
+                    <button className="w-7 h-3 gap-1 flex flex-col justify-between cursor-pointer z-50 relative items-center" onClick={() => setIsOpen(!isOpen)}>
                         <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded origin-left"></motion.div>
                         <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded"></motion.div>
                         <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded origin-left"></motion.div>

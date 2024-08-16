@@ -8,12 +8,12 @@ const RecentBlogs = () => {
     return (
         <section className="w-full bg-light-200 py-[6rem] overflow-hidden h-full">
             <motion.h1
-                className='text-[1.6rem] md:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-700'
+                className='text-[1.6rem] md:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500'
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                Latest News{" "}<span className='text-primary-100 capitalize'>From{" "}</span>Us{" "}<span className='text-primary-100'>& Blogs</span>
+                Latest News{" "}<span className='text-blue-500 capitalize'>From{" "}</span>Us{" "}<span className='text-primary-100'>& Blogs</span>
             </motion.h1>
 
             <div className="flex flex-col-reverse md:flex-row mt-[3rem] w-[80%] mx-auto items-center justify-center gap-7 px-3 min-h-full">
@@ -26,7 +26,7 @@ const RecentBlogs = () => {
                     >
                         <Image src="/blog1.svg" alt='blog1' width={300} height={200} className='w-full px-[2px] h-[10rem] object-contain my-3' />
                         <motion.h3
-                            className="text-blue-950 w-full px-3 line-clamp-1 md:text-2xl xl:text-4xl sm:text-xl"
+                            className="text-blue-500 w-full px-3 line-clamp-1 md:text-2xl xl:text-4xl sm:text-xl"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
@@ -41,7 +41,7 @@ const RecentBlogs = () => {
                     >
                         <Image src="/blog2.svg" alt='blog1' width={300} height={200} className='w-full px-[2px] h-[10rem] object-contain my-3' />
                         <motion.h3
-                            className="text-blue-950 w-full px-3 line-clamp-1 md:text-2xl xl:text-4xl sm:text-xl"
+                            className="text-blue-500 w-full px-3 line-clamp-1 md:text-2xl xl:text-4xl sm:text-xl"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}

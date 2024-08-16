@@ -38,7 +38,7 @@ const Testimonials = () => {
         initial="hidden"
         animate={controls}
         variants={variants}
-        transition={{ duration: 0.5, delay: 0.2 }} className='md:text-center w-[89%] pl-6  text-[1.3rem] md:text-[3.4rem] my-6 font-sans line-clamp-1 font-bold    text-gray-800 '>Testimonials{" "}<span className='text-primary-100 capitalize'>From{" "}</span>Students At{" "}<span className='text-primary-100'>SEED</span></motion.h1>
+        transition={{ duration: 0.5, delay: 0.2 }} className='md:text-center w-[89%] pl-6  text-[1.3rem] md:text-[3.4rem] my-6 font-sans line-clamp-1 font-bold    text-blue-500 '>Testimonials{" "}<span className='text-primary-100 capitalize'>From{" "}</span>Students At{" "}<span className='text-primary-100'>SEED</span></motion.h1>
 
       <div className="flex  md:flex-row flex-col items-center justify-between px-9 w-full my-[3rem]">
         <div className="w-full h-full  flex flex-col items-start lg:items-start  gap-7 justify-center">
@@ -47,7 +47,7 @@ const Testimonials = () => {
             initial="hidden"
             animate={controls}
             variants={variants}
-            transition={{ duration: 0.5, delay: 0.2 }} className='text-gray-900 md:text-4xl text-xl line-clamp-1 font-sans w-full text-left'>Waoh!, you {"won't"} believe what our students says about us</motion.h2>
+            transition={{ duration: 0.5, delay: 0.2 }} className='text-blue-500 md:text-4xl text-xl line-clamp-1 font-sans w-full text-left'>Waoh!, you {"won't"} believe what our students says about us</motion.h2>
           <motion.p initial="hidden"
             animate={controls}
             variants={variants}
@@ -73,9 +73,9 @@ const Testimonials = () => {
           initial="hidden"
           animate={controls}
           variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
-          transition={{ duration: 0.6, delay: 0.7 }} className=" md:rounded-full rounded-sm w-full md:h-[500px] h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] 
+          transition={{ duration: 0.6, delay: 0.7 }} className=" w-full  lg:w-2/3 md:h-[500px] h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] 
         from-gray-300 to-gray-100  p-3">
-          <Image src="/student.svg" alt='student' width={1000} height={1000} className='w-full md:h-[500px] h-full md:rounded-sm  object-contain rounded-sm' />
+          <Image src="/student.svg" alt='student' width={1000} height={1000} className='w-full md:h-[500px] h-full md:rounded-full  object-contain rounded-sm' />
         </motion.div>
 
 
@@ -88,7 +88,7 @@ const Testimonials = () => {
         animate={controls}
         variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
         transition={{ duration: 0.7, delay: 0.8 }}
-        className='text-[1.6rem] md:text-[2.4rem] my-[5rem] font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800  '>There{" "}<span className='text-primary-100 capitalize'>We{" "}</span>Go👌{" "}<span className='text-primary-100'>SEED</span></motion.h2>
+        className='text-[1.6rem] md:text-[2.4rem] my-[5rem] font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500  '>There{" "}<span className='text-primary-100 capitalize'>We{" "}</span>Go👌{" "}<span className='text-primary-100'>SEED</span></motion.h2>
 
       { }
       <motion.div

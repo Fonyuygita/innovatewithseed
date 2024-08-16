@@ -42,7 +42,7 @@ const page = () => {
 
                 <div className=" w-full h-full flex  justify-start flex-col items-start bg-gray-100 p-6">
                     <motion.h1
-                        className='text-[1.6rem] md:text-[2.4rem] my-2 font-sans line-clamp-2 w-[90%] text-left text-black/30'
+                        className='text-[1.6rem] md:text-[2.4rem] my-2 font-sans line-clamp-2 w-[90%] text-left text-blue-500'
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}

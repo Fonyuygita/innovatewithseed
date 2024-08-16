@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ offering }) => {
             viewport={{ once: true }}
         >
             <div className="text-4xl text-primary-100 mb-4">{offering.icon}</div>
-            <h3 className="text-xl font-bold mb-2 text-gray-700">{offering.title}</h3>
+            <h3 className="text-xl font-bold mb-2 text-blue-500">{offering.title}</h3>
             <p className="text-gray-800">{offering.description}</p>
         </motion.div>
     );

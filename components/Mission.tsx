@@ -92,7 +92,7 @@ const Mission = () => {
                 animate={controls}
                 variants={variants}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="heading text-gray-800 -[70%] my-4">
+                className="heading text-blue-500 -[70%] my-4">
                 Our   {' '}
                 <span className="text-primary-100">Mission</span>
             </motion.h1>
@@ -114,7 +114,7 @@ const Mission = () => {
                                 </div>
                                 <div className="flex item-center gap-4 flex-col justify-center">
 
-                                    <h3 className='w-full text-2xl text-gray-900'>{item.title}</h3>
+                                    <h3 className='w-full text-2xl text-blue-500'>{item.title}</h3>
                                     <p className='text-[#999] text-sm line-clamp-1'>{item.description}</p>
                                 </div>
                             </div>

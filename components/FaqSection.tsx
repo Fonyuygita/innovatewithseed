@@ -65,7 +65,7 @@ const FAQSection: React.FC = () => {
                 initial="hidden"
                 animate={controls}
                 variants={variants}
-                transition={{ duration: 0.5, delay: 0.2 }} className='text-[1.6rem] md:text-[3.4rem] my-1 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-gray-800 '>Frequently{" "}<span className='text-primary-100 capitalize'>Ask{" "}</span>Questions{" "}<span className='text-primary-100'>.</span></motion.h1>
+                transition={{ duration: 0.5, delay: 0.2 }} className='text-[1.6rem] md:text-[3.4rem] my-1 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500 '>Frequently{" "}<span className='text-primary-100 capitalize'>Ask{" "}</span>Questions{" "}<span className='text-primary-100'>.</span></motion.h1>
 
             <div className="flex flex-col items-center  h-screen bg-gray-100 p-6">
                 {faqs.map((faq, index) => (
@@ -81,7 +81,7 @@ const FAQSection: React.FC = () => {
                             className="flex justify-between items-center cursor-pointer"
                             onClick={() => toggleFAQ(index)}
                         >
-                            <h2 className="text-lg font-bold text-gray-800">{faq.question}</h2>
+                            <h2 className="text-lg font-bold text-blue-500">{faq.question}</h2>
                             {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
                         </div>
                         {activeIndex === index && (

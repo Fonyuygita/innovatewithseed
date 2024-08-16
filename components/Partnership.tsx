@@ -62,7 +62,7 @@ const Partnership = () => {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <div className="text-4xl text-light-200">{item.icon}</div>
+                        <div className="text-4xl text-blue-200 bg-primary-100 p-4 rounded-full">{item.icon}</div>
                         <p className="mt-2 text-center text-sm">{item.text}</p>
                     </div>
                 ))}
