@@ -183,6 +183,7 @@
   text-align: center;
   cursor: default;
   background: var(--color-gray-0);
+  margin-top: 5rem;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

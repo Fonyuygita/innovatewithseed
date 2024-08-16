@@ -29,10 +29,10 @@ const ContactUs = () => {
                         <label htmlFor="message" className="blo text-blue-500 ck text-sm font-medium">Message</label>
                         <textarea id="message" className="w-full p-2 rounded-md border border-primary-100 outline-none text-blue-900" rows={4}></textarea>
                     </div>
-                    <button type="submit" className="w-full p-2 bg-blue-500 rounded-md hover:bg-yellow-600">Send</button>
+                    <button type="submit" className="w-full p-2 bg-blue-500 rounded-md hover:bg-blue-400">Send</button>
                 </form>
             </div>
-            <div className="w-full mx-auto md:w-1/2 flex justify-center md:justify-center gap-6 flex-col ">
+            <div className="w-full mx-auto md:w-1/2 flex justify-center md:justify-center gap-6 md:flex-col flex-row ">
                 {socialIcons.map((social, index) => (
                     <motion.a
                         key={index}

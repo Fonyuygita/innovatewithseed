@@ -21,80 +21,73 @@ interface MentorshipProps {
 }
 [];
 
-const MentorshipData: MentorshipProps[] = [
+export const MentorshipData: MentorshipProps[] = [
   {
     id: 1,
     name: "Fonyuy Gita",
     title: "Web Development",
     description:
       "Fonyuy Gita is a skilled web developer with expertise in front-end and back-end technologies. She excels in creating responsive and user-friendly websites using HTML, CSS, JavaScript, and various frameworks like React and Angular",
-    img: "",
+    img: "/team/d1.png",
     link: "",
     portfolio: "",
   },
   {
     id: 2,
-    name: "Bob",
+    name: "Nchanji Faithful",
     title: "App Development",
     description:
       "Bob specializes in app development, focusing on creating mobile applications for both iOS and Android platforms. He is proficient in languages like Swift, Kotlin, and frameworks like Flutter and React Native.",
-    img: "",
+    img: "/team/d2.png",
     link: "",
     portfolio: "",
   },
 
   {
     id: 3,
-    name: "David",
+    name: "Fien Dora",
     title: "Machine Learning (Artificial Intelligence)",
     description:
       "David is a data scientist who excels in analyzing complex data sets, building predictive models, and extracting valuable insights. He is proficient in tools like Python, R, and libraries such as Pandas and Scikit-learn.",
-    img: "",
+    img: "/team/d3.png",
     link: "",
     portfolio: "",
   },
 
   {
     id: 4,
-    name: "Charles",
+    name: "Fien Dora",
     title: "Cyber Security",
     description:
       "Charlie is a cybersecurity expert with in-depth knowledge of network security, cryptography, and ethical hacking. He works on securing systems, identifying vulnerabilities, and implementing robust security measures.",
-    img: "",
+    img: "/team/d6.png",
     link: "",
     portfolio: "",
   },
 
   {
     id: 5,
-    name: "Eve",
+    name: "Cheko Yohane",
     title: "Cloud Computing",
     description:
       "Eve specializes in cloud computing, working with cloud platforms like AWS, Azure, and Google Cloud. She designs scalable and reliable cloud architectures, manages cloud resources efficiently, and ensures high availability.",
-    img: "",
+    img: "/team/d4.png",
     link: "",
     portfolio: "",
   },
 
   {
     id: 6,
-    name: "Frank",
+    name: "Cheko Yohane",
     title: "Mathematics",
     description:
       "Frank is a mathematician with expertise in various branches of mathematics such as algebra, calculus, and statistics. He applies mathematical principles to solve complex problems in fields like physics, engineering, and computer science.",
-    img: "",
+    img: "/team/d4.png",
     link: "",
     portfolio: "",
   },
 
-  {
-    id: 6,
-    title: "Data Structure and Algorithm",
-    description: "",
-    img: "",
-    link: "",
-    portfolio: "",
-  },
+
 ];
 
 
@@ -122,6 +115,7 @@ export const offerings: Offering[] = [
   { title: 'Mobile Solutions', description: 'Innovative mobile solutions.', icon: <FaMobileAlt /> },
   { title: 'Security', description: 'Top-notch security.', icon: <FaShieldAlt /> },
 ];
+
 
 
 

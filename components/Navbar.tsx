@@ -112,7 +112,7 @@ const Navbar = () => {
 
                         (
 
-                            <Link href="/sign-in" className='md:text-lg text-[12px] py-2  items-center justify-center outline-none rounded-md  bg-primary-100 text-white flex  px-3  hover:scale-110  transition p-2'>Academics</Link>
+                            <Link href="/sign-in" className='md:text-lg text-[12px] py-2  items-center justify-center outline-none rounded-md  bg-blue-500 text-white flex  px-3  hover:scale-110  transition p-2'>Academics</Link>
 
 
                         )
@@ -144,7 +144,7 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`text-gray-800 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                        <Link className={`text-blue-500 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                     {isSignedIn &&
                         (
@@ -180,7 +180,7 @@ const Navbar = () => {
                 </div>
 
 
-                <div className="lg:hidden bg-primary-100 rounded-md p-2">
+                <div className="lg:hidden bg-blue-500 rounded-md p-2">
 
                     {/*  CREATE MENU BUTTON FOR MOBILE*/}
 
@@ -210,7 +210,7 @@ const Navbar = () => {
 
                             {isSignedIn &&
                                 (
-                                    <Link className="text-blue-950 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/courses" >Courses</Link>
+                                    <Link className="text-blue-500 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/courses" >Courses</Link>
                                 )
                             }
                         </motion.div>

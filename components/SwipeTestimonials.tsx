@@ -23,7 +23,7 @@ const SwipeTestimonials: FC = () => {
             modules={[Pagination]}
             spaceBetween={30}
             slidesPerView={1}
-
+            className='md:w-[60%] mx-auto'
             pagination={{ clickable: true }}
 
         >
@@ -39,7 +39,7 @@ const SwipeTestimonials: FC = () => {
                                 <h3 className="text-gray-900 text-sm font-bold md:text-lg">{testimonial.name}</h3>
                                 <p className='text-[12px] text-gray-700'>{testimonial.title}</p>
                                 <span className='outline-none text-[12px] text-primary-100'>
-                                    <Image src={testimonial.stars} alt='stars' width={50} height={15} className='object-contain ' />
+                                    <Image src={testimonial.stars} alt='stars' width={60} height={20} className='object-contain ' />
                                 </span>
                             </div>
                             <Image src={testimonial.image} className="w-24 h-24 rounded-md border  border-primary-100 object-cover  " alt="user" width={50} height={50} />

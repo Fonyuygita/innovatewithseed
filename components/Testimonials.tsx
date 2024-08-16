@@ -51,7 +51,7 @@ const Testimonials = () => {
           <motion.p initial="hidden"
             animate={controls}
             variants={variants}
-            transition={{ duration: 0.6, delay: 0.5 }} className='md:w-[80%] sm:text-[23px] w-[95%] font-sans text-[#999]'>Here some inspiring words our students gave after the 50 Days Of Code Challenge</motion.p>
+            transition={{ duration: 0.6, delay: 0.5 }} className='md:w-[70%] sm:text-[23px] w-[95%] font-sans text-[#999]'>Here some inspiring words our students gave after the 50 Days Of Code Challenge</motion.p>
           <motion.div
             initial="hidden"
             animate={controls}
@@ -61,7 +61,7 @@ const Testimonials = () => {
             <Link href="/about" className='w-full'>
               <PrimaryBtn
                 title="Read more"
-                extraStyle="min-w-[30%] md:min-w-[57%]  bg-primary-100 md:my-4 my-6 "
+                extraStyle="min-w-[30%] md:min-w-[57%]   md:my-4 my-6 "
                 icon={<FaArrowAltCircleRight />}
               />
             </Link>
