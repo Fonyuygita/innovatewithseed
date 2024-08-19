@@ -30,7 +30,7 @@ const VideoGrid: React.FC = () => {
 
     return (
         <div className="container mx-auto p-4 overflow-hidden">
-            <h2 className="text-2xl font-bold mb-4">Our Recent Activities</h2>
+            <h2 className="text-2xl text-blue-500 font-bold mb-4">Our Recent Activities</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 overflow-hidden">
                 {videos.map((video, index) => (
                     <motion.div

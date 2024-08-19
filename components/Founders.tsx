@@ -147,7 +147,7 @@ const FounderSection: React.FC = () => {
                     ))}
                 </div>
                 <div className="w-full h-full bg-white">
-                    <Image src="/seed.svg" width={1000} height={1000} alt='seed' className='w-full h-full object-contain' />
+                    <Image src="/galView.svg" width={1000} height={1000} alt='seed' className='w-full h-full object-contain' />
                 </div>
             </div>
             <FAQSection />

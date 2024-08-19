@@ -13,8 +13,8 @@ const ContactUs = () => {
     ];
 
     return (
-        <div className="flex flex-col md:flex-row justify-center gap-4 items-center px-5  text-white rounded-lg shadow-lg  w-full py-6 h-screen">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-center gap-1 md:items-center px-5  text-white rounded-lg shadow-lg   w-full md:h-screen pb-4 mt-[3rem]">
+            <div className="w-full md:w-1/2 mb-9 h-sc  md:mb-4 ">
                 <h2 className="text-3xl font-bold mb-4 text-blue-500">Contact Us</h2>
                 <form className="space-y-4">
                     <div>
@@ -32,7 +32,7 @@ const ContactUs = () => {
                     <button type="submit" className="w-full p-2 bg-blue-500 rounded-md hover:bg-blue-400">Send</button>
                 </form>
             </div>
-            <div className="w-full mx-auto md:w-1/2 flex justify-center md:justify-center gap-6 md:flex-col flex-row ">
+            <div className="w-full mx-auto md:w-1/2 flex justify-center md:justify-center gap-6 lg:flex-col flex-row ">
                 {socialIcons.map((social, index) => (
                     <motion.a
                         key={index}
@@ -46,8 +46,8 @@ const ContactUs = () => {
                     </motion.a>
                 ))}
             </div>
-            <div className="w-full h-full p-3 md:flex hidden">
-                <Image src="/services.png" alt='contact' width={1000} height={1000} className='w-full h-full p-2' />
+            <div className="w-full h-full p-3 lg:flex hidden">
+                <Image src="/contact.svg" alt='contact' width={1000} height={1000} className='w-full h-full p-2' />
             </div>
         </div>
     );

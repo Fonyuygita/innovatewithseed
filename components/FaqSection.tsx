@@ -4,34 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import { faqs } from '@/constants';
 
-interface FAQ {
-    question: string;
-    answer: string;
-}
 
-const faqs: FAQ[] = [
-    {
-        question: 'What is Seed?',
-        answer: 'Seed is a company focused on revolutionizing the tech industry...',
-    },
-    {
-        question: 'Who is the CEO of Seed?',
-        answer: 'John Doe is the CEO of Seed, with over 20 years of experience...',
-    },
-    {
-        question: 'What services does Seed offer?',
-        answer: 'Seed offers a range of services including software development...',
-    },
-    {
-        question: 'How can I contact Seed?',
-        answer: 'You can contact Seed through our website or social media channels...',
-    },
-    {
-        question: 'Where is Seed located?',
-        answer: 'Seed is headquartered in Silicon Valley, with offices worldwide...',
-    },
-];
 
 const FAQSection: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -59,7 +34,7 @@ const FAQSection: React.FC = () => {
     };
 
     return (
-        <div ref={ref} className=" w-full min-h-screen ">
+        <div ref={ref} className=" w-full min-h-[60vh]  ">
             <motion.h1
 
                 initial="hidden"
@@ -67,7 +42,7 @@ const FAQSection: React.FC = () => {
                 variants={variants}
                 transition={{ duration: 0.5, delay: 0.2 }} className='text-[1.6rem] md:text-[3.4rem] my-1 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500 '>Frequently{" "}<span className='text-primary-100 capitalize'>Ask{" "}</span>Questions{" "}<span className='text-primary-100'>.</span></motion.h1>
 
-            <div className="flex flex-col items-center  h-screen bg-gray-100 p-6">
+            <div className="flex flex-col items-center   bg-gray-100 p-6">
                 {faqs.map((faq, index) => (
                     <motion.div
                         key={index}

@@ -31,3 +31,8 @@ export interface Testimonial {
   text: string;
   title: string;
 }
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}

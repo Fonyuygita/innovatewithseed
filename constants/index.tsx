@@ -1,4 +1,4 @@
-import { Testimonial } from "./type";
+import { FAQ, Testimonial } from "./type";
 
 // export const slideShowData = [
 //     {
@@ -101,6 +101,48 @@ export
         // Add more testimonials as needed
     ];
 
+export const faqs: FAQ[] = [
+
+    {
+        question: 'Who is the CEO of Seed?',
+        answer: 'Cheko Yohane is the CEO of Seed.',
+    },
+
+    {
+        question: "What is the full meaning of SEED?",
+        answer: "Skill Enhancement and Empowerment through Digitalization"
+    },
+
+    {
+        question: 'What is Seed?',
+        answer: 'Seed is a tech company founded by Cheko Yohane, Fonyuy Gita, and Fien Dora. It aims to help young talents excel in the tech industry by providing necessary tools and resources.',
+    },
+    {
+        question: 'Who founded Seed?',
+        answer: 'Seed was founded by Cheko Yohane, Fonyuy Gita, and Fien Dora.',
+    },
+    {
+        question: 'Where is Seed located?',
+        answer: 'Seed is located in Bamenda, North West Region of Cameroon.',
+    },
+    {
+        question: 'What is the mission of Seed?',
+        answer: 'The mission of Seed is to transform the lives of many in the tech industry by nurturing them with essential resources and tools.',
+    },
+
+    {
+        question: 'What services does Seed offer?',
+        answer: 'Seed offers a variety of services including software development, mentoring, and resource provision.',
+    },
+    {
+        question: 'How can I get involved with Seed?',
+        answer: 'You can get involved with Seed by reaching out through our website or social media channels.',
+    },
+    {
+        question: 'How does Seed aim to help young talents excel in tech?',
+        answer: 'Seed aims to help young talents excel in tech by providing them with the necessary tools, resources, and mentorship opportunities.'
+    }
+];
 
 
 export const techCourses = [

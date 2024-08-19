@@ -82,7 +82,7 @@
                 }
 
             .hero-container2{
-              background-image: url('/team/d6.png');
+              background-image: url('/contact.svg');
               background-size: cover;
               background-position: center;
               height: 100vh;
@@ -122,7 +122,7 @@
                     }
 
                                          .hero-container5 {
-                                           background-image: url('/bootcamps.jpg');
+                                           background-image: url('/galView.svg');
                                            background-size: cover;
                                            background-position: center;
                                            height: 100vh;
