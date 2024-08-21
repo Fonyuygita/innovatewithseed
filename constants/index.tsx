@@ -66,7 +66,7 @@ export
         },
 
         {
-            name: 'Mbingolo Tracy',
+            name: 'Mbinghonyi Tracy',
             image: '/testimonial/tracy.png',
             stars: '/star.svg',
             text: "SEED embodies innovation with a plethora of cutting-edge technologies, fostering exploration in the tech realm. Experts passionately mentor youth, driving forward technological boundaries with enthusiasm.",
@@ -74,7 +74,7 @@ export
         },
 
         {
-            name: 'Dorhbit Carlen',
+            name: 'Dohbit Carlen',
             image: '/testimonial/carlen.png',
             stars: '/star.svg',
             text: "nitially skeptical about SEED, this bootcamp shifted my perspective towards tech. Instructor Mr. Gita is supportive, pushing growth. Building a diverse network, like Mr. Emmanuel, enhances learning. As a high school student, grasping course material is challenging, but I strive for progress.",
@@ -88,6 +88,15 @@ export
             text: "Great experience at SEED, dedicated tutors ensure understanding.Comfortable environment with resources for smooth studies.Recommend for starters",
             title: "Student"
         },
+
+        {
+            name: 'Mark',
+            image: '/testimonial/mark.png',
+            stars: '/star.svg',
+            text: "SEED's 50 Days Of Code transformed my tech career. Intensive yet rewarding, with passionate tutors covering frontend and backend skills. Structured syllabus ensures vital topics. Recommend this challenge to jumpstart your tech journey—an investment in your future.",
+            title: "Student"
+        },
+
 
         {
             name: 'Zino Grace',

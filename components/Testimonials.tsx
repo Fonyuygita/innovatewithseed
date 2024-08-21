@@ -9,6 +9,7 @@ import SwipeTestimonials from './SwipeTestimonials'
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link'
+import SliderComponent from './AboutSlide'
 
 const Testimonials = () => {
   const controls = useAnimation();
@@ -51,7 +52,7 @@ const Testimonials = () => {
           <motion.p initial="hidden"
             animate={controls}
             variants={variants}
-            transition={{ duration: 0.6, delay: 0.5 }} className='md:w-[70%] sm:text-[23px] w-[95%] font-sans text-[#999]'>Here some inspiring words our students gave after the 50 Days Of Code Challenge</motion.p>
+            transition={{ duration: 0.6, delay: 0.5 }} className='md:w-[70%] sm:text-[23px] w-[95%] font-sans text-[#999]'>Here some inspiring words our students gave after the 50 Days Of Code Challenge...</motion.p>
           <motion.div
             initial="hidden"
             animate={controls}
@@ -61,7 +62,7 @@ const Testimonials = () => {
             <Link href="/about" className='w-full'>
               <PrimaryBtn
                 title="Read more"
-                extraStyle="min-w-[30%] md:min-w-[57%]   md:my-4 my-6 "
+                extraStyle="min-w-[30%] md:min-w-[57%] lg:flex hidden  md:my-4 my-6 "
                 icon={<FaArrowAltCircleRight />}
               />
             </Link>
@@ -74,8 +75,24 @@ const Testimonials = () => {
           animate={controls}
           variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
           transition={{ duration: 0.6, delay: 0.7 }} className=" w-full  lg:w-2/3 md:h-[500px] h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] 
-        from-gray-300 to-gray-100  p-3">
-          <Image src="/student.svg" alt='student' width={1000} height={1000} className='w-full md:h-[500px] h-full md:rounded-full  object-contain rounded-sm' />
+        from-gray-300 to-gray-100  p-1">
+          <SliderComponent images={[
+            "/slide1.svg",
+            "/slide2.svg",
+            "/slide2.svg",
+            "/team/s1.png",
+            "/team/s4.png",
+            "/testimonial/favour.png",
+            "/testimonial/abdul.png",
+            "/testimonial/tracy.png",
+            "/testimonial/carlen.png",
+            "/testimonial/frank.png",
+            "/testimonial/mark.png",
+            "/testimonial/hope.png",
+            "/team/d1.png"
+
+          ]} />
+
         </motion.div>
 
 

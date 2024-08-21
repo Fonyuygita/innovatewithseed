@@ -26,7 +26,11 @@ const page = () => {
             <div className='flex items-center justify-between my-[6rem] w-full  md:flex-row flex-col'>
                 {/* image box */}
 
-                <SliderComponent />
+                <SliderComponent images={[
+                    "/galView.svg",
+                    "contact.svg",
+
+                ]} showCount />
 
 
 
