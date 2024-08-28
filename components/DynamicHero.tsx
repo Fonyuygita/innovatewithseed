@@ -68,19 +68,33 @@ const DynamicHero: React.FC<HeroProps> = ({ title, description }) => {
             <div className="hero-bg"></div>
             <div className="hero-content">
                 <motion.h1
-                    className="text-5xl font-bold mb-4 hero-header"
+                    className="lg:text-5xl md:text-3xl text-lg font-bold mb-4 hero-header mt-[3rem]"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >{title}</motion.h1>
                 <div className="hero-divider"></div>
                 <motion.h2
-                    className="text-3xl text-center w-[80%] mx-auto max-w-2xl"
+                    className="text-3xl text-center w-full mx-auto max-w-2xl"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.8 }}
                 >
-                    {description}
+                    {description.split("").map((letter, index) => (
+                        <motion.span
+                            key={index}
+                            className=""
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 0 }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                delay: index * 0.1,
+                            }}
+                        >
+                            {letter}
+                        </motion.span>
+                    ))}
                 </motion.h2>
             </div>
         </div>

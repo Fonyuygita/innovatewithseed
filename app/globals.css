@@ -32,7 +32,7 @@
       background-image: url('/services.png');
       background-size: cover;
       background-position: center;
-      height: 100vh;
+      height: 40vh;
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -46,7 +46,7 @@
               background-image: url('/services.png');
               background-size: cover;
               background-position: center;
-              height: 100vh;
+              height: 40vh;
               width: 100vw;
               display: flex;
               justify-content: center;
@@ -59,7 +59,7 @@
                            background-image: url('/team/d4.png');
                            background-size: cover;
                            background-position: center;
-                           height: 100vh;
+                           height: 40vh;
                            width: 100vw;
                            display: flex;
                            justify-content: center;
@@ -72,7 +72,7 @@
                   background-image: url('/team/d4.png');
                   background-size: cover;
                   background-position: center;
-                  height: 100vh;
+                  height: 40vh;
                   width: 100vw;
                   display: flex;
                   justify-content: center;
@@ -85,7 +85,7 @@
               background-image: url('/contact.svg');
               background-size: cover;
               background-position: center;
-              height: 100vh;
+              height: 40vh;
               width: 100vw;
               background-repeat: no-repeat;
               display: flex;
@@ -99,7 +99,7 @@
                               background-size: cover;
                               background-position: center;
               background-repeat: no-repeat;
-                              height: 100vh;
+                              height: 40vh;
                               width: 100vw;
                               display: flex;
                               justify-content: center;
@@ -111,7 +111,7 @@
                       background-image: url('/camera.png');
                       background-size: cover;
                       background-position: center;
-                      height: 100vh;
+                      height: 40vh;
                       width: 100vw;
                       display: flex;
                       justify-content: center;
@@ -125,7 +125,7 @@
                                            background-image: url('/galView.svg');
                                            background-size: cover;
                                            background-position: center;
-                                           height: 100vh;
+                                           height: 40vh;
                                            width: 100vw;
                                            background-repeat: no-repeat;
                                            display: flex;

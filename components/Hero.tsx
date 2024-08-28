@@ -34,7 +34,7 @@ const Hero = () => {
         <>
             <DynamicHero
                 title="SEED INNOVATE"
-                description="Planting To Harvest"
+                description="Empowering Tomorrow's Tech Leaders"
             />
         </>
     )

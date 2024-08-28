@@ -30,12 +30,12 @@ const Partnership = () => {
     useEffect(() => {
         if (!isPaused) {
             controls.start({
-                x: [0, -100 * items.length],
+                x: [0, -200 * items.length],
                 transition: {
                     x: {
                         repeat: Infinity,
                         repeatType: 'loop',
-                        duration: 100,
+                        duration: 50,
                         ease: 'linear',
                     },
                 },

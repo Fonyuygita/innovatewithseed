@@ -25,10 +25,10 @@ const ServicesBody = () => {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="p-6 bg-gray-100 rounded-lg shadow-lg"
+                        className="p-6 bg-gray-100 rounded-lg shadow-lg py-4"
                     >
-                        <service.icon className="text-4xl mb-4 text-primary-100" />
-                        <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                        <service.icon className="text-4xl mb-4 text-primary-100 my-4" />
+                        <h3 className="text-2xl font-bold my-4 text-blue-500">{service.title}</h3>
                         <p>{service.description}</p>
                     </motion.div>
                 ))}
