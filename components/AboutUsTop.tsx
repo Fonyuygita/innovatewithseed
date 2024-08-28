@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const AboutUsTop = () => {
     return (
-        <section className="p-8 mt-[12rem] bg-gray-100 w-full h-full flex items-center justify-center overflow-hidden">
+        <section className="p-8 mt-[5rem] bg-gray-100 w-full h-full flex items-center justify-center overflow-hidden">
             <div className="container mx-auto text-primary-100">
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}

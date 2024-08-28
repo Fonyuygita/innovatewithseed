@@ -68,14 +68,14 @@ const DynamicHero: React.FC<HeroProps> = ({ title, description }) => {
             <div className="hero-bg"></div>
             <div className="hero-content">
                 <motion.h1
-                    className="lg:text-5xl md:text-3xl text-lg font-bold mb-4 hero-header mt-[3rem]"
+                    className="lg:text-5xl md:text-3xl text-lg font-bold mb-4 hero-header md:mt-[3rem] my-[6rem] "
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >{title}</motion.h1>
                 <div className="hero-divider"></div>
                 <motion.h2
-                    className="text-3xl text-center w-full mx-auto max-w-2xl"
+                    className="md:text-3xl text-center w-full mx-auto max-w-2xl text-2xl"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
