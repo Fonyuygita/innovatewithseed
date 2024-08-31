@@ -100,7 +100,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='bg-gray-200 w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px'>
+        <div className='bg-gray-200 w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px shadow-lg'>
             <nav className='flex justify-between items-center p-2 h-full flex-row-reverse'>
 
                 <div className="lg:hidden  flex items-center justify-center`">
@@ -112,8 +112,13 @@ const Navbar = () => {
 
                         (
 
-                            <Link href="/sign-in" className='md:text-lg text-[12px] py-2  items-center justify-center outline-none rounded-md  bg-blue-500 text-white flex  px-3  hover:scale-110  transition p-2'>Academics</Link>
-
+                            <Link
+                                href="/"
+                                className="flex items-center justify-center lg:justify-start gap-2"
+                            >
+                                <Image src="/academics/logo.png" alt="logo" width={32} height={32} />
+                                <span className="hidden lg:block font-bold">SEEDedU</span>
+                            </Link>
 
                         )
                     }
@@ -144,11 +149,11 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`text-blue-500 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                        <Link className={`font-bold text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                     {isSignedIn &&
                         (
-                            <Link className="text-blue-950 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/courses" >Courses</Link>
+                            <Link className="text-blue-950 text-sm text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/academics" >Courses</Link>
                         )
                     }
 
@@ -168,7 +173,13 @@ const Navbar = () => {
 
                         (
 
-                            <Link href="/sign-in" className='text-lg py-2  items-center justify-center outline-none bg-primary-100 text-gray-100 rounded-3xl px-8  hover:scale-110  transition p-3'>Academics</Link>
+                            <Link
+                                href="/sign-in"
+                                className="flex items-center justify-center lg:justify-start gap-2"
+                            >
+                                <Image src="/academics/logo.png" alt="logo" width={32} height={32} />
+                                <span className="hidden lg:block font-bold">Academics</span>
+                            </Link>
 
 
                         )
@@ -210,7 +221,7 @@ const Navbar = () => {
 
                             {isSignedIn &&
                                 (
-                                    <Link className="text-blue-500 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/courses" >Courses</Link>
+                                    <Link className="text-blue-500 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/academics text-sm" >Courses</Link>
                                 )
                             }
                         </motion.div>

@@ -63,10 +63,10 @@ const DynamicHero: React.FC<HeroProps> = ({ title, description }) => {
     }, [])
 
     return (
-        <div className={`${slideShowData[currentSlide].image} `
+        <div className={`${slideShowData[currentSlide].image} md:h-[88vh] h-[50vh]`
         }>
             <div className="hero-bg"></div>
-            <div className="hero-content">
+            <div className="hero-content ">
                 <motion.h1
                     className="lg:text-5xl md:text-3xl text-lg font-bold mb-4 hero-header md:mt-[3rem] my-[6rem] "
                     initial={{ opacity: 0, y: -50 }}
