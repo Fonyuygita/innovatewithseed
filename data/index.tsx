@@ -29,7 +29,7 @@ export const MentorshipData: MentorshipProps[] = [
     description:
       "Fonyuy Gita is a skilled web developer with expertise in front-end and back-end technologies. She excels in creating responsive and user-friendly websites using HTML, CSS, JavaScript, and various frameworks like React and Angular",
     img: "/team/d1.png",
-    link: "",
+    link: "https://fonyuygita.vercel.app",
     portfolio: "",
   },
   {

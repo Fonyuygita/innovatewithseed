@@ -113,11 +113,11 @@ const Navbar = () => {
                         (
 
                             <Link
-                                href="/"
-                                className="flex items-center justify-center lg:justify-start gap-2"
+                                href="/academics"
+                                className="flex items-center justify-center lg:justify-start gap-2 flex-col"
                             >
                                 <Image src="/academics/logo.png" alt="logo" width={32} height={32} />
-                                <span className="hidden lg:block font-bold">SEEDedU</span>
+                                <span className="text-[10px] lg:block font-bold">Academy</span>
                             </Link>
 
                         )
@@ -153,7 +153,7 @@ const Navbar = () => {
                     ))}
                     {isSignedIn &&
                         (
-                            <Link className="text-blue-950 text-sm text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/academics" >Courses</Link>
+                            <Link className="text-blue-950 text-sm md:text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/academics" >Courses</Link>
                         )
                     }
 
@@ -191,14 +191,14 @@ const Navbar = () => {
                 </div>
 
 
-                <div className="lg:hidden bg-blue-500 rounded-md p-2">
+                <div className="lg:hidden  rounded-md p-2">
 
                     {/*  CREATE MENU BUTTON FOR MOBILE*/}
 
-                    <button className="w-7 h-3 gap-1 flex flex-col justify-between cursor-pointer z-50 relative items-center" onClick={() => setIsOpen(!isOpen)}>
-                        <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded origin-left"></motion.div>
-                        <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded"></motion.div>
-                        <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-white rounded origin-left"></motion.div>
+                    <button className="w-7 h-5 gap-1 flex flex-col justify-between cursor-pointer z-50 relative items-center" onClick={() => setIsOpen(!isOpen)}>
+                        <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-primary-100 rounded origin-left"></motion.div>
+                        <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-primary-100 rounded"></motion.div>
+                        <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-primary-100 rounded origin-left"></motion.div>
                     </button>
                     {/*  END MENU BUTTON*/}
 
@@ -221,7 +221,7 @@ const Navbar = () => {
 
                             {isSignedIn &&
                                 (
-                                    <Link className="text-blue-500 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/academics text-sm" >Courses</Link>
+                                    <Link className="text-blue-500 md:text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold text-sm" href="/academics"  >Courses</Link>
                                 )
                             }
                         </motion.div>

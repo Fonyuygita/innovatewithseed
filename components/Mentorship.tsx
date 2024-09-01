@@ -36,7 +36,7 @@ const Mentorship = () => {
 
             >
                 {MentorshipData.map((item, index) => (
-                    <SwiperSlide className="bg-blue-500 shadow-2xl min-h-[300px] md:h-[350px] w-[89%] px-9 md:w-full mb-[4rem] mt-[5rem] relative border-2 border-primary-100" key={item.id}>
+                    <SwiperSlide className="bg-blue-500 shadow-2xl min-h-[300px] md:h-[350px] w-[89%] px-9 md:w-full mb-[4rem] mt-[5rem] relative " key={item.id}>
                         <div className="flex justify-between items-center px-5 w-full">
                             <div className=" flex items-center justify-center text-xs md:flex-row flex-col w-full">
                                 <div className="max-w-[90%]  md:flex md:items-start flex-col md:gap-4 p-3 items-center hidden">
