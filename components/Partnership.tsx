@@ -49,7 +49,7 @@ const Partnership = () => {
     const handleMouseLeave = () => setIsPaused(false);
 
     return (
-        <div className="overflow-hidden w-[80%] w-full mx-auto flex items-center justify-center h-[240px] bg-white shadow-2xl gap-[12rem]">
+        <div className="overflow-hidden md:w-[80%] w-full mx-auto flex items-center justify-center h-[240px] shadow-2xl gap-[12rem]">
             <motion.div
                 className="flex"
                 animate={controls}
@@ -58,12 +58,12 @@ const Partnership = () => {
                 {items.concat(items).map((item, index) => (
                     <div
                         key={index}
-                        className=" w-[12rem] h-[12rem] flex flex-col items-center justify-center  m-2  bg-blue-500 p-6 text-white rounded-lg shadow-2xl px-8 mr-6"
+                        className=" w-[7rem] h-[7rem] flex flex-col items-center justify-center  m-2 text-white   px-8 mr-6"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
                         <div className="text-4xl text-blue-200 bg-primary-100 p-4 rounded-full">{item.icon}</div>
-                        <p className="mt-2 text-center text-sm">{item.text}</p>
+                        <p className="mt-2 text-center text-sm text-primary-100">{item.text}</p>
                     </div>
                 ))}
             </motion.div>

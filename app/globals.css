@@ -220,6 +220,7 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
       transparent 80deg
     );
 
+
   
 
     @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-border-spin content-[''];
@@ -237,6 +238,17 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   .bg-image {
     @apply bg-black-900 bg-light-rays bg-cover bg-no-repeat;
   }
+
+    .bg-hero {
+      /* background-color: rgba(0, 0, 0, 0.1); */
+      width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        /* background-color: red; */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
   .header {
     @apply text-32-bold md:text-36-bold;
@@ -395,10 +407,11 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply text-14-medium text-dark-700 !important;
   }
 
+  
+
   .shad-input {
     @apply bg-white placeholder:text-dark-600 border-white/55 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
-
   .shad-input-icon {
     @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }

@@ -1,3 +1,4 @@
+import CompanyStory from "@/components/CompanyStory";
 import ContactUs from "@/components/ContactUs";
 import Faqs from "@/components/Faqs";
 import FAQSection from "@/components/FaqSection";
@@ -23,6 +24,7 @@ export default function Home() {
     <div className="bg-gray-100 text-red-400 overflow-x-hidden">
 
       <Hero />
+      {/* <CompanyStory /> */}
       <Partnership />
       {/* <Experience /> */}
       <Introduction />
