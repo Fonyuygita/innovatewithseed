@@ -42,15 +42,16 @@ const Hero: React.FC = () => {
                     </div>
                 ))}
             </Slide>
-            <div className="absolute top-[12rem] left-4 text-white">
+            <div className="absolute top-4 md:flex hidden left-4 text-primary-100">
                 {dayjs().format('MMMM D, YYYY h:mm A')}
                 {/* <h1 className="text-4xl text-primary-100">Welcome To Seed</h1> */}
             </div>
             <div className="absolute inset-0 flex items-center justify-center text-center text-white">
                 <h1 className="text-xl md:text-4xl  w-[70%]">{quotes[quoteIndex]}</h1>
             </div>
-            <div className="absolute bottom-4 right-4 text-white">
-                seedInnovate
+            <div className="absolute bottom-4 right-4 flex md:hidden text-white">
+                {dayjs().format('MMMM D, YYYY h:mm A')}
+
             </div>
         </div>
     );

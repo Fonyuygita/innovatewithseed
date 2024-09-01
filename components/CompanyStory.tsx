@@ -1,40 +1,45 @@
 "use client"
 
-import { motion } from 'framer-motion';
-import Lottie from 'lottie-react';
-import animationData from '../public/animation.json'; // Ensure you have a Lottie animation JSON file
+import { useEffect, useRef } from 'react';
+// import LottieAnimation from '../components/LottieAnimation';
+import SlidesContainer from './SlideIntro';
 import LottieAnimation from './lottie/LottieAnimation';
+// import SlidesContainer from '../components/SlidesContainer'
+import animationData from '../public/animation.json'
 
-const CompanyStory = () => {
+
+const SeedStory = () => {
+    const slidesRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (slidesRef.current) {
+                const rect = slidesRef.current.getBoundingClientRect();
+                if (rect.top <= window.innerHeight) {
+                    slidesRef.current.style.opacity = '1';
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <section className="bg-gray-100 py-20">
-            <div className="container mx-auto px-4">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
-                    {/* <Lottie animationData={animationData} loop={true} /> */}
-                    <LottieAnimation animationData={animationData} />
+        <div className="flex md:justify-between justify-center items-center lg:h-[30rem] min-h-[70vh] px-3 md:flex-row flex-col">
+            {/* <LottieAnimation />
+             */}
+            <div className="w-full h-full px-2 flex justify-center">
+                <LottieAnimation animationData={animationData} />
 
-                </motion.div>
-                <motion.div
-                    initial={{ x: '-100vw' }}
-                    animate={{ x: 0 }}
-                    transition={{ type: 'spring', stiffness: 50 }}
-                    className="mt-10"
-                >
-                    <h2 className="text-4xl font-bold text-center mb-4">Our Story</h2>
-                    <p className="text-lg text-center mb-8">
-                        Welcome to See, a company dedicated to innovation and excellence. Our mission is to revolutionize the industry with cutting-edge solutions and unparalleled service.
-                    </p>
-                    <p className="text-lg text-center">
-                        Our aim is to empower businesses and individuals through technology, fostering growth and success in every endeavor.
-                    </p>
-                </motion.div>
+
             </div>
-        </section>
+
+            <div ref={slidesRef} className="opacity-0 transition-opacity duration-500">
+                <SlidesContainer />
+            </div>
+        </div>
     );
 };
 
-export default CompanyStory;
+export default SeedStory;

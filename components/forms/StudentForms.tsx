@@ -61,7 +61,7 @@ const ClientForm = () => {
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className='flex-1 space-y-6'>
                 <section className="mb-12 space-y-4">
-                    <h1 className="mb-12 space-y-4 text-5xl text-primary-100 font-bold mt-6 md:flex hidden">SEED</h1>
+                    <h1 className="mb-12 space-y-4 text-5xl text-primary-100 font-bold mt-6 ">SEED</h1>
                     <p className="text-blue-500 text-3xl mt-[12rem]">Get started with us</p>
                 </section>
 
