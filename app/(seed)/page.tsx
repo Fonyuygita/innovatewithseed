@@ -24,8 +24,9 @@ export default function Home() {
     <div className="bg-gray-100 text-red-400 overflow-x-hidden">
 
       <Hero />
-      <CompanyStory />
       <Partnership />
+
+      <CompanyStory />
       {/* <Experience /> */}
       <Introduction />
 

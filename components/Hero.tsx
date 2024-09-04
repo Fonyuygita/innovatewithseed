@@ -29,8 +29,8 @@ const Hero: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative md:min-h-[60vh] min-h-[40vh] w-full">
-            <Slide easing="ease" duration={5000} transitionDuration={1000}>
+        <div className="relative md:min-h-[70vh] min-h-[40vh] w-full">
+            <Slide easing="ease" arrows duration={5000} transitionDuration={1000}>
                 {images.map((image, index) => (
                     <div key={index} className="each-slide">
                         <div
@@ -42,14 +42,14 @@ const Hero: React.FC = () => {
                     </div>
                 ))}
             </Slide>
-            <div className="absolute top-4 md:flex hidden left-4 text-primary-100">
+            <div className="absolute top-4 hidden  left-4 bg-blue-500 text-primary-100">
                 {dayjs().format('MMMM D, YYYY h:mm A')}
                 {/* <h1 className="text-4xl text-primary-100">Welcome To Seed</h1> */}
             </div>
             <div className="absolute inset-0 flex items-center justify-center text-center text-white">
                 <h1 className="text-xl md:text-4xl  w-[70%]">{quotes[quoteIndex]}</h1>
             </div>
-            <div className="absolute bottom-4 right-4 flex md:hidden text-white">
+            <div className="absolute bottom-4 right-4 n text-white bg-blue-500 text-sm p-3">
                 {dayjs().format('MMMM D, YYYY h:mm A')}
 
             </div>

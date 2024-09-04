@@ -92,7 +92,7 @@ const Mission = () => {
                 animate={controls}
                 variants={variants}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="heading text-blue-500 -[70%] my-4">
+                className="heading text-[2.4rem] text-blue-500 -[70%] my-4">
                 Our   {' '}
                 <span className="text-primary-100">Mission</span>
             </motion.h1>

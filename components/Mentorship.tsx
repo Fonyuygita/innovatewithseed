@@ -18,7 +18,7 @@ const Mentorship = () => {
 
 
         <section className="w-full   py-[3rem] overflow-hidden  items-center  gap-6 flex-col">
-            <h1 className='text-[1.6rem] md:text-[3.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500 mb-9'>Get <span className='text-primary-100 capitalize'>Mentored{" "}</span>By The {" "}Best</h1>
+            <h1 className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500 mb-9'>Get <span className='text-primary-100 capitalize'>Mentored{" "}</span>By The {" "}Best</h1>
             <div className="h-[350px] w-screen md:w-[80%] lg:w-[76%] pt-4 mx-auto bg-blue-500 mb-[4rem]">
                 <Image src="/team/s1.png" alt='banner' height={700} width={500} className='object-cover w-[999px] h-[300px] mx-auto ' />
 

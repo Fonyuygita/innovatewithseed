@@ -29,7 +29,7 @@ const Introduction = () => {
     };
 
     return (
-        <section ref={ref} className="mt-[8rem] flex flex-col md:flex-row justify-between gap-[7rem] lg:px-[5rem] px-[2rem] mb-[2rem] items-center w-full">
+        <section ref={ref} className="md:mt-[8rem] mt-[4rem] flex flex-col md:flex-row justify-between gap-[7rem] lg:px-[5rem] px-[2rem] mb-[2rem] items-center w-full">
 
             <motion.div
                 className="flex flex-col gap-9 w-full"
@@ -39,7 +39,7 @@ const Introduction = () => {
                 transition={{ duration: 0.5 }}
             >
                 <motion.h1
-                    className="text-3xl md:text-5xl text-blue-500 font-extrabold mt-3"
+                    className="text-[2.4rem] md:text-5xl text-blue-500 font-extrabold mt-3"
                     initial="hidden"
                     animate={controls}
                     variants={variants}

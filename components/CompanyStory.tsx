@@ -26,7 +26,7 @@ const SeedStory = () => {
     }, []);
 
     return (
-        <div className="flex md:justify-between justify-center items-center lg:h-[30rem] min-h-[70vh] px-3 md:flex-row flex-col">
+        <div className="flex md:justify-between justify-center items-center lg:h-[40rem] min-h-[70vh] px-3 md:flex-row flex-col-reverse">
             {/* <LottieAnimation />
              */}
             <div className="w-full h-full px-2 flex justify-center">

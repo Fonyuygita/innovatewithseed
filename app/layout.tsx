@@ -33,11 +33,10 @@ export default function RootLayout({
       <html lang="en">
 
         <body className={cn('min-h-screen bg-light-300 font-sans antialiased', fontSans.variable)}>
-          <Navbar />
+
           <ThemeProvider attribute="class" defaultTheme="light">
             {children}
           </ThemeProvider>
-          <Footer />
 
         </body>
 

@@ -12,12 +12,12 @@ interface SlideProps {
 const Slide: React.FC<SlideProps> = ({ icon: Icon, title, description }) => {
     return (
         <motion.div
-            className="p-6 bg-white rounded-lg shadow-md flex items-center space-x-4"
+            className="p-6 bg-white rounded-lg shadow-md justify-start flex flex-col items-start space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <Icon className="text-blue-500 w-12 h-12" />
+            <Icon className="text-blue-500 w-12 h-12 bg-light-300 rounded-full p-3" />
             <div>
                 <h3 className="text-xl font-bold">{title}</h3>
                 <p className="text-gray-600">{description}</p>

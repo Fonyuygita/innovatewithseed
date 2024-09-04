@@ -30,12 +30,12 @@ const Partnership = () => {
     useEffect(() => {
         if (!isPaused) {
             controls.start({
-                x: [0, -200 * items.length],
+                x: [0, -80 * items.length],
                 transition: {
                     x: {
                         repeat: Infinity,
                         repeatType: 'loop',
-                        duration: 50,
+                        duration: 30,
                         ease: 'linear',
                     },
                 },
@@ -49,7 +49,7 @@ const Partnership = () => {
     const handleMouseLeave = () => setIsPaused(false);
 
     return (
-        <div className="overflow-hidden md:w-[80%] w-full mx-auto flex items-center justify-center h-[240px] shadow-2xl gap-[12rem]">
+        <div className="overflow-hidden md:w-[90%] w-full mx-auto flex items-center justify-center h-[240px]  gap-[12rem] md:space-y-7 space-y-4">
             <motion.div
                 className="flex"
                 animate={controls}
@@ -58,12 +58,12 @@ const Partnership = () => {
                 {items.concat(items).map((item, index) => (
                     <div
                         key={index}
-                        className=" w-[7rem] h-[7rem] flex flex-col items-center justify-center  m-2 text-white   px-8 mr-6"
+                        className=" w-[7rem] h-[7rem] flex flex-col items-center justify-center  m-2 text-white  shadow-2xl  mr-6 p-8"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <div className="text-4xl text-blue-200 bg-primary-100 p-4 rounded-full">{item.icon}</div>
-                        <p className="mt-2 text-center text-sm text-primary-100">{item.text}</p>
+                        <div className=" text-blue-200 bg-primary-100 p-4 rounded-full text-lg">{item.icon}</div>
+                        <p className="mt-2 text-center text-[12px] text-primary-100">{item.text}</p>
                     </div>
                 ))}
             </motion.div>

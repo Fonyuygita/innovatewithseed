@@ -101,7 +101,7 @@ const Navbar = () => {
 
     return (
         <div className='bg-gray-200 w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px shadow-lg'>
-            <nav className='flex justify-between items-center p-2 h-full flex-row-reverse'>
+            <nav className='flex justify-between items-center p-2 h-full '>
 
                 <div className="lg:hidden  flex items-center justify-center`">
                     {isSignedIn ? (
