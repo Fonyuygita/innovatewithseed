@@ -11,12 +11,12 @@ import Image from 'next/image';
 const Onboarding = () => {
     return (
 
-        <section className="flex min-h-screen items-center justify-between w-full relative overflow-hidden">
-            <div className="flex flex-1 flex-col items-center  min-h-screen  overflow-hidden  w-full mt-[2rem] bg-white shadow-2xl">
+        <section className="flex min-h-screen w-full relative overflow-y-hidden">
+            <div className="flex flex-1 flex-col items-center  min-h-screen  overflow-hidden  w-full bg-white shadow-2xl">
                 <LottieAnimation animationData={animationData} />
 
                 <motion.h1
-                    className="md:text-4xl px-3 md:px-0 font-bolder mb-4 text-blue-500 text-2xl md:w-[80%] w-full sm:text-center"
+                    className="md:text-4xl px-3 md:px-0 font-extrabold mb-4 text-blue-700 text-2xl md:w-[63%] w-[100%] -mt-9"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -24,7 +24,7 @@ const Onboarding = () => {
                     Welcome to SEED <span className='text-primary-100 font-sans'>Academy</span>
                 </motion.h1>
                 <motion.p
-                    className="md:text-lg md:text-left text-center mb-8 text-sm w-[60%] text-blue-500"
+                    className="md:text-lg md:text-left text-center mb-8 text-sm md:w-[60%] w-[80%] text-gray-900 "
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -34,7 +34,7 @@ const Onboarding = () => {
                 </motion.p>
                 <Link href="/sign-up">
                     <motion.button
-                        className="mt-4 px-6 py-3 bg-primary-100 text-white rounded-lg shadow-lg hover:bg-blue-500 md:w-[500px] w-[340px]"
+                        className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-500 md:w-[500px] w-[340px]"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
@@ -51,6 +51,20 @@ const Onboarding = () => {
             <div className="md:flex hidden w-full h-full flex-1 ">
 
                 <Image src="/acad.png" alt='image' width={800} height={1000} className='w-[500px] h-[400px] object-cover  absolute right-[20%] top-[7rem] border-8 border-blue-500 rounded-2xl -z-10 xl:z-10 shadow-2xl' />
+
+
+
+
+
+                <Link href="/" className='  rounded-full absolute top-[6.3rem] right-[19rem] z-10 bg-white p-4 animate-spin'>
+                    <Image
+                        src="/seedLogo.png"
+                        width={100}
+                        height={200}
+                        alt='logo'
+                        className='lg:w-45 lg:h-45 w-12 h-12  items-center justify-center  object-contain md:flex hidden'
+                    />
+                </Link>
 
                 {/* 
                 <Link href="/" className='  rounded-full  bg-white p-4 text-white absolute top-[34rem] border border-primary-100 z-10 right-[50%] '>
