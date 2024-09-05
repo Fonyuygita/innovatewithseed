@@ -21,7 +21,7 @@ const Onboarding = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Welcome to SEED <span className='text-primary-100'>Academy</span>
+                    Welcome to SEED <span className='text-primary-100 font-sans'>Academy</span>
                 </motion.h1>
                 <motion.p
                     className="md:text-lg md:text-left text-center mb-8 text-sm w-[60%] text-blue-500"

@@ -58,12 +58,12 @@ const Partnership = () => {
                 {items.concat(items).map((item, index) => (
                     <div
                         key={index}
-                        className=" w-[7rem] h-[7rem] flex flex-col items-center justify-center  m-2 text-white  shadow-2xl  mr-6 p-8"
+                        className=" w-[7rem] h-[7rem] flex flex-col items-center justify-center rounded-t-lg  m-2 text-white  shadow-2xl border-b  border-blue-500 mr-6 p-8 border-b-1"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
                         <div className=" text-blue-200 bg-primary-100 p-4 rounded-full text-lg">{item.icon}</div>
-                        <p className="mt-2 text-center text-[12px] text-primary-100">{item.text}</p>
+                        <p className="mt-2 text-center text-[12px] text-gray-800">{item.text}</p>
                     </div>
                 ))}
             </motion.div>
