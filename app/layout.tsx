@@ -29,15 +29,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        layout: {
+          unsafe_disableDevelopmentModeWarnings: true,
+        },
+      }}
+    >
       <html lang="en">
 
         <body className={cn('min-h-screen bg-light-300 font-sans antialiased', fontSans.variable)}>
 
-          <ThemeProvider attribute="class" defaultTheme="light">
+
+          <ThemeProvider attribute="class" defaultTheme="light"
+
+          >
             {children}
           </ThemeProvider>
-
         </body>
 
       </html>

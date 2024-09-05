@@ -11,12 +11,12 @@ import Image from 'next/image';
 const Onboarding = () => {
     return (
 
-        <section className="flex items-center justify-between w-full relative overflow-hidden">
-            <div className="flex flex-1 flex-col items-center justify-center min-h-screen  overflow-hidden  w-full mt-[2rem] bg-white shadow-2xl">
+        <section className="flex min-h-screen items-center justify-between w-full relative overflow-hidden">
+            <div className="flex flex-1 flex-col items-center  min-h-screen  overflow-hidden  w-full mt-[2rem] bg-white shadow-2xl">
                 <LottieAnimation animationData={animationData} />
 
                 <motion.h1
-                    className="md:text-4xl px-3 md:px-0 font-bolder mb-4 text-blue-500 text-2xl w-[60%] text-center"
+                    className="md:text-4xl px-3 md:px-0 font-bolder mb-4 text-blue-500 text-2xl md:w-[80%] w-full sm:text-center"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -32,22 +32,27 @@ const Onboarding = () => {
                     Join us and start your journey in the world of technology.
                     Join us and start your journey in the world of technology.
                 </motion.p>
-                <Link href="/register">            <motion.button
-                    className="mt-4 px-6 py-3 bg-primary-100 text-white rounded-lg shadow-lg hover:bg-blue-600 md:w-[600px] w-[340px]"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    Register Now
-                </motion.button>
+                <Link href="/sign-up">
+                    <motion.button
+                        className="mt-4 px-6 py-3 bg-primary-100 text-white rounded-lg shadow-lg hover:bg-blue-500 md:w-[500px] w-[340px]"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Sign Up
+                    </motion.button>
                 </Link>
+                <div className="flex gap-3 items-center my-4 justify-center text-sm">
+                    <p className='font-sans text-sm text-blue-500'>Already have an account?</p>
+                    <Link href="/sign-in">Sign in</Link>
+                </div>
 
             </div>
 
             <div className="md:flex hidden w-full h-full flex-1 ">
 
-                <Image src="/acad.png" alt='image' width={800} height={1000} className='w-[800px] h-[600px] object-cover  absolute right-[10%] top-[14rem] border-8 border-primary-100 rounded-2xl -z-10 xl:z-10' />
+                <Image src="/acad.png" alt='image' width={800} height={1000} className='w-[500px] h-[400px] object-cover  absolute right-[20%] top-[7rem] border-8 border-blue-500 rounded-2xl -z-10 xl:z-10 shadow-2xl' />
 
-
+                {/* 
                 <Link href="/" className='  rounded-full  bg-white p-4 text-white absolute top-[34rem] border border-primary-100 z-10 right-[50%] '>
                     <Image
                         src="/seedLogo.png"
@@ -56,7 +61,7 @@ const Onboarding = () => {
                         alt='logo'
                         className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain md:flex hidden'
                     />
-                </Link>
+                </Link> */}
 
             </div>
         </section>
