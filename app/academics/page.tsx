@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 // import { Player } from '@lottiefiles/react-lottie-player';
 import { motion } from 'framer-motion';
 import LottieAnimation from '@/components/lottie/LottieAnimation';
-import animationData from '../../public/animation.json'; // 
+import animationData from '../../public/computer.json'; // 
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -12,11 +12,11 @@ const Onboarding = () => {
     return (
 
         <section className="flex min-h-screen w-full relative overflow-y-hidden">
-            <div className="flex flex-1 flex-col items-center  min-h-screen  overflow-hidden  w-full bg-white shadow-2xl">
+            <div className="flex flex-1 flex-col items-center justify-center  min-h-screen  overflow-hidden  w-full bg-white shadow-2xl">
                 <LottieAnimation animationData={animationData} />
 
                 <motion.h1
-                    className="md:text-4xl px-3 md:px-0 font-extrabold mb-4 text-blue-700 text-2xl md:w-[63%] w-[100%] -mt-9"
+                    className="md:text-4xl px-3 md:px-0 font-extrabold mb-4 text-blue-700 text-2xl md:w-[63%] w-[100%] "
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}

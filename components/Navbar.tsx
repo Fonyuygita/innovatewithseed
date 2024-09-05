@@ -153,7 +153,7 @@ const Navbar = () => {
                     ))}
                     {isSignedIn &&
                         (
-                            <Link className="text-blue-950 text-sm md:text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/academics" >Academics</Link>
+                            <Link className="text-blue-950 text-sm md:text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/skills" >Academics</Link>
                         )
                     }
 
@@ -221,7 +221,7 @@ const Navbar = () => {
 
                             {isSignedIn &&
                                 (
-                                    <Link className="text-blue-950 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold " href="/academics"  >Academics</Link>
+                                    <Link className="text-blue-950 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold " href="/skills"  >Academics</Link>
                                 )
                             }
                         </motion.div>
