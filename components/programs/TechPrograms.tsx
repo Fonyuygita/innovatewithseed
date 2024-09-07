@@ -40,7 +40,7 @@ const ProgramCard = ({ program }: any) => (
     <motion.div className="bg-white cursor-pointer shadow-md rounded-lg overflow-hidden">
         <Image src={program.image} alt={program.title} className="w-full h-48 object-cover" width={1000} height={500} />
         <div className="p-4">
-            <h2 className="text-xl font-bold">{program.title}</h2>
+            <h2 className="text-xl font-bold font-medium">{program.title}</h2>
             <p className="mt-2 text-gray-600">{program.description}</p>
             <Link href="/register" className="mt-4 inline-flex items-center text-blue-500 hover:underline">
                 Register <FaArrowRight className="ml-2" />
@@ -95,19 +95,9 @@ const ProgramsSection = () => {
 
     return (
         <div className="container mx-auto p-4 " onScroll={handleScroll}>
-            <div className="flex justify-between items-center gap-5 mb-4 flex-col w-full">
-                <div className="text-gray-200 body-text no-scrollbar flex w-full max-w-full gap-2  py-12 sm:max-w-2xl overflow-scroll overflow-x-auto scrollbar-hide scroll-smooth " ref={elementRef}>
-                    {['All', 'Internships', 'Bootcamps', 'Q&A', 'Events', 'Mentorship', 'Courses', 'Hackathons'].map(category => (
-                        <button
-                            key={category}
-                            onClick={() => setFilter(category)}
-                            className={`px-6 py-1 items-center justify-center inline-flex rounded ${filter === category ? 'bg-primary-100 text-white' : 'bg-gray-200 text-gray-700 '}`}
-                        >
-                            {category}
-                        </button>
-                    ))}
-                </div>
-                <span className="flex flex-center justify-between gap-3 mt-[-12px]">
+            <div className="flex justify-center items-center gap-5 flex-col">
+
+                <div className="flex justify-center items-center gap-5 mb-4  w-full">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24"
                         onClick={() => slideLeft(elementRef.current)}
@@ -116,6 +106,19 @@ const ProgramsSection = () => {
                         <path strokeLinecap="round"
                             strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
+                    <div className="text-gray-200 body-text no-scrollbar flex w-full max-w-full gap-2  py-2 sm:max-w-2xl overflow-scroll overflow-x-auto scrollbar-hide scroll-smooth " ref={elementRef}>
+
+                        {['All', 'Internships', 'Bootcamps', 'Q&A', 'Events', 'Mentorship', 'Courses', 'Hackathons'].map(category => (
+                            <button
+                                key={category}
+                                onClick={() => setFilter(category)}
+                                className={`px-6 py-1 items-center justify-center inline-flex rounded ${filter === category ? 'bg-primary-100 text-white' : 'bg-gray-200 text-gray-700 '}`}
+                            >
+                                {category}
+                            </button>
+                        ))}
+
+                    </div>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         onClick={() => slideRight(elementRef.current)}
                         fill="none" viewBox="0 0 24 24"
@@ -124,7 +127,13 @@ const ProgramsSection = () => {
                         <path strokeLinecap="round"
                             strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
-                </span>
+                    <span className="flex flex-center justify-between gap-3 mt-[-12px]">
+
+
+                    </span>
+
+                </div>
+
                 <div className="relative my-5 flex items-center justify-between px-4 bg-gray-100 border border-primary-100 rounded-md">
                     <input
                         type="text"
@@ -135,8 +144,9 @@ const ProgramsSection = () => {
                     />
                     <FaSearch className=" text-primary-100" />
                 </div>
+
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {loading ? (
                     Array.from({ length: 6 }).map((_, index) => (
                         <SkeletonCard key={index} />

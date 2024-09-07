@@ -149,11 +149,15 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`font-bold text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                        <Link className={`font-bold text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                     {isSignedIn &&
                         (
-                            <Link className="text-blue-950 text-sm md:text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold" href="/skills" >Academics</Link>
+
+
+                            <Link className={`font-bold text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === 'academics' ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Academics</Link>
+
+
                         )
                     }
 
@@ -216,7 +220,7 @@ const Navbar = () => {
                                 className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain flex my-7'
                             />
                             {menuLinks.map(link => (
-                                <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 rounded-md bg-primary-100 px-6" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                                <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white  py-2 rounded-md bg-primary-100 px-[6rem]" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                             ))}
 
                             {isSignedIn &&

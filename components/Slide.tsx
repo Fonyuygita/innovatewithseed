@@ -17,9 +17,9 @@ const Slide: React.FC<SlideProps> = ({ icon: Icon, title, description }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <Icon className="text-blue-500 w-12 h-12 bg-light-300 rounded-full p-3" />
+            <Icon className="text-blue-500 w-12 h-12 bg-light-300 rounded-full p-3 " />
             <div>
-                <h3 className="text-xl font-bold">{title}</h3>
+                <h3 className="text-xl font-bold text-primary-100 my-2">{title}</h3>
                 <p className="text-gray-600">{description}</p>
             </div>
         </motion.div>

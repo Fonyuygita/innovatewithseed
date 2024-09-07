@@ -12,11 +12,12 @@ const Onboarding = () => {
     return (
 
         <section className="flex min-h-screen w-full relative overflow-y-hidden">
-            <div className="flex flex-1 flex-col items-center justify-center  min-h-screen  overflow-hidden  w-full bg-white shadow-2xl">
+            <div className="flex flex-1 flex-col items-center justify-center  min-h-screen  px-4 overflow-hidden  w-[70%] bg-white shadow-2xl">
                 <LottieAnimation animationData={animationData} />
 
+
                 <motion.h1
-                    className="md:text-4xl px-3 md:px-0 font-extrabold mb-4 text-blue-700 text-2xl md:w-[63%] w-[100%] "
+                    className="lg:text-3xl px-3 md:px-0 font-sans font-bold mb-4 text-blue-700 text-xl lg:w-[100%] my-4 text-center"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -24,7 +25,7 @@ const Onboarding = () => {
                     Welcome to SEED <span className='text-primary-100 font-sans'>Academy</span>
                 </motion.h1>
                 <motion.p
-                    className="md:text-lg md:text-left text-center mb-8 text-sm md:w-[60%] w-[80%] text-gray-900 "
+                    className="md:text-lg  text-center mb-8  w-[70%] text-gray-900 font-sans text-sm"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -48,7 +49,7 @@ const Onboarding = () => {
 
             </div>
 
-            <div className="md:flex hidden w-full h-full flex-1 ">
+            <div className="lg:flex hidden w-full h-full flex-1 ">
 
                 <Image src="/acad.png" alt='image' width={800} height={1000} className='w-[500px] h-[400px] object-cover  absolute right-[20%] top-[7rem] border-8 border-blue-500 rounded-2xl -z-10 xl:z-10 shadow-2xl' />
 

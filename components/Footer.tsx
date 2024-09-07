@@ -66,7 +66,7 @@ const Footer = () => {
 
 
                 {/* middle section */}
-                <div className="flex justify-between w-full flex-col md:flex-row gap-[8rem]">
+                <div className="flex justify-between w-full flex-col md:flex-row lg:gap-[8rem] gap-[3rem]">
                     <div className="flex flex-col gap-5 items-center">
                         <div className='flex flex-col items-center '>
                             <Image src="/seedLogo.png" alt='seed' width={150} height={150} className='object-contain' />
@@ -75,10 +75,10 @@ const Footer = () => {
 
                         <p className="text-blue-500 w-[70%] text-left font-sans">We Are A First Class Professional IT Training Institute
                         </p>
-                        <input type="text" className='text-gray-900 px-8 py-3 outline-none border-none bg-gray-100 rounded-lg shadow-2xl' placeholder='email......' />
+                        <input type="text" className='text-gray-900 px-8 py-3 outline-none border border-blue-500 bg-gray-100 rounded-lg shadow-xl' placeholder='email......' />
                         <PrimaryBtn
                             title="Subscribe"
-                            extraStyle="min-w-[70%] md:w-[27%] "
+                            extraStyle="min-w-[90%] md:w-[27%] "
                             icon={<FaSubscript />}
                         />
 
