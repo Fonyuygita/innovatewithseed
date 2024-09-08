@@ -12,12 +12,12 @@ const Onboarding = () => {
     return (
 
         <section className="flex min-h-screen w-full relative overflow-y-hidden">
-            <div className="flex flex-1 flex-col items-center justify-center  min-h-screen  px-4 overflow-hidden  w-[70%] bg-white shadow-2xl">
+            <div className="flex flex-1 flex-col items-center justify-center  min-h-screen  px-4 overflow-hidden  w-[70%] bg-light-100 shadow-2xl">
                 <LottieAnimation animationData={animationData} />
 
 
                 <motion.h1
-                    className="lg:text-3xl px-3 md:px-0 font-sans font-bold mb-4 text-blue-700 text-xl lg:w-[100%] my-4 text-center"
+                    className="lg:text-3xl px-3 md:px-0 font-sans font-bold mb-4 text-blue-500 text-xl lg:w-[100%] my-4 text-center"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -35,11 +35,11 @@ const Onboarding = () => {
                 </motion.p>
                 <Link href="/sign-in">
                     <motion.button
-                        className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-500 md:w-[500px] w-[340px]"
+                        className="mt-4 px-6 py-3 bg-primary-100 text-white rounded-lg shadow-lg hover:bg-[#ffb428f1] md:w-[500px] w-[340px]"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        Sign In
+                        Get Started
                     </motion.button>
                 </Link>
                 {/* <div className="flex gap-3 items-center my-4 justify-center text-sm">
@@ -51,7 +51,7 @@ const Onboarding = () => {
 
             <div className="lg:flex hidden w-full h-full flex-1 ">
 
-                <Image src="/acad.png" alt='image' width={800} height={1000} className='w-[500px] h-[400px] object-cover  absolute right-[20%] top-[7rem] border-8 border-blue-500 rounded-2xl -z-10 xl:z-10 shadow-2xl' />
+                <Image src="/acad.png" alt='image' width={800} height={1000} className='w-[500px] h-[400px] object-cover  absolute right-[20%] top-[7rem] border-8 border-primary-100 rounded-2xl -z-10 xl:z-10 shadow-2xl' />
 
 
 

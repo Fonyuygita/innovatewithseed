@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 // import Provider from "@/components/ClerkProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
+import { frFR } from '@clerk/localizations'
 // import { ClerkProvider } from "@clerk/nextjs";
 // import { ThemeProvider } from "@/components/theme-provider";
 
@@ -33,6 +34,10 @@ export const metadata: Metadata = {
   description: "Innovates with Seed",
 };
 
+const localization = {
+  socialButtonsBlockButton: 'Sign In with {{provider|titleize}}',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,7 +50,7 @@ export default function RootLayout({
           unsafe_disableDevelopmentModeWarnings: true,
         },
       }}
-    >
+      localization={localization}>
       <html lang="en">
 
         <body className={cn('min-h-screen bg-light-300 font-sans antialiased', fontSans.variable)}>

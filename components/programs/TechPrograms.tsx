@@ -90,6 +90,8 @@ const ProgramsSection = () => {
         setTimeout(() => {
             setLoading(false);
             // Update your data based on scroll
+            // setFilteredPrograms(filteredProgram)
+
         }, 3000);
     };
 
@@ -97,12 +99,12 @@ const ProgramsSection = () => {
         <div className="container mx-auto p-4 " onScroll={handleScroll}>
             <div className="flex justify-center items-center gap-5 flex-col">
 
-                <div className="flex justify-center items-center gap-5 mb-4  w-full">
+                <div className="flex justify-center items-center gap-2 mb-4  w-full">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24"
                         onClick={() => slideLeft(elementRef.current)}
                         strokeWidth={1.5} stroke="currentColor"
-                        className="w-8 h-8 bg-blue-500 cursor-pointer p-1 rounded-full text-white  rotate-180">
+                        className="w-8 h-8 bg-primary-100 cursor-pointer p-1 rounded-full text-white  rotate-180">
                         <path strokeLinecap="round"
                             strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -123,7 +125,7 @@ const ProgramsSection = () => {
                         onClick={() => slideRight(elementRef.current)}
                         fill="none" viewBox="0 0 24 24"
                         strokeWidth={1.5} stroke="currentColor"
-                        className="w-8 h-8 bg-blue-500 cursor-pointer p-1 rounded-full text-white">
+                        className="w-8 h-8 bg-primary-100 cursor-pointer p-1 rounded-full text-white">
                         <path strokeLinecap="round"
                             strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -134,7 +136,7 @@ const ProgramsSection = () => {
 
                 </div>
 
-                <div className="relative my-5 flex items-center justify-between px-4 bg-gray-100 border border-primary-100 rounded-md">
+                <div className="relative my-5 flex items-center justify-between px-2 bg-gray-100 border border-primary-100 rounded-md">
                     <input
                         type="text"
                         placeholder="Search programs..."
@@ -142,7 +144,7 @@ const ProgramsSection = () => {
                         onChange={(e) => setSearch(e.target.value)}
                         className="px-8 py-2 rounded bg-gray-100 border-none focus:outline-none"
                     />
-                    <FaSearch className=" text-primary-100" />
+                    <FaSearch className=" text-primary-100 " />
                 </div>
 
             </div>
