@@ -33,19 +33,19 @@ const Onboarding = () => {
                     Join us and start your journey in the world of technology.
                     Join us and start your journey in the world of technology.
                 </motion.p>
-                <Link href="/sign-up">
+                <Link href="/sign-in">
                     <motion.button
                         className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-500 md:w-[500px] w-[340px]"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        Sign Up
+                        Sign In
                     </motion.button>
                 </Link>
-                <div className="flex gap-3 items-center my-4 justify-center text-sm">
+                {/* <div className="flex gap-3 items-center my-4 justify-center text-sm">
                     <p className='font-sans text-sm text-blue-500'>Already have an account?</p>
                     <Link href="/sign-in">Sign in</Link>
-                </div>
+                </div> */}
 
             </div>
 
