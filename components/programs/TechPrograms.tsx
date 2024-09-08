@@ -104,7 +104,7 @@ const ProgramsSection = () => {
                         fill="none" viewBox="0 0 24 24"
                         onClick={() => slideLeft(elementRef.current)}
                         strokeWidth={1.5} stroke="currentColor"
-                        className="w-8 h-8 bg-primary-100 cursor-pointer p-1 rounded-full text-white  rotate-180">
+                        className="w-8 h-8 md:bg-primary-100 cursor-pointer p-1 rounded-full md:text-white text-2xl font-extrabold text-primary-100  rotate-180">
                         <path strokeLinecap="round"
                             strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -125,7 +125,7 @@ const ProgramsSection = () => {
                         onClick={() => slideRight(elementRef.current)}
                         fill="none" viewBox="0 0 24 24"
                         strokeWidth={1.5} stroke="currentColor"
-                        className="w-8 h-8 bg-primary-100 cursor-pointer p-1 rounded-full text-white">
+                        className="w-8 h-8 md:bg-primary-100  cursor-pointer p-1 rounded-full md:text-white text-primary-100 text-2xl">
                         <path strokeLinecap="round"
                             strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
