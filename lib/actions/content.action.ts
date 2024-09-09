@@ -43,11 +43,11 @@ export const updatePost = async (postId: string, field: "likes" | "viewed") => {
   if (!entry.fields[field]["en-US"]) {
     /* @ts-ignore */
 
-    entry.fields[field]["en-US"] = 0;
+    entry.fields[field] = 0;
   }
   /* @ts-ignore */
 
-  entry.fields[field]["en-US"] += 1;
+  entry.fields[field] += 1;
   /* @ts-ignore */
 
   // await client.updateEntry(entry);
