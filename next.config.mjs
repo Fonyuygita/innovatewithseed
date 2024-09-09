@@ -2,8 +2,13 @@
 const nextConfig = {
     swcMinify: false,
     images: {
-        domains: ["images.pexels.com"],
-        loader: "default",
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'images.ctfassets.net',
+                pathname: '/**',
+            },
+        ],
     },
     eslint: {
         ignoreDuringBuilds: true,

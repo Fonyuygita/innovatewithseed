@@ -52,7 +52,6 @@ const ProgramCard = ({ program }: any) => (
 
 
 const slideRight = (element: any) => {
-    element.scrollLeft += 200;
 }
 const slideLeft = (element: any) => {
     element.scrollLeft -= 200;
@@ -64,6 +63,8 @@ const ProgramsSection = () => {
     const [filter, setFilter] = useState('All');
     const [search, setSearch] = useState('');
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | boolean>(false);
+
     const [filteredPrograms, setFilteredPrograms] = useState<any | []>([]);
 
 
@@ -71,6 +72,12 @@ const ProgramsSection = () => {
         (filter === 'All' || program.title === filter) &&
         program.title.toLowerCase().includes(search.toLowerCase())
     );
+
+
+    if (!filteredProgram) {
+        setError(error)
+    }
+
 
     useEffect(() => {
         // Simulate loading data
@@ -84,7 +91,10 @@ const ProgramsSection = () => {
         }, 3000);
     }, []);
 
-
+    if (!filteredPrograms) {
+        setError(true)
+        console.log("No program found")
+    }
     const handleScroll = () => {
         setLoading(true);
         setTimeout(() => {
@@ -94,6 +104,9 @@ const ProgramsSection = () => {
 
         }, 3000);
     };
+
+
+
 
     return (
         <div className="container mx-auto p-4 " onScroll={handleScroll}>
@@ -159,6 +172,8 @@ const ProgramsSection = () => {
                     ))
                 )}
             </div>
+
+            {error && (<p className='text-red-700 bg-red-800'>Error occurred while searching</p>)}
         </div>
     );
 };
