@@ -16,7 +16,7 @@ const options = {
             // Check if the paragraph contains code
             const isCodeBlock = node.content.some((child) => child.nodeType === 'text' && child.marks.some((mark) => mark.type === 'code'));
             return isCodeBlock ? (
-                <pre className=" text-gray-500 shadow-xl p-4 rounded-lg overflow-x-auto my-4 w-[60%] bg-light-200">
+                <pre className=" text-gray-500 shadow-xl p-4 rounded-lg overflow-x-auto my-4 md:w-[90%] w-full bg-light-200">
                     <code>{children}</code>
                 </pre>
             ) : (
@@ -24,7 +24,7 @@ const options = {
             );
         },
         [BLOCKS.HEADING_1]: (node: Block, children: React.ReactNode) => (
-            <h1 className="text-4xl font-bold text-primary-100 mb-6">{children}</h1>
+            <h1 className="md:text-4xl text-2xl font-bold text-primary-100 mb-6">{children}</h1>
         ),
         [BLOCKS.HEADING_2]: (node: Block, children: React.ReactNode) => (
             <h2 className="text-3xl font-semibold text-blue-700 mb-4">{children}</h2>
@@ -58,7 +58,7 @@ const options = {
             if (__typename === 'Video') {
                 return (
                     <div className="my-4">
-                        <h2 className="text-2xl font-semibold mb-2">{fields.title}</h2>
+                        <h2 className="md:text-xl text-lg font-bold mb-2">{fields.title}</h2>
                         <video controls className="w-full rounded-lg shadow-md">
                             <source src={fields.videoUrl} type="video/mp4" />
                         </video>
@@ -85,7 +85,7 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
         setLikes(parseInt(likes + 1));
     };
     return (
-        <div className="md:w-[70%] w-[96px] min-h-screen mx-auto mt-[5rem] bg-[#e0dddd] px-3 shadow-2xl">
+        <div className="md:w-[70%] w-[96%] min-h-screen mx-auto mt-[5rem] bg-[#e0dddd] px-3 shadow-2xl">
             <Image
                 src={`https:${post.coverImage.fields.file.url}`} // Ensure the URL is absolute
                 alt={post.title}

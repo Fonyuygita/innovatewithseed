@@ -8,7 +8,7 @@ import PrimaryBtn from './PrimaryBtn'
 
 const Footer = () => {
     return (
-        <div className="w-full bg-white shadow-2xl px-3 min-h-[540px] mt-[3rem]">
+        <div className="w-full  border-t-2 border-blue-500 bg-light-200 shadow-t-2xl px-3 min-h-[540px] mt-[5rem]">
             <div className="flex flex-col items-center w-[90%] mx-auto p-3">
 
                 {/* top section */}
@@ -75,7 +75,7 @@ const Footer = () => {
 
                         <p className="text-blue-500 w-[70%] text-left font-sans">We Are A First Class Professional IT Training Institute
                         </p>
-                        <input type="text" className='text-gray-900 px-8 py-3 outline-none border border-blue-500 bg-gray-100 rounded-lg shadow-xl' placeholder='email......' />
+                        <input type="text" className='text-gray-900 px-8 py-3 outline-none border border-blue-500 bg-white/100 rounded-lg shadow-xl' placeholder='email......' />
                         <PrimaryBtn
                             title="Subscribe"
                             extraStyle="min-w-[90%] md:w-[27%] "
