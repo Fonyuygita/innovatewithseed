@@ -264,10 +264,35 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   /* Firefox */
 }
 
+
+
   .header {
     @apply text-32-bold md:text-36-bold;
   }
 
+     .hero-height {
+       @apply min-h-[calc(100vh-100px)];
+     }
+  
+     .text-gradient {
+       background: linear-gradient(90deg, #4ca5ff 2.34%, #b673f8 100.78%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-clip: text;
+       text-fill-color: transparent;
+     }
+  
+     .heading1 {
+       @apply text-[64px] leading-[67.2px] font-bold;
+     }
+  
+     .heading2 {
+       @apply font-bold text-[34px] leading-[50.4px];
+     }
+  
+     .heading3 {
+       @apply font-bold sm:text-[32px] sm:leading-[33.6px] text-[28px] leading-[40px] tracking-[-0.25%];
+     }
   .sub-header {
     @apply text-18-bold md:text-24-bold;
   }

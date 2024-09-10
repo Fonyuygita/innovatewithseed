@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { ClerkLoading, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { useAuth } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
+import { FaThumbsUp, FaBell, FaEye, FaMoon, FaSun } from 'react-icons/fa';
 
 type MenuLink = {
     title: string;
@@ -122,6 +123,7 @@ const Navbar = () => {
 
                         )
                     }
+
                 </div>
 
 
@@ -167,6 +169,12 @@ const Navbar = () => {
 
 
                 <div className="lg:flex items-center justify-center gap-x-10 hidden ">
+                    <div className="flex items-center justify-center gap-1 bg-blue-500 shadow-xl p-1 rounded-2xl w cursor-pointer">
+                        <FaMoon className="text-[15px] text-light-200 " />
+                        <FaSun className="text-[15px] h-full" />
+                    </div>
+
+
 
 
                     {isSignedIn ? (

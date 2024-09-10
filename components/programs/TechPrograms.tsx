@@ -37,12 +37,12 @@ const programs: ProgramsProps[] = [
 
 const ProgramCard = ({ program }: any) => (
 
-    <motion.div className="bg-white cursor-pointer shadow-md rounded-lg overflow-hidden">
+    <motion.div className="bg-light-300 cursor-pointer shadow-xl rounded-lg overflow-hidden p-3">
         <Image src={program.image} alt={program.title} className="w-full h-48 object-cover" width={1000} height={500} />
         <div className="p-4">
-            <h2 className="text-xl font-bold font-medium">{program.title}</h2>
+            <h2 className="text-xl  font-medium">{program.title}</h2>
             <p className="mt-2 text-gray-600">{program.description}</p>
-            <Link href="/register" className="mt-4 inline-flex items-center text-blue-500 hover:underline">
+            <Link href="/register" className="mt-4 inline-flex items-center text-primary-100 hover:underline">
                 Register <FaArrowRight className="ml-2" />
             </Link>
         </div>
@@ -149,7 +149,7 @@ const ProgramsSection = () => {
 
                 </div>
 
-                <div className="relative my-5 flex items-center justify-between px-2 bg-gray-100 border border-primary-100 rounded-md">
+                <div className="relative my-5 flex items-center justify-between px-2 bg-light-200 border border-primary-100 rounded-md">
                     <input
                         type="text"
                         placeholder="Search programs..."

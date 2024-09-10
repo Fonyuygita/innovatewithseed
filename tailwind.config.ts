@@ -54,10 +54,12 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+
       backgroundImage: {
         appointments: "url('/assets/images/banner.png')",
         pending: "url('/assets/images/pending-bg.png')",
         cancelled: "url('/assets/images/cancelled-bg.png')",
+        banner: "url('/banner.png')",
       },
       keyframes: {
         "accordion-down": {

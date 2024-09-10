@@ -1,7 +1,7 @@
 "use server";
 
 import { client } from "@/lib/contentful";
-import { ClientPageRoot } from "next/dist/client/components/client-page";
+// import { ClientPageRoot } from "next/dist/client/components/client-page";
 // import { Entry } from "contentful";
 
 export const getPosts = async () => {
@@ -30,25 +30,29 @@ export const getPosts = async () => {
 };
 
 export const updatePost = async (postId: string, field: "likes" | "viewed") => {
-  const entry = await client.getEntry(postId);
+  try {
+    const entry = await client.getEntry(postId);
 
-  // Initialize the field if it doesn't exist
-  if (!entry.fields[field]) {
-    entry.fields[field] = { "en-US": 0 };
-  }
+    // Initialize the field if it doesn't exist
+    if (!entry.fields[field]) {
+      entry.fields[field] = { "en-US": 0 };
+    }
 
-  // Initialize the locale if it doesn't exist
-  /* @ts-ignore */
-
-  if (!entry.fields[field]["en-US"]) {
+    // Initialize the locale if it doesn't exist
     /* @ts-ignore */
 
-    entry.fields[field] = 0;
+    if (!entry.fields[field]["en-US"]) {
+      /* @ts-ignore */
+
+      entry.fields[field]["en-US"] = 0;
+    }
+    /* @ts-ignore */
+
+    entry.fields[field]["en-US"] += 1;
+    /* @ts-ignore */
+
+    await client.updateEntry(entry);
+  } catch (error) {
+    console.error("Error updating entry:", error);
   }
-  /* @ts-ignore */
-
-  entry.fields[field] += 1;
-  /* @ts-ignore */
-
-  // await client.updateEntry(entry);
 };
