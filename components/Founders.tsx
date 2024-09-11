@@ -96,7 +96,7 @@ const FounderSection: React.FC = () => {
     return (
         <section className="flex flex-between items-center px-5 flex-col w-full mt-6">
 
-            <h2 className={`my-[6rem] text-3xl font-bold mb-8 text-center text-blue-500 `}>Our <span className='text-primary-100'>Founders</span></h2>
+            <h2 className={`my-[6rem] text-3xl font-bold mb-8 text-center text-blue-500 `}>SEED <span className='text-primary-100'>Founders</span></h2>
 
 
             <div className="grid w-full md:grid-cols-2 grid-cols-1">
