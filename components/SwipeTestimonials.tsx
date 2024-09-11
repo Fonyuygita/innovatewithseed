@@ -31,7 +31,7 @@ const SwipeTestimonials: FC = () => {
             {testimonials.map((testimonial, index) => (
                 <SwiperSlide
                     key={index}
-                    className={`w-[300px] h-[230px]   slide mb-[4rem] shadow-2xl p-5  ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-700'}`}
+                    className={`w-[300px] h-[230px]   slide mb-[4rem] shadow-2xl p-5  ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-900'}`}
 
                 >
                     <div className=" flex flex-col items-center gap-4">
