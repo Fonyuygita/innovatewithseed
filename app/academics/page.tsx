@@ -7,12 +7,14 @@ import LottieAnimation from '@/components/lottie/LottieAnimation';
 import animationData from '../../public/computer.json'; // 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTheme } from '@/components/context/ThemeContext';
 
 const Onboarding = () => {
+    const { theme } = useTheme()
     return (
 
-        <section className="flex min-h-screen w-full relative overflow-y-hidden">
-            <div className="flex flex-1 flex-col items-center justify-center  min-h-screen  px-4 overflow-hidden  w-[70%] bg-light-100 shadow-2xl">
+        <section className={`flex min-h-screen w-full relative overflow-y-hidden ${theme === 'light' ? 'bg-gray-300 ' : 'bg-gray-800 '}`}>
+            <div className={`flex flex-1 flex-col items-center justify-center  min-h-screen  px-4 overflow-hidden  w-[70%]  shadow-2xl ${theme === 'light' ? 'bg-gray-300 text-black' : 'bg-gray-900 '}`}>
                 <LottieAnimation animationData={animationData} />
 
 
@@ -25,7 +27,7 @@ const Onboarding = () => {
                     Welcome to SEED <span className='text-primary-100 font-sans'>Academy</span>
                 </motion.h1>
                 <motion.p
-                    className="md:text-lg  text-center mb-8  w-[70%] text-gray-900 font-sans text-sm"
+                    className={`md:text-lg  text-center mb-8  w-[70%]  font-sans text-sm ${theme === 'light' ? 'bg-gray-300 text-gray-900' : 'bg-gray-900 text-gray-300'}`}
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -49,7 +51,7 @@ const Onboarding = () => {
 
             </div>
 
-            <div className="lg:flex hidden w-full h-full flex-1 ">
+            <div className={`lg:flex bg-red-900 hidden w-full h-full flex-1 ${theme === 'light' ? 'bg-gray-900 ' : 'bg-gray-700 '}`}>
 
                 <Image src="/acad.png" alt='image' width={800} height={1000} className='w-[500px] h-[400px] object-cover  absolute right-[20%] top-[7rem] border-8 border-primary-100 rounded-2xl -z-10 xl:z-10 shadow-2xl' />
 
@@ -57,7 +59,7 @@ const Onboarding = () => {
 
 
 
-                <Link href="/" className='  rounded-full absolute top-[6.3rem] right-[19rem] z-10 bg-white p-4 animate-spin'>
+                <Link href="/" className={`rounded-full absolute top-[6.3rem] right-[19rem] z-10 ${theme === 'light' ? 'bg-gray-300 text-black' : 'bg-gray-800 '} p-4 animate-spin`}>
                     <Image
                         src="/seedLogo.png"
                         width={100}

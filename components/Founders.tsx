@@ -101,7 +101,7 @@ const FounderSection: React.FC = () => {
 
             <div className="grid w-full md:grid-cols-2 grid-cols-1">
 
-                <div className={`flex flex-col items-center  min-h-screen bg-gray-100 w-full ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-800 text-white  '}`}>
+                <div className={`flex flex-col items-center  min-h-screen bg-gray-100 w-full ${theme === 'light' ? 'bg-gray-300 ' : 'bg-gray-800 text-white  '}`}>
                     {founders.map((founder, index) => (
                         <motion.div
                             key={index}
@@ -121,7 +121,7 @@ const FounderSection: React.FC = () => {
                             <div className="flex flex-col text-center md:text-left">
                                 <h2 className="text-xl md:text-left sm:text-center font-bold text-primary-100">{founder.name}</h2>
                                 <h3 className="text-md text-blue-500 my-3">{founder.title}</h3>
-                                <p className={`text-gray-700 ${theme === 'light' ? 'text-gray-700 ' : ' text-gray-300  '}`}>{founder.description}</p>
+                                <p className={` ${theme === 'light' ? 'text-gray-700 ' : ' text-gray-300  '}`}>{founder.description}</p>
                                 <p className={` mt-4 md:flex hidden ${theme === 'light' ? 'text-gray-700 ' : ' text-gray-400  '}`}>{founder.longDescription}</p>
                                 <div className="flex mt-4 space-x-4 items-center md:justify-end justify-center">
                                     <motion.a

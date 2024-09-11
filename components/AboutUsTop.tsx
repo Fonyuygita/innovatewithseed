@@ -36,7 +36,7 @@ const AboutUsTop = () => {
                         className={` ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-light-200  '} p-6 rounded-lg shadow-md `}
                     >
                         <h2 className="text-2xl font-semibold mb-2">Our Mission</h2>
-                        <p className={` ${theme === "light" ? "text=gray-700" : "text-gray-300"}`}>
+                        <p className={` ${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
                             To provide a nurturing environment for young tech enthusiasts to develop their skills and achieve their dreams.
                         </p>
                     </motion.div>

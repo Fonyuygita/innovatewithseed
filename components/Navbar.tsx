@@ -103,7 +103,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={` w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px shadow-lg  ${theme === 'light' ? 'bg-gray-300 text-black' : 'bg-gray-800 text-white'} `}>
+        <div className={` w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px shadow-lg  ${theme === 'light' ? 'bg-gray-300 text-black' : 'bg-gray-900 text-white'} `}>
             <nav className='flex justify-between items-center p-2 h-full '>
 
                 <div className="lg:hidden  flex items-center justify-center`">
