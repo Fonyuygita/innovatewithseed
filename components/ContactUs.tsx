@@ -34,15 +34,15 @@ const ContactUs = () => {
                     <form className="space-y-4">
                         <div>
                             <label htmlFor="name" className="block  text-blue-500 text-sm font-medium ">Name</label>
-                            <input type="text" id="name" className={`w-full p-2 rounded-md border border-primary-100 outline-none text-blue-500  ${theme === "light" ? "bg-white" : "bg-gray-700"}`} />
+                            <input type="text" id="name" className={`w-full p-2 rounded-md border border-primary-100 outline-none text-blue-500  ${theme === "light" ? "bg-white" : "bg-gray-900"}`} />
                         </div>
                         <div>
                             <label htmlFor="email" className="block text-blue-500  text-sm font-medium">Email</label>
-                            <input type="email" id="email" className={`w-full p-2 rounded-md border border-primary-100 outline-none text-blue-500 ${theme === "light" ? "bg-white" : "bg-gray-700"}`} />
+                            <input type="email" id="email" className={`w-full p-2 rounded-md border border-primary-100 outline-none text-blue-500 ${theme === "light" ? "bg-white" : "bg-gray-900"}`} />
                         </div>
                         <div>
                             <label htmlFor="message" className="blo text-blue-500 ck text-sm font-medium">Message</label>
-                            <textarea id="message" className={`w-full p-2 rounded-md border border-primary-100 outline-none text-blue-900 ${theme === "light" ? "bg-white" : "bg-gray-700"}`} rows={4}></textarea>
+                            <textarea id="message" className={`w-full p-2 rounded-md border border-primary-100 outline-none text-blue-900 ${theme === "light" ? "bg-white" : "bg-gray-900"}`} rows={4}></textarea>
                         </div>
                         <button type="submit" className="w-full p-2 bg-blue-500 rounded-md hover:bg-blue-400">Send</button>
                     </form>

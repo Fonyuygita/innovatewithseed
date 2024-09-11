@@ -95,7 +95,12 @@ const FounderSection: React.FC = () => {
     const { theme } = useTheme()
     return (
         <section className="flex flex-between items-center px-5 flex-col w-full mt-6">
+
+            <h2 className={`my-[6rem] text-3xl font-bold mb-8 text-center text-blue-500 `}>Our <span className='text-primary-100'>Founders</span></h2>
+
+
             <div className="grid w-full md:grid-cols-2 grid-cols-1">
+
                 <div className={`flex flex-col items-center  min-h-screen bg-gray-100 w-full ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-800 text-white  '}`}>
                     {founders.map((founder, index) => (
                         <motion.div
@@ -117,7 +122,7 @@ const FounderSection: React.FC = () => {
                                 <h2 className="text-xl md:text-left sm:text-center font-bold text-primary-100">{founder.name}</h2>
                                 <h3 className="text-md text-blue-500 my-3">{founder.title}</h3>
                                 <p className={`text-gray-700 ${theme === 'light' ? 'text-gray-700 ' : ' text-gray-300  '}`}>{founder.description}</p>
-                                {/* <p className="text-gray-900 mt-4">{founder.longDescription}</p> */}
+                                <p className={` mt-4 md:flex hidden ${theme === 'light' ? 'text-gray-700 ' : ' text-gray-400  '}`}>{founder.longDescription}</p>
                                 <div className="flex mt-4 space-x-4 items-center md:justify-end justify-center">
                                     <motion.a
                                         href={founder.social.twitter}
@@ -148,7 +153,7 @@ const FounderSection: React.FC = () => {
                         </motion.div>
                     ))}
                 </div>
-                <div className="w-full h-full bg-white">
+                <div className={`w-full h-full ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white  '}`}>
                     <Image src="/galView.svg" width={1000} height={1000} alt='seed' className='w-full h-full object-contain' />
                 </div>
             </div>
