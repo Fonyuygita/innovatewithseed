@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FaCamera, FaGlobe, FaHeart } from 'react-icons/fa';
+import { useTheme } from '../context/ThemeContext';
 
 
 
@@ -44,6 +45,7 @@ export const items: Item[] = [
 
 
 const GalleryTop: FC = () => {
+    const { theme } = useTheme()
     return (
         <div className="flex flex-col md:flex-row items-center justify-between p-8 mt-[3rem]">
             <motion.div
@@ -61,7 +63,7 @@ const GalleryTop: FC = () => {
                 transition={{ duration: 1 }}
             >
                 {items.map((item: Item, index: number) => (
-                    <div key={index} className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-lg">
+                    <div key={index} className={`flex items-center space-x-4 p-4  rounded-lg shadow-lg ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-gray-300  '}`}>
                         {item.icon}
                         <p>{item.description}</p>
                     </div>

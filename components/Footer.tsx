@@ -12,7 +12,7 @@ import { useTheme } from './context/ThemeContext'
 const Footer = () => {
     const { theme } = useTheme()
     return (
-        <div className={`w-full  border-t-2 border-blue-500   px-3 min-h-[540px] mt-[5rem] ${theme === "light" ? "bg-light-200" : "bg-gray-800"}`}>
+        <div className={`w-full  border-t-2 border-blue-500   px-3 min-h-[540px]  ${theme === "light" ? "bg-light-200" : "bg-gray-800"}`}>
             <div className="flex flex-col items-center w-[90%] mx-auto p-3">
 
                 {/* top section */}

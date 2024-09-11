@@ -7,6 +7,7 @@ import AboutFounders from './FaqSection';
 import FAQSection from './FaqSection';
 import Image from 'next/image';
 import { FaXTwitter } from 'react-icons/fa6';
+import { useTheme } from './context/ThemeContext';
 
 interface Founder {
     name: string;
@@ -91,14 +92,15 @@ const founders: Founder[] = [
 ];
 
 const FounderSection: React.FC = () => {
+    const { theme } = useTheme()
     return (
         <section className="flex flex-between items-center px-5 flex-col w-full mt-6">
             <div className="grid w-full md:grid-cols-2 grid-cols-1">
-                <div className="flex flex-col items-center  min-h-screen bg-gray-100 w-full">
+                <div className={`flex flex-col items-center  min-h-screen bg-gray-100 w-full ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-800 text-white  '}`}>
                     {founders.map((founder, index) => (
                         <motion.div
                             key={index}
-                            className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg p-6 m-4"
+                            className={`flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg p-6 m-4 ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white  '}`}
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.5 }}
@@ -113,9 +115,9 @@ const FounderSection: React.FC = () => {
                             />
                             <div className="flex flex-col text-center md:text-left">
                                 <h2 className="text-xl md:text-left sm:text-center font-bold text-primary-100">{founder.name}</h2>
-                                <h3 className="text-md text-gray-700 my-3">{founder.title}</h3>
-                                <p className="text-gray-700">{founder.description}</p>
-                                <p className="text-gray-900 mt-4">{founder.longDescription}</p>
+                                <h3 className="text-md text-blue-500 my-3">{founder.title}</h3>
+                                <p className={`text-gray-700 ${theme === 'light' ? 'text-gray-700 ' : ' text-gray-300  '}`}>{founder.description}</p>
+                                {/* <p className="text-gray-900 mt-4">{founder.longDescription}</p> */}
                                 <div className="flex mt-4 space-x-4 items-center md:justify-end justify-center">
                                     <motion.a
                                         href={founder.social.twitter}
@@ -123,7 +125,7 @@ const FounderSection: React.FC = () => {
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.2 }}
                                     >
-                                        <FaXTwitter className="text-blue-500" />
+                                        <FaXTwitter className="text-blue-500 text-xl" />
                                     </motion.a>
                                     <motion.a
                                         href={founder.social.linkedin}
@@ -131,7 +133,7 @@ const FounderSection: React.FC = () => {
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.2 }}
                                     >
-                                        <FaLinkedin className="text-blue-700" />
+                                        <FaLinkedin className="text-primary-100 text-xl" />
                                     </motion.a>
                                     <motion.a
                                         href={founder.social.github}
@@ -139,7 +141,7 @@ const FounderSection: React.FC = () => {
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.2 }}
                                     >
-                                        <FaGithub className="text-gray-800" />
+                                        <FaGithub className="text-blue-500 text-xl" />
                                     </motion.a>
                                 </div>
                             </div>

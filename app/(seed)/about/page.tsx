@@ -13,9 +13,12 @@ import DynamicHero from '@/components/DynamicHero'
 import ContactUs from '@/components/ContactUs'
 import CountUpNumber from '@/components/CountUp'
 import SliderComponent from '@/components/AboutSlide'
-const page = () => {
+import { useTheme } from '@/components/context/ThemeContext'
+const AboutPage = () => {
+    const { theme } = useTheme()
+
     return (
-        <section className="w-full flex flex-col items-center justify-center min-h-screen">
+        <section className={`w-full flex flex-col items-center justify-center min-h-screen   ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-800 text-white  '}`}>
             <DynamicHero
                 title="About Us"
                 description="We plant to harvest."
@@ -37,7 +40,9 @@ const page = () => {
 
                 {/* text box */}
 
-                <div className=" w-full  flex  justify-start flex-col items-start bg-gray-100 p-6">
+
+
+                <div className={`w-full  flex  justify-start flex-col items-start bg-gray-100 p-6 ${theme === "light" ? "text=gray-700 bg-gray-100" : "text-gray-300 bg-gray-900"}`}>
                     <motion.h2
                         className='text-[1.6rem] md:text-[2.4rem] my-2 font-sans line-clamp-2 w-[90%] text-left text-blue-500'
                         initial={{ opacity: 0, scale: 0.5 }}
@@ -49,7 +54,7 @@ const page = () => {
 
 
                     <motion.p
-                        className='text-[14px] md:text-[18px] my-6 font-sans line-clamp-5 text-gray-800  text-left w-[100%] md:w-[98%] mx-auto  '
+                        className={`text-[14px] md:text-[18px] my-6 font-sans line-clamp-5   text-left w-[100%] md:w-[98%] mx-auto ${theme === "light" ? "text-gray-700" : "text-gray-300"}`}
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -74,4 +79,4 @@ const page = () => {
     )
 }
 
-export default page
+export default AboutPage
