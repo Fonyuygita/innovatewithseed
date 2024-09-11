@@ -105,7 +105,7 @@ const FounderSection: React.FC = () => {
                     {founders.map((founder, index) => (
                         <motion.div
                             key={index}
-                            className={`flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg p-6 m-4 ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white  '}`}
+                            className={`flex flex-col md:flex-row items-center  shadow-lg rounded-lg p-6 m-4 ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white  '}`}
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.5 }}
