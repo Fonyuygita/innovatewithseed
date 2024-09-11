@@ -59,7 +59,7 @@ const AboutPage = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                     >
-                        Seed, a tech company, aims to cultivate and support the budding talents in the industry, fostering growth and innovation. Like nurturing a seedling, Seed provides the necessary resources and guidance for young minds to flourish. With a focus on development and mentorship, Seed empowers individuals to reach their full potential in the ever-evolving tech landscape.
+                        Seed, a tech company, aims to cultivate and support the budding talents in the industry, fostering growth and innovation. Like nurturing a seedling, Seed provides the necessary resources and guidance for young minds to flourish. With a focus on development and mentorship, Seed empowers individuals to reach their full potential in the ever-evolving technological landscape.
 
                     </motion.p>
 
