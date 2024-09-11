@@ -3,10 +3,12 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useTheme } from './context/ThemeContext'
 
 const RecentBlogs = () => {
+    const { theme } = useTheme()
     return (
-        <section className="w-full bg-light-200 py-[6rem] overflow-hidden h-full">
+        <section className={`w-full  py-[6rem] overflow-hidden h-full ${theme === 'light' ? 'text-gray-600 bg-light-200  ' : ' text-light-300 bg-gray-700'}`}>
             <motion.h1
                 className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500'
                 initial={{ opacity: 0, y: -50 }}
@@ -18,15 +20,15 @@ const RecentBlogs = () => {
 
             <div className="flex flex-col-reverse md:flex-row mt-[3rem] lg:w-[95%] mx-auto items-center justify-center gap-7 lg:px-3 min-h-full w-full px-4">
                 {/* left hand side for articles */}
-                <div className="flex flex-col gap-5 w-full md:w-1/3 bg-gray-100">
+                <div className={`flex flex-col gap-5 w-full md:w-1/3   ${theme === 'light' ? 'text-gray-600   ' : ' text-light-300 '}`}>
                     <motion.div
-                        className="bg-gray-200 rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer"
+                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-800'} rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
                         <Image src="/blog1.svg" alt='blog1' width={300} height={200} className='w-full px-[2px] h-[10rem] object-contain my-3' />
                         <motion.h3
-                            className="text-blue-500 w-full px-3 line-clamp-1 md:text-2xl xl:text-4xl sm:text-xl"
+                            className="text-blue-500 w-full px-3 line-clamp-1 md:text-lg xl:text-lg sm:text-sm"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
@@ -35,13 +37,13 @@ const RecentBlogs = () => {
                         </motion.h3>
                     </motion.div>
                     <motion.div
-                        className="bg-gray-200 rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer"
+                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-800'} rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
                         <Image src="/blog2.svg" alt='blog1' width={300} height={200} className='w-full px-[2px] h-[10rem] object-contain my-3' />
                         <motion.h3
-                            className="text-blue-500 w-full px-3 line-clamp-1 md:text-2xl xl:text-4xl sm:text-xl"
+                            className="text-blue-500 w-full px-3 line-clamp-1 md:text-lg xl:text-lg sm:text-xl"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}

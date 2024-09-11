@@ -6,6 +6,7 @@ import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion"
 import { FaRegLightbulb, FaUserFriends, FaCogs, FaChalkboardTeacher, FaGlobe, FaBriefcase, FaCode, FaUsers, FaBook } from 'react-icons/fa';
+import { useTheme } from './context/ThemeContext';
 
 interface MissionProps {
     title: string;
@@ -68,6 +69,7 @@ const MissionInfo: MissionProps[] = [
 
 const Mission = () => {
     const controls = useAnimation();
+    const { theme } = useTheme()
     const [ref, inView] = useInView({
         triggerOnce: false,
         threshold: 0.1,
@@ -106,7 +108,7 @@ const Mission = () => {
                         animate={controls}
                         variants={variants}
                         transition={{ duration: 0.5 * index, delay: 0.2 * index }}
-                        className="bg-white shadow-2xl h-[300px] " key={item.title}>
+                        className={`shadow-2xl h-[300px] ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-900'}`} key={item.title}>
                         <div className=" flex items-center justify-center text-xs">
                             <div className="max-w-[100%] text-center flex items-center flex-col gap-4">
                                 <div className="w-24 h-24  text-primary-100 rounded-full flex items-center justify-center  text-[30px]">
@@ -115,7 +117,7 @@ const Mission = () => {
                                 <div className="flex item-center gap-4 flex-col justify-center">
 
                                     <h3 className='w-full text-2xl text-blue-500'>{item.title}</h3>
-                                    <p className='text-[#999] text-sm line-clamp-1'>{item.description}</p>
+                                    <p className='text-[#999] text-sm px-2'>{item.description}</p>
                                 </div>
                             </div>
                         </div>

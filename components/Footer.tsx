@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaShare, FaSubscript, FaUber, FaWhatsapp } from 'react-icons/fa'
@@ -5,10 +7,12 @@ import { FaMessage, FaShareNodes, FaX, FaXTwitter } from 'react-icons/fa6'
 import CustomButton from './CustomButton'
 import Link from 'next/link'
 import PrimaryBtn from './PrimaryBtn'
+import { useTheme } from './context/ThemeContext'
 
 const Footer = () => {
+    const { theme } = useTheme()
     return (
-        <div className="w-full  border-t-2 border-blue-500 bg-light-200 shadow-t-2xl px-3 min-h-[540px] mt-[5rem]">
+        <div className={`w-full  border-t-2 border-blue-500   px-3 min-h-[540px] mt-[5rem] ${theme === "light" ? "bg-light-200" : "bg-gray-800"}`}>
             <div className="flex flex-col items-center w-[90%] mx-auto p-3">
 
                 {/* top section */}
@@ -75,7 +79,7 @@ const Footer = () => {
 
                         <p className="text-blue-500 w-[70%] text-left font-sans">We Are A First Class Professional IT Training Institute
                         </p>
-                        <input type="text" className='text-gray-900 px-8 py-3 outline-none border border-blue-500 bg-white/100 rounded-lg shadow-xl' placeholder='email......' />
+                        <input type="text" className={`text-gray-900 px-8 py-3 outline-none border border-blue-500 ${theme === "light" ? "bg-light-200" : "bg-gray-700"} rounded-lg shadow-xl`} placeholder='email......' />
                         <PrimaryBtn
                             title="Subscribe"
                             extraStyle="min-w-[90%] md:w-[27%] "

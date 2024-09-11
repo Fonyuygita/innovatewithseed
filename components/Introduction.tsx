@@ -7,9 +7,11 @@ import Image from 'next/image';
 import CustomButton from './CustomButton';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import Link from 'next/link';
+import { useTheme } from './context/ThemeContext';
 
 const Introduction = () => {
     const controls = useAnimation();
+    const { theme } = useTheme()
     const [ref, inView] = useInView({
         triggerOnce: false,
         threshold: 0.1,
@@ -49,7 +51,8 @@ const Introduction = () => {
                 </motion.h1>
 
                 <motion.p
-                    className="md:text-lg text-sm font-sans text-gray-800 w-full md:w-[60%]"
+                    className={`md:text-lg text-sm font-sans text-gray-800 w-full md:w-[60%] 
+                ${theme === 'light' ? 'text-gray-800 ' : ' text-light-300 '}`}
                     initial="hidden"
                     animate={controls}
                     variants={variants}

@@ -9,6 +9,7 @@ import { ClerkLoading, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { useAuth } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
 import { FaThumbsUp, FaBell, FaEye, FaMoon, FaSun } from 'react-icons/fa';
+import { useTheme } from "./context/ThemeContext"
 
 type MenuLink = {
     title: string;
@@ -95,13 +96,14 @@ const Navbar = () => {
     const pathname = usePathname();
     const { userId } = useAuth();
     const { isLoaded, isSignedIn, user } = useUser();
+    const { theme, toggleTheme } = useTheme();
 
 
 
 
 
     return (
-        <div className='bg-gray-200 w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px shadow-lg'>
+        <div className={` w-[100%] mr-auto ml-auto px-[5%] h-[90px] fixed top-0 left-0 z-30 md:110px shadow-lg  ${theme === 'light' ? 'bg-gray-300 text-black' : 'bg-gray-800 text-white'} `}>
             <nav className='flex justify-between items-center p-2 h-full '>
 
                 <div className="lg:hidden  flex items-center justify-center`">
@@ -126,8 +128,7 @@ const Navbar = () => {
 
                 </div>
 
-
-                <Link href="/" className='  rounded-full '>
+                <Link href="/" className={`rounded-full shadow-2xl ${theme === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white border border-x-primary-100'}`}>
                     <Image
                         src="/seedLogo.png"
                         width={100}
@@ -137,7 +138,9 @@ const Navbar = () => {
                     />
                 </Link>
 
-                <Link href="/" className='rounded-full bg-gray-200  absolute bottom-[-28px] left-[41%] md:hidden  border border-primary-100 w-12 h-12 flex items-center justify-center'>
+
+
+                <Link href="/" className={`rounded-full   absolute bottom-[-28px] left-[41%] md:hidden   w-12 h-12 flex items-center justify-center  ${theme === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white border border-x-primary-100'}`}>
                     <Image
                         src="/seedLogo.png"
                         width={100}
@@ -151,7 +154,7 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`font-bold text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                        <Link className={`font-semibold text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                     {isSignedIn &&
                         (
@@ -219,16 +222,18 @@ const Navbar = () => {
                     {isOpen &&
 
 
-                        <motion.div variants={listVariants} initial="closed" animate="open" onClick={() => setIsOpen(!isOpen)} className="absolute top-0 left-0 w-screen h-screen bg-light-200 shadow-xl text-blue-400 flex flex-col items-center justify-center gap-8 z-40">
-                            <Image
-                                src="/seedLogo.png"
-                                width={100}
-                                height={200}
-                                alt='logo'
-                                className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain flex my-7'
-                            />
+                        <motion.div variants={listVariants} initial="closed" animate="open" onClick={() => setIsOpen(!isOpen)} className={`absolute top-0 left-0 w-screen h-screen  shadow-xl text-blue-400 flex flex-col items-center justify-center gap-8 z-40   ${theme === 'light' ? 'bg-gray-200 text-blue-400' : 'bg-gray-800 text-light-200'} `}>
+                            <Link href="/" className={`rounded-full shadow-2xl ${theme === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white border border-x-primary-100'}`}>
+                                <Image
+                                    src="/seedLogo.png"
+                                    width={200}
+                                    height={200}
+                                    alt='logo'
+                                    className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain flex '
+                                />
+                            </Link>
                             {menuLinks.map(link => (
-                                <Link className={`text-blue-950 text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white  py-2 rounded-md bg-primary-100 px-[6rem]" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                                <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white  py-2 rounded-md bg-primary-100 px-[6rem]" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                             ))}
 
                             {isSignedIn &&

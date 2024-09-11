@@ -4,15 +4,17 @@ import React, { useState } from 'react'
 
 import { motion } from "framer-motion"
 import Offers from './Offers'
+import { useTheme } from './context/ThemeContext'
 
 const Technologies = () => {
     const [show, setShow] = useState(false)
+    const { theme } = useTheme()
     const showMore = () => {
         // setShow(true)
         console.log("showing more..");
     }
     return (
-        <section className="w-full bg-light-300  py-[3rem] overflow-hidden">
+        <section className={`w-full   py-[3rem] overflow-hidden ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-900'}`}>
             <motion.h1
                 className={`text-[1.6rem] md:text-[2.4rem] my-6 font-sans  line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500`}
                 initial={{ opacity: 0, scale: 0.5 }}

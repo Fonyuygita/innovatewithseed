@@ -10,9 +10,11 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link'
 import SliderComponent from './AboutSlide'
+import { useTheme } from './context/ThemeContext'
 
 const Testimonials = () => {
   const controls = useAnimation();
+  const { theme } = useTheme()
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -74,8 +76,7 @@ const Testimonials = () => {
           initial="hidden"
           animate={controls}
           variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
-          transition={{ duration: 0.6, delay: 0.7 }} className=" w-full  lg:w-2/3 md:h-[500px] h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] 
-        from-gray-300 to-gray-100  p-1">
+          transition={{ duration: 0.6, delay: 0.7 }} className={` w-full  lg:w-2/3 md:h-[500px] h-[400px] ${theme === "light" ? "bg-light-200" : "bg-gray-800"}  p-1`}>
           <SliderComponent images={[
             "/slide1.svg",
             "/slide2.svg",

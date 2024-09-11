@@ -10,6 +10,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
 import { frFR } from '@clerk/localizations'
 import Mode from "@/components/Mode";
+import { ThemeContextProvider } from "@/components/context/ThemeContext";
 // import { ClerkProvider } from "@clerk/nextjs";
 // import { ThemeProvider } from "@/components/theme-provider";
 
@@ -60,8 +61,10 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="light"
 
           >
-            {children}
-            <Mode />
+            <ThemeContextProvider>
+              {children}
+              <Mode />
+            </ThemeContextProvider>
           </ThemeProvider>
         </body>
 
