@@ -60,6 +60,7 @@ const config = {
         pending: "url('/assets/images/pending-bg.png')",
         cancelled: "url('/assets/images/cancelled-bg.png')",
         banner: "url('/banner.png')",
+        blog: "url('/blog.png')",
       },
       keyframes: {
         "accordion-down": {

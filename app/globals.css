@@ -283,7 +283,7 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
      }
   
      .heading1 {
-       @apply text-[64px] leading-[67.2px] font-bold;
+       @apply text-[34px] leading-[67.2px] font-bold;
      }
   
      .heading2 {
