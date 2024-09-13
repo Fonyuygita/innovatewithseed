@@ -7,7 +7,7 @@ import { SearchParamProps } from "@/constants/type";
 import Image from "next/image";
 import Link from "next/link";
 
-export const RegisterPage = async ({ params: { userId } }: SearchParamProps) => {
+const RegisterPage = async ({ params: { userId } }: SearchParamProps) => {
 
     console.log(userId);
 
