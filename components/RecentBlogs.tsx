@@ -8,7 +8,7 @@ import { useTheme } from './context/ThemeContext'
 const RecentBlogs = () => {
     const { theme } = useTheme()
     return (
-        <section className={`w-full  py-[6rem] overflow-hidden h-full ${theme === 'light' ? 'text-gray-600 bg-light-200  ' : ' text-light-300 bg-gray-700'}`}>
+        <section className={`w-full  py-[6rem] overflow-hidden h-full ${theme === 'light' ? 'text-gray-600 bg-light-200  ' : ' text-light-300 bg-gray-800'}`}>
             <motion.h1
                 className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500'
                 initial={{ opacity: 0, y: -50 }}
@@ -22,7 +22,7 @@ const RecentBlogs = () => {
                 {/* left hand side for articles */}
                 <div className={`flex flex-col gap-5 w-full md:w-1/3   ${theme === 'light' ? 'text-gray-600   ' : ' text-light-300 '}`}>
                     <motion.div
-                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-800'} rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer`}
+                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-900'} rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
@@ -37,7 +37,7 @@ const RecentBlogs = () => {
                         </motion.h3>
                     </motion.div>
                     <motion.div
-                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-800'} rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer`}
+                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-900'} rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >

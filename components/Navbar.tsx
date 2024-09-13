@@ -238,7 +238,7 @@ const Navbar = () => {
 
                             {isSignedIn &&
                                 (
-                                    <Link className="text-blue-950 text-lg gap-x-2 animate-in  hover:text-red-700   py-2 rounded-md  px-6 font-bold " href="/skills"  >Academics</Link>
+                                    <Link className={`font-bold text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === 'academics' ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Academics</Link>
                                 )
                             }
                         </motion.div>

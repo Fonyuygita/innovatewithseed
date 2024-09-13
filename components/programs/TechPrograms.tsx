@@ -42,7 +42,7 @@ const ProgramCard = ({ program }: any) => (
         <div className="p-4">
             <h2 className="text-xl  font-medium">{program.title}</h2>
             <p className="mt-2 text-gray-600">{program.description}</p>
-            <Link href="/register" className="mt-4 inline-flex items-center text-primary-100 hover:underline">
+            <Link href="/student/123/register" className="mt-4 inline-flex items-center text-primary-100 hover:underline">
                 Register <FaArrowRight className="ml-2" />
             </Link>
         </div>

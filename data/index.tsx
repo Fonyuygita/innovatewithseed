@@ -1,3 +1,5 @@
+export const GenderOptions = ["Male", "Female", "Other"];
+
 
 import { ReactNode } from 'react';
 import { FaHandshake, FaProjectDiagram, FaLightbulb, FaRocket, FaUsers, FaChartLine, FaCogs, FaLaptopCode, FaMobileAlt, FaShieldAlt } from 'react-icons/fa';

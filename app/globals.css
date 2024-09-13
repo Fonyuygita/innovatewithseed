@@ -241,13 +241,14 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
 
     .bg-hero {
       /* background-color: rgba(0, 0, 0, 0.1); */
-      width: 100%;
+      width: 80%;
+      margin: 0 auto;
         height: 100%;
         background: rgba(0, 0, 0, 0.4);
         /* background-color: red; */
         position: absolute;
         top: 0;
-        left: 0;
+        left: 20%;
     }
 
 
@@ -340,7 +341,7 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
 
   /* ==== FORM */
   .radio-group {
-    @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed border-dark-500 bg-dark-400 p-3;
+    @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed bg-blue-500 p-3;
   }
 
   .checkbox-label {
@@ -349,8 +350,12 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
 
   /* ==== File Upload */
   .file-upload {
-    @apply text-12-regular flex cursor-pointer flex-col items-center justify-center gap-3 rounded-md border border-dashed border-dark-500 bg-dark-400 p-5;
+    @apply text-12-regular flex cursor-pointer flex-col items-center justify-center gap-3 rounded-md border border-dashed border-primary-100 bg-white p-5 text-gray-700;
   }
+
+        .file-upload1 {
+          @apply text-12-regular flex cursor-pointer flex-col items-center justify-center gap-3 rounded-md border border-dashed border-primary-100 bg-gray-800 text-gray-300 p-5;
+        }
 
   .file-upload_label {
     @apply flex flex-col justify-center gap-2 text-center text-dark-600;
@@ -443,21 +448,38 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 
   .shad-input-label {
-    @apply text-14-medium text-dark-700 !important;
+    @apply text-14-medium text-gray-800 !important;
   }
-
+ .checkbox-label {
+   @apply cursor-pointer bg-gray-200 text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
+ }
   
 
   .shad-input {
     @apply bg-white placeholder:text-dark-600 border-white/55 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
+     .shad-input1 {
+       @apply bg-gray-800 placeholder:text-light-300 border-gray-600 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+     }
+
+     .radio-group {
+       @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed border-primary-100 bg-white p-3;
+     }
+
+         .radio-group1{
+           @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed border-primary-100 bg-gray-800 p-3;
+         }
   .shad-input-icon {
     @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .shad-textArea {
-    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply bg-white placeholder:text-gray-800 border-primary-100 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
+
+     .shad-textArea1 {
+       @apply bg-gray-800 placeholder:text-gray-300 border-primary-100 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+     }
 
   .shad-combobox-item {
     @apply data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 !important;
@@ -468,12 +490,20 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 
   .shad-select-trigger {
-    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus:ring-0 focus:ring-offset-0 !important;
+    @apply bg-white placeholder:text-gray-800 border-primary-100 h-11 focus:ring-0 focus:ring-offset-0 !important;
   }
 
+        .shad-select-trigger1 {
+          @apply bg-gray-800 placeholder:text-gray-100 border-primary-100 h-11 focus:ring-0 focus:ring-offset-0 !important;
+        }
+
   .shad-select-content {
-    @apply bg-dark-400 border-dark-500 !important;
+    @apply bg-white border-blue-500 !important;
   }
+
+        .shad-select-content1 {
+          @apply bg-gray-800 border-primary-100 !important;
+        }
 
   .shad-dialog {
     @apply bg-dark-400 border-dark-500 !important;
@@ -520,16 +550,87 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply mt-2 h-11 rounded-md px-3 text-sm border bg-white placeholder:text-dark-600 border-primary-100 !important;
   }
 
+        .input-phone1 {
+          @apply mt-2 h-11 rounded-md px-3 text-sm border bg-gray-800 placeholder:text-light-300 border-primary-100 !important;
+        }
+
   /* =====  REACT DATE PICKER OVERRIDES */
-  .date-picker {
-    @apply overflow-hidden border-transparent w-full placeholder:text-dark-600 h-11 text-14-medium rounded-md px-3 outline-none !important;
-  }
+/* =====  REACT DATE PICKER OVERRIDES */
+.date-picker {
+  @apply overflow-hidden w-full placeholder:text-dark-600 h-11 text-14-medium rounded-md px-3 outline-none border-primary-100 !important;
+}
 }
 
 /* =====  REACT-DATEPICKER OVERRIDES */
 .react-datepicker-wrapper.date-picker {
   display: flex;
   align-items: center;
+}
+
+.react-datepicker,
+.react-datepicker__time,
+.react-datepicker__header,
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker-time__header {
+  background-color: #888 !important;
+  border-color: #777 !important;
+  color: #333 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker-time__header {
+  color: #000000 !important;
+}
+
+.react-datepicker__triangle {
+  fill: #1a1d21 !important;
+  color: #1a1d21 !important;
+  stroke: #1a1d21 !important;
+}
+
+.react-datepicker__time-list-item:hover {
+  background-color: #363a3d !important;
+}
+
+.react-datepicker__input-container input {
+  background-color: #999 !important;
+  width: 100%;
+  outline: none;
+}
+
+.react-datepicker__day--selected {
+  background-color: #24ae7c !important;
+  color: #ffffff !important;
+  border-radius: 4px;
+}
+
+.react-datepicker__time-list-item--selected {
+  background-color: #24ae7c !important;
+}
+
+.react-datepicker__time-container {
+  border-left: 1px solid #363a3d !important;
+}
+
+.react-datepicker__time-list-item {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* =====  REACT PHONE NUMBER INPUT OVERRIDES */
+.PhoneInputInput {
+  outline: none;
+  margin-left: 4px;
+  background: #888;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.PhoneInputInput::placeholder {
+  color: #fff;
 }
 
 

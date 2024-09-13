@@ -168,3 +168,81 @@ export const techCourses = [
 ];
 export const level = ["Beginner", "Intermediate", "Advance, Other"];
 export const time = ["online", "onside", "Both", "Other"];
+
+export const Departments = [
+    {
+        image: "/icons/dr-green.png",
+        name: "NAHPI",
+    },
+    {
+        image: "/icons/dr-cameron.png",
+        name: "COLTECH",
+    },
+    {
+        image: "/icons/department.png",
+        name: "MACS",
+    },
+    {
+        image: "/icons/department.png",
+        name: "CATUC",
+    },
+    {
+        image: "/icons/department.png",
+        name: "CAMPSCI",
+    },
+    {
+        image: "/icons/department.png",
+        name: "HTTTC",
+    },
+    {
+        image: "/icons/department.png",
+        name: "POLYTECH",
+    },
+    {
+        image: "/icons/department.png",
+        name: "Other",
+    },
+
+];
+
+
+
+export const Programs = [
+    {
+        image: "/program/cyber.png",
+        name: "CyberSecurity",
+    },
+    {
+        image: "/program/ai.png",
+        name: "Ai/Machine Learning/Data Science",
+    },
+    {
+        image: "/program/frontEbd.png",
+        name: "FrontEnd Development",
+    },
+    {
+        image: "/program/.png",
+        name: "App Development",
+    },
+    {
+        image: "/program/backend.png",
+        name: "Backend Development",
+    },
+    {
+        image: "/program/embeded.png",
+        name: "Embeded System",
+    },
+
+
+];
+
+
+
+
+
+export const IdentificationTypes = [
+    "Birth Certificate",
+    "National Identity Card",
+    "Student ID Card",
+
+];

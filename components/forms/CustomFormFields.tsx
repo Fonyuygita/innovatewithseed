@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image';
 import { E164Number } from "libphonenumber-js/core";
 import React from 'react'
@@ -14,8 +16,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Input } from '../ui/input';
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
 import { Textarea } from '../ui/textarea';
-import { Select, SelectContent, SelectTrigger, SelectValue } from '../ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Checkbox } from '../ui/checkbox';
+import { useTheme } from '../context/ThemeContext';
 
 export enum FormFieldType {
     INPUT = "input",
@@ -42,16 +45,18 @@ interface CustomProps {
     children?: React.ReactNode;
     renderSkeleton?: (field: any) => React.ReactNode;
     fieldType: FormFieldType;
+    defaultValue?: string
 
 
 }
 
 
 const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
+    const { theme } = useTheme()
     switch (props.fieldType) {
         case FormFieldType.INPUT:
             return (
-                <div className="flex rounded-md border border-primary-100  bg-white">
+                <div className={`flex rounded-md border border-primary-100  ${theme === 'light' ? 'bg-white text-gray-700' : 'bg-gray-800 text-gray-300'}`}>
                     {props.iconSrc && (
                         <Image
                             src={props.iconSrc}
@@ -66,7 +71,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
                         <Input
                             placeholder={props.placeholder}
                             {...field}
-                            className='border-0 outline-none shad-input'
+                            className={`border-0 outline-none  ${theme === 'light' ? 'shad-input' : 'shad-input1'}`}
                         />
                     </FormControl>
                 </div>
@@ -81,7 +86,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
                         withCountryCallingCode
                         value={field.value as E164Number | undefined}
                         onChange={field.onChange}
-                        className='input-phone shad-input b'
+                        className={`  ${theme === 'light' ? 'shad-input input-phone' : 'shad-input1 input-phone1'}`}
                     />
                 </FormControl>
             )
@@ -92,7 +97,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
                     <Textarea
                         placeholder={props.placeholder}
                         {...field}
-                        className="shad-textArea"
+                        className={`${theme === 'light' ? 'shad-textArea' : 'shad-textArea1'} `}
                         disabled={props.disabled}
                     />
                 </FormControl>
@@ -102,9 +107,9 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
 
         case FormFieldType.DATE_PICKER:
             return (
-                <div className="flex rounded-md border border-primary-100  bg-white">
+                <div className={`flex rounded-md  border-primary-100   ${theme === 'light' ? "bg-white" : "bg-gray-800 text-light-200"}`}>
                     <Image
-                        src="/assets/icons/calendar.svg"
+                        src="/icons/calendar.svg"
                         height={24}
                         width={24}
                         alt="user"
@@ -123,21 +128,23 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
                 </div>
             );
 
+
         case FormFieldType.SELECT:
             return (
                 <FormControl>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                            <SelectTrigger className="shad-select-trigger">
+                            <SelectTrigger className={` ${theme === 'light' ? "shad-select-trigger" : "shad-select-trigger1"}`}>
                                 <SelectValue placeholder={props.placeholder} />
                             </SelectTrigger>
                         </FormControl>
-                        <SelectContent className="shad-select-content">
+                        <SelectContent className={` ${theme === 'light' ? "shad-select-content" : "shad-select-content1"}`}>
                             {props.children}
                         </SelectContent>
                     </Select>
                 </FormControl>
             );
+
 
         case FormFieldType.CHECKBOX:
             return (
@@ -147,6 +154,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
                             id={props.name}
                             checked={field.value}
                             onCheckedChange={field.onChange}
+                            className='w-7 h-7 bg-primary-100'
                         />
                         <label htmlFor={props.name} className="checkbox-label">
                             {props.label}
