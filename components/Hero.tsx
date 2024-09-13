@@ -7,6 +7,7 @@ import dayjs from 'dayjs';
 
 const images = [
     '/blog.png',
+    '/banner.png'
 
 ];
 
