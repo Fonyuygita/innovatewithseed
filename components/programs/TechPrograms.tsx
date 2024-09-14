@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaSearch } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTheme } from '../context/ThemeContext';
 
 
 type ProgramsProps = {
@@ -35,9 +36,11 @@ const programs: ProgramsProps[] = [
     { id: 7, title: 'Hackathons', description: 'Competitive coding events.', image: '/programs/bootcamp.png' },
 ];
 
-const ProgramCard = ({ program }: any) => (
+const ProgramCard = ({ program, theme }: any) => (
 
-    <motion.div className="bg-light-300 cursor-pointer shadow-xl rounded-lg overflow-hidden p-3">
+
+
+    <motion.div className={` cursor-pointer shadow-xl rounded-lg overflow-hidden p-3  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
         <Image src={program.image} alt={program.title} className="w-full h-48 object-cover" width={1000} height={500} />
         <div className="p-4">
             <h2 className="text-xl  font-medium">{program.title}</h2>
@@ -57,7 +60,7 @@ const slideLeft = (element: any) => {
     element.scrollLeft -= 200;
 }
 
-const ProgramsSection = () => {
+const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
     const elementRef = useRef(null);
 
     const [filter, setFilter] = useState('All');
@@ -127,7 +130,7 @@ const ProgramsSection = () => {
                             <button
                                 key={category}
                                 onClick={() => setFilter(category)}
-                                className={`px-6 py-1 items-center justify-center inline-flex rounded ${filter === category ? 'bg-primary-100 text-white' : 'bg-gray-200 text-gray-700 '}`}
+                                className={`px-6 py-1 items-center justify-center inline-flex rounded ${filter === category ? 'bg-primary-100 text-white' : 'bg-gray-200 text-gray-700 '}  ${theme === 'light' ? "bg-gray-200" : "bg-gray-900"}`}
                             >
                                 {category}
                             </button>
@@ -149,13 +152,13 @@ const ProgramsSection = () => {
 
                 </div>
 
-                <div className="relative my-5 flex items-center justify-between px-2 bg-light-200 border border-primary-100 rounded-md">
+                <div className={`relative my-5 flex items-center justify-between px-2  border border-primary-100 rounded-md  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
                     <input
                         type="text"
                         placeholder="Search programs..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="px-8 py-2 rounded bg-gray-100 border-none focus:outline-none"
+                        className={`px-8 py-2 rounded  border-none focus:outline-none ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}
                     />
                     <FaSearch className=" text-primary-100 " />
                 </div>
@@ -168,7 +171,7 @@ const ProgramsSection = () => {
                     ))
                 ) : (
                     filteredProgram.map((program: any) => (
-                        <ProgramCard key={program.id} program={program} />
+                        <ProgramCard key={program.id} program={program} theme={theme} />
                     ))
                 )}
             </div>
