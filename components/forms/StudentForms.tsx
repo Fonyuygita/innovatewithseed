@@ -72,10 +72,10 @@ const StudentForm = () => {
     return (
         <section className={`absolute top-0 left-0 w-full h-full ${theme === 'light' ? 'bg-gray-200 text-gray-800' : 'bg-gray-800 text-gray-300'}`}>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className={`flex-1 space-y-6   shadow-xl p-4  ${theme === 'light' ? 'bg-gray-300 text-gray-800' : 'bg-gray-900 text-gray-300'}`}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className={`flex-1 space-y-6   shadow-xl p-4 px-7  ${theme === 'light' ? 'bg-gray-300 text-gray-800' : 'bg-gray-900 text-gray-300'}`}>
                     <section className="mb-12 space-y-4">
-                        <h1 className="mb-12 space-y-4 text-5xl text-primary-100 font-bold mt-6 ">S<span className="text-blue-500">EE</span>D</h1>
-                        <p className="text-blue-500 text-3xl mt-[12rem]">Oooh <span className='text-primary-100 capitalize font-bold'>{user?.lastName}</span> , Heard you wanna do CyberSecurity There we Go</p>
+                        <h1 className="mb-12 space-y-4 text-5xl text-primary-100 font-bold mt-6 capitalize ">S<span className="text-blue-500">EE</span>D</h1>
+                        <p className="text-blue-500 text-3xl mt-[12rem]">Hey {" "} 👋 <span className='text-yellow-600 capitalize font-bold'>{user?.lastName}</span> , Heard you wanna do CyberSecurity There we Go</p>
                     </section>
 
 
