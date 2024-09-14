@@ -41,3 +41,10 @@ export interface FAQ {
   question: string;
   answer: string;
 }
+
+export interface ProgramsProps {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}

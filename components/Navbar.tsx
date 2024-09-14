@@ -98,6 +98,20 @@ const Navbar = () => {
     const { isLoaded, isSignedIn, user } = useUser();
     const { theme, toggleTheme } = useTheme();
 
+    const customAppearance = {
+        variables: {
+            colorPrimary: '#FF6F00', // Tomato color
+            colorText: theme === 'light' ? '#333333' : "#888888", // Dark text
+            colorBackground: theme === 'light' ? '#E8E9E9' : "#111827", // Light background
+            fontFamily: 'Arial, sans-serif',
+            borderRadius: '8px',
+            colorBorder: '#ff6347',
+            colorInputBackground: theme === "light" ? "#ffffff" : "#333333",
+            colorOtpText: theme === 'light' ? '#000000' : '#ffffff', // OTP input font color
+            colorSocialButtonBorder: '#ffffff', // Social media button border color
+        },
+    }
+
 
 
 
@@ -182,7 +196,10 @@ const Navbar = () => {
 
                     {isSignedIn ? (
                         <Link href="/">
-                            <UserButton afterSignOutUrl="/" />
+                            <UserButton afterSignOutUrl="/"
+
+                                appearance={customAppearance}
+                            />
                         </Link>
                     ) :
 

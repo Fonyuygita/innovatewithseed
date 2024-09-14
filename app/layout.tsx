@@ -49,6 +49,8 @@ export default function RootLayout({
     <ClerkProvider
       appearance={{
         layout: {
+          socialButtonsPlacement: 'bottom',
+          socialButtonsVariant: 'auto',
           unsafe_disableDevelopmentModeWarnings: true,
         },
       }}

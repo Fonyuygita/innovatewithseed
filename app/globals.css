@@ -615,6 +615,28 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   border-left: 1px solid #363a3d !important;
 }
 
+.clerk-sign-in .clerk-social-buttons .clerk-social-button.google {
+  background-color: #4285F4; /* Google Blue */
+  color: white;
+}
+
+.clerk-sign-in .clerk-social-buttons .clerk-social-button.github {
+  background-color: #333; /* GitHub Black */
+  color: white;
+}
+
+.clerk-sign-in .clerk-social-buttons .clerk-social-button.facebook {
+  background-color: #3b5998; /* Facebook Blue */
+  color: white;
+}
+
+.clerk-sign-in .clerk-social-buttons .clerk-social-button-label {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+
 .react-datepicker__time-list-item {
   display: flex !important;
   align-items: center !important;

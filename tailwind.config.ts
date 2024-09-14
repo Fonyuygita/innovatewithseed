@@ -59,8 +59,9 @@ const config = {
         appointments: "url('/assets/images/banner.png')",
         pending: "url('/assets/images/pending-bg.png')",
         cancelled: "url('/assets/images/cancelled-bg.png')",
-        banner: "url('/banner.png')",
+        banner: "url('/seedBanner.png')",
         blog: "url('/blog.png')",
+        ban: "url('/banner.png')",
       },
       keyframes: {
         "accordion-down": {
