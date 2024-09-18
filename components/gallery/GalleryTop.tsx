@@ -63,7 +63,7 @@ const GalleryTop: FC = () => {
                 transition={{ duration: 1 }}
             >
                 {items.map((item: Item, index: number) => (
-                    <div key={index} className={`flex items-center space-x-4 p-4  rounded-lg shadow-lg ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-gray-300  '}`}>
+                    <div key={index} className={`flex items-center space-x-4 p-4  rounded-lg shadow-lg ${theme === 'light' ? 'bg-gray-200 text-gray-800 ' : 'bg-gray-900 text-gray-300  '}`}>
                         {item.icon}
                         <p>{item.description}</p>
                     </div>

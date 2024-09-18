@@ -24,10 +24,10 @@ const PostCardComponent = ({ posts }: any) => {
     return (
         <section className={`w-full  mx-auto min-h-screen pb-[5rem] ${theme === 'light' ? "bg-light-200 " : "bg-[#10151D] text-light-300"}`}>
             <div className="w-[87%] h-full mt-[4rem] mx-auto mb-[3rem] pt-[4rem]">
-                <div className="flex-center relative min-h-[300px] w-full flex-col rounded-xl bg-blog bg-cover bg-center text-center">
+                <div className="flex-center relative min-h-[276px] w-full flex-col rounded-xl bg-blog bg-cover bg-center text-center">
                     <h1 className="heading1 md:heading2  mb-6 text-center text-white ">
                         {`[WELCOME] To Our Blog`}{" "}
-                        <span className='font-bold text-primary-100'>
+                        <span className='font-bold  bg-primary-100 text-light-200 px-5 py-2'>
                             {user?.firstName}
                         </span>
                     </h1>

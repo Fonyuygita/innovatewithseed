@@ -66,7 +66,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
 
 
     const filteredProgram = MyPrograms.filter(program =>
-        (filter === 'All' || program.title === filter) &&
+        (filter === 'All' || program.title.split(" ").includes(filter)) &&
         program.title.toLowerCase().includes(search.toLowerCase())
     );
 
@@ -120,7 +120,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
                     </svg>
                     <div className="text-gray-200 body-text no-scrollbar flex w-full max-w-full gap-2  py-2 sm:max-w-2xl overflow-scroll overflow-x-auto scrollbar-hide scroll-smooth " ref={elementRef}>
 
-                        {['All', 'Internships', 'Bootcamps', 'Q&A', 'Events', 'Mentorship', 'Courses', 'Hackathons'].map(category => (
+                        {['All', 'Internship', 'Bootcamp', 'Q&A', 'Events', 'Mentorship', 'Courses', 'Hackathons'].map(category => (
                             <button
                                 key={category}
                                 onClick={() => setFilter(category)}

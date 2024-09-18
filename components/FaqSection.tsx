@@ -38,6 +38,15 @@ const FAQSection: React.FC = () => {
     return (
         <div ref={ref} className=" w-full min-h-[60vh]  ">
 
+            <motion.h1
+                className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500'
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                Frequently Ask{" "}<span className='text-primary-100'>Questions</span>
+            </motion.h1>
+
             <div className="flex flex-col items-center p-6">
                 {faqs.map((faq, index) => (
                     <motion.div

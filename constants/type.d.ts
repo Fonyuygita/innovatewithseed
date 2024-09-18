@@ -8,6 +8,7 @@ export interface HeroProps {
   description: string;
 }
 
+type Level = "Beginner" | "Intermediate" | "Advance" | "Other";
 export type ButtonType = {
   title: string;
   icon?: React.ReactNode;
@@ -47,4 +48,32 @@ export interface ProgramsProps {
   title: string;
   description: string;
   image: string;
+}
+
+declare interface CreateUserParams {
+  name: string;
+  email: string;
+  phone: string;
+}
+declare interface User extends CreateUserParams {
+  $id: string;
+}
+
+declare interface RegisterUserParams extends CreateUserParams {
+  userId: string;
+  birthDate: Date;
+  gender: Gender;
+  address: string;
+  occupation: string;
+  program: string;
+  department: string;
+  duration: string;
+  level: Level;
+  reason: string;
+  notes: string | undefined;
+  identificationType: string | undefined;
+  identificationNumber: string | undefined;
+  identificationDocument: FormData | undefined;
+  applicationDocument: FormData | undefined;
+  privacyConsent: boolean;
 }
