@@ -124,7 +124,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
                             <button
                                 key={category}
                                 onClick={() => setFilter(category)}
-                                className={`px-6 py-1 items-center justify-center inline-flex rounded ${filter === category ? 'bg-primary-100 text-white' : 'bg-gray-200 text-gray-700 '}  ${theme === 'light' ? "bg-gray-200" : "bg-gray-900"}`}
+                                className={`px-6 py-1 items-center justify-center inline-flex rounded ${filter === category ? 'bg-primary-100 text-white' : 'bg-gray-200 text-gray-700 '}  ${theme === 'light' ? "bg-gray-200" : "bg-gray-900 text-light-200"}`}
                             >
                                 {category}
                             </button>
