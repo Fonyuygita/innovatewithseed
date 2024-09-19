@@ -18,7 +18,7 @@ export default function Home() {
                         className="mb-12 h-10 w-fit"
                     />
                     <h2 className="text-2xl text-blue-500 font-bold">Welcome to</h2>
-                    <ClientForm />
+
                     <div className="text-l4 regular mt-20 flex justify-between">
                         <p className="justify-items-end text-dark-600 xl:text-left">
                             @ 2024 SeedInnovates
