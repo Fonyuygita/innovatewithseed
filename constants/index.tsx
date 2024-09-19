@@ -308,8 +308,8 @@ export const MyPrograms: ProgramsProps[] = [
 
 
 
-export const StudentFormDefaultValues = { 
-    name:"",
+export const StudentFormDefaultValues = {
+    name: "",
     email: "",
     phone: "",
     birthDate: new Date(Date.now()),

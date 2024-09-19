@@ -13,7 +13,7 @@ const RegisterPage = async ({ params: { userId } }: SearchParamProps) => {
     const searchParam = userId.toLowerCase()
 
     console.log("search params is " + searchParam)
-    let program;
+    let program: string;
     switch (searchParam) {
         case "internship":
             program = "internship"
@@ -39,7 +39,8 @@ const RegisterPage = async ({ params: { userId } }: SearchParamProps) => {
                         alt="patient"
                         className="mb-12 h-10 w-fit"
                     />
-                    <StudentForm program={program!} />
+                    {/* @ts-ignore */}
+                    <StudentForm program={program} />
 
                     {/* <div className="text-l4 regular mt-20 flex justify-between">
                         <p className="justify-items-end text-dark-600 xl:text-left">

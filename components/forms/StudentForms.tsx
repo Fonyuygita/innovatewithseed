@@ -17,10 +17,11 @@ import { Label } from '../ui/label';
 import { GenderOptions, SiteOptions } from '@/data';
 import { SelectItem } from '../ui/select';
 import Image from 'next/image';
-import { Departments, IdentificationTypes, Programs } from '@/constants';
+import { Departments, IdentificationTypes, StudentFormDefaultValues, Programs } from '@/constants';
 import { useUser } from '@clerk/nextjs';
 import FileUploader from '../FileUploader';
 import { useTheme } from '../context/ThemeContext';
+import { Gender, Site } from '@/constants/type';
 
 const StudentForm = ({ program }: { program: string }) => {
     const router = useRouter()
@@ -32,11 +33,26 @@ const StudentForm = ({ program }: { program: string }) => {
         defaultValues: {
             name: "",
             email: "",
-            phone: ""
+            phone: "",
+            birthDate: new Date(Date.now()),
+            gender: "Male" as Gender,
+            address: "",
+            occupation: "",
+            department: "",
+            program: "",
+            notes: "",
+            reason: "",
+            ambitions: "",
+            site: "Online" as Site,
+            identificationType: "Birth Certificate",
+            identificationNumber: "",
+            identificationDocument: [],
+            applicationDocument: []
+
         }
     });
 
-    const onSubmit = async ({ values }: z.infer<typeof StudentFormValidation>) => {
+    const onSubmit = async (values: z.infer<typeof StudentFormValidation>) => {
         setIsLoading(true);
 
         // try {
