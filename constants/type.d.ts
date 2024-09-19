@@ -8,7 +8,11 @@ export interface HeroProps {
   description: string;
 }
 
-type Level = "Beginner" | "Intermediate" | "Advance" | "Other";
+declare type Level = "Beginner" | "Intermediate" | "Advance" | "Other";
+declare type Site = "Online" | "Offline" | "Other";
+
+declare type Gender = "Male" | "Female" | "Other";
+
 export type ButtonType = {
   title: string;
   icon?: React.ReactNode;
@@ -70,6 +74,8 @@ declare interface RegisterUserParams extends CreateUserParams {
   duration: string;
   level: Level;
   reason: string;
+  site: string;
+  ambitions: string;
   notes: string | undefined;
   identificationType: string | undefined;
   identificationNumber: string | undefined;

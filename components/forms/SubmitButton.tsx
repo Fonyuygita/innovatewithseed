@@ -15,7 +15,7 @@ const SubmitButton = ({ isLoading, className, children }: ButtonProps) => {
         <Button
             type='submit'
             disabled={isLoading}
-            className={className ?? "bg-primary-100 text-white w-full"}
+            className={className ?? "bg-primary-100 text-white w-full mb-[3rem]"}
         >
 
             {isLoading ? (

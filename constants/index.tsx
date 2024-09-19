@@ -1,4 +1,4 @@
-import { FAQ, ProgramsProps, Testimonial } from "./type";
+import { FAQ, Gender, ProgramsProps, Testimonial } from "./type";
 
 // export const slideShowData = [
 //     {
@@ -305,3 +305,28 @@ export const MyPrograms: ProgramsProps[] = [
     { id: 49, title: 'Data Science Conference', description: 'Conference on data science.', image: '/blog.png' },
     { id: 50, title: 'AI Conference', description: 'Conference on AI topics.', image: '/banner.png' },
 ];
+
+
+
+export const StudentFormDefaultValues = { 
+    name:"",
+    email: "",
+    phone: "",
+    birthDate: new Date(Date.now()),
+    gender: "Male" as Gender,
+    address: "",
+    occupation: "",
+    department: "",
+    program: "",
+    notes: "",
+    reason: "",
+    ambitions: "",
+    site: "",
+    identificationType: "Birth Certificate",
+    identificationNumber: "",
+    identificationDocument: [],
+    applicationDocument: ""
+    //   treatmentConsent: false,
+    //   disclosureConsent: false,
+    //   privacyConsent: false,
+};

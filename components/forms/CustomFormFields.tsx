@@ -172,6 +172,8 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
 
 const CustomFormField = (props: CustomProps) => {
     const { control, name, label } = props;
+    const { theme } = useTheme()
+
 
     return (
         <FormField
@@ -182,7 +184,7 @@ const CustomFormField = (props: CustomProps) => {
                     className='flex-1'
                 >
                     {props.fieldType !== FormFieldType.CHECKBOX && label && (
-                        <FormLabel className='shad-input-label'>{label}</FormLabel>
+                        <FormLabel className={`${theme === "light" ? "shad-input-label" : "shad-input-label1"}`}>{label}</FormLabel>
                     )}
                     <RenderInput field={field} props={props} />
                     <FormMessage className='shad-error' />

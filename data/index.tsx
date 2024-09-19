@@ -1,5 +1,7 @@
 export const GenderOptions = ["Male", "Female", "Other"];
 
+export const SiteOptions = ["Online", "Offline", "Other"];
+
 
 import { ReactNode } from 'react';
 import { FaHandshake, FaProjectDiagram, FaLightbulb, FaRocket, FaUsers, FaChartLine, FaCogs, FaLaptopCode, FaMobileAlt, FaShieldAlt } from 'react-icons/fa';

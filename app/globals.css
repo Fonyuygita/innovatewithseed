@@ -340,9 +340,9 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 
   /* ==== FORM */
-  .radio-group {
+  /* .radio-group {
     @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed bg-blue-500 p-3;
-  }
+  } */
 
   .checkbox-label {
     @apply cursor-pointer text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
@@ -450,6 +450,11 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   .shad-input-label {
     @apply text-14-medium text-gray-800 !important;
   }
+
+
+        .shad-input-label1 {
+          @apply text-14-medium text-light-300 !important;
+        }
  .checkbox-label {
    @apply cursor-pointer bg-gray-200 text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
  }
@@ -490,7 +495,7 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 
   .shad-select-trigger {
-    @apply bg-white placeholder:text-gray-800 border-primary-100 h-11 focus:ring-0 focus:ring-offset-0 !important;
+    @apply bg-white placeholder:text-gray-800 border-primary-100 h-11 focus:ring-0 focus:ring-offset-0 text-gray-800 !important;
   }
 
         .shad-select-trigger1 {
@@ -498,11 +503,11 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
         }
 
   .shad-select-content {
-    @apply bg-white border-blue-500 !important;
+    @apply bg-light-200 border-b py-2 border-blue-500 text-gray-800 !important;
   }
 
         .shad-select-content1 {
-          @apply bg-gray-800 border-primary-100 !important;
+          @apply bg-gray-800 border py-2 border-primary-100 text-gray-200 !important;
         }
 
   .shad-dialog {
@@ -547,7 +552,7 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
 
   /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
   .input-phone {
-    @apply mt-2 h-11 rounded-md px-3 text-sm border bg-white placeholder:text-dark-600 border-primary-100 !important;
+    @apply mt-2 h-11 rounded-md px-3 text-sm border bg-white placeholder:text-gray-800 border-primary-100 !important;
   }
 
         .input-phone1 {
@@ -646,7 +651,7 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
 .PhoneInputInput {
   outline: none;
   margin-left: 4px;
-  background: #888;
+  background: #999;;
   font-size: 14px;
   font-weight: 500;
 }

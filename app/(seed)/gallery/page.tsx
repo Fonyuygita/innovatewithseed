@@ -1,7 +1,9 @@
 "use client"
 
+import ContactUs from '@/components/ContactUs'
 import { useTheme } from '@/components/context/ThemeContext'
 import DynamicHero from '@/components/DynamicHero'
+import FAQSection from '@/components/FaqSection'
 import MyImageGallery from '@/components/gallery/ImageGallery'
 import React from 'react'
 
@@ -15,6 +17,8 @@ const GalleryPage = () => {
                 description="We plant to harvest"
             />
             <MyImageGallery />
+            <FAQSection />
+            <ContactUs />
         </div>
     )
 }

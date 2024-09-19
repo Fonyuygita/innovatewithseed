@@ -9,7 +9,24 @@ import Link from "next/link";
 
 const RegisterPage = async ({ params: { userId } }: SearchParamProps) => {
 
-    console.log(userId);
+    // console.log(userId.toLowerCase());
+    const searchParam = userId.toLowerCase()
+
+    console.log("search params is " + searchParam)
+    let program;
+    switch (searchParam) {
+        case "internship":
+            program = "internship"
+            break;
+        case "bootcamp":
+            program = "bootcamp";
+            break;
+        case "mentorship":
+            program = "mentorship"
+            break;
+        default:
+            console.log("Program not found")
+    }
 
     return (
         <div className="flex h-screen max-h-screen overflow-hidden">
@@ -22,7 +39,7 @@ const RegisterPage = async ({ params: { userId } }: SearchParamProps) => {
                         alt="patient"
                         className="mb-12 h-10 w-fit"
                     />
-                    <StudentForm />
+                    <StudentForm program={program!} />
 
                     {/* <div className="text-l4 regular mt-20 flex justify-between">
                         <p className="justify-items-end text-dark-600 xl:text-left">

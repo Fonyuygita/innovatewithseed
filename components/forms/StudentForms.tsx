@@ -1,6 +1,6 @@
 "use client"
 
-import { UserFormValidation } from '@/lib/validation';
+import { StudentFormValidation } from '@/lib/validation';
 import { useForm } from "react-hook-form"
 import React, { useState } from 'react'
 import { z } from "zod"
@@ -14,7 +14,7 @@ import CustomFormField, { FormFieldType } from './CustomFormFields';
 
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
 import { Label } from '../ui/label';
-import { GenderOptions } from '@/data';
+import { GenderOptions, SiteOptions } from '@/data';
 import { SelectItem } from '../ui/select';
 import Image from 'next/image';
 import { Departments, IdentificationTypes, Programs } from '@/constants';
@@ -22,13 +22,13 @@ import { useUser } from '@clerk/nextjs';
 import FileUploader from '../FileUploader';
 import { useTheme } from '../context/ThemeContext';
 
-const StudentForm = () => {
+const StudentForm = ({ program }: { program: string }) => {
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(false);
     const { isLoaded, isSignedIn, user } = useUser();
     const { theme } = useTheme()
-    const form = useForm<z.infer<typeof UserFormValidation>>({
-        resolver: zodResolver(UserFormValidation),
+    const form = useForm<z.infer<typeof StudentFormValidation>>({
+        resolver: zodResolver(StudentFormValidation),
         defaultValues: {
             name: "",
             email: "",
@@ -36,7 +36,7 @@ const StudentForm = () => {
         }
     });
 
-    const onSubmit = async ({ name, email, phone }: z.infer<typeof UserFormValidation>) => {
+    const onSubmit = async ({ values }: z.infer<typeof StudentFormValidation>) => {
         setIsLoading(true);
 
         // try {
@@ -72,10 +72,15 @@ const StudentForm = () => {
     return (
         <section className={`absolute top-0 left-0 w-full h-full ${theme === 'light' ? 'bg-gray-200 text-gray-800' : 'bg-gray-800 text-gray-300'}`}>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className={`flex-1 space-y-6   shadow-xl p-4 px-7  ${theme === 'light' ? 'bg-gray-300 text-gray-800' : 'bg-gray-900 text-gray-300'}`}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className={`flex-1 space-y-6   shadow-xl p-4 px-[1rem] lg:px-[6rem]  ${theme === 'light' ? 'bg-gray-300 text-gray-800' : 'bg-gray-900 text-gray-300'}`}>
                     <section className="mb-12 space-y-4">
                         <h1 className="mb-12 space-y-4 text-5xl text-primary-100 font-bold mt-6 capitalize ">S<span className="text-blue-500">EE</span>D</h1>
-                        <p className="text-blue-500 text-3xl mt-[12rem]">Hey {" "} 👋 <span className='text-yellow-600 capitalize font-bold'>{user?.lastName}</span> , Heard you wanna do CyberSecurity There we Go</p>
+                        <p className="text-blue-500 text-3xl mt-[12rem] p-2">Hey {" "} 👋 <span className='text-yellow-600 capitalize font-bold'>{user?.lastName}</span> , Heard you wanna do
+                            <span className='my-3'>                            <span className="bg-primary-100 text-lg px-3 py-1 text-light-200 capitalize rounded-md">{program}</span> There we Go
+                            </span>
+
+                        </p>
+
                     </section>
 
 
@@ -89,7 +94,7 @@ const StudentForm = () => {
                             fieldType={FormFieldType.SELECT}
                             control={form.control}
                             name="Program"
-                            label="Choose Your Internship Program"
+                            label={`Choose Your ${program} Program`}
                             placeholder="Select A Program"
                             defaultValue="Cybersecurity" // Set your default value here
                         >
@@ -102,9 +107,9 @@ const StudentForm = () => {
                                             width={32}
                                             height={32}
                                             alt="program"
-                                            className="rounded-full border border-dark-500"
+                                            className="rounded-full border border-dark-500 object-contain"
                                         />
-                                        <p>{program.name}</p>
+                                        <p className={`${theme === "light" ? "text-gray-800" : "text-light-300"}`}>{program.name}</p>
                                     </div>
                                 </SelectItem>
                             ))}
@@ -202,38 +207,49 @@ const StudentForm = () => {
 
                     <section className="space-y-8">
                         <div className="mb-9 space-y-3">
-                            <h2 className="sub-header text-blue-500">Academic Information</h2>
+                            {program === "internship" && (
+                                <h2 className="sub-header text-blue-500">Academic Information</h2>
+                            )}
+
+                            {program === "bootcamp" && (
+                                <h2 className="sub-header text-blue-500">Provide us with the following info</h2>
+                            )}
                         </div>
 
-                        <CustomFormField
-                            fieldType={FormFieldType.SELECT}
-                            control={form.control}
-                            name="department"
-                            label="Select a Department"
-                            placeholder="Select a Department"
-                        >
-                            {Departments.map((doctor, i) => (
-                                <SelectItem key={doctor.name + i} value={doctor.name}>
-                                    <div className="flex cursor-pointer items-center gap-2">
-                                        <Image
-                                            src={doctor.image}
-                                            width={32}
-                                            height={32}
-                                            alt="doctor"
-                                            className="rounded-full border border-dark-500"
-                                        />
-                                        <p>{doctor.name}</p>
-                                    </div>
-                                </SelectItem>
-                            ))}
-                        </CustomFormField>
+
+                        {program === "internship" && (
+
+
+                            <CustomFormField
+                                fieldType={FormFieldType.SELECT}
+                                control={form.control}
+                                name="department"
+                                label="Select a Department"
+                                placeholder="Select a Department"
+                            >
+                                {Departments.map((dep, i) => (
+                                    <SelectItem key={dep.name + i} value={dep.name}>
+                                        <div className="flex cursor-pointer items-center gap-2">
+                                            <Image
+                                                src={dep.image}
+                                                width={32}
+                                                height={32}
+                                                alt="dep"
+                                                className="rounded-full border border-dark-500"
+                                            />
+                                            <p>{dep.name}</p>
+                                        </div>
+                                    </SelectItem>
+                                ))}
+                            </CustomFormField>
+                        )}
 
                         <div className="flex flex-col gap-6 xl:flex-row">
                             <CustomFormField
                                 fieldType={FormFieldType.INPUT}
                                 control={form.control}
                                 name="duration"
-                                label="Internship Duration"
+                                label={`${program}  Duration`}
                                 placeholder=" 2 Months"
                             />
 
@@ -245,6 +261,43 @@ const StudentForm = () => {
                                 placeholder="Beginner | Intermediate | Advance | Other"
                             />
                         </div>
+
+                        {program === "bootcamp" && (
+                            <div className="flex flex-col gap-6 xl:flex-row">
+                                <CustomFormField
+                                    fieldType={FormFieldType.INPUT}
+                                    control={form.control}
+                                    name="ambitions"
+                                    label={`${program}  Ambitions`}
+                                    placeholder="To create mobile responsive designs"
+                                />
+
+                                <CustomFormField
+                                    fieldType={FormFieldType.SKELETON}
+                                    control={form.control}
+                                    name="gender"
+                                    label="Gender"
+                                    renderSkeleton={(field) => (
+                                        <FormControl>
+                                            <RadioGroup
+                                                className="flex h-11 gap-6 xl:justify-between"
+                                                onValueChange={field.onChange}
+                                                defaultValue={field.value}
+                                            >
+                                                {SiteOptions.map((option, i) => (
+                                                    <div key={option + i} className={` ${theme === 'light' ? "radio-group" : "radio-group1"}`}>
+                                                        <RadioGroupItem value={option} id={option} />
+                                                        <Label htmlFor={option} className="cursor-pointer">
+                                                            {option}
+                                                        </Label>
+                                                    </div>
+                                                ))}
+                                            </RadioGroup>
+                                        </FormControl>
+                                    )}
+                                />
+                            </div>
+                        )}
 
                         <div className="flex flex-col gap-6 xl:flex-row">
                             <CustomFormField
@@ -266,68 +319,74 @@ const StudentForm = () => {
 
 
                     </section>
+                    {program === "internship" && (
+                        <section className="space-y-6 ">
+                            <div className="mb-9 space-y-1 mt-[3rem]">
+                                <h2 className="sub-header text-blue-500">Identification and Verification</h2>
+                            </div>
+                            <CustomFormField
+                                fieldType={FormFieldType.SELECT}
+                                control={form.control}
+                                name="identificationType"
+                                label="Identification Type"
+                                placeholder="Select identification type"
+                            >
+                                {IdentificationTypes.map((type, i) => (
+                                    <SelectItem key={type + i} value={type}>
+                                        {type}
+                                    </SelectItem>
+                                ))}
+                            </CustomFormField>
 
-                    <section className="space-y-6 ">
-                        <div className="mb-9 space-y-1 mt-[3rem]">
-                            <h2 className="sub-header text-blue-500">Identification and Verfication</h2>
-                        </div>
-                        <CustomFormField
-                            fieldType={FormFieldType.SELECT}
-                            control={form.control}
-                            name="identificationType"
-                            label="Identification Type"
-                            placeholder="Select identification type"
-                        >
-                            {IdentificationTypes.map((type, i) => (
-                                <SelectItem key={type + i} value={type}>
-                                    {type}
-                                </SelectItem>
-                            ))}
-                        </CustomFormField>
+                            <CustomFormField
+                                fieldType={FormFieldType.INPUT}
+                                control={form.control}
+                                name="identificationNumber"
+                                label="Identification Number"
+                                placeholder="KT56789"
+                            />
 
-                        <CustomFormField
-                            fieldType={FormFieldType.INPUT}
-                            control={form.control}
-                            name="identificationNumber"
-                            label="Identification Number"
-                            placeholder="KT56789"
-                        />
+                            <CustomFormField
+                                fieldType={FormFieldType.SKELETON}
+                                control={form.control}
+                                name="identificationDocument"
+                                label="Scanned Copy of Identification Document"
+                                renderSkeleton={(field) => (
+                                    <FormControl>
+                                        <FileUploader files={field.value} onChange={field.onChange} />
+                                    </FormControl>
+                                )}
+                            />
 
-                        <CustomFormField
-                            fieldType={FormFieldType.SKELETON}
-                            control={form.control}
-                            name="identificationDocument"
-                            label="Scanned Copy of Identification Document"
-                            renderSkeleton={(field) => (
-                                <FormControl>
-                                    <FileUploader files={field.value} onChange={field.onChange} />
-                                </FormControl>
-                            )}
-                        />
+                        </section>
+                    )
 
-                    </section>
+                    }
+
+                    {program === "internship" && (
+
+                        <section className="space-y-6 ">
+                            <div className="mb-9 space-y-1 mt-[3rem]">
+                                <h2 className="sub-header text-blue-500">And Finally, Your Application</h2>
+                            </div>
 
 
+                            <CustomFormField
+                                fieldType={FormFieldType.SKELETON}
+                                control={form.control}
+                                name="applicationDocument"
+                                label="Scanned Copy of Application Document"
+                                renderSkeleton={(field) => (
+                                    <FormControl>
+                                        <FileUploader files={field.value} onChange={field.onChange} />
+                                    </FormControl>
+                                )}
+                            />
 
-                    <section className="space-y-6 ">
-                        <div className="mb-9 space-y-1 mt-[3rem]">
-                            <h2 className="sub-header text-blue-500">And Finally, Your Application</h2>
-                        </div>
+                        </section>
+                    )
+                    }
 
-
-                        <CustomFormField
-                            fieldType={FormFieldType.SKELETON}
-                            control={form.control}
-                            name="applicationDocument"
-                            label="Scanned Copy of Application Document"
-                            renderSkeleton={(field) => (
-                                <FormControl>
-                                    <FileUploader files={field.value} onChange={field.onChange} />
-                                </FormControl>
-                            )}
-                        />
-
-                    </section>
 
                     <SubmitButton
                         isLoading={isLoading}
