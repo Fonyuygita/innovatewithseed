@@ -3,12 +3,16 @@
 import StudentForm from "@/components/forms/StudentForms";
 import { Button } from "@/components/ui/button";
 import { SearchParamProps } from "@/constants/type";
+import { getUser } from "@/lib/actions/student.action"
+import { createUser } from '@/lib/actions/student.action';
 // import { getUser } from "@/lib/actions/patient.actions";
 import Image from "next/image";
 import Link from "next/link";
 
 const RegisterPage = async ({ params: { userId }, searchParams }: SearchParamProps) => {
-    // console.log(prog?.program)
+
+
+    const user = await getUser(userId)
 
     // console.log(userId.toLowerCase());
     const searchParam = searchParams.prog
@@ -44,7 +48,7 @@ const RegisterPage = async ({ params: { userId }, searchParams }: SearchParamPro
                         className="mb-12 h-10 w-fit"
                     />
                     {/* @ts-ignore */}
-                    <StudentForm program={program} />
+                    <StudentForm program={program} student={user} />
 
 
 

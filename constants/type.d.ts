@@ -57,8 +57,8 @@ export interface ProgramsProps {
 declare interface CreateUserParams {
   name: string;
   email: string;
+  password: undefine;
   phone: string;
-  program?:string
 }
 declare interface User extends CreateUserParams {
   $id: string;
@@ -84,3 +84,22 @@ declare interface RegisterUserParams extends CreateUserParams {
   applicationDocument: FormData | undefined;
   privacyConsent: boolean;
 }
+
+declare type CreateAppointmentParams = {
+  userId: string;
+  patient: string;
+  primaryPhysician: string;
+  reason: string;
+  schedule: Date;
+  status: Status;
+  note: string | undefined;
+};
+
+declare type UpdateAppointmentParams = {
+  appointmentId: string;
+  userId: string;
+  appointment: Appointment;
+  type: string;
+};
+
+declare type Status = "pending" | "scheduled" | "cancelled";

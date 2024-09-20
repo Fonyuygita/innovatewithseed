@@ -21,9 +21,10 @@ import { Departments, IdentificationTypes, StudentFormDefaultValues, Programs } 
 import { useUser } from '@clerk/nextjs';
 import FileUploader from '../FileUploader';
 import { useTheme } from '../context/ThemeContext';
-import { Gender, Site } from '@/constants/type';
+import { Gender, Site, User } from '@/constants/type';
+import { registerStudent } from "@/lib/actions/student.action"
 
-const StudentForm = ({ program }: { program: string }) => {
+const StudentForm = ({ program, student }: { program: string; student: User }) => {
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(false);
     const { isLoaded, isSignedIn, user } = useUser();
@@ -39,30 +40,73 @@ const StudentForm = ({ program }: { program: string }) => {
     const onSubmit = async (values: z.infer<typeof StudentFormValidation>) => {
         setIsLoading(true);
 
-        // try {
-        //     const userData = {
-        //         name,
-        //         email,
-        //         phone
-        //     };
-        //     const newUser = await createUser(userData);
-        //     console.log(newUser)
-        //     // router.push(`/patient/${newUser.$id}/register`)
 
 
-        //     if (newUser) {
-        //         router.push(`/patient/${newUser?.$id}/register`)
-        //         console.log(newUser);
-        //     }
-        // } catch (err) {
-        //     // \catch errors if any
-        //     console.log(err);
-        //     // router.push(`/patient/${newUser.$id}/register`)
+        let formDataId;
+        let formDataApp;
+
+        // if identification docs exist, and convert data to blob before sending
+        if (values.identificationDocument && values.identificationDocument?.length > 0) {
+
+            const blobFile = new Blob([values.identificationDocument[0]], {
+                type: values.identificationDocument[0].type,
+            })
+            console.log(blobFile);
+            formDataId = new FormData();
+            formDataId.append("blobFile", blobFile);
+            formDataId.append("fileName", values.identificationDocument[0].name)
+            console.log(formDataId);
+
+        }
 
 
-        // }
 
-        // setIsLoading(false)
+        if (values.applicationDocument && values.applicationDocument?.length > 0) {
+
+            const blobFile1 = new Blob([values.applicationDocument[0]], {
+                type: values.applicationDocument[0].type,
+            })
+            console.log(blobFile1);
+            formDataApp = new FormData();
+            formDataApp.append("blobFile", blobFile1);
+            formDataApp.append("fileName", values.applicationDocument[0].name)
+            console.log(formDataApp);
+
+        }
+
+
+
+
+        try {
+            // get the data we want to send to db
+            const studentData = {
+                ...values,
+                userId: student.$id!,
+                birthDate: new Date(values.birthDate),
+                identificationDocument: formDataId,
+                applicationDocument: formDataApp,
+            }
+
+            // @ts-ignore
+
+            const newPatient = await registerStudent(studentData)
+            console.log("hello data");
+            console.log(newPatient);
+
+            if (newPatient) router.push(`/student/${student.$id}/appointment?prog=${program}`)
+
+        } catch (err) {
+            // \catch errors if any
+            console.log(err);
+            // router.push(`/patient/${newUser.$id}/register`)
+
+
+        }
+
+
+
+
+        setIsLoading(false)
 
 
 
@@ -390,7 +434,7 @@ const StudentForm = ({ program }: { program: string }) => {
 
                     <SubmitButton
                         isLoading={isLoading}
-                    >Start Now</SubmitButton>
+                    >Continue</SubmitButton>
 
 
                 </form>

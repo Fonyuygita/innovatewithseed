@@ -79,7 +79,7 @@ export const registerStudent = async ({
       ...patient,
     });
 
-    const newPatient = await databases.createDocument(
+    const newStudent = await databases.createDocument(
       DATABASE_ID!,
       STUDENT_COLLECTION_ID!,
       ID.unique(),
@@ -92,7 +92,7 @@ export const registerStudent = async ({
       }
     );
 
-    return parseStringify(newPatient);
+    return parseStringify(newStudent);
   } catch (err) {
     console.log("The error that occurred is " + err);
   }
@@ -100,11 +100,11 @@ export const registerStudent = async ({
 
 //  GET PATIENT
 
-export const getPatient = async (userId: string) => {
+export const getStudent = async (userId: string) => {
   try {
     const patients = await databases.listDocuments(
       DATABASE_ID!,
-      PATIENT_COLLECTION_ID!,
+      STUDENT_COLLECTION_ID!,
       [Query.equal("userId", [userId])]
     );
 

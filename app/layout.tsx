@@ -61,7 +61,7 @@ export default function RootLayout({
         baseTheme: dark,
         variables: {
           colorPrimary: "#3371ff",
-          fontSize: '16px'
+          fontSize: '13px'
         }
       }}
       localization={localization}>
