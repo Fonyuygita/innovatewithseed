@@ -66,10 +66,7 @@ export default function Page() {
             </ClerkLoading>
             {/* @ts-ignore */}
             <SignIn
-                appearance={customAppearance}
-                // @ts-ignore
-                localization={customLabels}
-                socialButtons={['google', 'facebook', 'twitter']} // Specify social media handles
+
             />
         </div>
     );

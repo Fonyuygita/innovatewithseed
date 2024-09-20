@@ -1,5 +1,7 @@
 // import ClientForm from "@/components/forms/ClientForm";
 // import RegisterForm from "@/components/forms/RegisterForm";
+// import RegisterForm from "@/components/DynamicRegisterForm";
+import RegisterStudentForm from "@/components/forms/RegisterForm";
 import StudentForm from "@/components/forms/StudentForms";
 import { Button } from "@/components/ui/button";
 import { SearchParamProps } from "@/constants/type";
@@ -7,14 +9,10 @@ import { SearchParamProps } from "@/constants/type";
 import Image from "next/image";
 import Link from "next/link";
 
-const RegisterPage = async ({ params: { userId }, searchParams }: SearchParamProps) => {
-    // console.log(prog?.program)
+const RegisterPage = async ({ params: { userId } }: SearchParamProps) => {
 
     // console.log(userId.toLowerCase());
-    const searchParam = searchParams.prog
-    console.log(userId)
-    console.log(searchParam)
-
+    const searchParam = userId.toLowerCase()
 
     console.log("search params is " + searchParam)
     let program: string;
@@ -37,14 +35,14 @@ const RegisterPage = async ({ params: { userId }, searchParams }: SearchParamPro
             <section className="remove-scrollbar container ">
                 <div className="sub-container max-w-[846px] flex-1 flex-col py-10">
                     <Image
-                        src="/assets/icons/logo-full.svg"
+                        src="/seedLogo.png"
                         height={1000}
                         width={1000}
                         alt="patient"
                         className="mb-12 h-10 w-fit"
                     />
                     {/* @ts-ignore */}
-                    <StudentForm program={program} />
+                    <RegisterStudentForm program={program} />
 
 
 
@@ -54,7 +52,7 @@ const RegisterPage = async ({ params: { userId }, searchParams }: SearchParamPro
             {/* right side section */}
 
             <Image
-                src="/footer.png"
+                src="/acad.png"
                 height={1000}
                 width={1000}
                 alt="doctor_picture"

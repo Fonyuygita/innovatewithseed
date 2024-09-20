@@ -10,6 +10,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
 import { frFR } from '@clerk/localizations'
 import Mode from "@/components/Mode";
+import { dark } from '@clerk/themes'
 import { ThemeContextProvider } from "@/components/context/ThemeContext";
 // import { ClerkProvider } from "@clerk/nextjs";
 // import { ThemeProvider } from "@/components/theme-provider";
@@ -52,7 +53,16 @@ export default function RootLayout({
           socialButtonsPlacement: 'bottom',
           socialButtonsVariant: 'auto',
           unsafe_disableDevelopmentModeWarnings: true,
+
+
+
         },
+
+        baseTheme: dark,
+        variables: {
+          colorPrimary: "#3371ff",
+          fontSize: '16px'
+        }
       }}
       localization={localization}>
       <html lang="en">

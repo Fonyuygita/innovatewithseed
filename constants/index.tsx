@@ -1,4 +1,4 @@
-import { FAQ, Gender, ProgramsProps, Testimonial } from "./type";
+import { FAQ, Gender, ProgramsProps, Testimonial, Site } from "./type";
 
 // export const slideShowData = [
 //     {
@@ -321,11 +321,11 @@ export const StudentFormDefaultValues = {
     notes: "",
     reason: "",
     ambitions: "",
-    site: "",
+    site: "Online" as Site,
     identificationType: "Birth Certificate",
     identificationNumber: "",
     identificationDocument: [],
-    applicationDocument: ""
+    applicationDocument: []
     //   treatmentConsent: false,
     //   disclosureConsent: false,
     //   privacyConsent: false,

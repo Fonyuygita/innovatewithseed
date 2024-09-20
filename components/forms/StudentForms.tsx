@@ -31,24 +31,8 @@ const StudentForm = ({ program }: { program: string }) => {
     const form = useForm<z.infer<typeof StudentFormValidation>>({
         resolver: zodResolver(StudentFormValidation),
         defaultValues: {
-            name: "",
-            email: "",
-            phone: "",
-            birthDate: new Date(Date.now()),
-            gender: "Male" as Gender,
-            address: "",
-            occupation: "",
-            department: "",
-            program: "",
-            notes: "",
-            reason: "",
-            ambitions: "",
-            site: "Online" as Site,
-            identificationType: "Birth Certificate",
-            identificationNumber: "",
-            identificationDocument: [],
-            applicationDocument: []
 
+            ...StudentFormDefaultValues
         }
     });
 
@@ -109,7 +93,7 @@ const StudentForm = ({ program }: { program: string }) => {
                         <CustomFormField
                             fieldType={FormFieldType.SELECT}
                             control={form.control}
-                            name="Program"
+                            name="program"
                             label={`Choose Your ${program} Program`}
                             placeholder="Select A Program"
                             defaultValue="Cybersecurity" // Set your default value here
@@ -291,8 +275,8 @@ const StudentForm = ({ program }: { program: string }) => {
                                 <CustomFormField
                                     fieldType={FormFieldType.SKELETON}
                                     control={form.control}
-                                    name="gender"
-                                    label="Gender"
+                                    name="site"
+                                    label="Site"
                                     renderSkeleton={(field) => (
                                         <FormControl>
                                             <RadioGroup

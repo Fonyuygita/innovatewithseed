@@ -39,7 +39,7 @@ const ProgramCard = ({ program, theme }: any) => (
         <div className="p-4">
             <h2 className="text-sm  font-medium">{program.title}</h2>
             <p className="mt-2 text-gray-600 text-[11px]">{program.description}</p>
-            <Link href={`/student/${program.title.split(" ")[2]}/register`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
+            <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
                 Register <FaArrowRight className="ml-2" />
             </Link>
         </div>

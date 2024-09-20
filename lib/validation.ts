@@ -4,8 +4,10 @@ export const UserFormValidation = z.object({
   name: z
     .string()
     .min(2, "Name must be at least 2 characters")
-    .max(50, "Name must be at most 50 characters"),
+    .max(50, "Name must be at most 50 characters")
+    .optional(),
   email: z.string().email("Invalid email address"),
+  address: z.string().optional(),
   phone: z
     .string()
     .refine((phone) => /^\+\d{10,15}$/.test(phone), "Invalid phone number"),
@@ -22,7 +24,7 @@ export const StudentFormValidation = z.object({
     .refine((phone) => /^\+\d{10,15}$/.test(phone), "Invalid phone number"),
   birthDate: z.coerce.date(),
   gender: z.enum(["Male", "Female", "Other"]),
-  site: z.enum(["Online", "Offline", "Other"]),
+  site: z.enum(["Online", "Offline", "Other"]).optional(),
   address: z
     .string()
     .min(5, "Address must be at least 5 characters")
@@ -31,10 +33,7 @@ export const StudentFormValidation = z.object({
     .string()
     .min(2, "Occupation must be at least 2 characters")
     .max(500, "Occupation must be at most 500 characters"),
-  ambitions: z
-    .string()
-    .min(2, "Ambitions must be at least 2 characters")
-    .max(500, "Ambitions must be at most 500 characters"),
+  ambitions: z.string().optional(),
 
   duration: z
     .string()
@@ -47,7 +46,7 @@ export const StudentFormValidation = z.object({
 
   // department: z.string().min(2, "Select at least one department"),
   program: z.string().min(2, "Select at least one internship program"),
-  department: z.string().min(2, "Select at least one department program"),
+  department: z.string().optional(),
 
   identificationType: z.string().optional(),
   identificationNumber: z.string().optional(),
