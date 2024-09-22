@@ -24,7 +24,7 @@ import Image from "next/image";
 export default function Home() {
   const { theme } = useTheme();
   return (
-    <div className={`${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-950 text-white '} text-red-400 overflow-x-hidden`}>
+    <div className={`${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white '} text-red-400 overflow-x-hidden`}>
 
       <Hero />
       <Partnership />
