@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative left-[-10%] md:min-h-[70vh] min-h-[40vh] w-[120%] mx-auto">
+        <div className="relative left-0 md:min-h-[70vh] min-h-[40vh] w-[120%] mx-auto">
             <Slide easing="ease" arrows duration={5000} transitionDuration={1000}>
                 {images.map((image, index) => (
                     <div key={index} className="each-slide">
