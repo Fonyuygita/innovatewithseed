@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// checking for issues
 const nextConfig = {
     swcMinify: false,
     images: {
