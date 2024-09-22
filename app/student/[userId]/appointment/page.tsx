@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 import { SearchParamProps } from "@/constants/type";
-import { AppointmentForm } from "@/components/forms/AppointmentForm";
+// import { AppointmentForm } from "@/components/forms/AppointmentForm";
 
 const Appointment = async ({ params: { userId } }: SearchParamProps) => {
     // const patient = await getPatient(userId);
@@ -21,7 +21,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
                         className="mb-12 h-10 w-fit"
                     />
 
-                    <AppointmentForm />
+                    {/* <AppointmentForm /> */}
 
                     <p className="copyright mt-10 py-12">© 2024 CarePluse</p>
                 </div>
