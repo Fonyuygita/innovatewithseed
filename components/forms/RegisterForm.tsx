@@ -50,8 +50,9 @@ const RegisterStudentForm = ({ program }: { program: string }) => {
                 name,
                 email,
                 phone,
-                program
+
             };
+            // @ts-ignore
             const newUser = await createUser(userData);
             console.log(newUser)
             // router.push(`/student/${newUser.$id}/register`)

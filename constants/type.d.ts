@@ -57,7 +57,6 @@ export interface ProgramsProps {
 declare interface CreateUserParams {
   name: string;
   email: string;
-  password: undefine;
   phone: string;
 }
 declare interface User extends CreateUserParams {
