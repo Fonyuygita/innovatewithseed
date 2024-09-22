@@ -241,14 +241,14 @@ main.dark .swiper-pagination-bullet.swiper-pagination-bullet-active {
 
     .bg-hero {
       /* background-color: rgba(0, 0, 0, 0.1); */
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
         height: 100%;
         background: rgba(0, 0, 0, 0.4);
         /* background-color: red; */
         position: absolute;
         top: 0;
-        left: 20%;
+        left:0;
     }
 
 
