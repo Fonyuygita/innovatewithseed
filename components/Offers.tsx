@@ -9,7 +9,7 @@ const Offers: React.FC = () => {
 
 
     return (
-        <section className={`overflow-hidden w-full  py-12 ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-950'}`}>
+        <section className={`overflow-hidden w-full  py-12 ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-800'}`}>
             <div className="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
                 {offerings.map((offering, index) => (
                     <Card key={index} offering={offering} />

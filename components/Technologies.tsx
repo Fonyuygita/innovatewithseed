@@ -38,9 +38,9 @@ const Technologies = () => {
         visible: { opacity: 1, y: 0 },
     };
     return (
-        <section className={`w-full   py-[3rem] overflow-hidden ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-950'}`} ref={ref}>
+        <section className={`w-full   py-[3rem] overflow-hidden ${theme === 'light' ? 'text-gray-600 bg-light-300 ' : ' text-light-300 bg-gray-800'}`} ref={ref}>
             <motion.h1
-                className="text-[2.2rem] md:text-3xl text-blue-500 font-extrabold mt-3 text-center"
+                className="text-[1.9rem] md:text-3xl text-blue-500 font-extrabold mt-3 text-center"
                 initial="hidden"
                 animate={controls}
                 variants={variants}
