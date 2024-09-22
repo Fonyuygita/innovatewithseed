@@ -48,9 +48,7 @@ export const StudentFormValidation = z.object({
   program: z.string().min(2, "Select at least one internship program"),
   department: z.string().optional(),
 
-  identificationType: z.string().optional(),
-  identificationNumber: z.string().optional(),
-  identificationDocument: z.custom<File[]>().optional(),
+
   applicationDocument: z.custom<File[]>().optional(),
 
   // treatmentConsent: z

@@ -322,9 +322,6 @@ export const StudentFormDefaultValues = {
     reason: "",
     ambitions: "",
     site: "Online" as Site,
-    identificationType: "Birth Certificate",
-    identificationNumber: "",
-    identificationDocument: [],
     applicationDocument: []
     //   treatmentConsent: false,
     //   disclosureConsent: false,

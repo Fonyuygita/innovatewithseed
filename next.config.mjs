@@ -8,6 +8,12 @@ const nextConfig = {
                 hostname: 'images.ctfassets.net',
                 pathname: '/**',
             },
+
+            {
+                protocol: 'https',
+                hostname: 'img.clerk.com',
+                pathname: '/**',
+            },
         ],
     },
     eslint: {

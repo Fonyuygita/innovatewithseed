@@ -54,29 +54,31 @@ export const getUser = async (userId: string) => {
 };
 
 export const registerStudent = async ({
-  identificationDocument,
-  ...patient
+  applicationDocument,
+
+  ...student
 }: RegisterUserParams) => {
   try {
     // try to upload the file before storing it
-    let file;
-    if (identificationDocument) {
-      const inputFile =
-        identificationDocument &&
+    let file1;
+    let file2;
+    if (applicationDocument) {
+      const inputFile1 =
+        applicationDocument &&
         InputFile.fromBuffer(
-          identificationDocument?.get("blobFile") as Blob,
-          identificationDocument?.get("fileName") as string
+          applicationDocument?.get("blobFile") as Blob,
+          applicationDocument?.get("fileName") as string
         );
-      // console.log(inputFile);
+      // console.log(inputFile1);
 
-      file = await storage.createFile(BUCKET_ID!, ID.unique(), inputFile);
-      // console.log(file);
+      file1 = await storage.createFile(BUCKET_ID!, ID.unique(), inputFile1);
+      // console.log(file1);
     }
 
     console.log({
-      identificationDocumentId: file?.$id ? file.$id : null,
-      identificationDocumentUrl: `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file?.$id}/view??project=${PROJECT_ID}`,
-      ...patient,
+      applicationDocumentId: file1?.$id ? file1.$id : null,
+      applicationDocumentUrl: `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file1?.$id}/view??project=${PROJECT_ID}`,
+      ...student,
     });
 
     const newStudent = await databases.createDocument(
@@ -84,11 +86,12 @@ export const registerStudent = async ({
       STUDENT_COLLECTION_ID!,
       ID.unique(),
       {
-        identificationDocumentId: file?.$id ? file.$id : null,
-        identificationDocumentUrl: file?.$id
-          ? `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file?.$id}/view??project=${PROJECT_ID}`
+        applicationDocumentId: file1?.$id ? file1.$id : null,
+        applicationDocumentUrl: file1?.$id
+          ? `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file1?.$id}/view??project=${PROJECT_ID}`
           : null,
-        ...patient,
+
+        ...student,
       }
     );
 

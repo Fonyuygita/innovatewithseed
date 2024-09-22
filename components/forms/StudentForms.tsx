@@ -23,6 +23,7 @@ import FileUploader from '../FileUploader';
 import { useTheme } from '../context/ThemeContext';
 import { Gender, Site, User } from '@/constants/type';
 import { registerStudent } from "@/lib/actions/student.action"
+import { FaHome } from 'react-icons/fa';
 
 const StudentForm = ({ program, student }: { program: string; student: User }) => {
     const router = useRouter()
@@ -42,22 +43,9 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
 
 
 
-        let formDataId;
+
         let formDataApp;
 
-        // if identification docs exist, and convert data to blob before sending
-        if (values.identificationDocument && values.identificationDocument?.length > 0) {
-
-            const blobFile = new Blob([values.identificationDocument[0]], {
-                type: values.identificationDocument[0].type,
-            })
-            console.log(blobFile);
-            formDataId = new FormData();
-            formDataId.append("blobFile", blobFile);
-            formDataId.append("fileName", values.identificationDocument[0].name)
-            console.log(formDataId);
-
-        }
 
 
 
@@ -83,7 +71,6 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
                 ...values,
                 userId: student.$id!,
                 birthDate: new Date(values.birthDate),
-                identificationDocument: formDataId,
                 applicationDocument: formDataApp,
             }
 
@@ -93,7 +80,7 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
             console.log("hello data");
             console.log(newPatient);
 
-            if (newPatient) router.push(`/student/${student.$id}/appointment?prog=${program}`)
+            if (newPatient) router.push(`/student/${student.$id}/register/success?prog=${program}`)
 
         } catch (err) {
             // \catch errors if any
@@ -115,6 +102,16 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
 
     return (
         <section className={`absolute top-0 left-0 w-full h-full ${theme === 'light' ? 'bg-gray-200 text-gray-800' : 'bg-gray-800 text-gray-300'}`}>
+            {/* <div className="w-[50px] fixed left-0 top-[7rem] h-[390px] bg-gray-900 shadow-xl flex flex-col gap-3 items-center ">
+                <FaHome />
+                <FaHome />
+                <FaHome />
+                <FaHome />
+                <FaHome />
+                <FaHome />
+
+
+            </div> */}
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className={`flex-1 space-y-6   shadow-xl p-4 px-[1rem] lg:px-[6rem]  ${theme === 'light' ? 'bg-gray-300 text-gray-800' : 'bg-gray-900 text-gray-300'}`}>
                     <section className="mb-12 space-y-4">
@@ -363,49 +360,9 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
 
 
                     </section>
-                    {program === "internship" && (
-                        <section className="space-y-6 ">
-                            <div className="mb-9 space-y-1 mt-[3rem]">
-                                <h2 className="sub-header text-blue-500">Identification and Verification</h2>
-                            </div>
-                            <CustomFormField
-                                fieldType={FormFieldType.SELECT}
-                                control={form.control}
-                                name="identificationType"
-                                label="Identification Type"
-                                placeholder="Select identification type"
-                            >
-                                {IdentificationTypes.map((type, i) => (
-                                    <SelectItem key={type + i} value={type}>
-                                        {type}
-                                    </SelectItem>
-                                ))}
-                            </CustomFormField>
 
-                            <CustomFormField
-                                fieldType={FormFieldType.INPUT}
-                                control={form.control}
-                                name="identificationNumber"
-                                label="Identification Number"
-                                placeholder="KT56789"
-                            />
 
-                            <CustomFormField
-                                fieldType={FormFieldType.SKELETON}
-                                control={form.control}
-                                name="identificationDocument"
-                                label="Scanned Copy of Identification Document"
-                                renderSkeleton={(field) => (
-                                    <FormControl>
-                                        <FileUploader files={field.value} onChange={field.onChange} />
-                                    </FormControl>
-                                )}
-                            />
 
-                        </section>
-                    )
-
-                    }
 
                     {program === "internship" && (
 

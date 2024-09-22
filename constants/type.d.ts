@@ -78,11 +78,7 @@ declare interface RegisterUserParams extends CreateUserParams {
   site: string;
   ambitions: string;
   notes: string | undefined;
-  identificationType: string | undefined;
-  identificationNumber: string | undefined;
-  identificationDocument: FormData | undefined;
   applicationDocument: FormData | undefined;
-  privacyConsent: boolean;
 }
 
 declare type CreateAppointmentParams = {

@@ -8,7 +8,7 @@ import { useTheme } from './context/ThemeContext'
 const RecentBlogs = () => {
     const { theme } = useTheme()
     return (
-        <section className={`w-full  py-[6rem] overflow-hidden h-full ${theme === 'light' ? 'text-gray-600 bg-light-200  ' : ' text-light-300 bg-gray-800'}`}>
+        <section className={`w-full  py-[6rem] overflow-hidden h-full ${theme === 'light' ? 'text-gray-600 bg-light-200  ' : ' text-light-300 bg-gray-950'}`}>
             <motion.h1
                 className='text-[1.6rem] md:text-[2.4rem] my-6 font-sans line-clamp-2 font-bold text-center w-[68%] mx-auto text-blue-500'
                 initial={{ opacity: 0, y: -50 }}

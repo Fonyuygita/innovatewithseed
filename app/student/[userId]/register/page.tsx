@@ -1,6 +1,7 @@
 // import ClientForm from "@/components/forms/ClientForm";
 // import RegisterForm from "@/components/forms/RegisterForm";
 import StudentForm from "@/components/forms/StudentForms";
+import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { SearchParamProps } from "@/constants/type";
 import { getUser } from "@/lib/actions/student.action"
@@ -37,34 +38,33 @@ const RegisterPage = async ({ params: { userId }, searchParams }: SearchParamPro
     }
 
     return (
-        <div className="flex h-screen max-h-screen overflow-hidden">
-            <section className="remove-scrollbar container ">
-                <div className="sub-container max-w-[846px] flex-1 flex-col py-10">
-                    <Image
-                        src="/assets/icons/logo-full.svg"
-                        height={1000}
-                        width={1000}
-                        alt="patient"
-                        className="mb-12 h-10 w-fit"
-                    />
-                    {/* @ts-ignore */}
-                    <StudentForm program={program} student={user} />
+        <>
+            <Navbar />
+            <div className="flex h-screen max-h-screen overflow-hidden">
+                <section className="remove-scrollbar container ">
+                    {/* sticky side bar */}
+
+                    <div className="sub-container max-w-[846px] flex-1 flex-col py-10">
+
+                        {/* @ts-ignore */}
+                        <StudentForm program={program} student={user} />
 
 
 
-                </div>
-            </section>
+                    </div>
+                </section>
 
-            {/* right side section */}
+                {/* right side section */}
 
-            <Image
-                src="/footer.png"
-                height={1000}
-                width={1000}
-                alt="doctor_picture"
-                className="side-img max-w-[50%] "
-            />
-        </div>
+                <Image
+                    src="/footer.png"
+                    height={1000}
+                    width={1000}
+                    alt="doctor_picture"
+                    className="side-img max-w-[50%] "
+                />
+            </div>
+        </>
     );
 }
 
