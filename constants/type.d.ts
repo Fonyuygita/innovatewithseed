@@ -52,6 +52,7 @@ export interface ProgramsProps {
   title: string;
   description: string;
   image: string;
+  status:string
 }
 
 declare interface CreateUserParams {

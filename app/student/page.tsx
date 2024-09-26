@@ -12,7 +12,6 @@ import { FaUser, FaVoicemail } from 'react-icons/fa'
 
 const StudentPage = () => {
 
-
     const { theme } = useTheme()
     const { user } = useUser();
     return (
@@ -24,7 +23,7 @@ const StudentPage = () => {
                         <span className=' font-extrabold '>[WELCOME 👋]</span> TO [SEED] <span className='text-primary-100 bg-white p-3'>ACADEMY</span>
                     </h1>
                     <div className="absolute left-[35%] -bottom-[3rem] md:-bottom-[5rem] md:left-[43%] ">
-                        <Image src={user?.imageUrl!} alt='seed' width={200} height={200} className='rounded-full object-contain md:w-[200px] md:h-[200px] w-[100px] h-[100px]' />
+                        <Image src={user?.imageUrl!} alt='seed' width={200} height={200} className='rounded-full object-cover md:w-[200px] md:h-[200px] w-[100px] h-[100px]' />
 
                     </div>
 

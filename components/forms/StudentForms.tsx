@@ -22,7 +22,7 @@ import { useUser } from '@clerk/nextjs';
 import FileUploader from '../FileUploader';
 import { useTheme } from '../context/ThemeContext';
 import { Gender, Site, User } from '@/constants/type';
-import { registerStudent } from "@/lib/actions/student.action"
+import { registerStudent, updatedStudentData } from "@/lib/actions/student.action"
 import { FaHome } from 'react-icons/fa';
 
 const StudentForm = ({ program, student }: { program: string; student: User }) => {
@@ -62,7 +62,9 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
 
         }
 
-
+        let status = {
+            type: "Pending...."
+        }
 
 
         try {
@@ -79,6 +81,10 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
             const newPatient = await registerStudent(studentData)
             console.log("hello data");
             console.log(newPatient);
+
+            // Add a confirmation status : pending | "success" | "cancel to the studentData collection"
+
+            // const studentUpdate=await updatedStudentData(status.type, student.$id)
 
             if (newPatient) router.push(`/student/${student.$id}/register/success?prog=${program}`)
 

@@ -10,6 +10,9 @@ import { MyPrograms } from '@/constants';
 // import { MyPrograms } from '@/constants';
 
 
+const studentRegistered = false;
+
+
 type ProgramsProps = {
     id: number,
     title: string,
@@ -30,20 +33,44 @@ const SkeletonCard = () => (
 
 
 
-const ProgramCard = ({ program, theme }: any) => (
+const ProgramCard = ({ program, theme, updateStatus }: any) => (
+
+    <Link href={`/student/123/program?id=${program.id}`}>
+        <motion.div className={` cursor-pointer shadow-xl rounded-lg overflow-hidden p-3  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
+            <Image src={program.image} alt={program.title} className="w-full h-48 object-cover" width={1000} height={500} />
+            <div className="p-4">
+                <h2 className="text-sm  font-medium">{program.title}</h2>
+                <p className="mt-2 text-gray-600 text-[11px]">{program.description}</p>
+                {/* {studentRegistered ? (
+                <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
+                    Register <FaArrowRight className="ml-2" />
+                </Link>
+            ) : (
+                <p className="text-green-500 text-sm font-thin italic ">Pending...</p>
+            )} */}
+
+                {program.title.split(" ")[2] === "Internship" && (
+                    <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
+                        <button onClick={() => updateStatus(program.id, 'Pending')}>{program.status} </button>
+                        <FaArrowRight className="ml-2" />
+                    </Link>
+
+                )}
+
+                {program.title.split(" ")[2] === "Bootcamp" && (
+                    <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
+                        <button onClick={() => updateStatus(program.id, 'Pending')}>{program.status} </button>
+                        <FaArrowRight className="ml-2" />
+                    </Link>
+
+                )}
 
 
 
-    <motion.div className={` cursor-pointer shadow-xl rounded-lg overflow-hidden p-3  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
-        <Image src={program.image} alt={program.title} className="w-full h-48 object-cover" width={1000} height={500} />
-        <div className="p-4">
-            <h2 className="text-sm  font-medium">{program.title}</h2>
-            <p className="mt-2 text-gray-600 text-[11px]">{program.description}</p>
-            <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
-                Register <FaArrowRight className="ml-2" />
-            </Link>
-        </div>
-    </motion.div>
+
+            </div>
+        </motion.div>
+    </Link>
 );
 
 
@@ -54,7 +81,7 @@ const slideLeft = (element: any) => {
     element.scrollLeft -= 200;
 }
 
-const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
+const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
     const elementRef = useRef(null);
 
     const [filter, setFilter] = useState('All');
@@ -63,7 +90,16 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
     const [error, setError] = useState<string | boolean>(false);
 
     const [filteredPrograms, setFilteredPrograms] = useState<any | []>([]);
+    const [programStatus, setProgramStatus] = useState(MyPrograms);
 
+
+    const updateStatus = (id: number, status: string) => {
+        setProgramStatus((prevStatus: any) =>
+            prevStatus.map((program: any) =>
+                program.id === id ? { ...program, status } : program
+            )
+        );
+    };
 
     const filteredProgram = MyPrograms.filter(program =>
         (filter === 'All' || program.title.split(" ").includes(filter)) &&
@@ -146,7 +182,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
 
                 </div>
 
-                <div className={`relative my-5 flex items-center justify-between px-2  border border-primary-100 rounded-md  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
+                <div className={`relative my-5 flex items-center justify-between px-2  border border-primary-100 rounded-lg  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
                     <input
                         type="text"
                         placeholder="Search programs..."
@@ -164,8 +200,8 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' }) => {
                         <SkeletonCard key={index} />
                     ))
                 ) : (
-                    filteredProgram.map((program: any) => (
-                        <ProgramCard key={program.id} program={program} theme={theme} />
+                    programStatus.map((program: any) => (
+                        <ProgramCard key={program.id} program={program} theme={theme} updateStatus={updateStatus} />
                     ))
                 )}
             </div>

@@ -11,6 +11,7 @@ import {
   PROJECT_ID,
   storage,
   users,
+  STUDENTDATA_COLLECTION_ID,
 } from "../appwrite.config";
 import { parseStringify } from "../utils";
 import { InputFile } from "node-appwrite/file";
@@ -101,6 +102,21 @@ export const registerStudent = async ({
   }
 };
 
+export const updatedStudentData = async (status: String, userId: string) => {
+  try {
+    await databases.updateDocument(
+      DATABASE_ID!,
+      STUDENTTDATA_COLLECTION_ID!,
+      userId,
+      { status: status }
+    );
+  } catch (err) {
+    console.log(
+      "error occured while trying to change the status of student",
+      err
+    );
+  }
+};
 //  GET PATIENT
 
 export const getStudent = async (userId: string) => {
