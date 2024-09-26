@@ -2,39 +2,41 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
+// import { useTheme } from 'next-themes';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VideoCard from '@/components/BigVideo';
 import { FaArrowRight, FaCode, FaPython } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
+import { programsData } from '@/constants/programsData';
+import { useTheme } from '@/components/context/ThemeContext';
 
-const programs = [
-    {
-        id: '1',
-        name: 'Bootcamp',
-        videoUrl: 'https://www.youtube.com/embed/mGuFN2FlLCU',
-        description: 'An intensive program to get you job-ready.',
-        outcomes: 'You will learn full-stack development.',
-        structure: [
-            {
-                level: 'Beginner',
-                details: ['HTML & CSS', 'JavaScript Basics', 'Version Control', 'Responsive Design', 'Basic Algorithms', 'Project 1'],
-            },
-            {
-                level: 'Intermediate',
-                details: ['Advanced JavaScript', 'APIs', 'Node.js', 'Express.js', 'Database Management', 'Project 2'],
-            },
-            {
-                level: 'Advanced',
-                details: ['React.js', 'Next.js', 'TypeScript', 'Testing', 'Deployment', 'Final Project'],
-            },
-        ],
-        requirements: 'Basic understanding of programming.',
-    },
-    // Add more programs as needed
-];
+// const programs = [
+//     {
+//         id: '1',
+//         name: 'Bootcamp',
+//         videoUrl: 'https://www.youtube.com/embed/mGuFN2FlLCU',
+//         description: 'An intensive program to get you job-ready.',
+//         outcomes: 'You will learn full-stack development.',
+//         structure: [
+//             {
+//                 level: 'Beginner',
+//                 details: ['HTML & CSS', 'JavaScript Basics', 'Version Control', 'Responsive Design', 'Basic Algorithms', 'Project 1'],
+//             },
+//             {
+//                 level: 'Intermediate',
+//                 details: ['Advanced JavaScript', 'APIs', 'Node.js', 'Express.js', 'Database Management', 'Project 2'],
+//             },
+//             {
+//                 level: 'Advanced',
+//                 details: ['React.js', 'Next.js', 'TypeScript', 'Testing', 'Deployment', 'Final Project'],
+//             },
+//         ],
+//         requirements: 'Basic understanding of programming.',
+//     },
+//     // Add more programs as needed
+// ];
 
 const ProgramPage = ({ searchParams }: any) => {
     const router = useRouter();
@@ -42,7 +44,7 @@ const ProgramPage = ({ searchParams }: any) => {
     // const searchParam = useSearchParams()
     const { theme } = useTheme()
     console.log(searchParams)
-    const program = programs.find((p) => p.id === searchParams.id!);
+    const program = programsData.find((p) => p.id === searchParams.id!);
 
     const [expandedLevel, setExpandedLevel] = useState<string | null>(null);
 
@@ -52,12 +54,12 @@ const ProgramPage = ({ searchParams }: any) => {
         <>
             <Navbar />
 
-            <div className={`w-full py-[5rem] px-8 p-4 flex min-h-screen items-center justify-center ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-950 text-light-200"} overflow-y-auto`}>
+            <div className={`w-full py-[5rem] px-8 p-4 flex min-h-screen items-center justify-center ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-950 text-light-200"}`}>
                 <div className="flex items-center justify-between gap-4 w-full h-full md:flex-row flex-col">
                     <div className="flex flex-col md:gap-6 gap-8 items-start md:w-1/2 md:px-4 max-h-full w-full ">
                         <div className="w-full my-4">
                             <VideoCard
-                                title='Web development'
+                                title={program.name}
                                 url={program.videoUrl}
                                 thumbnail="/vid/vid3.png"
                                 className=''
@@ -95,7 +97,7 @@ const ProgramPage = ({ searchParams }: any) => {
                                         className={`cursor-pointer  p-2 rounded ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-950 text-light-200"} font-sans`}
                                         onClick={() => setExpandedLevel(expandedLevel === level.level ? null : level.level)}
                                     >
-                                        <h4 className="text-lg font-sans flex  items-center gap-3">
+                                        <h4 className="md:text-lg text-sm font-sans flex  items-center gap-3">
                                             <span className='text-blue-500'>{index + 1}</span>
                                             {level.level}
                                             <span>
@@ -105,7 +107,7 @@ const ProgramPage = ({ searchParams }: any) => {
                                     </div>
                                     <div className="pl-4">
                                         {level.details.map((detail, idx) => (
-                                            <p key={idx} className="mt-2 border-b border-gray-500 my-5 flex items-center gap-2 shadow-2xl bg-gray-900 ">
+                                            <p key={idx} className={`mt-2 border-b border-gray-500 my-5 flex items-center gap-2 md:shadow-2xl shadow-lg ${theme === "light" ? "bg-light-300" : "bg-gray-900"}`}>
                                                 <FaArrowRight className='text-primary-100' />
                                                 <span>{detail} </span>
 
@@ -128,9 +130,9 @@ const ProgramPage = ({ searchParams }: any) => {
 
                             {/* instructor */}
                             <div className="flex items-center gap-5 my-4">
-                                <h4 className='text-blue-500'>Instructor <span className="text-primary-100">Eng Fonyuy Gita</span></h4>
+                                <h4 className='text-blue-500'>Instructor <span className="text-primary-100">Eng {program.tutor?.name}</span></h4>
                                 <Link href="https://fonyuygita.vercel.app">
-                                    <Image src="/team/d1.png" width={30} height={30} className='rounded-full'
+                                    <Image src={program.tutor?.picture!} width={30} height={30} className='rounded-full'
                                         alt='tutor' />
                                 </Link>
 

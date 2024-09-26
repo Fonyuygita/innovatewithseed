@@ -256,10 +256,10 @@ export const IdentificationTypes = [
 export const MyPrograms: ProgramsProps[] = [
     { status: "Register", id: 1, title: 'Cyber Security Internship', description: 'Gain real-world experience in cybersecurity.', image: '/blog.png' },
     { status: "Register", id: 2, title: 'Web Development Internship', description: 'Hands-on experience in web development.', image: '/banner.png' },
-    { status: "Register", id: 3, title: 'Machine Learning Internship', description: 'Practical experience in machine learning.', image: '/blog.png' },
+    { status: "Register", id: 3, title: 'Embeded Systems Internship', description: 'Practical experience in machine learning.', image: '/blog.png' },
     { status: "Register", id: 4, title: 'Data Science Internship', description: 'Work on real data science projects.', image: '/banner.png' },
     { status: "Register", id: 5, title: 'AI Research Internship', description: 'Contribute to AI research projects.', image: '/blog.png' },
-    { status: "Register", id: 6, title: 'Cyber Security Bootcamp', description: 'Intensive training in cybersecurity.', image: '/banner.png' },
+    { status: "Register", id: 6, title: 'App Development Internship', description: 'Intensive training App development.', image: '/vid/vid2.png' },
     { status: "Register", id: 7, title: 'Web Development Bootcamp', description: 'Learn web development in a short time.', image: '/blog.png' },
     { status: "Register", id: 8, title: 'Machine Learning Bootcamp', description: 'Intensive machine learning training.', image: '/banner.png' },
     { status: "Register", id: 9, title: 'Data Science Bootcamp', description: 'Comprehensive data science training.', image: '/blog.png' },
