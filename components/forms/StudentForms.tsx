@@ -22,7 +22,7 @@ import { useUser } from '@clerk/nextjs';
 import FileUploader from '../FileUploader';
 import { useTheme } from '../context/ThemeContext';
 import { Gender, Site, User } from '@/constants/type';
-import { registerStudent, updatedStudentData } from "@/lib/actions/student.action"
+import { registerStudent } from "@/lib/actions/student.action"
 import { FaHome } from 'react-icons/fa';
 
 const StudentForm = ({ program, student }: { program: string; student: User }) => {
