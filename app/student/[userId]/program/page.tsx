@@ -72,7 +72,7 @@ const ProgramPage = ({ searchParams }: any) => {
 
                             />
                         </div>
-                        <div className="my-6">
+                        <div className="my-8">
                             <h2 className="flex items-center gap-3 text-2xl  text-blue-500">{program.name}
                                 <span>
                                     <FaCode className='text-primary-100' />

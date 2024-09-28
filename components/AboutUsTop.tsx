@@ -24,11 +24,11 @@ const AboutUsTop = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className={`text-[14px] md:text-lg mb-8  w-full my-3 ${theme === "light" ? "text=gray-700" : "text-gray-300"}`}
+                    className={`text-[14px] md:text-lg mb-8  w-full my-3 ${theme === "light" ? "text-gray-700" : "text-gray-300"}`}
                 >
                     SEED, A software and technology company developed to help kids and young people interested in tech grow. Founded by Cheko Yohane, Fonyuy Gita, and Fien Dora, SEED aims to train and empower young lads who want to grow and mature in tech. SEED stands for Skills Enhancement and Empowerment through Digitalization.
                 </motion.p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

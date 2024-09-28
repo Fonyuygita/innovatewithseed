@@ -54,7 +54,7 @@ const GalleryTop: FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
             >
-                <Image src="/camera.png" alt="Company" width={500} height={500} className="rounded-lg shadow-lg object-contain" />
+                <Image src="/vid/vid2.png" alt="Company" width={500} height={500} className="rounded-lg shadow-lg object-contain" />
             </motion.div>
             <motion.div
                 className="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-0"
