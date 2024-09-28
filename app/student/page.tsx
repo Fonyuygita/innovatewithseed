@@ -1,6 +1,7 @@
 "use client"
 
 import { useTheme } from '@/components/context/ThemeContext'
+import DashboardFooter from '@/components/DashboardFooter'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import ProgramsSection from '@/components/programs/TechPrograms'
@@ -47,7 +48,8 @@ const StudentPage = () => {
                 </div>
                 <ProgramsSection theme={theme} />
             </div>
-            <Footer />
+            {/* <Footer /> */}
+            <DashboardFooter />
         </>
     )
 }

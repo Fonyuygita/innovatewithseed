@@ -67,7 +67,7 @@ export default function RootLayout({
       localization={localization}>
       <html lang="en">
 
-        <body className={cn('min-h-screen bg-light-300 font-sans antialiased', fontSans.variable)}>
+        <body className={cn('min-h-screen bg-gray-900 font-sans antialiased', fontSans.variable)}>
 
 
           <ThemeProvider attribute="class" defaultTheme="light"

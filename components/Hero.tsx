@@ -7,7 +7,9 @@ import dayjs from 'dayjs';
 
 const images = [
     '/blog.png',
-    '/banner.png'
+    '/banner.png',
+    '/vid/vid2.png',
+    '/vid/vid3.png'
 
 ];
 
@@ -35,7 +37,7 @@ const Hero: React.FC = () => {
                     <div key={index} className="each-slide">
                         <div
                             style={{ backgroundImage: `url(${image})` }}
-                            className="md:h-[60vh] h-[38vh] bg-cover bg-center w-[90%] mx-auto"
+                            className="md:h-[60vh] h-[48vh] bg-cover bg-center w-[90%] mx-auto"
                         >
                             <div className="absolute inset-0 opacity-50 bg-hero"></div>
                         </div>
@@ -49,7 +51,7 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center text-center text-white w-[70%] mx-auto text-lg">
                 <h1 className="text-lg  md:text-4xl">{quotes[quoteIndex]}</h1>
             </div>
-            <div className="absolute bottom-4 right-[10%] rounded-lg text-white bg-gray-900 text-sm p-3">
+            <div className="absolute bottom-4 right-[10%] rounded-lg text-white bg-gray-900 text-[12px] p-2">
                 {dayjs().format('MMMM D, YYYY h:mm A')}
 
             </div>

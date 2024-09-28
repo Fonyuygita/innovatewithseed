@@ -11,6 +11,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { programsData } from '@/constants/programsData';
 import { useTheme } from '@/components/context/ThemeContext';
+import EmptyError from '@/components/EmptyError';
 
 // const programs = [
 //     {
@@ -48,8 +49,13 @@ const ProgramPage = ({ searchParams }: any) => {
 
     const [expandedLevel, setExpandedLevel] = useState<string | null>(null);
 
-    if (!program) return <div>Program not found</div>;
+    if (!program) return (
 
+        < >
+            <EmptyError title='Program not yet available' subTitle='Please be patient programs are still loading, keep calm until we upload more' className='w-full h-screen' image='/empty.png' />
+        </ >
+
+    )
     return (
         <>
             <Navbar />

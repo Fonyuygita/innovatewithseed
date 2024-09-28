@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from '../context/ThemeContext';
 import { MyPrograms } from '@/constants';
+import EmptyError from '../EmptyError';
 // import { MyPrograms } from '@/constants';
 
 
@@ -51,7 +52,8 @@ const ProgramCard = ({ program, theme, updateStatus }: any) => (
 
                 {program.title.split(" ")[2] === "Internship" && (
                     <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
-                        <button onClick={() => updateStatus(program.id, 'Pending')}>{program.status} </button>
+                        {/* <button onClick={() => updateStatus(program.id, 'Pending')}> </button> */}
+                        <span>Read More</span>
                         <FaArrowRight className="ml-2" />
                     </Link>
 
@@ -59,7 +61,8 @@ const ProgramCard = ({ program, theme, updateStatus }: any) => (
 
                 {program.title.split(" ")[2] === "Bootcamp" && (
                     <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
-                        <button onClick={() => updateStatus(program.id, 'Pending')}>{program.status} </button>
+                        {/* <button onClick={() => updateStatus(program.id, 'Pending')}>{program.status} </button> */}
+                        <span>Read More</span>
                         <FaArrowRight className="ml-2" />
                     </Link>
 
@@ -87,7 +90,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
     const [filter, setFilter] = useState('All');
     const [search, setSearch] = useState('');
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | boolean>(false);
+    const [error, setError] = useState<boolean>(false);
 
     const [filteredPrograms, setFilteredPrograms] = useState<any | []>([]);
     const [programStatus, setProgramStatus] = useState(MyPrograms);
@@ -102,14 +105,20 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
     };
 
     const filteredProgram = MyPrograms.filter(program =>
-        (filter === 'All' || program.title.split(" ").includes(filter)) &&
+        (filter === 'All' || program.title.toLowerCase().includes(filter.toLowerCase())) &&
         program.title.toLowerCase().includes(search.toLowerCase())
     );
 
+    // if (filteredProgram.length === 0) {
 
-    if (!filteredProgram) {
-        setError(error)
-    }
+    //     setError(true)
+    // } else {
+    //     // console.log(filteredProgram);
+    // }
+
+
+
+
 
 
     useEffect(() => {
@@ -124,10 +133,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
         }, 3000);
     }, []);
 
-    if (!filteredPrograms) {
-        setError(true)
-        console.log("No program found")
-    }
+
     const handleScroll = () => {
         setLoading(true);
         setTimeout(() => {
@@ -140,7 +146,9 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
 
 
 
-
+    if (!filteredProgram) {
+        console.log("There is no filtered item")
+    }
     return (
         <div className="container mx-auto p-4 " onScroll={handleScroll}>
             <div className="flex justify-center items-center gap-5 flex-col">
@@ -200,13 +208,16 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
                         <SkeletonCard key={index} />
                     ))
                 ) : (
-                    programStatus.map((program: any) => (
+                    filteredProgram.map((program: any) => (
                         <ProgramCard key={program.id} program={program} theme={theme} updateStatus={updateStatus} />
                     ))
                 )}
             </div>
+            {filteredProgram.length === 0 && (
+                <EmptyError title='Search not match' subTitle='Sorry, it seems the program you are searching for those not exist, please try agin' className='w-full min-h-[455px] gap-2 overflow-hidden bg-gray-900  shadow-2xl' image='/empty.png' />
+            )}
 
-            {error && (<p className='text-red-700 bg-red-800'>Error occurred while searching</p>)}
+            {/* {error && <p className='text-red-700 bg-red-800'>Error occurred while searching</p>} */}
         </div>
     );
 };

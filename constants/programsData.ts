@@ -43,7 +43,7 @@ export const programsData = [
     requirements: "Basic understanding of IT and networking.",
     tutor: {
       name: "Jane Smith",
-      picture: "https://example.com/jane-smith.jpg",
+      picture: "/team/d3.png",
     },
   },
 
@@ -94,7 +94,7 @@ export const programsData = [
 
     tutor: {
       name: "Jane Smith",
-      picture: "https://example.com/jane-smith.jpg",
+      picture: "/team/d5.png",
     },
   },
   {

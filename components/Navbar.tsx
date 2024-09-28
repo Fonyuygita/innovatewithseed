@@ -123,7 +123,9 @@ const Navbar = () => {
                 <div className="lg:hidden  flex items-center justify-center`">
                     {isSignedIn ? (
                         <Link href="/">
-                            <UserButton afterSignOutUrl="/" />
+                            <UserButton afterSignOutUrl="/"
+                                appearance={customAppearance}
+                            />
                         </Link>
                     ) :
 
