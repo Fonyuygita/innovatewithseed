@@ -41,7 +41,7 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
                         <code>{children}</code>
                     </pre>
                 ) : (
-                    <p className={`mb-4 text-gray-700 line-clamp-9 w-[80%] ${theme === 'light' ? "text-gray-700" : " text-light-300"}`}>{children}</p>
+                    <p className={`mb-4 text-gray-700 line-clamp-9 w-[100%] ${theme === 'light' ? "text-gray-700" : " text-light-300"}`}>{children}</p>
                 );
             },
             [BLOCKS.HEADING_1]: (node: Block, children: React.ReactNode) => (
