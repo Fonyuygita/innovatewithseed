@@ -23,7 +23,7 @@ const RecentPosts = ({ posts }: any) => {
     const firstTwoPosts = posts.slice(0, 2);
     const { theme } = useTheme()
     return (
-        <section className={`w-full  py-[6rem] overflow-hidden h-full ${theme === 'light' ? 'text-gray-600 bg-light-200  ' : ' text-light-300 bg-gray-950'}`
+        <section className={`w-full  py-[6rem] overflow-hidden h-full ${theme === 'light' ? 'text-gray-600 bg-light-200  ' : ' text-light-300 bg-gray-800'}`
         }>
 
             <motion.h1

@@ -254,6 +254,8 @@ export const IdentificationTypes = [
 
 
 export const MyPrograms: ProgramsProps[] = [
+
+    { status: "Register", id: 33, title: 'Week_end_of_code', description: 'Learn and get your hance dirty in the weekend of code.', image: '/woc.png' },
     { status: "Register", id: 1, title: 'Cyber Security Internship', description: 'Gain real-world experience in cybersecurity.', image: '/blog.png' },
     { status: "Register", id: 2, title: 'Web Development Internship', description: 'Hands-on experience in web development.', image: '/banner.png' },
     { status: "Register", id: 3, title: 'Embeded Systems Internship', description: 'Practical experience in machine learning.', image: '/blog.png' },
@@ -269,41 +271,7 @@ export const MyPrograms: ProgramsProps[] = [
     { status: "Register", id: 13, title: 'Machine Learning Holiday Tech Camp', description: 'Explore machine learning in a fun way.', image: '/blog.png' },
     { status: "Register", id: 14, title: 'Data Science Holiday Tech Camp', description: 'Engaging data science activities.', image: '/banner.png' },
     { status: "Register", id: 15, title: 'AI Holiday Tech Camp', description: 'AI projects and activities for kids.', image: '/blog.png' },
-    { status: "Register", id: 16, title: 'Cyber Security Tech Event', description: 'Networking and learning in cybersecurity.', image: '/banner.png' },
-    { status: "Register", id: 17, title: 'Web Development Tech Event', description: 'Meet and learn from web developers.', image: '/blog.png' },
-    { status: "Register", id: 18, title: 'Machine Learning Tech Event', description: 'Networking and learning in machine learning.', image: '/banner.png' },
-    { status: "Register", id: 19, title: 'Data Science Tech Event', description: 'Connect with data science professionals.', image: '/blog.png' },
-    { status: "Register", id: 20, title: 'AI Tech Event', description: 'AI-focused networking and learning.', image: '/banner.png' },
-    { status: "Register", id: 21, title: 'Cyber Security Mentorship Program', description: 'Guidance from cybersecurity experts.', image: '/blog.png' },
-    { status: "Register", id: 22, title: 'Web Development Mentorship Program', description: 'Mentorship from web development professionals.', image: '/banner.png' },
-    { status: "Register", id: 23, title: 'Machine Learning Mentorship Program', description: 'Learn from machine learning experts.', image: '/blog.png' },
-    { status: "Register", id: 24, title: 'Data Science Mentorship Program', description: 'Guidance from data science professionals.', image: '/banner.png' },
-    { status: "Register", id: 25, title: 'AI Mentorship Program', description: 'Mentorship from AI professionals.', image: '/blog.png' },
-    { status: "Register", id: 26, title: 'Cyber Security Online Course', description: 'Learn cybersecurity at your own pace.', image: '/banner.png' },
-    { status: "Register", id: 27, title: 'Web Development Online Course', description: 'Self-paced web development course.', image: '/blog.png' },
-    { status: "Register", id: 28, title: 'Machine Learning Online Course', description: 'Learn machine learning online.', image: '/banner.png' },
-    { status: "Register", id: 29, title: 'Data Science Online Course', description: 'Online data science course.', image: '/blog.png' },
-    { status: "Register", id: 30, title: 'AI Online Course', description: 'Self-paced AI course.', image: '/banner.png' },
-    { status: "Register", id: 31, title: 'Cyber Security Hackathon', description: 'Competitive cybersecurity event.', image: '/blog.png' },
-    { status: "Register", id: 32, title: 'Web Development Hackathon', description: 'Competitive web development event.', image: '/banner.png' },
-    { status: "Register", id: 33, title: 'Machine Learning Hackathon', description: 'Machine learning coding competition.', image: '/blog.png' },
-    { status: "Register", id: 34, title: 'Data Science Hackathon', description: 'Data science competition.', image: '/banner.png' },
-    { status: "Register", id: 35, title: 'AI Hackathon', description: 'AI-focused coding competition.', image: '/blog.png' },
-    { status: "Register", id: 36, title: 'Cyber Security Workshop', description: 'Hands-on cybersecurity workshop.', image: '/banner.png' },
-    { status: "Register", id: 37, title: 'Web Development Workshop', description: 'Practical web development workshop.', image: '/blog.png' },
-    { status: "Register", id: 38, title: 'Machine Learning Workshop', description: 'Hands-on machine learning workshop.', image: '/banner.png' },
-    { status: "Register", id: 39, title: 'Data Science Workshop', description: 'Practical data science workshop.', image: '/blog.png' },
-    { status: "Register", id: 40, title: 'AI Workshop', description: 'Hands-on AI workshop.', image: '/banner.png' },
-    { status: "Register", id: 41, title: 'Cyber Security Seminar', description: 'Educational cybersecurity seminar.', image: '/blog.png' },
-    { status: "Register", id: 42, title: 'Web Development Seminar', description: 'Educational web development seminar.', image: '/banner.png' },
-    { status: "Register", id: 43, title: 'Machine Learning Seminar', description: 'Educational machine learning seminar.', image: '/blog.png' },
-    { status: "Register", id: 44, title: 'Data Science Seminar', description: 'Educational data science seminar.', image: '/banner.png' },
-    { status: "Register", id: 45, title: 'AI Seminar', description: 'Educational AI seminar.', image: '/blog.png' },
-    { status: "Register", id: 46, title: 'Cyber Security Conference', description: 'Conference on cybersecurity topics.', image: '/banner.png' },
-    { status: "Register", id: 47, title: 'Web Development Conference', description: 'Conference on web development.', image: '/blog.png' },
-    { status: "Register", id: 48, title: 'Machine Learning Conference', description: 'Conference on machine learning.', image: '/banner.png' },
-    { status: "Register", id: 49, title: 'Data Science Conference', description: 'Conference on data science.', image: '/blog.png' },
-    { status: "Register", id: 50, title: 'AI Conference', description: 'Conference on AI topics.', image: '/banner.png' },
+
 ];
 
 

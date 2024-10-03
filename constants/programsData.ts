@@ -344,5 +344,36 @@ export const programsData = [
     requirements: "Basic understanding of programming.",
   },
 
+
+  {
+    id: '33',
+    name: 'Week_End_of_code',
+    videoUrl: 'https://example.com/programming_ds_video.mp4',
+    description: 'A weekend program focusing on foundational programming skills, data structures, algorithms, SQL, and Excel.',
+    outcomes: 'You will gain proficiency in C programming, data structure implementation, SQL database querying, and Excel data analysis.',
+    structure: [
+      {
+        level: 'C Programming Basics',
+        details: ['Introduction to C Programming Language', 'Variables and Data Types', 'Control Structures', 'Functions and Pointers', 'Arrays and Strings', 'Project 1'],
+      },
+      {
+        level: 'Data Structures and Algorithms',
+        details: ['Basic Data Structures (Arrays, Linked Lists)', 'Sorting and Searching Algorithms', 'Recursion and Dynamic Programming', 'Tree and Graph Algorithms', 'Complexity Analysis', 'Project 2'],
+      },
+      {
+        level: 'SQL and Excel',
+        details: ['SQL Fundamentals (Queries, Joins, Aggregations)', 'Database Design Concepts', 'Excel Basics (Functions, Formulas)', 'Data Visualization in Excel', 'SQL and Excel Integration', 'Final Project'],
+      },
+    ],
+    requirements: 'No prior experience required. Basic knowledge of programming concepts is helpful.',
+
+
+ tutor: {
+      name: "Fonyuy Gita",
+      picture: "/team/d1.png",
+    },
+    
+  },
+
   // Add more programs as needed
 ];

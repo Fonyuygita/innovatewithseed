@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin, FaShare, FaSubscript, FaUber, FaWhatsapp } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaShare, FaSubscript, FaUber, FaUserPlus, FaWhatsapp } from 'react-icons/fa'
 import { FaMessage, FaShareNodes, FaX, FaXTwitter } from 'react-icons/fa6'
 import CustomButton from './CustomButton'
 import Link from 'next/link'
@@ -66,7 +66,7 @@ const Footer = () => {
 
                 </div>
                 {/* line */}
-                <div className="w-full h-[1px] bg-blue-500 my-8"></div>
+                <div className="w-full h-[1px] bg-blue-500 md:my-8 my-1"></div>
 
 
                 {/* middle section */}
@@ -79,11 +79,11 @@ const Footer = () => {
 
                         <p className="text-blue-500 w-[70%] text-left font-sans">We Are A First Class Professional IT Training Institute
                         </p>
-                        <input type="text" className={`text-gray-900 px-8 py-3 outline-none border border-blue-500 ${theme === "light" ? "bg-light-200" : "bg-gray-700"} rounded-lg shadow-xl`} placeholder='email......' />
+                        <input type="text" className={` px-8 py-3 outline-none border border-blue-500 ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-700 text-light-200"} rounded-lg shadow-xl`} placeholder='email......' />
                         <PrimaryBtn
                             title="Subscribe"
                             extraStyle="min-w-[90%] md:w-[27%] "
-                            icon={<FaSubscript />}
+                            icon={<FaUserPlus />}
                         />
 
                     </div>
@@ -92,11 +92,14 @@ const Footer = () => {
 
                     <div className="flex flex-col items-start gap-4">
                         <h3 className="text-primary-100 my-7">Company</h3>
-                        <div className="bg-primary-100 w-[100%] h-[1px] mb-4"></div>
+                        <div className="bg-primary-100 w-[100%] h-[1px] mt-[-2.6rem] mb-4"></div>
                         <Link href="/about" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">About Us</Link>
                         <Link href="/about" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Admission</Link>
                         <Link href="/about" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Blog</Link>
                         <Link href="/about" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Contact Us</Link>
+
+                        <Link href="/privacy-policy" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Privacy Policy</Link>
+
 
                     </div>
 
@@ -104,7 +107,7 @@ const Footer = () => {
 
                     <div className="flex flex-col items-left gap-4">
                         <h3 className="text-primary-100 my-7">Our Interest</h3>
-                        <div className="bg-primary-100 w-[100%] h-[1px] mb-4"></div>
+                        <div className="bg-primary-100 w-[100%] h-[1px] mb-4 mt-[-2.4rem]"></div>
                         <Link href="/about" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Web Development</Link>
                         <Link href="/about" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Cybersecurity</Link>
                         <Link href="/about" className="text-blue-500 text-sm font-sans font-600 hover:text-[#888] animate-in transition-all duration-75">Machine Learning</Link>
@@ -114,11 +117,11 @@ const Footer = () => {
                 </div>
                 {/* bottom section */}
             </div>
-            <div className="my-3 w-full h-[1px]  bg-primary-100"></div>
+            <div className="md:my-3  my-1w-full h-[1px]  bg-primary-100"></div>
             <div className=" flex  w-[83%] mx-auto flex-between px-[1px]" py-5>
                 <h5 className='text-sm text-[#999] font-sans '>Copyright 2024 Seed. All Rights Reserved.</h5>
 
-                <h5 className='text-sm text-[#999] font-sans '>Design by Seed</h5>
+                <h5 className='text-sm text-[#999] font-sans '>SeedWeb</h5>
 
             </div>
             {/* <div className="w-full bg-white h-[130px] mt-3 flex items-center justify-center">

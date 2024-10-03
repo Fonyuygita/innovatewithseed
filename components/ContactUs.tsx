@@ -63,7 +63,7 @@ const ContactUs = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-full rounded-2xl border border-blue-500 ">
+                <div className="w-full h-full rounded-2xl md:border-none  border border-blue-500 ">
                     <Image src="/contact.png" alt='contact' width={1000} height={1000} className='w-full h-full p-2 object-contain rounded-2xl' />
                 </div>
             </div>

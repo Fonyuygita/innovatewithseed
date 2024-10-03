@@ -33,8 +33,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  title: "SeedInnovations",
-  description: "Innovates with Seed",
+  title: "SEED",
+  description: "Get In touch , Learn AND GROW with seed",
 };
 
 const localization = {

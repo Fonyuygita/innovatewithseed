@@ -27,7 +27,7 @@ const HomeComponents = ({ children }: { children: ReactNode }) => {
             <Introduction />
 
             {/* <Services /> */}
-            <Technologies />
+            {/* <Technologies /> */}
             <Mentorship />
             <Mission />
             {children}

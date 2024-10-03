@@ -50,23 +50,13 @@ const ProgramCard = ({ program, theme, updateStatus }: any) => (
                 <p className="text-green-500 text-sm font-thin italic ">Pending...</p>
             )} */}
 
-                {program.title.split(" ")[2] === "Internship" && (
                     <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
                         {/* <button onClick={() => updateStatus(program.id, 'Pending')}> </button> */}
                         <span>Read More</span>
                         <FaArrowRight className="ml-2" />
                     </Link>
 
-                )}
-
-                {program.title.split(" ")[2] === "Bootcamp" && (
-                    <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
-                        {/* <button onClick={() => updateStatus(program.id, 'Pending')}>{program.status} </button> */}
-                        <span>Read More</span>
-                        <FaArrowRight className="ml-2" />
-                    </Link>
-
-                )}
+      
 
 
 

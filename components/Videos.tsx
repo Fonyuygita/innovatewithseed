@@ -6,12 +6,11 @@ import Image from 'next/image';
 import PlayIcon from './PlayIcon';
 
 const videos = [
-    { url: 'https://jumpshare.com/s/P8SbgFzW2WNbR3h4Z8r7', thumbnail: '/t1.jpg', title: 'Video 1' },
-    { url: 'https://youtu.be/OcL932W6E1w?si=epysX07SclPZGo40', thumbnail: '/t2.jpg', title: 'Video 2' },
-    { url: 'https://www.youtube.com/embed/87m19xZ--BE', thumbnail: '/t3.jpg', title: 'Video 3' },
-    { url: 'https://www.youtube.com/embed/xyz1', thumbnail: '/t1.jpg', title: 'Video 1' },
-    { url: 'https://www.youtube.com/embed/xyz2', thumbnail: '/t2.jpg', title: 'Video 2' },
-    { url: 'https://www.youtube.com/embed/xyz3', thumbnail: '/t3.jpg', title: 'Video 3' },
+    { url: 'https://go.screenpal.com/watch/cZ6eDZVWnFD', thumbnail: '/t1.jpg', title: 'Welcome to seed' },
+    { url: 'https://go.screenpal.com/watch/cZ6eDZVWnFD', thumbnail: '/bootcamps.jpg', title: 'Welcome to seed' },
+    { url: 'https://www.youtube.com/embed/87m19xZ--BE', thumbnail: '/banner.png', title: 'Welcome to seed' },
+    { url: 'https://go.screenpal.com/watch/cZ6eDZVWnFD', thumbnail: '/vid/vid2.png', title: 'Welcome to seed' },
+
     // Add more videos as needed
 ];
 

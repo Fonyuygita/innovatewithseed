@@ -64,13 +64,27 @@ const ProgramPage = ({ searchParams }: any) => {
                 <div className="flex items-center justify-between gap-4 w-full h-full md:flex-row flex-col">
                     <div className="flex flex-col md:gap-6 gap-8 items-start md:w-1/2 md:px-4 max-h-full w-full ">
                         <div className="w-full my-4">
-                            <VideoCard
-                                title={program.name}
-                                url={program.videoUrl}
-                                thumbnail="/vid/vid3.png"
-                                className=''
+                            {program.id===33 && (
+                                <Image
+                                src="/woc.png"
+                                alt="woc"
+                                width={400}
+                                height={300}
+                                className="w-full h-fit"
+                                
+                                />
+                            )}
 
-                            />
+{program.id!=='33'
+                            // <VideoCard
+                            //     title={program.name}
+                            //     url={program.videoUrl}
+                            //     thumbnail="/vid/vid3.png"
+                            //     className=''
+
+                            // />
+
+                            }
                         </div>
                         <div className="my-8">
                             <h2 className="flex items-center gap-3 text-2xl  text-blue-500">{program.name}
