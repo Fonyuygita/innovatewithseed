@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VideoCard from '@/components/BigVideo';
-import { FaArrowRight, FaCode, FaPython } from 'react-icons/fa';
+import { FaArrowRight, FaCode, FaMinus, FaPlus, FaPython } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { programsData } from '@/constants/programsData';
@@ -64,25 +64,26 @@ const ProgramPage = ({ searchParams }: any) => {
                 <div className="flex items-center justify-between gap-4 w-full h-full md:flex-row flex-col">
                     <div className="flex flex-col md:gap-6 gap-8 items-start md:w-1/2 md:px-4 max-h-full w-full ">
                         <div className="w-full my-4">
-                            {program.id===33 && (
+                            {program.id === '33' && (
                                 <Image
-                                src="/woc.png"
-                                alt="woc"
-                                width={400}
-                                height={300}
-                                className="w-full h-fit"
-                                
+                                    src="/woc.png"
+                                    alt="woc"
+                                    width={400}
+                                    height={300}
+                                    className="w-full h-fit bg-red-700"
+
                                 />
                             )}
 
-{program.id!=='33'
-                            // <VideoCard
-                            //     title={program.name}
-                            //     url={program.videoUrl}
-                            //     thumbnail="/vid/vid3.png"
-                            //     className=''
+                            {program.id !== '33' &&
 
-                            // />
+                                <VideoCard
+                                    title={program.name}
+                                    url={program.videoUrl}
+                                    thumbnail="/vid/vid3.png"
+                                    className=''
+
+                                />
 
                             }
                         </div>
@@ -117,11 +118,18 @@ const ProgramPage = ({ searchParams }: any) => {
                                         className={`cursor-pointer  p-2 rounded ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-950 text-light-200"} font-sans`}
                                         onClick={() => setExpandedLevel(expandedLevel === level.level ? null : level.level)}
                                     >
-                                        <h4 className="md:text-lg text-sm font-sans flex  items-center gap-3">
+                                        <h4 className="md:text-lg text-sm font-sans flex  justify-between items-center gap-3">
                                             <span className='text-blue-500'>{index + 1}</span>
                                             {level.level}
                                             <span>
-                                                <FaPython className='text-primary-100' />
+                                                {
+                                                    expandedLevel === level.level ? (
+                                                        <FaMinus className='text-primary-100' />
+                                                    ) : (
+                                                        <FaPlus className='text-primary-100' />
+                                                    )
+                                                }
+
                                             </span>
                                         </h4>
                                     </div>
