@@ -14,7 +14,7 @@ const GalleryPage = () => {
         }>
             <DynamicHero
                 title="Our Gallery"
-                description="We plant to harvest"
+                description="Dream Create Innovate"
             />
             <MyImageGallery />
             <FAQSection />

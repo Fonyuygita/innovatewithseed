@@ -118,7 +118,7 @@ const ProgramPage = ({ searchParams }: any) => {
                                         className={`cursor-pointer  p-2 rounded ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-950 text-light-200"} font-sans`}
                                         onClick={() => setExpandedLevel(expandedLevel === level.level ? null : level.level)}
                                     >
-                                        <h4 className="md:text-lg text-sm font-sans flex  justify-between items-center gap-3">
+                                        <h4 className="md:text-lg text-sm font-sans flex  justify-between items-start gap-3">
                                             <span className='text-blue-500'>{index + 1}</span>
                                             {level.level}
                                             <span>

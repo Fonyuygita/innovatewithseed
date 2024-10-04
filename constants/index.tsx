@@ -99,10 +99,10 @@ export
 
 
         {
-            name: 'Zino Grace',
-            image: '/testimonial/zino.png',
+            name: 'Pierrick Junior',
+            image: '/testimonial/jj.png',
             stars: '/star.svg',
-            text: "SEED's 50-day code bootcamp transformed my tech skills and career prospects! Highly recommend for aspiring developers",
+            text: "Seed changed my career path and made me love learning. Their experts and community helped me grow and believe in myself. I gained valuable tech skills and now see endless possibilities.",
             title: "Student"
         },
 

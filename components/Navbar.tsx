@@ -170,14 +170,14 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
                     {menuLinks.map(link => (
-                        <Link className={`font-semibold text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== '/' && pathname.startsWith(link.url) ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""
+                        <Link className={` text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== '/' && pathname.startsWith(link.url) ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""
                             }`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                     {isSignedIn &&
                         (
 
 
-                            <Link className={`font-bold text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Academics</Link>
+                            <Link className={` text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Academics</Link>
 
 
                         )
@@ -189,10 +189,7 @@ const Navbar = () => {
 
 
                 <div className="lg:flex items-center justify-center gap-x-10 hidden ">
-                    <div className="flex items-center justify-center gap-1 bg-blue-500 shadow-xl p-1 rounded-2xl w cursor-pointer">
-                        <FaMoon className="text-[15px] text-light-200 " />
-                        <FaSun className="text-[15px] h-full" />
-                    </div>
+
 
 
 
