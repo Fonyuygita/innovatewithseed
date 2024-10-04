@@ -3,8 +3,9 @@
 // components/InfiniteScroll.js
 import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { FaSeedling, FaProjectDiagram, FaHandsHelping, FaLightbulb, FaUsers, FaAward, FaChartLine, FaShieldAlt, FaLaptopCode, FaBookOpen, FaHandshake, FaBullseye, FaRocket, FaHeart, FaGlobe, FaBrain, FaTools } from 'react-icons/fa';
+import { FaSeedling, FaProjectDiagram, FaHandsHelping, FaLightbulb, FaUsers, FaAward, FaChartLine, FaShieldAlt, FaLaptopCode, FaBookOpen, FaHandshake, FaBullseye, FaRocket, FaHeart, FaGlobe, FaBrain, FaTools, FaHackerNews } from 'react-icons/fa';
 import { useTheme } from './context/ThemeContext';
+import SlidingPanel from './SlideIn';
 
 
 
@@ -51,25 +52,34 @@ const Partnership = () => {
     const handleMouseLeave = () => setIsPaused(false);
 
     return (
-        <div className="overflow-hidden md:w-[90%] w-full mx-auto flex items-center justify-center h-[240px]  gap-[12rem] md:space-y-7 space-y-4">
-            <motion.div
-                className="flex"
-                animate={controls}
-                initial={{ x: 0 }}
-            >
-                {items.concat(items).map((item, index) => (
-                    <div
-                        key={index}
-                        className={`w-[7rem] h-[7rem] flex flex-col items-center justify-center rounded-t-lg  m-2 text-white  shadow-2xl  mr-6 p-8  ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white  '}`}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                    >
-                        <div className=" text-blue-200 bg-primary-100 p-4 rounded-full text-lg">{item.icon}</div>
-                        <p className={`mt-2 text-center text-[12px] text-gray-800  ${theme === 'light' ? 'text-gray-900 ' : 'text-light-200 '}`}>{item.text}</p>
-                    </div>
-                ))}
-            </motion.div>
-        </div>
+        <>
+            <div className="overflow-hidden md:w-[90%] w-full mx-auto flex items-center justify-center h-[240px]  gap-[12rem] md:space-y-7 space-y-4">
+                <motion.div
+                    className="flex"
+                    animate={controls}
+                    initial={{ x: 0 }}
+                >
+                    {items.concat(items).map((item, index) => (
+                        <div
+                            key={index}
+                            className={`w-[7rem] h-[7rem] flex flex-col items-center justify-center rounded-t-lg  m-2 text-white  shadow-2xl  mr-6 p-8  ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white  '}`}
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <div className=" text-blue-200 bg-primary-100 p-4 rounded-full text-lg">{item.icon}</div>
+                            <p className={`mt-2 text-center text-[12px] text-gray-800  ${theme === 'light' ? 'text-gray-900 ' : 'text-light-200 '}`}>{item.text}</p>
+                        </div>
+                    ))}
+                </motion.div>
+
+
+            </div>
+            {/* news button */}
+
+        </>
+
+
+
     );
 };
 

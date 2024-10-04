@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTheme } from './context/ThemeContext';
+// import SlidingPanel from './SlideIn';
 
 const AboutUsTop = () => {
 
@@ -75,6 +76,8 @@ const AboutUsTop = () => {
                     </motion.div>
                 </div>
             </div>
+            {/* <SlidingPanel /> */}
+
         </section>
     );
 };

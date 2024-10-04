@@ -11,6 +11,7 @@ import Testimonials from './Testimonials'
 import ContactUs from './ContactUs'
 import SeedStory from './CompanyStory'
 import { useTheme } from './context/ThemeContext'
+import SlidingPanel from './SlideIn'
 // import { useTheme } from './context/ThemeContext'
 
 const HomeComponents = ({ children }: { children: ReactNode }) => {
@@ -21,7 +22,9 @@ const HomeComponents = ({ children }: { children: ReactNode }) => {
 
             <Hero />
             <Partnership />
-
+            {/* <div className="my-3 flex items-center justify-center ">
+                <SlidingPanel />
+            </div> */}
             <SeedStory />
             {/* <Experience /> */}
             <Introduction />
@@ -30,7 +33,10 @@ const HomeComponents = ({ children }: { children: ReactNode }) => {
             {/* <Technologies /> */}
             <Mentorship />
             <Mission />
-            {children}
+            <div id="news">
+                {children}
+            </div>
+
             <Testimonials />
 
             <ContactUs />
