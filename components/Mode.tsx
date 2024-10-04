@@ -12,7 +12,7 @@ const Mode = () => {
     return (
         <div
             onClick={toggleTheme}
-            className={`flex items-center justify-center gap-1 p-2 rounded-2xl cursor-pointer fixed bottom-2 left-3 transition-colors duration-300 w-[60px] h-[60px] ${theme === 'light' ? 'bg-primary-100' : 'bg-gray-950'
+            className={`flex items-center justify-center gap-1 p-2 rounded-2xl cursor-pointer fixed bottom-2 left-3 transition-colors duration-300 w-[60px] h-[60px] ${theme === 'light' ? 'bg-primary-100' : 'bg-black'
                 }`}
         >
             {theme === 'light' ? (

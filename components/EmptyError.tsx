@@ -3,7 +3,7 @@ import React from 'react'
 import Image from "next/image"
 // import CustomErrorButton from "./CustomErrorButton"
 import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 // import { router } from 'expo-router'
 const EmptyError = ({ title, subTitle, className, image }: { title: string; subTitle: string; className: string, image?: string }) => {
     return (
@@ -29,9 +29,10 @@ const EmptyError = ({ title, subTitle, className, image }: { title: string; subT
             
             /> */}
 
-            <Link href="/student" className='flex items-center justify-center w-fit py-3 px-9 text-light-100 bg-primary-100'>
+            <Link href="/student" className='flex items-center justify-center w-fit py-3 px-9 text-light-100 bg-primary-100 text-white gap-3 rounded-md'>
+                <FaArrowLeft color='white' className='text-light-200' />
+
                 <span>Dashboard</span>
-                <FaArrowRight color='white' />
             </Link>
 
         </div>

@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useTheme } from '../context/ThemeContext';
 import { MyPrograms } from '@/constants';
 import EmptyError from '../EmptyError';
+import { useUser } from '@clerk/nextjs';
 // import { MyPrograms } from '@/constants';
 
 
@@ -34,9 +35,10 @@ const SkeletonCard = () => (
 
 
 
-const ProgramCard = ({ program, theme, updateStatus }: any) => (
+const ProgramCard = ({ program, theme, updateStatus, user }: any) => (
 
-    <Link href={`/student/123/program?id=${program.id}`}>
+
+    <Link href={`/student/123/program?id=${user?.id}&program=${program.title}`}>
         <motion.div className={` cursor-pointer shadow-xl rounded-lg overflow-hidden p-3  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
             <Image src={program.image} alt={program.title} className="w-full h-48 object-cover" width={1000} height={500} />
             <div className="p-4">
@@ -50,13 +52,13 @@ const ProgramCard = ({ program, theme, updateStatus }: any) => (
                 <p className="text-green-500 text-sm font-thin italic ">Pending...</p>
             )} */}
 
-                    <Link href={`/student/${program.title.split(" ")[2]}/start`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
-                        {/* <button onClick={() => updateStatus(program.id, 'Pending')}> </button> */}
-                        <span>Read More</span>
-                        <FaArrowRight className="ml-2" />
-                    </Link>
+                <Link href={`/student/123/program?id=${user?.id}&program=${program.title.split(" ")[2]}`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
+                    {/* <button onClick={() => updateStatus(program.id, 'Pending')}> </button> */}
+                    <span>Read More</span>
+                    <FaArrowRight className="ml-2" />
+                </Link>
 
-      
+
 
 
 
@@ -76,6 +78,7 @@ const slideLeft = (element: any) => {
 
 const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
     const elementRef = useRef(null);
+    const { user } = useUser();
 
     const [filter, setFilter] = useState('All');
     const [search, setSearch] = useState('');
@@ -199,7 +202,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
                     ))
                 ) : (
                     filteredProgram.map((program: any) => (
-                        <ProgramCard key={program.id} program={program} theme={theme} updateStatus={updateStatus} />
+                        <ProgramCard key={program.id} program={program} theme={theme} updateStatus={updateStatus} user={user} />
                     ))
                 )}
             </div>

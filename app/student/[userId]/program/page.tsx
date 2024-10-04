@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VideoCard from '@/components/BigVideo';
-import { FaArrowRight, FaCode, FaMinus, FaPlus, FaPython } from 'react-icons/fa';
+import { FaArrowRight, FaCode, FaMinus, FaPlus, FaPython, FaUser } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { programsData } from '@/constants/programsData';
@@ -115,7 +115,7 @@ const ProgramPage = ({ searchParams }: any) => {
                                     className="overflow-hidden"
                                 >
                                     <div
-                                        className={`cursor-pointer  p-2 rounded ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-950 text-light-200"} font-sans`}
+                                        className={`cursor-pointer border-b border-gray-400  p-2 rounded ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-950 text-light-200"} font-sans`}
                                         onClick={() => setExpandedLevel(expandedLevel === level.level ? null : level.level)}
                                     >
                                         <h4 className="md:text-lg text-sm font-sans flex  justify-between items-start gap-3">
@@ -146,18 +146,23 @@ const ProgramPage = ({ searchParams }: any) => {
                             </div>
                         ))}
 
-                        <div className="flex md:flex-row flex-col md:items-center items-start  justify-between w-full md:px-2">
+                        <div className="flex  flex-col  items-start  justify-between w-full md:px-2">
 
-                            <div className="mt-8">
+                            <div className="mt-8 ">
                                 <h3 className="text-xl font-sans text-blue-500">Requirements</h3>
                                 <p className="my-3 text-sm">{program.requirements}</p>
                                 <p className="my-3 text-sm">{program.requirements}</p>
                                 <p className="my-3 text-sm">{program.requirements}</p>
 
+                                <Link href="/student/123/register/redirect" className='text-sm w-fit px-6 py-2 bg-primary-100 flex items-center justify-center rounded-md hover:scale-10 animate-in hover:bg-yellow-500 gap-5 my-4 text-light-300'>
+                                    <span>Register</span>
+                                    <span><FaUser /></span>
+                                </Link>
+
                             </div>
 
                             {/* instructor */}
-                            <div className="flex items-center gap-5 my-4">
+                            <div className="flex items-center gap-5 my-4 text-sm">
                                 <h4 className='text-blue-500'>Instructor <span className="text-primary-100">Eng {program.tutor?.name}</span></h4>
                                 <Link href="https://fonyuygita.vercel.app">
                                     <Image src={program.tutor?.picture!} width={30} height={30} className='rounded-full'
