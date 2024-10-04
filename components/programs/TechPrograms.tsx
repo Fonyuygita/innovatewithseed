@@ -38,7 +38,7 @@ const SkeletonCard = () => (
 const ProgramCard = ({ program, theme, updateStatus, user }: any) => (
 
 
-    <Link href={`/student/123/program?id=${user?.id}&program=${program.title}`}>
+    <Link href={`/student/123/program?id=${program.id}&ids=${user?.id}&program=${program.title}`}>
         <motion.div className={` cursor-pointer shadow-xl rounded-lg overflow-hidden p-3  ${theme === 'light' ? "bg-gray-100" : "bg-gray-900"}`}>
             <Image src={program.image} alt={program.title} className="w-full h-48 object-cover" width={1000} height={500} />
             <div className="p-4">
@@ -52,7 +52,7 @@ const ProgramCard = ({ program, theme, updateStatus, user }: any) => (
                 <p className="text-green-500 text-sm font-thin italic ">Pending...</p>
             )} */}
 
-                <Link href={`/student/123/program?id=${user?.id}&program=${program.title.split(" ")[2]}`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
+                <Link href={`/student/123/program?id=${program.id}&ids=${user?.id}&program=${program.title.split(" ")[2]}`} className="mt-4 inline-flex items-center text-primary-100 hover:underline">
                     {/* <button onClick={() => updateStatus(program.id, 'Pending')}> </button> */}
                     <span>Read More</span>
                     <FaArrowRight className="ml-2" />
