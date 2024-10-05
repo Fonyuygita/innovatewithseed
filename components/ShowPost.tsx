@@ -37,7 +37,7 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
                 // Check if the paragraph contains code
                 const isCodeBlock = node.content.some((child) => child.nodeType === 'text' && child.marks.some((mark) => mark.type === 'code'));
                 return isCodeBlock ? (
-                    <pre className={`text-gray-500 shadow-xl p-4 rounded-lg overflow-x-auto my-4 md:w-[90%] w-full  ${theme === 'light' ? "text-gray-900 bg-light-300" : "bg-gray-900 text-yellow-500"}`}>
+                    <pre className={`text-gray-500 shadow-xl p-4 rounded-lg overflow-x-auto my-4 md:w-[90%] w-full  ${theme === 'light' ? "text-gray-900 bg-light-300" : "bg-gray-950 text-yellow-500"}`}>
                         <code>{children}</code>
                     </pre>
                 ) : (
@@ -101,7 +101,7 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
 
 
     return (
-        <div className={`w-full min-h-screen   py-[5rem]  ${theme === 'light' ? "bg-[#e0dddd] text-gray-700" : "bg-gray-800 text-light-300"}`}>
+        <div className={`w-full min-h-screen   py-[5rem]  ${theme === 'light' ? "bg-[#e0dddd] text-gray-700" : "bg-gray-900 text-light-300"}`}>
             <div className={`md:w-[70%] w-[96%] h-full  mx-auto px-5 shadow-2xl ${theme === 'light' ? "bg-[#e0dddd] text-gray-700" : " text-light-300"} `}>
                 <Image
                     src={`https:${post.coverImage.fields.file.url}`} // Ensure the URL is absolute
