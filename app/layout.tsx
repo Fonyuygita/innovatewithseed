@@ -12,6 +12,7 @@ import { frFR } from '@clerk/localizations'
 import Mode from "@/components/Mode";
 import { dark } from '@clerk/themes'
 import { ThemeContextProvider } from "@/components/context/ThemeContext";
+import Script from "next/script";
 // import { ClerkProvider } from "@clerk/nextjs";
 // import { ThemeProvider } from "@/components/theme-provider";
 
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   title: "SEED",
   description: "innovatewithseed.com - SEED (Skill Enhancement and Empowerment through Digitalisation) is a private tech startup based in Bamenda, Cameroon. Legally recognized under Cameroonian business regulations, SEED operates independently with a mission to foster technological innovation and provide hands-on training in various tech disciplines. Through its coding bootcamps, internships, and tech programs, SEED plays a pivotal role in equipping individuals with digital skills, empowering them to solve real-world problems.",
   manifest: '/manifest.json',
-  // themeColor: '#FF6F00',
+  themeColor: '#FF6F00',
   keywords: [
     "fonyuygita",
     "seed Inc",
@@ -119,7 +120,7 @@ export default function RootLayout({
       }}
       localization={localization}>
       <html lang="en">
-
+        <Script src='/register-sw.ts' />
         <body className={cn('min-h-screen bg-gray-900 font-sans antialiased', fontSans.variable)}>
 
 
