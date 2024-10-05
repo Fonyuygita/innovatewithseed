@@ -1,15 +1,20 @@
+import DashboardFooter from '@/components/DashboardFooter'
 import EmptyError from '@/components/EmptyError'
+import Navbar from '@/components/Navbar'
 import React from 'react'
 
 const page = () => {
     return (
         <>
+            <Navbar />
             <EmptyError
                 title='Registration Closed'
                 subTitle='Registration for this program is currently closed'
                 className='w-full h-screen gap-7'
-                image='/empty.png'
+                image='/closed.png'
+                msg
             />
+            <DashboardFooter />
         </>
     )
 }
