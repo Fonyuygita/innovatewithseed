@@ -13,18 +13,18 @@ const Footer = () => {
     const { theme } = useTheme()
     return (
         <div className={`w-full  border-t-2 border-blue-500   px-3 min-h-  ${theme === "light" ? "bg-light-200" : "bg-gray-800"}`}>
-            <div className="flex flex-col items-center w-[90%] mx-auto p-3">
+            <div className="flex flex-col md:items-center items-start w-[90%] mx-auto p-3">
 
                 {/* top section */}
 
-                <div className="flex md:flex-row flex-col justify-between items-center gap-[8rem] mt-9">
+                <div className="flex md:flex-row flex-col justify-between md:items-center md:gap-[8rem] mt-9 items-start gap-[5rem]">
                     {/* social media icon */}
                     <div className="flex items-center gap-4">
                         <FaWhatsapp className='text-primary-100 h-12 w-12 border border-primary-100 p-2' />
 
                         <div className="flex flex-col gap-3">
                             <h1 className='text-sm text-primary-100'>Call Now</h1>
-                            <p className="text-blue-500 font-bold text-lg ">(+237) 674 567 789</p>
+                            <p className="text-blue-500 font-bold text-lg ">(+237) 680 468 606</p>
                         </div>
                     </div>
 
@@ -33,7 +33,7 @@ const Footer = () => {
 
                         <div className="flex flex-col gap-3">
                             <h1 className='text-sm text-primary-100'>Email Administration</h1>
-                            <p className="text-blue-500 font-bold text-lg ">seed@email.com</p>
+                            <p className="text-blue-500 font-bold text-lg ">Info@innovatewithseed.com</p>
                         </div>
                     </div>
 
@@ -66,25 +66,33 @@ const Footer = () => {
 
                 </div>
                 {/* line */}
-                <div className="w-full h-[1px] bg-blue-500 md:my-8 my-1"></div>
+                <div className="w-full h-[1px] bg-blue-500 md:my-8 my-2"></div>
 
 
                 {/* middle section */}
-                <div className="flex justify-between w-full flex-col md:flex-row lg:gap-[8rem] gap-[3rem]">
-                    <div className="flex flex-col gap-5 items-center">
-                        <div className='flex flex-col items-center '>
-                            <Image src="/seedLogo.png" alt='seed' width={150} height={150} className='object-contain' />
-                            <h1 className='text-lg text-primary-100'>SEED</h1>
+                <div className="flex justify-between w-full flex-col md:flex-row lg:gap-[8rem] gap-[3rem] items-start">
+                    <div className="flex flex-col gap-5 md:items-center items-start">
+                        <div className='flex flex-col items-center my-3'>
+                            <Link href="/" className={`rounded-full shadow-2xl ${theme === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white border border-x-primary-100'}`}>
+                                <Image
+                                    src="/seedLogo.png"
+                                    width={150}
+                                    height={150}
+                                    alt='logo'
+                                    className=' items-center justify-center  object-contain hidden'
+                                />
+                            </Link>
+                            <h1 className='text-lg text-primary-100'>SE<span className='text-blue-500'>ED</span></h1>
                         </div>
 
                         <p className="text-blue-500 w-[70%] text-left font-sans">We Are A First Class Professional IT Training Institute
                         </p>
-                        <input type="text" className={` px-8 py-3 outline-none border border-blue-500 ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-700 text-light-200"} rounded-lg shadow-xl`} placeholder='email......' />
+                        {/* <input type="text" className={` px-8 py-3 outline-none border border-blue-500 ${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-700 text-light-200"} rounded-lg shadow-xl`} placeholder='email......' />
                         <PrimaryBtn
                             title="Subscribe"
                             extraStyle="min-w-[90%] md:w-[27%] "
                             icon={<FaUserPlus />}
-                        />
+                        /> */}
 
                     </div>
 
@@ -119,9 +127,9 @@ const Footer = () => {
             </div>
             <div className="md:my-3  my-1w-full h-[1px]  bg-primary-100"></div>
             <div className=" flex  w-[83%] mx-auto flex-between px-[1px]" py-5>
-                <h5 className='text-sm text-[#999] font-sans '>Copyright 2024 Seed. All Rights Reserved.</h5>
+                <h5 className='text-[10px] text-[#999] font-sans '>Copyright 2024 Seed. All Rights Reserved.</h5>
 
-                <h5 className='text-sm text-[#999] font-sans '>SeedWeb</h5>
+                <h5 className='text-[10px] text-[#999] font-sans '>SeedWeb</h5>
 
             </div>
             {/* <div className="w-full bg-white h-[130px] mt-3 flex items-center justify-center">
