@@ -17,7 +17,7 @@ type MenuLink = {
 };
 
 const menuLinks: MenuLink[] = [
-    { title: 'Home', url: '/' },
+
     { title: 'About', url: '/about' },
     { title: 'Services', url: '/services' },
     { title: 'Blog', url: '/blog' },
@@ -169,8 +169,11 @@ const Navbar = () => {
 
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
+
+                    <Link className={` text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Home</Link>
+
                     {menuLinks.map(link => (
-                        <Link className={` text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${link.url === pathname ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""
+                        <Link className={` text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== "/" && pathname.startsWith(link.url) ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""
                             }`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
                     {isSignedIn &&
@@ -249,8 +252,10 @@ const Navbar = () => {
                                     className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain flex '
                                 />
                             </Link>
+
+                            <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Home</Link>
                             {menuLinks.map(link => (
-                                <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === link.url ? "text-white  py-2 rounded-md bg-primary-100 px-[6rem]" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
+                                <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== "/" && pathname.startsWith(link.url) ? "text-white  py-2 rounded-md bg-primary-100 px-[6rem]" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                             ))}
 
                             {isSignedIn &&
