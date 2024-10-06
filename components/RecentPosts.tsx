@@ -34,7 +34,7 @@ const RecentPosts = ({ posts }: any) => {
             >
                 Latest News{" "}<span className='text-blue-500 capitalize'>From{" "}</span>Us{" "}<span className='text-primary-100'>& Blogs</span>
             </motion.h1>
-            <div className="flex flex-col-reverse md:flex-row mt-[3rem] lg:w-[95%] mx-auto items-center justify-center gap-7 lg:px-3 min-h-full w-full px-4">
+            <div className="flex flex-col md:flex-row mt-[3rem] lg:w-[95%] mx-auto items-center justify-center gap-7 lg:px-3 min-h-full w-full px-4">
 
                 {firstTwoPosts.map((post: { post: PostCardProps }) => (
                     // @ts-ignore
@@ -43,11 +43,11 @@ const RecentPosts = ({ posts }: any) => {
 
 
                 <motion.div
-                    className="w-[100%] md:w-[90%] h-[16rem] md:h-[40rem] md:p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue shadow-sm md:shadow-2xl cursor-pointer p-2"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    className="w-[100%] md:w-[90%] h-[16rem] md:h-[40rem] md:p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-blue shadow-sm md:shadow-2xl cursor-pointer p-2 md:flex hidden"
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.5 }}
                 >
-                    <Image src="/contact.svg" alt='' width={1000} height={1000} className='object-cover w-full h-full ' />
+                    <Image src="/contact.svg" alt='' width={1000} height={1000} className='object-cover w-full h-full  ' />
 
                 </motion.div>
 

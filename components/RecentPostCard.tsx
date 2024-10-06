@@ -61,7 +61,7 @@ const RecentPostCard: React.FC<PostCardProps> = ({ post }) => {
             <div className={`flex flex-col gap-5 w-full md:w-1/3   ${theme === 'light' ? 'text-gray-600   ' : ' text-light-300 '}`} id='news'>
                 <Link href={`/blog/${post.slug}`}>
                     <motion.div
-                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-900'} rounded-2xl shadow-2xl flex md:flex-col flex-col-reverse  px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer text-center`}
+                        className={` ${theme === 'light' ? 'text-gray-600 bg-gray-200  ' : ' text-light-300 bg-gray-900'} rounded-2xl shadow-2xl flex flex-col px-5 min-w-full h-[21rem] items-center gap-4 cursor-pointer text-center`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
