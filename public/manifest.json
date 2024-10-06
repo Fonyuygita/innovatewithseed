@@ -14,5 +14,18 @@
      "sizes": "512x512",
      "type": "image/png"
    }
- ]
+ ],
+
+ 
+   "id": "9c513d5a-d0e0-46a0-a5f0-c82f8940b618",
+    "dir": "ltr",
+    "lang": "en",
+    "categories": [
+      "business",
+      "food",
+      "shopping"
+    ], 
+    "prefer_related_applications": false,
+  "iarc_rating_id": "13"
+
 }

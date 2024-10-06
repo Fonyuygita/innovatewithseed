@@ -53,7 +53,7 @@ const Partnership = () => {
 
     return (
         <>
-            <div className="overflow-hidden md:w-[90%] w-full mx-auto flex items-center justify-center h-[240px]  gap-[12rem] md:space-y-7 space-y-4">
+            <div className="overflow-hidden md:w-[90%] w-full mx-auto flex items-center justify-center h-[240px]  gap-[12rem] md:space-y-7 space-y-4 mt-[2rem]">
                 <motion.div
                     className="flex"
                     animate={controls}
@@ -75,6 +75,8 @@ const Partnership = () => {
 
             </div>
             {/* news button */}
+
+
 
         </>
 

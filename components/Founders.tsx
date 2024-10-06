@@ -50,7 +50,7 @@ const founders: Founder[] = [
 
     {
         name: 'Fien Dora',
-        title: 'CEO',
+        title: 'Chief Operating Officer',
         description: 'Core Founder and a Computer Engineer.',
         longDescription: " I'm Fien Dora, again, a computer engineer, from NAHPI, I'm a front end web developer,  audiuno programmer and into IoT. I'll be one of your guides during this period and, ill be you reference for anything u might be needing",
         image: '/fien.png',
@@ -64,7 +64,7 @@ const founders: Founder[] = [
 
     {
         name: 'Nchanji Faithful',
-        title: 'CTO',
+        title: 'Developer',
         description: 'Computer Engineer and App Developer.',
         longDescription: " I'm Faithful, again, a computer engineer, from NAHPI, I'm a front end web developer,  audiuno programmer and into IoT. I'll be one of your guides during this period and, ill be you reference for anything u might be needing",
         image: '/faith.png',
@@ -78,7 +78,7 @@ const founders: Founder[] = [
 
     {
         name: 'Jick Alvin',
-        title: 'CTO',
+        title: 'Developer',
         description: 'Software Engineer, Mathematician Computer Scientist and App Developer.',
         longDescription: " I'm Jick, again, a computer engineer, from NAHPI, I'm a front end web developer,  audiuno programmer and into IoT. I'll be one of your guides during this period and, ill be you reference for anything u might be needing",
         image: '/alvin.png',

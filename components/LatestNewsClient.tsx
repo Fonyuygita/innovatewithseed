@@ -4,6 +4,7 @@ import React, { ReactNode, useState } from 'react'
 import { motion } from "framer-motion"
 import { FaHackerNews, FaNewspaper } from 'react-icons/fa'
 import { FaPlay } from 'react-icons/fa'
+import Button from './NewsButton'
 const LatestNewsClient = ({ children }: { children: ReactNode }) => {
     const [isOpen, setIsOpen] = useState(false);
     const togglePanel = () => {
@@ -11,17 +12,21 @@ const LatestNewsClient = ({ children }: { children: ReactNode }) => {
     };
 
     return (
-        <section className='absolute top-[38.9%] left-[1px]  '>
-            <div className="relative my-5 px-1 flex">
-                <button
-                    onClick={togglePanel}
-                    className=" p-4 py-1 w-fit  h-fit rounded-full  bg-blue-500 text-white  flex items-center justify-start gap-3 ml-4 text-[12px]"
-                >
+        <section className='absolute top-[48%] md:top-[38.9%] left-[1px]  '>
+            <div className="relative my-7 px-1 flex">
+                <div className="flex items-center gap-3">
+                    <button
 
-                    <span>News</span>
-                    <span><FaHackerNews /></span>
+                        className="flex items-center justify-center md:w-12 md:h-12 w-9 h-9 bg-blue-500 rounded-full text-white shadow-lg"
+                        onClick={togglePanel}
+                    >
+                        <FaNewspaper size={24} />
+                    </button>
+                    <span className='text-[12px]'>Latest News</span>
+                </div>
 
-                </button>
+
+
                 <motion.div
                     initial={{ x: '-100%' }}
                     animate={{ x: isOpen ? 0 : '-100%' }}
