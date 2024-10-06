@@ -65,7 +65,7 @@ const RecentPostCard: React.FC<PostCardProps> = ({ post }) => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <Image src={`https:${post.coverImage}`} alt='blog1' width={300} height={200} className='w-full px-[2px] h-[10rem] object-fit my-3' />
+                        <Image src={`https:${post.coverImage}`} alt='blog1' width={300} height={200} className='w-full px-[2px] h-[10rem] object-contain my-3' />
                         <motion.h3
                             className="text-primary-100 w-full px-3 line-clamp-1 md:text-lg xl:text-lg sm:text-sm"
                             initial={{ opacity: 0 }}

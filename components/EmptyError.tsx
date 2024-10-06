@@ -40,7 +40,7 @@ const EmptyError = ({ title, subTitle, className, image, msg }: { title: string;
             
             /> */}
 
-            <Link href="/student" className={`flex items-center justify-center w-fit py-3 px-9 text-light-100  ${msg ? "bg-red-800" : "bg-primary-100"} text-white gap-3 rounded-md`}>
+            <Link href="/student" className={`flex items-center justify-center w-fit py-3 px-9 text-light-100  ${msg ? "bg-primary-100" : "bg-primary-100"} text-white gap-3 rounded-md`}>
                 <FaArrowLeft color='white' className='text-light-200' />
 
                 <span>Dashboard</span>

@@ -170,7 +170,7 @@ const Navbar = () => {
                 {/* Menu links here */}
                 <div className="hidden lg:flex gap-2 items-center">
 
-                    <Link className={` text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Home</Link>
+                    <Link className={` text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/">Home</Link>
 
                     {menuLinks.map(link => (
                         <Link className={` text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== "/" && pathname.startsWith(link.url) ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""
@@ -215,7 +215,7 @@ const Navbar = () => {
                         (
 
                             <Link
-                                href="/academics"
+                                href="/students"
                                 className="flex items-center justify-center lg:justify-start gap-2"
                             >
                                 <Image src="/academics/logo.png" alt="logo" width={32} height={32} />
@@ -259,14 +259,14 @@ const Navbar = () => {
                                 />
                             </Link>
 
-                            <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Home</Link>
+                            <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/">Home</Link>
                             {menuLinks.map(link => (
                                 <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== "/" && pathname.startsWith(link.url) ? "text-white  py-2 rounded-md bg-primary-100 px-[6rem]" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                             ))}
 
                             {isSignedIn &&
                                 (
-                                    <Link className={`font-bold text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Academics</Link>
+                                    <Link className={`font-bold text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/students">Academics</Link>
                                 )
                             }
                         </motion.div>

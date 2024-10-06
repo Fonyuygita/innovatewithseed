@@ -4,15 +4,17 @@ import React, { ReactNode, useState } from 'react'
 import { motion } from "framer-motion"
 import { FaHackerNews, FaNewspaper } from 'react-icons/fa'
 import { FaPlay } from 'react-icons/fa'
+import { useTheme } from './context/ThemeContext'
 
 const LatestNewsClient = ({ children }: { children: ReactNode }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const { theme } = useTheme();
     const togglePanel = () => {
         setIsOpen(!isOpen);
     };
 
     return (
-        <section className='absolute top-[48%] md:top-[38.9%] left-[1px]  '>
+        <section className='absolute top-[48%] md:top-[38.9%] left-[6%]  '>
             <div className="relative my-7 px-1 flex">
                 <div className="flex items-center gap-3">
                     <button
@@ -22,7 +24,7 @@ const LatestNewsClient = ({ children }: { children: ReactNode }) => {
                     >
                         <FaNewspaper size={24} />
                     </button>
-                    <span className='text-[12px]'>Latest News</span>
+                    <span className={`rounded-md p-2 text-[12px] cursor-pointer ${theme === "light" ? "bg-gray-300 text-gray-900 " : "text-light-200 bg-gray-900"}`}>Latest News</span>
                 </div>
 
 

@@ -14,7 +14,7 @@ const Slide: React.FC<SlideProps> = ({ icon: Icon, title, description }) => {
     const { theme } = useTheme()
     return (
         <motion.div
-            className={`px-5 py-2 w-full  rounded-lg shadow-md justify-start flex flex-col items-start space-y-4 ${theme === 'light' ? 'bg-gray-200 ' : 'bg-gray-900 text-white '}`}
+            className={`px-5 py-2 w-full  rounded-lg shadow-md justify-start flex flex-col items-start space-y-4 ${theme === 'light' ? 'bg-gray-300 ' : 'bg-gray-900 text-white '}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
