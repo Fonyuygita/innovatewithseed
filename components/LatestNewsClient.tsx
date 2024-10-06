@@ -4,7 +4,7 @@ import React, { ReactNode, useState } from 'react'
 import { motion } from "framer-motion"
 import { FaHackerNews, FaNewspaper } from 'react-icons/fa'
 import { FaPlay } from 'react-icons/fa'
-import Button from './NewsButton'
+
 const LatestNewsClient = ({ children }: { children: ReactNode }) => {
     const [isOpen, setIsOpen] = useState(false);
     const togglePanel = () => {
