@@ -1,4 +1,4 @@
-import Menu from "@/components/acedemicsComponents/Menu";
+// import Menu from "@/components/acedemicsComponents/Menu";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
