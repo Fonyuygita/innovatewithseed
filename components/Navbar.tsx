@@ -176,22 +176,16 @@ const Navbar = () => {
                         <Link className={` text-sm rounded-md gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== "/" && pathname.startsWith(link.url) ? "text-white py-2 bg-primary-100 hover:animate-in transition-all duration-100 to-blue px-6 " : ""
                             }`} href={link.url} key={link.title}>{link.title}</Link>
                     ))}
-                    {isSignedIn ?
+                    {isSignedIn &&
                         (
 
 
-                            <Link className={` text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/academics">Academics</Link>
+                            <Link className={` text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/student">Academics</Link>
 
 
                         )
 
-                        :
-
-                        (
-                            <Link className={` text-sm gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/students">Academics</Link>
-                        )
                     }
-
                 </div>
 
                 {/* search_bar and register cta */}
@@ -266,7 +260,7 @@ const Navbar = () => {
 
                             {isSignedIn &&
                                 (
-                                    <Link className={`font-bold text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/students">Academics</Link>
+                                    <Link className={`font-bold text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/student">Academics</Link>
                                 )
                             }
                         </motion.div>
