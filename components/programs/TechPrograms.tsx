@@ -140,7 +140,7 @@ const ProgramsSection = ({ theme }: { theme: 'dark' | 'light' },) => {
 
 
     if (!filteredProgram) {
-        console.log("There is no filtered item")
+        // console.log("There is no filtered item")
     }
     return (
         <div className="container mx-auto p-4 " onScroll={handleScroll}>

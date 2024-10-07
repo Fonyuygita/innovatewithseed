@@ -144,13 +144,13 @@ const Navbar = () => {
 
                 </div>
 
-                <Link href="/" className={`rounded-full shadow-2xl ${theme === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white border border-x-primary-100'}`}>
+                <Link href="/" className={`md:flex hidden rounded-full shadow-2xl ${theme === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white border border-x-primary-100'}`}>
                     <Image
                         src="/seedLogo.png"
                         width={100}
                         height={200}
                         alt='logo'
-                        className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain md:flex hidden'
+                        className='lg:w-25 lg:h-25 w-12 h-12  items-center justify-center  object-contain '
                     />
                 </Link>
 

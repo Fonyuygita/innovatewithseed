@@ -54,11 +54,11 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
             const blobFile1 = new Blob([values.applicationDocument[0]], {
                 type: values.applicationDocument[0].type,
             })
-            console.log(blobFile1);
+            // console.log(blobFile1);
             formDataApp = new FormData();
             formDataApp.append("blobFile", blobFile1);
             formDataApp.append("fileName", values.applicationDocument[0].name)
-            console.log(formDataApp);
+            // console.log(formDataApp);
 
         }
 
@@ -79,8 +79,8 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
             // @ts-ignore
 
             const newPatient = await registerStudent(studentData)
-            console.log("hello data");
-            console.log(newPatient);
+            // console.log("hello data");
+            // console.log(newPatient);
 
             // Add a confirmation status : pending | "success" | "cancel to the studentData collection"
 
@@ -90,7 +90,7 @@ const StudentForm = ({ program, student }: { program: string; student: User }) =
 
         } catch (err) {
             // \catch errors if any
-            console.log(err);
+            // console.log(err);
             // router.push(`/patient/${newUser.$id}/register`)
 
 

@@ -41,9 +41,9 @@ const RegisterStudentForm = ({ program }: { program: string }) => {
     });
 
     const onSubmit = async ({ name, email, phone }: z.infer<typeof UserFormValidation>) => {
-        console.log("Submit button clicked")
+        // console.log("Submit button clicked")
         setIsLoading(true);
-        console.log({ name, email, phone })
+        // console.log({ name, email, phone })
 
         try {
             const userData = {
@@ -54,13 +54,13 @@ const RegisterStudentForm = ({ program }: { program: string }) => {
             };
             // @ts-ignore
             const newUser = await createUser(userData);
-            console.log(newUser)
+            // console.log(newUser)
             // router.push(`/student/${newUser.$id}/register`)
 
 
             if (newUser) {
                 router.push(`/student/${newUser?.$id}/register?prog=${program}`)
-                console.log(newUser);
+                // console.log(newUser);
             }
         } catch (err) {
             // \catch errors if any

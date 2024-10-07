@@ -7,7 +7,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, Document, Block, Inline } from '@contentful/rich-text-types';
-import { FaThumbsUp, FaBell, FaEye, FaMoon, FaSun } from 'react-icons/fa';
+import { FaThumbsUp, FaBell, FaEye, FaMoon, FaSun, FaHeart } from 'react-icons/fa';
 import { useTheme } from './context/ThemeContext';
 type NodeRenderer = (node: Block | Inline, children: React.ReactNode) => React.ReactNode;
 
@@ -16,6 +16,7 @@ type NodeRenderer = (node: Block | Inline, children: React.ReactNode) => React.R
 const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
     const [likes, setLikes] = useState<number | any>(post.likes);
     const [viewed, setViewed] = useState<number | any>(post.viewed);
+    const [clicked, setClicked] = useState(false)
     const { theme } = useTheme()
 
     useEffect(() => {
@@ -26,6 +27,7 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
     const handleLike = async () => {
         await updatePost(postId, 'likes');
         setLikes(parseInt(likes + 1));
+        setClicked(!clicked)
     };
 
 
@@ -102,7 +104,7 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
 
     return (
         <div className={`w-full min-h-screen   py-[5rem]  ${theme === 'light' ? "bg-[#e0dddd] text-gray-700" : "bg-gray-900 text-light-300"}`}>
-            <div className={`md:w-[70%] w-[96%] h-full  mx-auto px-5 shadow-2xl ${theme === 'light' ? "bg-[#e0dddd] text-gray-700" : " text-light-300"} `}>
+            <div className={`md:w-[70%] w-[96%] h-full  mx-auto px-5 py-2 shadow-2xl ${theme === 'light' ? "bg-[#e0dddd] text-gray-700" : " text-light-300"} `}>
                 <Image
                     src={`https:${post.coverImage.fields.file.url}`} // Ensure the URL is absolute
                     alt={post.title}
@@ -115,9 +117,14 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
                 {/* <MarkdownRenderer content={post.content.content[0].value} />
              */}
 
-                <div className=' w-full py-3 my-4 flex flex-col gap-4'>{documentToReactComponents(post.content, options)}</div>;
+                <div className=' w-full py-3 my-4 flex flex-col gap-4'>{documentToReactComponents(post.content, options)}</div>
                 {/* <p>{postcontent.content[0].value}</p> */}
-                <p>Published on: {new Date(post.author.sys?.createdAt).toLocaleDateString()}</p>
+
+                <div className="flex space-x-4">
+                    <button onClick={handleLike}><FaHeart className={`${clicked ? "text-red-700" : "border-none-"}`} /> <span>{likes}</span></button>
+                    <button><FaEye /> <span>{viewed}</span></button>
+                </div>
+                <p className='text-light-200 w-fit my-4 bg-blue-500 p-2'>Published on: {new Date(post.author.sys?.createdAt).toLocaleDateString()}</p>
                 <div className="author">
                     {/* <Image
                     src={`https:${post.author.fields.picture.file}`} // Ensure the URL is absolute
@@ -126,10 +133,7 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
                     height={50}
                     className="rounded-full object-contain"
                 /> */}
-                    <div className="flex space-x-4">
-                        <button onClick={handleLike}><FaThumbsUp className='text-primary-100 text-xl w-full' /> <span>{likes}</span></button>
-                        <button><FaEye /> <span>{viewed}</span></button>
-                    </div>
+
                 </div>
             </div>
         </div>

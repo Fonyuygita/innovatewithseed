@@ -16,7 +16,7 @@ const PostPage = async ({ params }: { params: { slug: string } }) => {
 
     const post: any = response.items[0].fields;
 
-    console.log(post.content)
+
 
     const postId = response.items[0].sys.id;
 

@@ -17,11 +17,10 @@ const RegisterPage = async ({ params: { userId }, searchParams }: SearchParamPro
 
     // console.log(userId.toLowerCase());
     const searchParam = searchParams.prog
-    console.log(userId)
-    console.log(searchParam)
+    // console.log(userId)
+    // console.log(searchParam)
 
 
-    console.log("search params is " + searchParam)
     let program: string;
     switch (searchParam) {
         case "internship":

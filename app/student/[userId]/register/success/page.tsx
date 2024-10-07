@@ -18,7 +18,7 @@ const RequestSuccess = async ({
 }: SearchParamProps) => {
     const appointmentId = (searchParams?.appointmentId as string) || "";
     const user = await getUser(userId)
-    console.log(user)
+    // console.log(user)
 
     // const appointmentId = (searchParams?.appointmentId as string) || "";
     // const appointment = await getAppointment(appointmentId);

@@ -61,7 +61,7 @@ const CoursePage = () => {
     };
 
     const handleSubmit = (data: any) => {
-        console.log('Form Data:', data);
+
     };
 
     return (
