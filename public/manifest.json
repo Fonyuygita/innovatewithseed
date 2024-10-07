@@ -1,1 +1,31 @@
-{"theme_color":"#ff6f00","background_color":"#00bbff","icons":[{"purpose":"maskable","sizes":"512x512","src":"icon512_maskable.png","type":"image/png"},{"purpose":"any","sizes":"512x512","src":"icon512_rounded.png","type":"image/png"}],"orientation":"any","display":"standalone","dir":"auto","lang":"en-US","name":"SEED","short_name":"SEED","id":"SEEDTech","description":"Skills Enhancement"}
+
+{
+ "name": "SEED",
+ "short_name": "SEED",
+ "theme_color": "#FF6F00",
+ "background_color": "#FF6F00",
+ "display": "standalone",
+ "scope": "/",
+ "start_url": "/",
+ "description": "Skills Enhancement and Empowerment Through Digitalization",
+ "icons": [
+   {
+     "src": "/icon-512x512.png",
+     "sizes": "512x512",
+     "type": "image/png"
+   }
+ ],
+
+ 
+   "id": "9c513d5a-d0e0-46a0-a5f0-c82f8940b618",
+    "dir": "ltr",
+    "lang": "en",
+    "categories": [
+      "business",
+      "food",
+      "shopping"
+    ], 
+    "prefer_related_applications": false,
+  "iarc_rating_id": "13"
+
+}

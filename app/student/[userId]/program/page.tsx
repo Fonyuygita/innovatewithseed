@@ -12,7 +12,6 @@ import Link from 'next/link';
 import { programsData } from '@/constants/programsData';
 import { useTheme } from '@/components/context/ThemeContext';
 import EmptyError from '@/components/EmptyError';
-import { useUser } from '@clerk/nextjs';
 
 // const programs = [
 //     {
@@ -42,7 +41,6 @@ import { useUser } from '@clerk/nextjs';
 
 const ProgramPage = ({ searchParams }: any) => {
     const router = useRouter();
-    const { user } = useUser();
     // const { programId } = router.query;
     // const searchParam = useSearchParams()
     const { theme } = useTheme()
@@ -156,7 +154,7 @@ const ProgramPage = ({ searchParams }: any) => {
                                 <p className="my-3 text-sm">{program.requirements}</p>
                                 <p className="my-3 text-sm">{program.requirements}</p>
 
-                                <Link href={`/student/${user?.id}/register/redirect`} className='text-sm w-fit px-6 py-2 bg-primary-100 flex items-center justify-center rounded-md hover:scale-10 animate-in hover:bg-yellow-500 gap-5 my-4 text-light-300'>
+                                <Link href="/student/123/register/redirect" className='text-sm w-fit px-6 py-2 bg-primary-100 flex items-center justify-center rounded-md hover:scale-10 animate-in hover:bg-yellow-500 gap-5 my-4 text-light-300'>
                                     <span>Register</span>
                                     <span><FaUser /></span>
                                 </Link>
@@ -164,14 +162,14 @@ const ProgramPage = ({ searchParams }: any) => {
                             </div>
 
                             {/* instructor */}
-                            <Link href="https://fonyuygita.vercel.app" className="flex items-center gap-5 my-4 text-sm">
+                            <div className="flex items-center gap-5 my-4 text-sm">
                                 <h4 className='text-blue-500'>Instructor <span className="text-primary-100">Eng {program.tutor?.name}</span></h4>
-                                <div >
+                                <Link href="https://fonyuygita.vercel.app">
                                     <Image src={program.tutor?.picture!} width={30} height={30} className='rounded-full'
                                         alt='tutor' />
-                                </div>
+                                </Link>
 
-                            </Link>
+                            </div>
 
                         </div>
                     </div>
