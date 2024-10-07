@@ -1,9 +1,8 @@
 // import withPWA from "next-pwa";
-// import withPWA from 'next-pwa';
+import withPWA from 'next-pwa';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
     swcMinify: false,
     images: {
         remotePatterns: [
@@ -24,13 +23,13 @@ const nextConfig = {
     },
 };
 
-// const pwaConfig = withPWA({
-//     dest: 'public',
-//     register: true,
-//     skipWaiting: true,
-//     fallbacks: {
-//         document: '/offline',
-//     },
-// });
+const pwaConfig = withPWA({
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
+    fallbacks: {
+        document: '/_offline',
+    },
+});
 
-export default nextConfig;
+export default pwaConfig(nextConfig);
