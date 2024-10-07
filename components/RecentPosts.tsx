@@ -35,11 +35,22 @@ const RecentPosts = ({ posts }: any) => {
                 Latest News{" "}<span className='text-blue-500 capitalize'>From{" "}</span>Us{" "}<span className='text-primary-100'>& Blogs</span>
             </motion.h1>
             <div className="flex flex-col md:flex-row mt-[3rem] lg:w-[95%] mx-auto items-center justify-center gap-7 lg:px-3 min-h-full w-full px-4">
+                {!firstTwoPosts ? (
+                    <div className="text-lg flex flex-col items-center.justify-center gap-3">
+                        <p className="test-sm text-primary-100">News loading....</p>
+                        <p className="text-lg">We give you real and up to date news</p>
+                    </div>
 
-                {firstTwoPosts.map((post: { post: PostCardProps }) => (
-                    // @ts-ignore
-                    <RecentPostCard key={post.id} post={post} />
-                ))}
+                ) : (
+
+                    firstTwoPosts.map((post: { post: PostCardProps }) => (
+                        // @ts-ignore
+                        <RecentPostCard key={post.id} post={post} />
+                    ))
+
+
+
+                )}
 
 
                 <motion.div
