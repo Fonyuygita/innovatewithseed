@@ -101,8 +101,8 @@ const Navbar = () => {
     const customAppearance = {
         variables: {
             colorPrimary: '#FF6F00', // Tomato color
-            colorText: theme === 'light' ? '#333333' : "#888888", // Dark text
-            colorBackground: theme === 'light' ? '#E8E9E9' : "#111827", // Light background
+            colorText: theme === 'light' ? '#fff' : "#888888", // Dark text
+            colorBackground: theme === 'light' ? '#999' : "#111827", // Light background
             fontFamily: 'Arial, sans-serif',
             borderRadius: '8px',
             colorBorder: '#ff6347',
@@ -209,11 +209,11 @@ const Navbar = () => {
                         (
 
                             <Link
-                                href="/students"
-                                className="flex items-center justify-center lg:justify-start gap-2"
+                                href="/academics"
+                                className="flex items-center justify-center lg:justify-start gap-2 bg-primary-100 hover:bg-orange-700 animate-in hover:scale-100 px-4 py-1 rounded-xl"
                             >
-                                <Image src="/academics/logo.png" alt="logo" width={32} height={32} />
-                                <span className="hidden lg:block font-bold">Academics</span>
+                                <Image src="/academics/logo.png" alt="logo" width={28} height={82} />
+                                <span className={`hidden lg:block font-bold ${theme === "light" ? "text-light-200" : "text-light-200 text-sm"}`}>Academics</span>
                             </Link>
 
 

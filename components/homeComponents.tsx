@@ -14,7 +14,7 @@ import { useTheme } from './context/ThemeContext'
 import SlidingPanel from './SlideIn'
 // import { useTheme } from './context/ThemeContext'
 
-const HomeComponents = ({ children }: { children: ReactNode }) => {
+const HomeComponents = ({ children }: { children?: ReactNode }) => {
 
     const { theme } = useTheme()
     return (

@@ -91,7 +91,7 @@ export
 
         {
             name: 'Nsami Emmanuel',
-            image: '/testimonial/emma.png',
+            image: '/testimonial/emma.jpeg',
             stars: '/star.svg',
             text: "joining SEED Inc has been a life-changing experience. When I started, I had no programming knowledge not even how to use a simple 'div' tag. But thanks to the excellent guidance from the Seed tutors, especially Mr. Gita, I’ve learned and grown tremendously.",
             title: "Student"
