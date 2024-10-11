@@ -48,7 +48,6 @@ export const StudentFormValidation = z.object({
   program: z.string().min(2, "Select at least one internship program"),
   department: z.string().optional(),
 
-
   applicationDocument: z.custom<File[]>().optional(),
 
   // treatmentConsent: z
@@ -71,20 +70,19 @@ export const StudentFormValidation = z.object({
   //   }),
 });
 
-
 export const CreateAppointmentSchema = z.object({
-  primaryPhysician: z.string().min(2, "Select at least one doctor"),
+  level: z.string().min(2, "Select at least one level"),
+  schoolLevel: z.string().min(2, "Select at least one level"),
   schedule: z.coerce.date(),
-  reason: z
+  expectations: z
     .string()
     .min(2, "Reason must be at least 2 characters")
     .max(500, "Reason must be at most 500 characters"),
-  note: z.string().optional(),
+  additionalNotes: z.string().optional(),
   cancellationReason: z.string().optional(),
 });
 
 export const ScheduleAppointmentSchema = z.object({
-  primaryPhysician: z.string().min(2, "Select at least one doctor"),
   schedule: z.coerce.date(),
   reason: z.string().optional(),
   note: z.string().optional(),
@@ -92,7 +90,6 @@ export const ScheduleAppointmentSchema = z.object({
 });
 
 export const CancelAppointmentSchema = z.object({
-  primaryPhysician: z.string().min(2, "Select at least one doctor"),
   schedule: z.coerce.date(),
   reason: z.string().optional(),
   note: z.string().optional(),

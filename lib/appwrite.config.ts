@@ -8,6 +8,7 @@ export const {
   APPOINTMENT_COLLECTION_ID,
   NEXT_PUBLIC_BUCKET_ID: BUCKET_ID,
   NEXT_PUBLIC_ENDPOINT: ENDPOINT,
+  WOC_COLLECTION_ID,
 } = process.env;
 
 // exposing all of appwrite sdk functionality and everything else

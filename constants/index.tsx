@@ -177,6 +177,37 @@ export const techCourses = [
 export const level = ["Beginner", "Intermediate", "Advance, Other"];
 export const time = ["online", "onside", "Both", "Other"];
 
+export const educationalLevel = [
+    {
+        name: "Primary School",
+        image: "/icon/primary.png",
+
+    },
+    {
+        name: "Secondary School",
+        image: "/icon/secondary.png",
+
+    },
+
+    {
+        name: "High School",
+        image: "/icon/high.png",
+
+    },
+
+    {
+        name: "University",
+        image: "/icon/university.png",
+
+    },
+
+    {
+        name: "Other",
+        image: "/icon/secondary.png",
+
+    },
+]
+
 export const Departments = [
     {
         image: "/icons/dr-green.png",
@@ -212,6 +243,8 @@ export const Departments = [
     },
 
 ];
+
+
 
 
 

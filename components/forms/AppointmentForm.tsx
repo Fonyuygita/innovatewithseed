@@ -1,228 +1,246 @@
-// "use client";
+"use client";
 
-// import { zodResolver } from "@hookform/resolvers/zod";
-// import Image from "next/image";
-// import { useRouter } from "next/navigation";
-// import { Dispatch, SetStateAction, useState } from "react";
-// import { useForm } from "react-hook-form";
-// import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { Dispatch, SetStateAction, useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-// import { SelectItem } from "@/components/ui/select";
+import { SelectItem } from "@/components/ui/select";
 
 
 
-// import "react-datepicker/dist/react-datepicker.css";
-// import { CreateAppointmentSchema, getAppointmentSchema } from "@/lib/validation";
-// import { Form } from "../ui/form";
-// import CustomFormField, { FormFieldType } from "./CustomFormFields";
-// import { Departments } from "@/constants";
-// import SubmitButton from "./SubmitButton";
-// import { Status } from "@/constants/type";
+import "react-datepicker/dist/react-datepicker.css";
+import { CreateAppointmentSchema } from "@/lib/validation";
+import { Form } from "../ui/form";
+import CustomFormField, { FormFieldType } from "./CustomFormFields";
+import { Departments, educationalLevel } from "@/constants";
+import SubmitButton from "./SubmitButton";
+import { Status } from "@/constants/type";
+import { Appointment } from "@/constants/appwrite.types";
 // import { Appointment } from "@/constants/appwrite.types";
 
 
-// export const AppointmentForm = ({
-//     userId,
-//     patientId,
-//     type = "create",
-//     appointment,
-//     setOpen,
-// }: {
-//     userId?: string;
-//     patientId?: string;
-//     type?: "create" | "schedule" | "cancel";
-//     appointment?: Appointment;
-//     setOpen?: Dispatch<SetStateAction<boolean>>;
-// }) => {
-//     const router = useRouter();
-//     const [isLoading, setIsLoading] = useState(false);
+export const AppointmentForm = ({
+    userId,
 
-//     const AppointmentFormValidation = getAppointmentSchema(type);
+    type = "create",
+    appointment,
+    setOpen,
+}: {
+    userId?: string;
 
-//     const form = useForm<z.infer<typeof AppointmentFormValidation>>({
-//         resolver: zodResolver(AppointmentFormValidation),
-//         defaultValues: {
-//             primaryPhysician: appointment ? appointment?.primaryPhysician : "",
-//             schedule: appointment
-//                 ? new Date(appointment?.schedule!)
-//                 : new Date(Date.now()),
-//             reason: appointment ? appointment.reason : "",
-//             note: appointment?.note || "",
-//             cancellationReason: appointment?.cancellationReason || "",
-//         },
-//     });
+    type?: "create" | "schedule" | "cancel";
+    appointment?: Appointment;
+    setOpen?: Dispatch<SetStateAction<boolean>>;
+}) => {
+    const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
 
-//     const onSubmit = async (
-//         values: z.infer<typeof AppointmentFormValidation>
-//     ) => {
-//         setIsLoading(true);
+    // const AppointmentFormValidation = getAppointmentSchema(type);
 
-//         let status;
-//         switch (type) {
-//             case "schedule":
-//                 status = "scheduled";
-//                 break;
-//             case "cancel":
-//                 status = "cancelled";
-//                 break;
-//             default:
-//                 status = "pending";
-//         }
+    const form = useForm<z.infer<typeof CreateAppointmentSchema>>({
+        resolver: zodResolver(CreateAppointmentSchema),
+        defaultValues: {
+            level: appointment ? appointment?.level : "",
+            schedule: appointment
+                ? new Date(appointment?.schedule!)
+                : new Date(Date.now()),
+            expectations: appointment ? appointment.expectations : "",
+            additionalNotes: appointment?.additionalNotes! || "",
+            cancellationReason: appointment?.cancellationReason || "",
+        },
+    });
 
-//         try {
-//             if (type === "create" && patientId) {
-//                 const appointment = {
-//                     userId,
-//                     patient: patientId,
-//                     primaryPhysician: values.primaryPhysician,
-//                     schedule: new Date(values.schedule),
-//                     reason: values.reason!,
-//                     status: status as Status,
-//                     note: values.note,
-//                 };
+    const onSubmit = async (
+        values: z.infer<typeof CreateAppointmentSchema>
+    ) => {
+        setIsLoading(true);
 
-//                 // @ts-ignore
+        let status;
+        switch (type) {
+            case "schedule":
+                status = "scheduled";
+                break;
+            case "cancel":
+                status = "cancelled";
+                break;
+            default:
+                status = "pending";
+        }
 
-//                 const newAppointment = await CreateAppointmentSchema(appointment);
+        try {
+            // if (type === "create" && userId) {
+            //     const appointment = {
+            //         userId,
+            //         level: values.level,
+            //         schedule: new Date(values.schedule),
+            //         expectations: values.expectations!,
+            //         status: status as Status,
+            //         additionalNotes: values.additionalNotes,
+            //     };
 
-//                 if (newAppointment) {
-//                     form.reset();
-//                     router.push(
-//                         `/patient/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`
-//                     );
-//                 }
-//             }
+            // @ts-ignore
 
-//             else {
-//                 const updatedAppointment = {
-//                     userId,
-//                     appointmentId: appointment?.$id!,
-//                     appointment: {
-//                         primaryPhysician: values.primaryPhysician,
-//                         schedule: new Date(values.schedule),
-//                         status: status as Status,
-//                         cancellationReason: values.cancellationReason
+            // const newAppointment = await CreateAppointmentSchema(appointment);
 
-//                     },
-//                     type,
+            //     if (newAppointment) {
+            //         form.reset();
+            //         router.push(
+            //             `/patient/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`
+            //         );
+            //     }
+            // }
 
-//                 }
-//                 // @ts-ignore
-//                 const appointmentUpdates = await updatedAppointment(updatedAppointment)
+            // else {
+            //     const updatedAppointment = {
+            //         userId,
+            //         appointmentId: appointment?.$id!,
+            //         appointment: {
+            //             primaryPhysician: values.primaryPhysician,
+            //             schedule: new Date(values.schedule),
+            //             status: status as Status,
+            //             cancellationReason: values.cancellationReason
 
-//                 if (appointmentUpdates) {
-//                     setOpen && setOpen(false);
-//                     form.reset()
-//                 }
+            //         },
+            //         type,
 
-//             }
+            //     }
+            // @ts-ignore
+            // const appointmentUpdates = await updatedAppointment(updatedAppointment)
 
-//         }
-//         catch (error) {
-//             console.log(error);
-//         }
-//         setIsLoading(false);
-//     };
+            // if (appointmentUpdates) {
+            //     setOpen && setOpen(false);
+            //     form.reset()
+            // }
 
-//     let buttonLabel;
-//     switch (type) {
-//         case "cancel":
-//             buttonLabel = "Cancel Appointment";
-//             break;
-//         case "schedule":
-//             buttonLabel = "Schedule Appointment";
-//             break;
-//         default:
-//             buttonLabel = "Submit Apppointment";
-//     }
+        }
 
-//     return (
-//         <Form {...form}>
-//             <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
-//                 {type === "create" && (
-//                     <section className="mb-12 space-y-4">
-//                         <h1 className="header">New Appointment</h1>
-//                         <p className="text-dark-700">
-//                             Request a new appointment in 10 seconds.
-//                         </p>
-//                     </section>
-//                 )}
 
-//                 {type !== "cancel" && (
-//                     <>
-//                         <CustomFormField
-//                             fieldType={FormFieldType.SELECT}
-//                             control={form.control}
-//                             name="primaryPhysician"
-//                             label="Doctor"
-//                             placeholder="Select a doctor"
-//                         >
-//                             {Departments.map((dep, i) => (
-//                                 <SelectItem key={dep.name + i} value={dep.name}>
-//                                     <div className="flex cursor-pointer items-center gap-2">
-//                                         <Image
-//                                             src={dep.image}
-//                                             width={32}
-//                                             height={32}
-//                                             alt="dep"
-//                                             className="rounded-full border border-dark-500"
-//                                         />
-//                                         <p>{dep.name}</p>
-//                                     </div>
-//                                 </SelectItem>
-//                             ))}
-//                         </CustomFormField>
+        catch (error) {
+            console.log(error);
+        }
+        setIsLoading(false);
+    };
 
-//                         <CustomFormField
-//                             fieldType={FormFieldType.DATE_PICKER}
-//                             control={form.control}
-//                             name="schedule"
-//                             label="Expected appointment date"
-//                             showTimeSelect
-//                             dateFormat="MM/dd/yyyy  -  h:mm aa"
-//                         />
+    let buttonLabel;
+    switch (type) {
+        case "cancel":
+            buttonLabel = "Cancel Appointment";
+            break;
+        case "schedule":
+            buttonLabel = "Schedule Appointment";
+            break;
+        default:
+            buttonLabel = "Register";
+    }
 
-//                         <div
-//                             className={`flex flex-col gap-6  ${type === "create" && "xl:flex-row"}`}
-//                         >
-//                             <CustomFormField
-//                                 fieldType={FormFieldType.TEXTAREA}
-//                                 control={form.control}
-//                                 name="reason"
-//                                 label="Appointment reason"
-//                                 placeholder="Annual montly check-up"
-//                                 disabled={type === "schedule"}
-//                             />
+    return (
+        <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
+                {type === "create" && (
+                    <section className="mb-12 space-y-4">
+                        <h1 className="header">{"Register For"} <span className="text-primary-100">{"<W.O.C/>"}</span></h1>
+                        <p className="text-dark-700">
+                            Request a new appointment in 10 seconds.
+                        </p>
+                    </section>
+                )}
 
-//                             <CustomFormField
-//                                 fieldType={FormFieldType.TEXTAREA}
-//                                 control={form.control}
-//                                 name="note"
-//                                 label="Comments/notes"
-//                                 placeholder="Prefer afternoon appointments, if possible"
-//                                 disabled={type === "schedule"}
-//                             />
-//                         </div>
-//                     </>
-//                 )}
+                {type !== "cancel" && (
+                    <>
+                        <CustomFormField
+                            fieldType={FormFieldType.SELECT}
+                            control={form.control}
+                            name="schoolLevel"
+                            label="School Level"
+                            placeholder="Select your school level"
+                        >
+                            {educationalLevel.map((dep, i) => (
+                                <SelectItem key={dep.name + i} value={dep.name}>
+                                    <div className="flex cursor-pointer items-center gap-2">
+                                        <Image
+                                            src={dep.image}
+                                            width={32}
+                                            height={32}
+                                            alt="dep"
+                                            className="rounded-full border border-dark-500"
+                                        />
+                                        <p>{dep.name}</p>
+                                    </div>
+                                </SelectItem>
+                            ))}
+                        </CustomFormField>
 
-//                 {type === "cancel" && (
-//                     <CustomFormField
-//                         fieldType={FormFieldType.TEXTAREA}
-//                         control={form.control}
-//                         name="cancellationReason"
-//                         label="Reason for cancellation"
-//                         placeholder="Urgent meeting came up"
-//                     />
-//                 )}
 
-//                 <SubmitButton
-//                     isLoading={isLoading}
-//                     className={`${type === "cancel" ? "shad-danger-btn" : "shad-primary-btn"} w-full`}
-//                 >
-//                     {buttonLabel}
-//                 </SubmitButton>
-//             </form>
-//         </Form>
-//     );
-// };
+
+                        <CustomFormField
+                            fieldType={FormFieldType.SELECT}
+                            control={form.control}
+                            name="level"
+                            label="level"
+                            placeholder="Select your Tech Level"
+                        >
+                            {["Beginner", "Intermediate", "Advance"].map((dep, i) => (
+                                <SelectItem key={dep + i} value={dep}>
+                                    <div className="flex cursor-pointer items-center gap-2">
+                                        {/* <Image
+                                            src={dep.image}
+                                            width={32}
+                                            height={32}
+                                            alt="dep"
+                                            className="rounded-full border border-dark-500"
+                                        /> */}
+                                        <p>{dep}</p>
+                                    </div>
+                                </SelectItem>
+                            ))}
+                        </CustomFormField>
+
+
+
+                        <div
+                            className={`flex flex-col gap-6  ${type === "create" && "xl:flex-row"}`}
+                        >
+                            <CustomFormField
+                                fieldType={FormFieldType.TEXTAREA}
+                                control={form.control}
+                                name="expectations"
+                                label="Appointment reason"
+                                placeholder="Annual montly check-up"
+                                disabled={type === "schedule"}
+                            />
+
+                            <CustomFormField
+                                fieldType={FormFieldType.TEXTAREA}
+                                control={form.control}
+                                name="additionalNotes"
+                                label="Comments/notes"
+                                placeholder="Why I am applying?"
+                                disabled={type === "schedule"}
+                            />
+                        </div>
+                    </>
+                )}
+
+                {type === "cancel" && (
+                    <CustomFormField
+                        fieldType={FormFieldType.TEXTAREA}
+                        control={form.control}
+                        name="cancellationReason"
+                        label="Reason for cancellation"
+                        placeholder="Urgent meeting came up"
+                    />
+                )}
+
+                <SubmitButton
+                    isLoading={isLoading}
+                    className={`${type === "cancel" ? "shad-danger-btn" : "shad-primary-btn"} w-full`}
+                >
+                    {buttonLabel}
+                </SubmitButton>
+            </form>
+        </Form>
+    );
+};
