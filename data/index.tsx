@@ -50,46 +50,24 @@ export const MentorshipData: MentorshipProps[] = [
   {
     id: 3,
     name: "Fien Dora",
-    title: "Machine Learning (Artificial Intelligence)",
+    title: "Embedded System",
     description:
-      "David is a data scientist who excels in analyzing complex data sets, building predictive models, and extracting valuable insights. He is proficient in tools like Python, R, and libraries such as Pandas and Scikit-learn.",
-    img: "/team/d3.png",
+      "Fien is an embedded systems developer with exceptional skills in designing and optimizing hardware-software integration. He specializes in programming microcontrollers, developing real-time operating systems, and ensuring seamless communication between components. Proficient in C, C++, and assembly language, David leverages his expertise to build efficient and reliable embedded solution.",
+    img: "/contact.png",
     link: "",
     portfolio: "",
   },
 
   {
     id: 4,
-    name: "Fien Dora",
-    title: "Cyber Security",
-    description:
-      "Charlie is a cybersecurity expert with in-depth knowledge of network security, cryptography, and ethical hacking. He works on securing systems, identifying vulnerabilities, and implementing robust security measures.",
-    img: "/team/d6.png",
+    name: "Ntunyu Serge",
+    title: "Software Developer",
+    description: "Serge is a software developer who thrives on creating innovative solutions through clean and efficient code.He excels in designing, developing, and maintaining software applications, with expertise in languages such as Java, JavaScript, and Python.David's skill set includes working with frameworks like React, Node.js, and Django, allowing him to build robust, scalable, and user-friendly applications.",
+    img: "/team/serge.svg",
     link: "",
     portfolio: "",
   },
 
-  {
-    id: 5,
-    name: "Cheko Yohane",
-    title: "Cloud Computing",
-    description:
-      "Eve specializes in cloud computing, working with cloud platforms like AWS, Azure, and Google Cloud. She designs scalable and reliable cloud architectures, manages cloud resources efficiently, and ensures high availability.",
-    img: "/team/d4.png",
-    link: "",
-    portfolio: "",
-  },
-
-  {
-    id: 6,
-    name: "Cheko Yohane",
-    title: "Mathematics",
-    description:
-      "Frank is a mathematician with expertise in various branches of mathematics such as algebra, calculus, and statistics. He applies mathematical principles to solve complex problems in fields like physics, engineering, and computer science.",
-    img: "/team/d4.png",
-    link: "",
-    portfolio: "",
-  },
 
 
 ];

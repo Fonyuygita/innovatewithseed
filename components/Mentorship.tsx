@@ -53,12 +53,12 @@ const Mentorship = () => {
                                 </div>
 
                                 <div className="flex w-full flex-col items-center h-full">
-                                    <Image src={item.img!} alt='mentor' className='w-[150px] h-[150px] object-contain rounded-full border-4 border-primary-100 absolute -top-[5rem]' width={200} height={200} />
+                                    <Image src={item.img!} alt='mentor' className='w-[150px] h-[150px] object-cover rounded-full border-4 border-primary-100 absolute -top-[5rem]' width={200} height={200} />
                                     <div className="flex flex-col gap-2 mt-6">
                                         <p className=' text-lg space-x-2 mt-[4rem]'>{item.name}</p>
 
 
-                                        <Link href="/" className='text-gray-100 bg-primary-100 px-5 py-2 my-4 flex items-center  gap-2'>
+                                        <Link href="/" className='text-gray-100 bg-primary-100 px-5 py-2 my-4 flex items-center rounded-md  gap-2'>
                                             <span>Portfolio</span>
                                             <FaLink />
 

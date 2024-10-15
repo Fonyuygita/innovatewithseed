@@ -77,6 +77,20 @@ const founders: Founder[] = [
 
 
     {
+        name: 'Ntunyu Serge',
+        title: 'Developer',
+        description: 'Computer Engineer and Videographer.',
+        longDescription: " I'm Serge, again, a computer engineer, from NAHPI, I'm a f developer, I'll be one of your guides during this period and, ill be you reference for anything u might be needing",
+        image: '/team/serge.svg',
+        social: {
+            twitter: 'https://twitter.com/johndoe',
+            linkedin: 'https://linkedin.com/in/johndoe',
+            github: 'https://github.com/johndoe',
+        },
+    },
+
+
+    {
         name: 'Jick Alvin',
         title: 'Developer',
         description: 'Software Engineer, Mathematician Computer Scientist and App Developer.',
