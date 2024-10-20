@@ -32,7 +32,7 @@ const Onboarding = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    We are dedicated to nurturing talent, fostering growth, and empowering individuals through the transformative power of digitalization. Our onboarding screen is designed to introduce you to a world where skills are honed, potentials are realized, and opportunities are endless.
+                    We are dedicated to nurturing talent, fostering growth, and empowering individuals through the transformative power of digitalization.
                 </motion.p>
                 <Link href="/sign-in">
                     <motion.button
