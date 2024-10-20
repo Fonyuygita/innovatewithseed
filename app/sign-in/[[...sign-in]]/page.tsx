@@ -1,6 +1,7 @@
 "use client"
 import { useTheme } from "@/components/context/ThemeContext";
 import { ClerkLoading, SignIn } from "@clerk/nextjs";
+import { color } from "framer-motion";
 
 const customLabels = {
     signIn: {
@@ -24,7 +25,7 @@ export default function Page() {
         variables: {
             colorPrimary: '#FF6F00', // Tomato color
             colorText: theme === 'light' ? '#333333' : "#888888", // Dark text
-            colorBackground: theme === 'light' ? '#E8E9E9' : "#333333", // Light background
+            colorBackground: theme === 'light' ? '#E8E9E9' : "#1a202c", // Light background
             fontFamily: 'Arial, sans-serif',
             borderRadius: '8px',
             colorBorder: '#ff6347',
@@ -34,10 +35,11 @@ export default function Page() {
         },
         elements: {
             footerActionLink: {
-                display: 'none', // Hide the "Sign up" link
+                // display: 'none',
+                color: "#3371ff"// Hide the "Sign up" link
             },
             footerActionText: {
-                color: theme === "light" ? '#E8E9E9' : "#131619", // Change this to your desired color
+                color: theme === "light" ? "#131619" : '#E8E9E9', // Change this to your desired color
             },
             socialButtons: {
                 google: {
@@ -66,7 +68,7 @@ export default function Page() {
             </ClerkLoading>
             {/* @ts-ignore */}
             <SignIn
-
+                appearance={customAppearance}
             />
         </div>
     );

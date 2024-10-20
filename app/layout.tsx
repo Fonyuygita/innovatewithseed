@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://innovatewithseed.com"
+    canonical: "https://innovatewithseedinc.com"
   }
 
 };
@@ -112,7 +112,7 @@ export default function RootLayout({
 
         },
 
-        baseTheme: dark,
+        // baseTheme: dark,
         variables: {
           colorPrimary: "#3371ff",
           fontSize: '13px'
