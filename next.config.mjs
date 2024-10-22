@@ -1,14 +1,15 @@
-
-// import withPWA from "next-pwa";
-// import withPWA from 'next-pwa';
-
 /** @type {import('next').NextConfig} */
+import withPWAInit from "@ducanh2912/next-pwa";
+
+const withPWA = withPWAInit({
+    dest: "public",
+    fallbacks: {
+        document: "/~offline",
+    }
+});
+
 const nextConfig = {
-
     swcMinify: false,
-
-
-
     images: {
         remotePatterns: [
             {
@@ -26,7 +27,6 @@ const nextConfig = {
                 hostname: 'i.ibb.co',
                 pathname: '/**',
             },
-
         ],
     },
     eslint: {
@@ -34,5 +34,4 @@ const nextConfig = {
     },
 };
 
-
-export default nextConfig;
+export default withPWA(nextConfig);
