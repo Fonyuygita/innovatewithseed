@@ -26,6 +26,25 @@ const images = [
             'https://i.ibb.co/9WvPgtn/IMG-20241018-153434.jpg'
         ],
     },
+
+    {
+        original: 'https://i.ibb.co/8Ds0VKv/IMG-20240827-171703.jpg',
+        thumbnail: 'https://i.ibb.co/8Ds0VKv/IMG-20240827-171703.jpg',
+        title: 'SEED Summer Internship',
+        variants: [
+            'https://i.ibb.co/6P6LSf1/IMG20240830110320.jpg',
+            'https://i.ibb.co/Nryrk6r/IMG-20240829-161354.jpg',
+            'https://i.ibb.co/5jpJnG9/IMG20241018130328.jpg',
+            'https://i.ibb.co/nw2cKKF/IMG20240827152913-01.jpg',
+            'https://i.ibb.co/02HJ6jw/IMG-20240827-122925.jpg',
+            'https://i.ibb.co/myRNp5Q/PXL-20240830-123157451.jpg',
+            'https://i.ibb.co/VJ18wdK/IMG-20240830-183233.jpg',
+            'https://i.ibb.co/k4mg1bM/IMG20240830123635.jpg',
+            'https://i.ibb.co/8Ds0VKv/IMG-20240827-171703.jpg'
+        ],
+    },
+
+
     {
         original: '/team/d4.png',
         thumbnail: '/team/d4.png',
