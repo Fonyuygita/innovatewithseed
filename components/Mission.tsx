@@ -84,8 +84,8 @@ const Mission = () => {
     }, [controls, inView]);
 
     const variants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 60 },
+        visible: { opacity: 1, y: 20 },
     };
     return (
         <section ref={ref} className="mt-[12rem] md:w-[80%] w-full mx-auto min-h-screen">
@@ -93,7 +93,7 @@ const Mission = () => {
                 initial="hidden"
                 animate={controls}
                 variants={variants}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
                 className="heading text-[2.4rem] text-blue-500 -[70%] my-4">
                 Our   {' '}
                 <span className="text-primary-100">Mission</span>

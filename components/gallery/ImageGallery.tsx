@@ -11,12 +11,19 @@ import GalleryTop from './GalleryTop';
 
 const images = [
     {
-        original: '/bootcamps.jpg',
-        thumbnail: '/p1.svg',
-        title: 'Seed Bootcamp',
+        original: 'https://i.ibb.co/qNZBh1s/IMG-20241018-154600.jpg',
+        thumbnail: 'https://i.ibb.co/qNZBh1s/IMG-20241018-154600.jpg',
+        title: 'Outreach @AmazingGrace',
         variants: [
-            '/p4.svg',
-            '/bootcamps.jpg',
+            'https://i.ibb.co/zG9HZ84/IMG20241018144006-01.jpg',
+            'https://i.ibb.co/d635q3S/IMG20241018143743.jpg',
+            'https://i.ibb.co/5jpJnG9/IMG20241018130328.jpg',
+            'https://i.ibb.co/8213ctx/IMG20241018124832.jpg',
+            'https://i.ibb.co/Rh4bNYy/IMG20241018124420.jpg',
+            'https://i.ibb.co/pzLcrBf/IMG20241018124334.jpg',
+            'https://i.ibb.co/qNZBh1s/IMG-20241018-154600.jpg',
+            'https://i.ibb.co/dWyQRLJ/IMG-20241018-153658.jpg',
+            'https://i.ibb.co/9WvPgtn/IMG-20241018-153434.jpg'
         ],
     },
     {
