@@ -9,7 +9,7 @@ const videos = [
     { url: 'https://www.youtube.com/embed/cYxsT94Qcw8"', thumbnail: 'https://i.ibb.co/8Ds0VKv/IMG-20240827-171703.jpg', title: 'Welcome to seed' },
     // { url: 'https://youtu.be/cYxsT94Qcw8', thumbnail: 'https://i.ibb.co/Nryrk6r/IMG-20240829-161354.jpg', title: 'Welcome to seed' },
     // { url: 'https://youtu.be/cYxsT94Qcw8', thumbnail: 'https://i.ibb.co/8213ctx/IMG20241018124832.jpg', title: 'Welcome to seed' },
-    { url: 'hhttps://www.youtube.com/embed/cYxsT94Qcw8"', thumbnail: '/team/s1.png', title: 'Welcome to seed' },
+    { url: 'https://www.youtube.com/embed/cYxsT94Qcw8"', thumbnail: '/team/s1.png', title: 'Welcome to seed' },
 
     // Add more videos as needed
 ];
