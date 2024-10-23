@@ -8,7 +8,7 @@ import Mentorship from './Mentorship'
 import Mission from './Mission'
 import RecentBlogs from './RecentBlogs'
 import Testimonials from './Testimonials'
-import ContactUs from './ContactUs'
+
 import SeedStory from './CompanyStory'
 import { useTheme } from './context/ThemeContext'
 import SlidingPanel from './SlideIn'
@@ -30,7 +30,7 @@ const HomeComponents = ({ children }: { children?: ReactNode }) => {
             <Introduction />
 
             {/* <Services /> */}
-            {/* <Technologies /> */}
+            <Technologies />
             <Mentorship />
             <Mission />
             <div id="news">
@@ -39,7 +39,7 @@ const HomeComponents = ({ children }: { children?: ReactNode }) => {
 
             <Testimonials />
 
-            <ContactUs />
+
 
         </div>
     )

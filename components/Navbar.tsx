@@ -23,6 +23,7 @@ const menuLinks: MenuLink[] = [
     { title: 'Blog', url: '/blog' },
 
     { title: 'Gallery', url: '/gallery' },
+    { title: 'Contact Us', url: '/contact' },
 ];
 
 const topVariant = {
@@ -253,14 +254,14 @@ const Navbar = () => {
                                 />
                             </Link>
 
-                            <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/">Home</Link>
+                            <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname === "/" ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-[6rem]" : ""}`} href="/">Home</Link>
                             {menuLinks.map(link => (
                                 <Link className={` text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${link.url !== "/" && pathname.startsWith(link.url) ? "text-white  py-2 rounded-md bg-primary-100 px-[6rem]" : ""}`} href={link.url} key={link.title}>{link.title}</Link>
                             ))}
 
                             {isSignedIn &&
                                 (
-                                    <Link className={`font-bold text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-6" : ""}`} href="/student">Academics</Link>
+                                    <Link className={`font-bold text-lg gap-x-2 animate-in px-4 hover:text-red-700 ${pathname.startsWith("/aca") || pathname.startsWith("/stud") ? "text-white py-2 bg-primary-100 hover:animate-in rounded-md transition-all duration-100 to-blue px-[6rem]" : ""}`} href="/student">Academics</Link>
                                 )
                             }
                         </motion.div>

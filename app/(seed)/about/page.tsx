@@ -54,7 +54,7 @@ const AboutPage = () => {
 
 
                     <motion.p
-                        className={`text-[14px] md:text-[18px] my-6 font-sans line-clamp-5   text-left w-[100%] md:w-[98%] mx-auto ${theme === "light" ? "text-gray-700" : "text-gray-300"}`}
+                        className={`text-[14px] md:text-[18px] my-6 font-sans line-clamp-5   text-left w-[100%] md:w-[98%] mx-auto ${theme === "light" ? "text-gray-700" : "text-light-200"}`}
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -73,7 +73,7 @@ const AboutPage = () => {
             <VideoGrid />
             <FounderSection />
 
-            <ContactUs />
+
 
         </section>
     )

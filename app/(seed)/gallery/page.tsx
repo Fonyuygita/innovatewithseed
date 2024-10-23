@@ -1,6 +1,5 @@
 "use client"
 
-import ContactUs from '@/components/ContactUs'
 import { useTheme } from '@/components/context/ThemeContext'
 import DynamicHero from '@/components/DynamicHero'
 import FAQSection from '@/components/FaqSection'
@@ -17,8 +16,7 @@ const GalleryPage = () => {
                 description="Dream Create Innovate"
             />
             <MyImageGallery />
-            <FAQSection />
-            <ContactUs />
+
         </div>
     )
 }

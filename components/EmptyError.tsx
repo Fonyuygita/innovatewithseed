@@ -6,20 +6,31 @@ import Image from "next/image"
 import Link from 'next/link';
 import { FaArrowLeft, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 import { useTheme } from './context/ThemeContext';
+import animationData from '../public/computer.json';
+import LottieAnimation from '@/components/lottie/LottieAnimation';
 // import { useTheme } from 'next-themes';
 // import { router } from 'expo-router'
-const EmptyError = ({ title, subTitle, className, image, msg }: { title: string; subTitle: string; className: string, image?: string; msg?: boolean }) => {
+const EmptyError = ({ title, subTitle, className, image, msg, animation }: { title: string; subTitle: string; className: string, image?: string; msg?: boolean; animation?: boolean }) => {
     const { theme } = useTheme()
     return (
         <div className={`flex ${className} ${theme === "light" ? "bg-light-300 text-gray-800" : "bg-gray-950 text-light-200"}  flex-col  justify-center items-center px-4 `}>
+            {animation && (
 
-            <Image
-                src={image!}
-                className="w-[270px] h-[215px]"
-                alt='error'
-                width={200}
-                height={200}
-            />
+                <LottieAnimation animationData={animationData} />
+
+            )}
+            {image && (
+                <Image
+                    src={image!}
+                    className="w-[270px] h-[215px]"
+                    alt='error'
+                    width={200}
+                    height={200}
+                />
+
+            )}
+
+
             <div className="my-3 text-center">
                 <p className="font-sans text-xl ">{title}</p>
                 <p className="font-sans text-sm  text-center mt-2">{subTitle}</p>
@@ -39,12 +50,15 @@ const EmptyError = ({ title, subTitle, className, image, msg }: { title: string;
             customStyles="w-full my-5"
             
             /> */}
+            {!animation && (
+                <Link href="/student" className={`flex items-center justify-center w-fit py-3 px-9 text-light-100  ${msg ? "bg-primary-100" : "bg-primary-100"} text-white gap-3 rounded-md`}>
+                    <FaArrowLeft color='white' className='text-light-200' />
 
-            <Link href="/student" className={`flex items-center justify-center w-fit py-3 px-9 text-light-100  ${msg ? "bg-primary-100" : "bg-primary-100"} text-white gap-3 rounded-md`}>
-                <FaArrowLeft color='white' className='text-light-200' />
+                    <span>Dashboard</span>
+                </Link>
+            )}
 
-                <span>Dashboard</span>
-            </Link>
+
 
         </div>
     )

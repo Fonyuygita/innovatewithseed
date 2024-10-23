@@ -1,6 +1,6 @@
 "use client"
 
-import ContactUs from '@/components/ContactUs'
+// import ContactUs from '@/components/ContactUs'
 import { useTheme } from '@/components/context/ThemeContext'
 import DynamicHero from '@/components/DynamicHero'
 import ServicesBody from '@/components/ServicesBody'
@@ -18,7 +18,7 @@ const ServicesPage = () => {
             />
             <ServicesBody />
 
-            <ContactUs />
+
 
         </section>
     )
