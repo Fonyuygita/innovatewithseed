@@ -9,6 +9,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES, Document, Block, Inline } from '@contentful/rich-text-types';
 import { FaThumbsUp, FaBell, FaEye, FaMoon, FaSun, FaHeart } from 'react-icons/fa';
 import { useTheme } from './context/ThemeContext';
+import { dateConverter } from '@/lib/utils';
 type NodeRenderer = (node: Block | Inline, children: React.ReactNode) => React.ReactNode;
 
 
@@ -124,7 +125,8 @@ const ShowPost = ({ post, postId }: { post: any; postId: string }) => {
                     <button onClick={handleLike}><FaHeart className={`${clicked ? "text-red-700" : "border-none-"}`} /> <span>{likes}</span></button>
                     <button><FaEye /> <span>{viewed}</span></button>
                 </div>
-                <p className='text-light-200 w-fit my-4 bg-blue-500 p-2'>Published on: {new Date(post.author.sys?.createdAt).toLocaleDateString()}</p>
+
+                <p className='text-light-200 w-fit my-4 bg-blue-500 p-2'>{dateConverter(new Date(post.author.sys?.createdAt).toLocaleDateString())} Ago</p>
                 <div className="author">
                     {/* <Image
                     src={`https:${post.author.fields.picture.file}`} // Ensure the URL is absolute

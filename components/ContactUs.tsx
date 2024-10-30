@@ -20,7 +20,7 @@ const ContactUs = () => {
     ];
 
     return (
-        <section className="w-full min-h-screen  overflow-hidden">
+        <section className={`${theme === "light" ? "bg-light-200 text-gray-800" : "bg-gray-800  text-light-200"} w-full min-h-screen  overflow-hidden`}>
 
 
 
@@ -63,8 +63,8 @@ const ContactUs = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-full rounded-2xl md:border-none  border border-blue-500 ">
-                    <Image src="/contact.png" alt='contact' width={1000} height={1000} className='w-full h-full p-2 object-contain rounded-2xl' />
+                <div className="w-full h-full rounded-2xl md:border-none  border border-blue-500 mt-[5rem]">
+                    <Image src="/log.svg" alt='contact' width={1000} height={1000} className='w-full h-full p-2 object-contain rounded-2xl' />
                 </div>
             </div>
         </section>

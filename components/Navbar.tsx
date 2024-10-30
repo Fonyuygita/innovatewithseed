@@ -102,8 +102,8 @@ const Navbar = () => {
     const customAppearance = {
         variables: {
             colorPrimary: '#FF6F00', // Tomato color
-            colorText: theme === 'light' ? '#fff' : "#888888", // Dark text
-            colorBackground: theme === 'light' ? '#999' : "#111827", // Light background
+            colorText: theme === 'light' ? '#333' : "#fff", // Dark text
+            colorBackground: theme === 'light' ? '#999' : "#666", // Light background
             fontFamily: 'Arial, sans-serif',
             borderRadius: '8px',
             colorBorder: '#ff6347',

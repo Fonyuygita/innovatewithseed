@@ -76,7 +76,7 @@ const RecentPostCard: React.FC<PostCardProps> = ({ post }) => {
                         </motion.h3>
 
                         <p className="line-clamp-1 text-sm ">{post.summary}</p>
-                        <div className="flex items-center mt-4 ">
+                        {/* <div className="flex items-center mt-4 ">
                             <Image
                                 src={`https:${post.author.picture}`}
                                 alt={post.author.name}
@@ -84,8 +84,9 @@ const RecentPostCard: React.FC<PostCardProps> = ({ post }) => {
                                 height={40}
                                 className="rounded-full h-8 w-8"
                             />
-                            <span className={`ml-2 md:text-sm text-[14px]`}>{post.author.name}</span>
-                        </div>
+                           
+                           
+                        </div> */}
                     </motion.div>
                 </Link>
 
